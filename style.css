@@ -1,0 +1,384 @@
+
+    /*
+    selector{
+        property: value;
+        property2: value;
+    }
+    */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+}
+
+.logo a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo a:hover{
+    background-color: black;
+}
+
+.nav-links{
+    position: absolute;
+    left: 62%;
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition-duration: 0.2s;
+}
+.nav-links a:hover{
+    background-color: black;
+}
+
+.burger{
+    display: none;
+}
+.burger div{
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        width: 30%;
+        top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links a{
+        color: white;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+body{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/*-------------------------------HOME PAGE-----------------------------------*/
+
+.intro{
+    top: 100px;
+    left: 50px;
+    position: relative;
+    text-decoration: none;
+}
+
+.name{
+    top: 110px;
+    left: 50px;
+    position: relative;
+    color: black;
+    letter-spacing: 5px;
+    text-transform: lowercase;
+    font-size: 60px;
+}
+
+
+.description{
+    top: 130px;
+    left: 50px;
+    position: relative;
+    text-decoration: none;
+}
+
+.button {
+    top: 200px;
+    left: 50px;
+    position: relative;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+
+    transition-duration: 0.2s;
+}
+
+.button:hover{
+    background-color: black;
+    color: white;
+
+/*----------------------------------ABOUT--------------------------------------*/}
+
+.me {
+    width: 30%;
+    height: 30%;
+    margin-left: 200px;
+    padding-top: 50px;
+    }
+
+.biography {
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    margin-right: 50px;
+    line-height: 30px;
+}
+
+.about-button {
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+
+    transition-duration: 0.2s;
+}
+
+.about-button:hover{
+    background-color: black;
+    color: white;
+}
+
+/*-------------------------------PORTFOLIO-----------------------------------*/
+
+.portfolio-links{
+    position: absolute;
+    top: 20%;
+    left: 46%;
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+.portfolio-links li{
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.portfolio-links a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.portfolio-links a:hover{
+    background-color: black;
+}
+
+.line {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 24%;
+    left: 46.75%;
+}
+
+@keyframes lineRight{
+    from {left: 46.75%;}
+    to   {left: 51.5%;}
+}
+@keyframes lineLeft{
+    from {left: 51.5%;}
+    to   { left: 46.75%;}
+}
+.line-active{
+    left: 51.5%;
+}
+
+.row {
+    top: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    left: 50px;
+    width: 1180px;
+    position: absolute;
+}
+.design-row {
+    top: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    left: 1260px;
+    width: 1180px;
+    position: absolute;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+@keyframes csLeft{
+    from { left:50px;}
+    to   { left: -1180px;}
+}
+@keyframes csRight{
+    from { left:-1180px;}
+    to   { left: 50px;}
+}
+
+@keyframes designLeft{
+    from { left: 1260px;}
+    to   { left: 50px;}
+}
+@keyframes designRight{
+    from { left: 50px;}
+    to   { left: 1260px;}
+}
+
+.cs-inactive{
+    left: -1180px;
+}
+.design-active{
+    left: 50px;
+}
+
+/*-------------------------------CONTACT-----------------------------------*/
+
+.directions {
+    text-align: center;
+    top: 50px;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+.social-media {
+    text-align: center;
+    top: 80px;
+    position: relative;
+}
+
+.social-media li{
+    padding: 3px;
+}
+.social-media img{
+    padding: 15px;
+    width: 50px;
+    background-color: #e6e6e6;
+    color: white;
+}
+
+.social-media img:hover {
+  opacity: 0.7;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect*/
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+.fa-github {
+  background: #211F1F;
+  color: white;
+}
+.fa-instagram {
+  background-image: linear-gradient(to bottom left, #515BD4, #8134AF, #DD2A7B, #F58529, #FEDA77);
+  color: white;
+}
+.fa-linkedin {
+  background: #0077B5;
+  color: white;
+}
