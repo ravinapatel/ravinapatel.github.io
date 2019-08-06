@@ -13,6 +13,7 @@
 
 body{
     overflow-x: hidden;
+    overflow-y: visible;
 }
 
 nav{
@@ -126,9 +127,95 @@ nav{
 
 }
 
-body{
+html, body{
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
+
+body {
+    min-height: 100%;
+}
+
+.page{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    z-index: 200;
+}
+.header {
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+    opacity: 0.8;
+}
+.body {
+    top: 8vh;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+    z-index: 100;
+}
+
+/*
+.footer{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    color: black;
+}
+*/
+.footer-contents {
+    padding-left: 50px;
+    padding-right: 50px;
+    bottom:100%;
+}
+
+.footer-contents p{
+    float: left;
+}
+
+.social-media-footer {
+    position: relative;
+    float: right;
+    top: 50%;
+}
+
+.social-media-footer .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    background-image: none;
+    flex-direction: column;
+}
+.social-media-footer li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    display: black;
+}
+
 
 /*-------------------------------HOME PAGE-----------------------------------*/
 
@@ -183,10 +270,28 @@ body{
 
 .me {
     width: 30%;
-    height: 30%;
     margin-left: 200px;
     padding-top: 50px;
+    position: absolute;
     }
+
+.rectangle {
+    background-color: white;
+    border: 4px solid #aaf0ea;
+    width: 30%;
+    height: 90%;
+    margin-left: 175px;
+    top: 13%;
+    position: absolute;
+}
+
+@media screen and (max-width:768px){
+    .me{
+        float: left;
+        left:0%;
+        width: 100%;
+    }
+}
 
 .biography {
     top: 30%;
@@ -220,7 +325,7 @@ body{
 
 .portfolio-links{
     position: absolute;
-    top: 20%;
+    top: 80px;
     left: 46%;
     display: flex;
     justify-content: space-around;
@@ -249,7 +354,7 @@ body{
     height: 2px;
     background-color: black;
     position: absolute;
-    top: 24%;
+    top: 105px;
     left: 46.75%;
 }
 
@@ -266,60 +371,84 @@ body{
 }
 
 .row {
-    top: 25%;
+    top: 140px;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
-    left: 50px;
-    width: 1180px;
+    padding: 0 0px;
+    left: 0%;
+    width: 1280px;
     position: absolute;
 }
 .design-row {
-    top: 25%;
+    top: 140px;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
-    left: 1260px;
-    width: 1180px;
+    padding: 0 0px;
+    left: 100%;
+    width: 1280px;
     position: absolute;
 }
 
 .column {
     flex: 25%;
     max-width: 25%;
-    padding: 0 4px;
+    padding: 0 0px;
+}
+
+.connect-four-container, .pixel-container, .invaders-container, .weather-container, .vision-container, .fractals-container, .site-container{
+    position: relative;
 }
 
 .column img {
-    margin-top: 8px;
+    margin-top: 0px;
     vertical-align: middle;
     width: 100%;
 }
 
+.connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption{
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: black;
+}
+
+.connect-four-container:hover .connect-four-caption, .pixel-container:hover .pixel-caption, .invaders-container:hover .invaders-caption, .weather-container:hover .weather-caption, .vision-container:hover .vision-caption, .fractals-container:hover .fractals-caption, .site-container:hover .site-caption {
+    opacity: 1;
+}
+.connect-four-container:hover .connect-four-img, .pixel-container:hover .pixel-img, .invaders-container:hover .invaders-img, .weather-container:hover .weather-img, .vision-container:hover .vision-img, .fractals-container:hover .fractals-img, .site-container:hover .site-img {
+    opacity: 0.3;
+}
+.pixel-description, .connect-four-description, .invaders-description, .weather-description, .vision-description, .fractals-description, .site-description{
+    font-size: 18px;
+}
 
 @keyframes csLeft{
-    from { left:50px;}
+    from { left:0%;}
     to   { left: -1180px;}
 }
 @keyframes csRight{
     from { left:-1180px;}
-    to   { left: 50px;}
+    to   { left: 0%;}
 }
 
 @keyframes designLeft{
-    from { left: 1260px;}
-    to   { left: 50px;}
+    from { left: 100%;}
+    to   { left: 0%;}
 }
 @keyframes designRight{
-    from { left: 50px;}
-    to   { left: 1260px;}
+    from { left: 0%;}
+    to   { left: 100%;}
 }
 
 .cs-inactive{
     left: -1180px;
 }
 .design-active{
-    left: 50px;
+    left: 0%;
 }
 
 /*-------------------------------CONTACT-----------------------------------*/
@@ -344,6 +473,7 @@ body{
 .social-media li{
     padding: 3px;
 }
+/* for the mail icon */
 .social-media img{
     padding: 15px;
     width: 50px;
