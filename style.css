@@ -244,6 +244,12 @@ body {
     text-decoration: none;
 }
 
+.disclaimer{
+    font-weight: lighter;
+    line-height: 30px;
+    color: grey;
+}
+
 .button {
     top: 200px;
     left: 50px;
@@ -333,12 +339,12 @@ body {
     color: black;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
 .biography p {
-    font-size: 12px;
+    font-size: 14px;
     color: black;
     text-decoration: none;
 }
@@ -425,6 +431,7 @@ body {
     margin-top: 0px;
     vertical-align: middle;
     width: 100%;
+    transition-duration: 0.2s;
 }
 
 .connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption{
@@ -436,13 +443,14 @@ body {
     transform: translate(-50%, -50%);
     font-size: 22px;
     color: black;
+    transition-duration: 0.2s;
 }
 
 .connect-four-container:hover .connect-four-caption, .pixel-container:hover .pixel-caption, .invaders-container:hover .invaders-caption, .weather-container:hover .weather-caption, .vision-container:hover .vision-caption, .fractals-container:hover .fractals-caption, .site-container:hover .site-caption {
     opacity: 1;
 }
 .connect-four-container:hover .connect-four-img, .pixel-container:hover .pixel-img, .invaders-container:hover .invaders-img, .weather-container:hover .weather-img, .vision-container:hover .vision-img, .fractals-container:hover .fractals-img, .site-container:hover .site-img {
-    opacity: 0.3;
+    opacity: 0.1;
 }
 .pixel-description, .connect-four-description, .invaders-description, .weather-description, .vision-description, .fractals-description, .site-description{
     font-size: 18px;
@@ -464,6 +472,15 @@ body {
 @keyframes designRight{
     from { left: 0%;}
     to   { left: 100%;}
+}
+
+@keyframes designInvisible{
+    from { opacity: 1;}
+    to   { opacity: 0;}
+}
+@keyframes designVisible{
+    from { opacity: : 0;}
+    to   { opacity: : 1;}
 }
 
 .cs-inactive{
