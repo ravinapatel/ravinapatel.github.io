@@ -399,6 +399,15 @@ body {
     left: 51.5%;
 }
 
+.case-study{
+    width: 100%;
+    height: auto;
+}
+.port-h3 {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
 .row {
     top: 140px;
     display: flex;
@@ -408,8 +417,8 @@ body {
     width: 1280px;
     position: absolute;
 }
-.design-row {
-    top: 140px;
+.design-row, .design {
+    top: 1320px;
     display: flex;
     flex-wrap: wrap;
     padding: 0 0px;
@@ -417,22 +426,45 @@ body {
     width: 1280px;
     position: absolute;
 }
+.graphic-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1280px;
+    position: absolute;
+}
+.design{
+    top: 140px;
+}
 
-.column {
+.column{
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 0px;
+}
+
+.graphic-column, .cs-column {
     flex: 25%;
     max-width: 25%;
-    padding: 0 0px;
+    padding: 10px;
+}
+
+.cs-column {
+    padding: 0px;
 }
 
 .connect-four-container, .pixel-container, .invaders-container, .weather-container, .vision-container, .fractals-container, .site-container{
     position: relative;
 }
 
-.column img {
+.column img, .graphic-column img, .cs-column img{
     margin-top: 0px;
     vertical-align: middle;
     width: 100%;
     transition-duration: 0.2s;
+}
+
+.graphic-column img {
+    padding: 10px;
 }
 
 .connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption{
@@ -459,10 +491,10 @@ body {
 
 @keyframes csLeft{
     from { left:0%;}
-    to   { left: -1180px;}
+    to   { left: -1300px;}
 }
 @keyframes csRight{
-    from { left:-1180px;}
+    from { left:-1300px;}
     to   { left: 0%;}
 }
 
@@ -485,11 +517,12 @@ body {
 }
 
 .cs-inactive{
-    left: -1180px;
+    left: -1300px;
 }
 .design-active{
     left: 0%;
 }
+
 
 /*-------------------------------CONTACT-----------------------------------*/
 
