@@ -18,6 +18,7 @@ const navSlide = () => {
 const portSlide = () => {
     const csimages = document.querySelector('.row');
     const designimages = document.querySelector('.design-row');
+    const designcontainer = document.querySelector('.design');
     const cs = document.querySelector('.cs-link');
     const design = document.querySelector('.design-link');
     const line = document.querySelector('.line');
@@ -26,20 +27,31 @@ const portSlide = () => {
     design.addEventListener('click',()=>{
         csimages.classList.toggle('cs-inactive');
         csimages.style.animation = `csLeft 1s`;
+
         line.style.animation = `lineRight 1s`;
         line.classList.toggle('line-active');
+
         designimages.classList.toggle('design-active');
         designimages.style.animation = `designLeft 1s`;
+
+        designcontainer.classList.toggle('design-active');
+        designcontainer.style.animation = `designLeft 1s`;
+
     });
 
     /*Moves to cs portfolio*/
     cs.addEventListener('click',()=>{
         csimages.classList.toggle('cs-inactive');
         csimages.style.animation = `csRight 1s`;
+
         line.style.animation = `lineLeft 1s`;
         line.classList.toggle('line-active');
+
         designimages.classList.toggle('design-active');
         designimages.style.animation = `designRight 1s`;
+
+        designcontainer.classList.toggle('design-active');
+        designcontainer.style.animation = `designRight 1s`;
 
     });
 
