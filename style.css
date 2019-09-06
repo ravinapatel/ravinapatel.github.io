@@ -16,6 +16,15 @@ body{
     overflow-y: visible;
 }
 
+.mobile-contents {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-contents {display: none;}
+    .mobile-contents {display: block;}
+}
+
 nav{
     display: flex;
     background-color: white;
