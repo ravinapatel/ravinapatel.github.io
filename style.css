@@ -51,6 +51,10 @@ nav{
     width: 30%;
 }
 
+.nav-links, .logo, .burger {
+    padding-top: 50px;
+}
+
 .nav-links li{
     list-style: none;
 }
@@ -278,7 +282,8 @@ body {
 .me {
     width: 30%;
     margin-left: 150px;
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    top: 22%;
     position: absolute;
     padding-bottom: 50px;
     }
@@ -289,7 +294,7 @@ body {
     width: 30%;
     height: 86%;
     margin-left: 125px;
-    top: 23%;
+    top: 28%;
     position: absolute;
 }
 
@@ -302,7 +307,7 @@ body {
 }
 
 .biography {
-    top: 18%;
+    top: 22%;
     left: 50%;
     position: absolute;
     margin-right: 125px;
