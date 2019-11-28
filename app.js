@@ -16,8 +16,8 @@ const navSlide = () => {
 }
 
 const portSlide = () => {
-    const csimages = document.querySelector('.row');
-    const designimages = document.querySelector('.design-row');
+    const csimages = document.querySelector('.cs-row');
+    const designimages = document.querySelector('.illustration-row');
     const designcontainer = document.querySelector('.design');
     const cs = document.querySelector('.cs-link');
     const design = document.querySelector('.design-link');

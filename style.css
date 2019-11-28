@@ -58,7 +58,7 @@ nav{
 .nav-links a{
     color: black;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-weight: bold;
     font-size: 14px;
     transition-duration: 0.2s;
@@ -399,16 +399,27 @@ body {
     left: 51.5%;
 }
 
-.case-study{
-    width: 100%;
+/* .UXUIdesign {
+    margin-left: 100px;
+    margin-right: 100px;
+} */
+
+.snap-img, .eatery-img{
+    width: 25%;
     height: auto;
+    padding-bottom: 40px;
+    display: inline;
+    text-align: center;
+    flex-wrap: wrap;
 }
+
 .port-h3 {
     padding-left: 50px;
     padding-top: 50px;
     padding-bottom: 10px;
+    font-size: 30px;
 }
-.row {
+.cs-row {
     top: 140px;
     display: flex;
     flex-wrap: wrap;
@@ -417,24 +428,32 @@ body {
     width: 1280px;
     position: absolute;
 }
-.design-row, .design {
-    top: 1320px;
+.design {
+    top: 140px;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0px;
     left: 100%;
     width: 1280px;
     position: absolute;
 }
+
+.illustration-row {
+    /* top: 1500px; */
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 0px; */
+    /* left: 100%; */
+    width: 1280px;
+    /* position: absolute; */
+}
+
 .graphic-row {
     display: flex;
     flex-wrap: wrap;
     width: 1280px;
-    position: absolute;
+    /* position: absolute; */
 }
-.design{
-    top: 140px;
-}
+
 
 .column{
     flex: 20%;
@@ -452,7 +471,7 @@ body {
     padding: 0px;
 }
 
-.connect-four-container, .pixel-container, .invaders-container, .weather-container, .vision-container, .fractals-container, .site-container{
+.connect-four-container, .pixel-container, .invaders-container, .weather-container, .vision-container, .fractals-container, .site-container, .snap-container, .eatery-container{
     position: relative;
 }
 
@@ -467,7 +486,26 @@ body {
     padding: 10px;
 }
 
-.connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption{
+.snap-container, .eatery-container {
+    display: inline;
+}
+.snap-caption, .eatery-caption {
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -180%);
+    font-size: 22px;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.eatery-caption {
+    transform: translate(-50%, -250%);
+}
+
+.connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption {
     opacity: 0;
     text-align: center;
     position: absolute;
@@ -479,13 +517,20 @@ body {
     transition-duration: 0.2s;
 }
 
-.connect-four-container:hover .connect-four-caption, .pixel-container:hover .pixel-caption, .invaders-container:hover .invaders-caption, .weather-container:hover .weather-caption, .vision-container:hover .vision-caption, .fractals-container:hover .fractals-caption, .site-container:hover .site-caption {
+
+
+.snap-container img, .eatery-container img{
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+}
+
+.connect-four-container:hover .connect-four-caption, .pixel-container:hover .pixel-caption, .invaders-container:hover .invaders-caption, .weather-container:hover .weather-caption, .vision-container:hover .vision-caption, .fractals-container:hover .fractals-caption, .site-container:hover .site-caption, .snap-container:hover .snap-caption, .eatery-container:hover .eatery-caption {
     opacity: 1;
 }
-.connect-four-container:hover .connect-four-img, .pixel-container:hover .pixel-img, .invaders-container:hover .invaders-img, .weather-container:hover .weather-img, .vision-container:hover .vision-img, .fractals-container:hover .fractals-img, .site-container:hover .site-img {
+.connect-four-container:hover .connect-four-img, .pixel-container:hover .pixel-img, .invaders-container:hover .invaders-img, .weather-container:hover .weather-img, .vision-container:hover .vision-img, .fractals-container:hover .fractals-img, .site-container:hover .site-img, .snap-container:hover .snap-img, .eatery-container:hover .eatery-img {
     opacity: 0.1;
 }
-.pixel-description, .connect-four-description, .invaders-description, .weather-description, .vision-description, .fractals-description, .site-description{
+.pixel-description, .connect-four-description, .invaders-description, .weather-description, .vision-description, .fractals-description, .site-description, .snap-description, .eatery-description {
     font-size: 18px;
 }
 
