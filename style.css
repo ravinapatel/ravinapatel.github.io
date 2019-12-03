@@ -45,10 +45,11 @@ nav{
 
 .nav-links{
     position: absolute;
-    left: 68%;
+    right: 0%;
+    margin-right: 50px;
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    /* width: 30%; */
 }
 
 .nav-links, .logo, .burger {
@@ -66,6 +67,8 @@ nav{
     font-weight: bold;
     font-size: 14px;
     transition-duration: 0.2s;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .nav-links a:hover{
     background-color: black;
@@ -83,12 +86,16 @@ nav{
 
 @media screen and (max-width:1024px){
     .nav-links{
-        width: 50%;
+        /* width: 50%; */
     }
 }
 
 @media screen and (max-width:768px){
-    body{
+    .nav-links a{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    /* body{
         overflow-x: hidden;
     }
     .nav-links{
@@ -113,7 +120,7 @@ nav{
     .burger{
         display: block;
         cursor: pointer;
-    }
+    } */
 }
 
 .nav-active{
@@ -249,6 +256,12 @@ body {
     text-decoration: none;
 }
 
+@media screen and (max-width:1200px) {
+    .description, .name {
+        width: 80%;
+    }
+}
+
 .disclaimer{
     font-weight: lighter;
     line-height: 30px;
@@ -279,7 +292,7 @@ body {
 
 /*----------------------------------ABOUT--------------------------------------*/}
 
-.me {
+.me, .me img {
     width: 375px;
     right: 55%;
     margin-left: 150px;
@@ -287,26 +300,27 @@ body {
     top: 22%;
     position: absolute;
     padding-bottom: 50px;
-    }
+}
 
-.rectangle {
+.me img{
+    width: 375px;
+    right: 0%;
+    top: 0%;
+}
+
+.rectangle{
+    opacity: 0%;
+}
+/* .rectangle {
     background-color: white;
     border: 2px solid #d5f2f0;
     width: 375px;
-    height: 490px;
-    right: 57%;
+    height: 500px;
+    right: 5%;
     margin-left: 125px;
-    top: 28%;
+    top: 15px;
     position: absolute;
-}
-
-@media screen and (max-width:768px){
-    .me{
-        float: left;
-        left:0%;
-        width: 100%;
-    }
-}
+} */
 
 .biography {
     top: 22%;
@@ -315,6 +329,25 @@ body {
     position: absolute;
     margin-right: 125px;
     line-height: 25px;
+}
+
+@media screen and (max-width:1100px){
+    .me{
+        width: 36%;
+    }
+
+    .me img{
+        width: 100%;
+    }
+
+    .biography {
+        width: 45%;
+    }
+
+    /* .rectangle {
+        height: 40%;
+        padding-top: 0%
+    } */
 }
 
 .about-button {
@@ -368,11 +401,14 @@ body {
 .portfolio-links{
     position: absolute;
     top: 80px;
-    left: 46%;
+    /* left: 46%; */
+    left: 50%;
+    transform: translate(-50%, 0%);
     display: flex;
     justify-content: space-around;
-    width: 10%;
+    /* width: 10%; */
 }
+
 .portfolio-links li{
     list-style: none;
     text-transform: uppercase;
@@ -386,6 +422,8 @@ body {
     font-size: 14px;
     transition-duration: 0.2s;
     cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .portfolio-links a:hover{
     background-color: black;
@@ -397,7 +435,11 @@ body {
     background-color: black;
     position: absolute;
     top: 105px;
-    left: 46.75%;
+    /* left: 46.75%; */
+
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0%;
 }
 
 @keyframes lineRight{
@@ -410,15 +452,6 @@ body {
 }
 .line-active{
     left: 51.5%;
-}
-
-.snap-img, .eatery-img{
-    width: 25%;
-    height: auto;
-    padding-bottom: 40px;
-    display: inline;
-    text-align: center;
-    flex-wrap: wrap;
 }
 
 .port-h3 {
@@ -442,22 +475,25 @@ body {
     display: flex;
     flex-wrap: wrap;
     left: 100%;
-    width: 1280px;
+    width: 100%;
     position: absolute;
 }
 
 .illustration-row {
     display: flex;
     flex-wrap: wrap;
-    width: 1280px;
+    width: 100%;
 }
 
 .graphic-row {
     display: flex;
     flex-wrap: wrap;
-    width: 1280px;
+    width: 100%;
 }
 
+.UXUI {
+    width: 100%;
+}
 
 .column{
     flex: 20%;
@@ -493,6 +529,17 @@ body {
 .snap-container, .eatery-container {
     display: inline;
 }
+
+.snap-img, .eatery-img{
+    width: 25%;
+    height: auto;
+    padding-bottom: 40px;
+    /* display: inline; */
+    top: 0%;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
 .snap-caption, .eatery-caption {
     opacity: 0;
     text-align: center;
@@ -500,7 +547,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -180%);
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: 2vw;
     color: black;
     transition-duration: 0.2s;
 }
@@ -516,12 +564,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: 2vw;
     color: black;
     transition-duration: 0.2s;
 }
-
-
 
 .snap-container img, .eatery-container img{
     transition-duration: 0.2s;
@@ -535,11 +582,11 @@ body {
     opacity: 0.1;
 }
 .pixel-description, .connect-four-description, .invaders-description, .weather-description, .vision-description, .fractals-description, .site-description, .snap-description, .eatery-description {
-    font-size: 18px;
+    font-size: 1.5vw;
 }
 
 @keyframes csLeft{
-    from { left:0%;}
+    from { left: 0%;}
     to   { left: -100%;}
 }
 @keyframes csRight{
