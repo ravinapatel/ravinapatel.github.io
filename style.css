@@ -560,7 +560,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -180%);
+    transform: translate(-50%, -200%);
     /* font-size: 22px; */
     font-size: 2vw;
     color: black;
@@ -572,7 +572,7 @@ body {
 }
 
 .snap-caption {
-    transform: translate(0%, 0%);
+    transform: translate(-50%, -150%);
 }
 
 .connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption {
