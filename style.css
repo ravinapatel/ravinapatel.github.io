@@ -446,7 +446,7 @@ body {
 .line {
     width: 20px;
     height: 2px;
-    background-color: black;
+    background-color: white;
     position: absolute;
     top: 105px;
     /* left: 46.75%; */
