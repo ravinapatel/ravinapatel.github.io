@@ -25,6 +25,9 @@ const portSlide = () => {
 
     /*Moves to design portfolio*/
     design.addEventListener('click',()=>{
+        design.classList.toggle('active');
+        cs.classList.toggle('inactive');
+
         csimages.classList.toggle('cs-inactive');
         csimages.style.animation = `csLeft 1s`;
 
@@ -41,6 +44,11 @@ const portSlide = () => {
 
     /*Moves to cs portfolio*/
     cs.addEventListener('click',()=>{
+        // cs.classList.toggle('cs-link-active');
+        // design.classList.toggle('design-link-inactive');
+        design.classList.toggle('active');
+        cs.classList.toggle('inactive');
+
         csimages.classList.toggle('cs-inactive');
         csimages.style.animation = `csRight 1s`;
 
@@ -54,6 +62,28 @@ const portSlide = () => {
         designcontainer.style.animation = `designRight 1s`;
 
     });
+
+
+    // cs.addEventListener('click',()=>{
+    //     if (csimages.className == 'cs-inactive'){
+    //         csimages.classList.toggle('cs-inactive');
+    //         csimages.style.animation = `csRight 1s`;
+    //
+    //         line.style.animation = `lineLeft 1s`;
+    //         line.classList.toggle('line-active');
+    //         // line.style.left = document.getElementById('cs-link').style.left;
+    //
+    //         designimages.classList.toggle('design-active');
+    //         designimages.style.animation = `designRight 1s`;
+    //
+    //         designcontainer.classList.toggle('design-active');
+    //         designcontainer.style.animation = `designRight 1s`;
+    //     }
+    //     else {
+    //         document.write(csimage.className);
+    //     }
+    // });
+
 
     /*when cs is active, move cs-images and design images left*/
 }

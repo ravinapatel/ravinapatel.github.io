@@ -28,6 +28,7 @@ nav{
 .logo {
     position: absolute;
     left: 50px;
+    display: inline;
 }
 
 .logo a{
@@ -40,7 +41,7 @@ nav{
 }
 
 .logo a:hover{
-    background-color: black;
+    /* background-color: black; */
 }
 
 .nav-links{
@@ -71,6 +72,7 @@ nav{
     margin-right: 20px;
 }
 .nav-links a:hover{
+    opacity: 1;
     background-color: black;
 }
 
@@ -409,6 +411,18 @@ body {
     /* width: 10%; */
 }
 
+.design-link {
+    opacity: 0.4;
+}
+
+.inactive {
+    opacity: 0.4;
+}
+
+.active {
+    opacity: 1;
+}
+
 .portfolio-links li{
     list-style: none;
     text-transform: uppercase;
@@ -553,8 +567,12 @@ body {
     transition-duration: 0.2s;
 }
 
-.eatery-caption {
-    transform: translate(-50%, -250%);
+.eatery-caption, {
+    transform: translate(-50%, -50%);
+}
+
+.snap-caption {
+    transform: translate(0%, 0%);
 }
 
 .connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption {
