@@ -529,7 +529,7 @@ body {
     padding: 0px;
 }
 
-.connect-four-container, .pixel-container, .invaders-container, .weather-container, .vision-container, .fractals-container, .site-container, .snap-container, .eatery-container{
+.connect-four-container, .pixel-container, .invaders-container, .weather-container, .vision-container, .fractals-container, .site-container, .snap-container, .eatery-container, .meet-container{
     position: relative;
 }
 
@@ -544,11 +544,11 @@ body {
     padding: 10px;
 }
 
-.snap-container, .eatery-container {
+.snap-container, .eatery-container, .meet-container {
     display: inline;
 }
 
-.snap-img, .eatery-img{
+.snap-img, .eatery-img, .meet-img{
     width: 25%;
     height: auto;
     padding-bottom: 40px;
@@ -558,7 +558,7 @@ body {
     flex-wrap: wrap;
 }
 
-.snap-caption, .eatery-caption {
+.snap-caption, .eatery-caption, .meet-caption {
     opacity: 0;
     text-align: center;
     position: absolute;
@@ -575,7 +575,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.snap-caption {
+.snap-caption, .meet-caption {
     transform: translate(-50%, -150%);
 }
 
@@ -592,7 +592,7 @@ body {
     transition-duration: 0.2s;
 }
 
-.snap-container img, .eatery-container img{
+.snap-container img, .eatery-container img, .meet-container img{
     transition-duration: 0.2s;
     transition-delay: 0s;
 }
