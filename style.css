@@ -571,11 +571,11 @@ body {
     transition-duration: 0.2s;
 }
 
-.eatery-caption, {
+.eatery-caption, .meet-caption {
     transform: translate(-50%, -50%);
 }
 
-.snap-caption, .meet-caption {
+.snap-caption {
     transform: translate(-50%, -150%);
 }
 
