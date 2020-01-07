@@ -601,13 +601,13 @@ body {
     transition-delay: 0s;
 }
 
-.connect-four-container:hover .connect-four-caption, .pixel-container:hover .pixel-caption, .invaders-container:hover .invaders-caption, .weather-container:hover .weather-caption, .vision-container:hover .vision-caption, .fractals-container:hover .fractals-caption, .site-container:hover .site-caption, .snap-container:hover .snap-caption, .eatery-container:hover .eatery-caption {
+.connect-four-container:hover .connect-four-caption, .pixel-container:hover .pixel-caption, .invaders-container:hover .invaders-caption, .weather-container:hover .weather-caption, .vision-container:hover .vision-caption, .fractals-container:hover .fractals-caption, .site-container:hover .site-caption, .snap-container:hover .snap-caption, .eatery-container:hover .eatery-caption,  .meet-container:hover .meet-caption {
     opacity: 1;
 }
-.connect-four-container:hover .connect-four-img, .pixel-container:hover .pixel-img, .invaders-container:hover .invaders-img, .weather-container:hover .weather-img, .vision-container:hover .vision-img, .fractals-container:hover .fractals-img, .site-container:hover .site-img, .snap-container:hover .snap-img, .eatery-container:hover .eatery-img {
+.connect-four-container:hover .connect-four-img, .pixel-container:hover .pixel-img, .invaders-container:hover .invaders-img, .weather-container:hover .weather-img, .vision-container:hover .vision-img, .fractals-container:hover .fractals-img, .site-container:hover .site-img, .snap-container:hover .snap-img, .eatery-container:hover .eatery-img, .meet-container:hover .meet-caption {
     opacity: 0.1;
 }
-.pixel-description, .connect-four-description, .invaders-description, .weather-description, .vision-description, .fractals-description, .site-description, .snap-description, .eatery-description {
+.pixel-description, .connect-four-description, .invaders-description, .weather-description, .vision-description, .fractals-description, .site-description, .snap-description, .eatery-description, .meet-description {
     font-size: 1.5vw;
 }
 
