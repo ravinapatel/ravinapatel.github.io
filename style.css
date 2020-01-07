@@ -580,7 +580,7 @@ body {
 }
 
 .meet-caption {
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -150%);
 }
 
 .connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption {
