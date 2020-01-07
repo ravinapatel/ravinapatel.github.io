@@ -571,12 +571,16 @@ body {
     transition-duration: 0.2s;
 }
 
-.eatery-caption, .meet-caption {
+.eatery-caption, {
     transform: translate(-50%, -50%);
 }
 
 .snap-caption {
     transform: translate(-50%, -150%);
+}
+
+.meet-caption {
+    transform: translate(-50%, 0%);
 }
 
 .connect-four-caption, .pixel-caption, .invaders-caption, .weather-caption, .vision-caption, .fractals-caption, .site-caption {
