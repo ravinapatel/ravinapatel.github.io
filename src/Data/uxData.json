@@ -1,0 +1,52 @@
+[
+  {
+    "id": "exceed",
+    "name": "Exceed",
+    "description": "A way for professionals to continue growing in their industry. Full case study coming soon.",
+    "msg": "View presentation",
+    "url": "https://docs.google.com/presentation/d/1QC8Xr-fdPhGcASEHUYQyG3M_lJIik3o67BKkYdIQKCI/edit?usp=sharing"
+  },
+  {
+    "id": "buffer"
+  },
+  {
+    "id": "way",
+    "name": "WAY",
+    "description": "A platform providing contactless pay options for local restaraunts",
+    "msg": "Coming soon"
+  },
+  {
+    "id": "snap",
+    "name": "Snap Cliques",
+    "description": "A way to personalize Snapchat's Discover page",
+    "msg": "Read case study",
+    "url": "https://medium.com/@rpp62/snap-cliques-discover-you-10b4f220908f"
+  },
+  {
+    "id": "fallen-flame",
+    "name": "Fallen Flame",
+    "description": "A survival-adventure game that I helped design and develop",
+    "msg": "View game site",
+    "url": "http://en-ci-gdiac.coecis.cornell.edu/gallery/fallen_flame/"
+  },
+  {
+    "id": "patch",
+    "name": "Patch",
+    "description": "A mobile customer service plugin and an accompanying desktop app for developers to respond to reports",
+    "msg": "Coming soon"
+  },
+  {
+    "id": "eatery",
+    "name": "Eatery",
+    "description": "A mini user research case study on the Eatery App's user experience",
+    "msg": "Read case study",
+    "url": "https://medium.com/@rpp62/eatery-5e53860455a1"
+  },
+  {
+    "id": "meet",
+    "name": "Let's meet",
+    "description": "An app to coordinate meeting times between a group of people",
+    "msg": "Read case study",
+    "url": "https://medium.com/@rpp62/lets-meet-9330b6041528"
+  }
+]

@@ -1,0 +1,146 @@
+::selection {
+  background: #4d4d4d; /* WebKit/Blink Browsers */
+  color: #eeeeee; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #4d4d4d; /* WebKit/Blink Browsers */
+  color: #eee; /* WebKit/Blink Browsers */
+}
+
+/* CASE STUDY TEXT STYLES */
+.emphatic {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.heading {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.subheading {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.body {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.75;
+  color: #1e1e1e
+}
+
+.body3 {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.75;
+}
+
+.body2 {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.75;
+}
+
+ul.dashed {
+  padding-left: 0;
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -10px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+/* ANIMATIONS */
+/* .button {
+  background-color: #fff;
+  color: #ffffff;
+  transition: all .5s;
+}
+
+.button:hover {
+  background-color: #f4f4f4;
+} */
+
+.button {
+  transition: all 0.3s;
+  background-color: #fff;
+}
+
+.button:hover {
+  background-color: #d8d8d8;
+}
+
+.project .image{
+  opacity: 1;
+  transition: all .2s;
+}
+
+.project .text{
+  opacity: 0;
+  transition: all .2s;
+}
+
+.project:hover .image{
+  opacity: 0.1;
+}
+
+.project:hover .text{
+  opacity: 1;
+}
+
+.hoverTag {
+  opacity: 0;
+  transition: all .2s;
+}
+
+.hoverText:hover .hoverTag {
+  opacity: 1;
+}
+
+.social {
+  opacity: 1;
+  transition: all .2s;
+}
+
+.social:hover {
+  opacity: 0.2;
+}
+
+/* .test {
+  animation: fadIn 1s infinite;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    background-color: white;
+  }
+  100% {
+    opacity: #f4f4f4;
+  }
+} */
