@@ -26,7 +26,7 @@ function App(props) {
     <FadeIn transitionDuration="500">
       <div className="container" style={containerStyle}>
         <div className="container" style={containerStyle}>
-          <div style={sectionStyle}><Gallery cols="2" totalWidth="500" data={data} msg="motion"></Gallery></div>
+          <div style={sectionStyle}><Gallery cols="2" totalWidth="600" data={data} msg="motion"></Gallery></div>
         </div>
         <div style={sectionStyle}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out some of my other work"></Gallery></div>
       </div>

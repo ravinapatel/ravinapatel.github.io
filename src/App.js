@@ -13,13 +13,13 @@ import Footer from "./Components/Footer";
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 
+
 // TODO:
 // - rewrite case studies
 // - project link should depend on isInternal not square prop
 // ----------
 // - fun animations
 // - calculate actual height of columns in Gallery
-// - check responsiveness
 
 
 // chooses three projects from a dataset, prioritizing ones with urls and excluding
@@ -51,7 +51,7 @@ function App() {
       <Router>
         <div className="App">
           <Navbar></Navbar>
-          <Switch>
+          <Switch className="websiteBody">
             <Route path="/about" component={About} />
             <Route path="/resume" component={Resume} />
             <Route path="/art" render={(props) => <Art {...props} chooseMoreData={chooseMoreData} />} />

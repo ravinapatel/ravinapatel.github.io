@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Project from "./Project";
+import useWindowSize from "./useWindowSize";
 
 
 function App(props) {
-  // A component that displays a group of Project Components as a gallery
+  // A component that displays an array of project data as a gallery of Project Components 
 
   // Props:
   //   - cols               number of columns for the gallery
@@ -11,11 +12,18 @@ function App(props) {
   //   - data               array of project data
   //   - msg                title of gallery section
   //   - square             bool indicating whether project images should be squares
+  //   - padding            optional padding value
+  //   - totalWidthMobile   optional total width for mobile
+
+  // STATE
+  const [cols, setCols] = useState(props.cols);
+  const [totalWidth, setTotalWidth] = useState(props.totalWidth);
 
   // CONSTANTS
   const PADDING = props.padding != null ? props.padding : 20;
   var columns = [];
-  const width = (props.totalWidth - (props.cols) * PADDING) / props.cols;
+  var width = (totalWidth - (cols) * PADDING) / cols;
+  const window = useWindowSize();
 
   // Array of Project components
   const projects = props.data.map(item => < Project
@@ -29,16 +37,18 @@ function App(props) {
   />)
 
   //FUNCTIONS
-  // Initiazlies `columns` based on `cols`
+  // Initiazlies `columns` to be the correct size based on `cols`
   function columnsInit() {
-    for (var i = 0; i < props.cols; i++) {
+    for (var i = 0; i < cols; i++) {
       columns.push([]);
     }
   }
-  // Adds projects into `columns` in the correct (shortest) columns
+  // Adds each project into the `columns` array in the correct (shortest) column
   function placeProjects() {
     for (var i = 0; i < props.data.length; i++) {
-      columns[chooseColumn()].push(projects[i]);
+      if (!(cols == 1 && props.data[i].id == "buffer")) {
+        columns[chooseColumn()].push(projects[i]);
+      }
     }
   }
   // Finds the shortest column
@@ -53,16 +63,41 @@ function App(props) {
     }
     return col
   }
-
   // Future: should really return actual height of column, not number of elements
   function height(array) {
     return array.length
   }
 
+  // Custom Mobile Display
+  function mobileDisplay() {
+    if (window.width < 900 && totalWidth != props.totalWidthMobile) {
+      if (props.totalWidthMobile != null) {
+        setTotalWidth(props.totalWidthMobile)
+      }
+    }
+  }
+  // Adjust size of gallery according to window size
+  function responsiveDown() {
+    if (window.width < totalWidth) {
+      if (cols > 1) {
+        setCols(cols - 1)
+        setTotalWidth(totalWidth - width - 1.5 * PADDING)
+      }
+    }
+  }
+
+  // Adjust size of gallery according to window size
+  function responsiveUp() {
+    if (window.width > 900) {
+      setCols(props.cols)
+      setTotalWidth(props.totalWidth)
+    }
+  }
+
   // STYLING
   const containerStyle = {
     display: "flex",
-    width: Number(props.totalWidth)
+    width: Number(totalWidth)
   }
 
   const columnStyle = {
@@ -80,7 +115,7 @@ function App(props) {
     textAlign: "center",
     paddingBottom: PADDING,
     height: "100%",
-    width: Number(props.totalWidth),
+    width: Number(totalWidth),
     letterSpacing: "0.03em",
     fontSize: "18px",
     textDecoration: "none",
@@ -91,6 +126,9 @@ function App(props) {
   // SCRIPT
   columnsInit();
   placeProjects();
+  mobileDisplay();
+  responsiveDown();
+  // responsiveUp();
 
   var columnsComponents = columns.map(col =>
     <div className="column" style={columnStyle}>

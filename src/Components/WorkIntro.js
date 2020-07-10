@@ -1,7 +1,10 @@
 import React from 'react';
+import useWindowSize from "./useWindowSize";
 
 
 function Body() {
+
+  const window = useWindowSize();
 
   // STYLING
   const container = {
@@ -16,7 +19,8 @@ function Body() {
   }
 
   const content = {
-    flex: "0 0 500px",
+    // flex: "0 0 500px",
+    flex: window.width < 650 ? "0 0 80%" : "0 0 500px",
     textAlign: "center"
   }
 

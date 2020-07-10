@@ -10,21 +10,24 @@ function App() {
   //STYLING
   // Overall
   const HEIGHT = 150
-  const PADDING_TOP = 54
-  const PADDING_SIDES = 250
+  const MIDDLE_SPACING = 450
 
   const navStyle = {
+    textAlign: "center",
     width: "100%",
     height: HEIGHT,
     backgroundColor: "white",
+    // boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.03)"
   }
 
   // Left Menu Styling
   const menuLeft = {
-    verticalAlign: "center",
-    float: "left",
-    paddingTop: PADDING_TOP,
-    paddingLeft: PADDING_SIDES,
+    textAlign: "left",
+    lineHeight: "15px",
+    paddingRight: MIDDLE_SPACING,
+    display: "inline-block",
+    paddingTop: 10,
+    paddingLeft: 10
   }
 
   const nameStyle = {
@@ -32,30 +35,35 @@ function App() {
     letterSpacing: "0.03em",
     fontSize: "18px",
     textDecoration: "none",
-    color: "#000000"
+    color: "#000000",
+    width: "auto"
   }
 
   // Right Menu Styling
   const menuRight = {
-    verticalAlign: "center",
-    float: "right",
-    paddingTop: PADDING_TOP,
-    paddingRight: PADDING_SIDES,
+    display: "inline-block",
+    right: "0%",
+    height: HEIGHT
   }
 
   const menuList = {
     margin: "0",
+    padding: "0",
     height: "100%",
     listStyleType: "none"
   }
 
   const menuListItem = {
     display: "inline-block",
-    marginLeft: "25px",
+    marginLeft: "20px",
     height: "100%"
   }
 
   const menuLink = {
+    display: "flex",
+    alignItems: "center",
+    padding: "0 3px",
+    height: "100%",
     textTransform: "lowercase",
     letterSpacing: "0.03em",
     fontSize: "14px",
@@ -64,6 +72,10 @@ function App() {
   }
 
   const menuActiveLink = {
+    display: "flex",
+    alignItems: "center",
+    padding: "0 3px",
+    height: "100%",
     textTransform: "lowercase",
     letterSpacing: "0.03em",
     fontSize: "14px",
@@ -95,17 +107,14 @@ function App() {
         <div style={menuRight}>
           <ul style={menuList}>
             <li style={menuListItem} >
-              {/* <Link to="/" style={activePage == "work" ? menuActiveLink : menuLink}>work</Link> */}
               <NavLink exact to="/" style={menuLink} activeStyle={menuActiveLink} >work</NavLink>
             </li>
 
             <li style={menuListItem} >
-              {/* <Link to="/about" style={activePage == "about" ? menuActiveLink : menuLink}>about</Link> */}
               <NavLink to="/about" style={menuLink} activeStyle={menuActiveLink} >about</NavLink>
             </li>
 
             <li style={menuListItem} >
-              {/* <Link to="/resume" style={activePage == "resume" ? menuActiveLink : menuLink}>resume</Link> */}
               <NavLink to="/resume" style={menuLink} activeStyle={menuActiveLink} >resume</NavLink>
             </li>
           </ul>

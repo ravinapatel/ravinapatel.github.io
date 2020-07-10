@@ -19,7 +19,8 @@ const containerStyle = {
 const sectionStyle = {
   verticalAlign: "top",
   display: "inline-block",
-  padding: "50px"
+  paddingTop: "50px",
+  paddingBottom: "50px"
 }
 
 // RENDERING

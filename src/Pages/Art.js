@@ -21,20 +21,27 @@ const sectionStyle = {
   padding: "50px"
 }
 
+const moreStyle = {
+  verticalAlign: "top",
+  display: "inline-block",
+  paddingTop: "50px",
+  paddingBottom: "50px"
+}
+
 // RENDERING
 function App(props) {
   return (
     <FadeIn transitionDuration="500">
       <div className="container" style={containerStyle}>
         <div className="container" style={containerStyle}>
-          <div style={sectionStyle}><Gallery cols="2" totalWidth="450" data={lineData} msg="line"></Gallery></div>
+          <div style={sectionStyle}><Gallery cols="2" totalWidth="450" totalWidthMobile="250" data={lineData} msg="line"></Gallery></div>
           <div style={sectionStyle}>
             <Gallery cols="2" totalWidth="250" data={watercolorData} msg="watercolor"></Gallery>
             <div style={{ paddingTop: "100px" }}><Gallery cols="2" totalWidth="250" data={otherData} msg="other"></Gallery></div>
           </div>
         </div>
 
-        <div style={sectionStyle}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out some of my other work"></Gallery></div>
+        <div style={moreStyle}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out some of my other work"></Gallery></div>
       </div>
     </FadeIn>
   );
