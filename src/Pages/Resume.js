@@ -38,7 +38,7 @@ function Resume() {
         </div>
 
         <div style={imgStyle}>
-          <img src={me} alt="Oops! Resume not found. Please download it above to view it :)" width={isBigScreen ? "800px" : "95%"} class="img-responsive" alt="" align="center" />
+          <img src={me} alt="Oops! Resume not found. Please download it above to view it :)" width={isBigScreen ? "800px" : "97%"} class="img-responsive" alt="" align="center" />
         </div>
       </div >
     </FadeIn>
