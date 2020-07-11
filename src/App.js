@@ -60,7 +60,7 @@ function App() {
             <Route path="/motion" render={(props) => <Motion {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} />
             {/* must be last */}
-            <Route exact path="/" component={Work} />
+            <Route path="/" component={Work} />
           </Switch>
           <Footer></Footer>
         </div>
