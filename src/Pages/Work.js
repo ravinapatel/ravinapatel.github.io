@@ -32,8 +32,7 @@ function App() {
         <div className="container" style={containerStyle}>
           <div style={sectionStyle}><Gallery cols="2" totalWidth="800" padding="40" data={data} msg="work"></Gallery></div>
         </div>
-        <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="check out some other stuff I do" ></Gallery></div
-        >
+        {/* <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="check out some other stuff I do" ></Gallery></div> */}
       </div>
     </FadeIn>
   );
