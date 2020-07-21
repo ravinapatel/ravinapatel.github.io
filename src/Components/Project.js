@@ -43,6 +43,8 @@ function App(props) {
       case 'invaders': return require('../Images/portfolio/cs/invaders-gif.gif');
       case 'pixel': return require('../Images/portfolio/cs/pixel_gif_og.gif');
       case 'weather': return require('../Images/portfolio/cs/brella.png');
+      case 'memory': return require('../Images/portfolio/cs/memory.gif');
+      case 'critter': return require('../Images/portfolio/cs/critterworld.gif');
 
       // LINE ART
       case 'art': return require('../Images/portfolio/art/feels.jpg');

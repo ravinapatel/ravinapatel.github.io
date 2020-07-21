@@ -9,9 +9,11 @@ import '../../App.css';
 function Quote(props) {
 
   const blockquote = {
-    borderLeft: "10px solid",
+    borderLeft: "5px solid",
     borderColor: props.color,
-    padding: "0.5em 30px"
+    padding: "0.5em 30px",
+    marginTop: "40px",
+    marginBottom: "40px"
   }
 
   return (

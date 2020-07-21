@@ -94,7 +94,15 @@ function App() {
         <div style={text}>
           <NavLink exact to="/" style={menuLink} className={isOpen ? "visible" : "invisible"} onClick={handleClick}>work</NavLink>
           <NavLink to="/about" style={menuLink} className={isOpen ? "visible" : "invisible"} onClick={handleClick}>about</NavLink>
-          <NavLink to="/resume" style={menuLink} className={isOpen ? "visible" : "invisible"} onClick={handleClick}>resume</NavLink>
+          {/* <NavLink to="/resume" style={menuLink} className={isOpen ? "visible" : "invisible"} onClick={handleClick}>resume</NavLink> */}
+          <Link
+            to={"../../ravina-resume.pdf"}
+            target="_blank"
+            style={menuLink}
+            className={isOpen ? "visible" : "invisible"}
+            onClick={handleClick}>
+            resume
+          </Link>
         </div>
       </div>
 

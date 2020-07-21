@@ -1,13 +1,17 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
 import Work from "./Pages/Work";
 import About from "./Pages/About";
 import Art from "./Pages/Art";
 import Code from "./Pages/Code";
 import Motion from "./Pages/Motion";
-import Resume from "./Pages/Resume";
+
+import Template from "./Pages/Case Studies/Template";
 import Eatery from "./Pages/Case Studies/Eatery";
+import Exceed from "./Pages/Case Studies/Exceed";
 import Snap from "./Pages/Case Studies/Snap";
+
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -53,12 +57,14 @@ function App() {
           <Navbar></Navbar>
           <Switch className="websiteBody">
             <Route path="/about" component={About} />
-            <Route path="/resume" component={Resume} />
+            {/* <Route path="/resume" component={Resume} /> */}
             <Route path="/art" render={(props) => <Art {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
+            {/* <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}
             <Route path="/code" render={(props) => <Code {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/motion" render={(props) => <Motion {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} />
+            {/* <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} /> */}
             {/* must be last */}
             <Route path="/" component={Work} />
           </Switch>

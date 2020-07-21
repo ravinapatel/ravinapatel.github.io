@@ -7,34 +7,43 @@ import Title from "../../Images/portfolio/ux/title.png";
 import { ParallaxBanner } from 'react-scroll-parallax';
 import Gallery from "../../Components/Gallery";
 import uxData from "../../Data/uxData.json";
-
+import useWindowSize from "../../Components/useWindowSize";
+import './CaseStudy.css';
 
 
 // Case study on Snapchat's Discover page
+// Components:
+// BlockQuote
+
+// CSS:
+// tableContainer - table - tableCol
 
 // STYLING
 const COLOR = "#AC65F1"
-const SMALL_WIDTH = "50%"
-const BIG_WIDTH = "75%"
-const SECTION_SPACING = 100
+const WIDTH = 800
+const SECTION_SPACING = 50
 const ID = "snap"       // must match id in uxData
 
 const contentStyle = {
   textAlign: "center",
 }
 
-const smallSection = {
+const section = {
   display: "inline-block",
   paddingBottom: SECTION_SPACING,
   padding: SECTION_SPACING,
-  width: SMALL_WIDTH
+  width: WIDTH
 }
-
-const bigSection = {
-  display: "inline-block",
-  paddingBottom: SECTION_SPACING,
-  padding: SECTION_SPACING,
-  width: BIG_WIDTH
+const tableContainer = {
+  display: "inline-block"
+}
+const table = {
+  MsFlex: 1,  /* IE 10 */
+  display: "flex",
+  width: WIDTH
+}
+const tableCol = {
+  flex: 1,
 }
 
 // CONTENTS
@@ -56,8 +65,16 @@ const introData = [
 // RENDERING
 function Eatery(props) {
 
+  // RESPONSIVENESS
+  const window = useWindowSize();
+  var isBigScreen = window.width > 900
+  var isMediumScreen = window.width < 900
+  var isSmallScreen = window.width < 650
+
   return (
     <div style={contentStyle}>
+      <div style={{ width: 400, display: "inline-block", paddingBottom: 30 }} className="emphatic">This is what my project is about. This is what my project is
+          about. This is what my project is about.</div>
       <ParallaxBanner
         className="your-class"
         layers={[
@@ -71,22 +88,33 @@ function Eatery(props) {
           },
         ]}
         style={{
-          height: '500px',
+          height: 500,
+          width: 900,
+          left: (window.width - 950) / 2
         }}
       >
       </ParallaxBanner>
 
       {/* <img src={Cover} alt="Eatery cover image" width="100%"></img> */}
 
-      <div style={bigSection}>
-        <Intro
-          tagline="This is what my project is about. This is what my project is 
-          about. This is what my project is about. This is what my project is about. "
-          specData={introData}
-        ></Intro>
+      <div style={tableContainer}>
+        <div style={table}>
+          <div style={tableCol}>
+            <div className="subheading" >My Role</div>
+            <div className="body" >blah blah blah</div>
+          </div>
+          <div style={tableCol}>
+            <div className="subheading" >Team</div>
+            <div className="body" >blah blah blah</div>
+          </div>
+          <div style={tableCol}>
+            <div className="subheading" >Duration</div>
+            <div className="body" >blah blah blah</div>
+          </div>
+        </div>
       </div>
 
-      <div style={smallSection}>
+      <div style={section}>
         <div className="heading" style={{ color: "#000" }}>Background</div>
         <div className="body">
           People love to discover new content. We scroll through social media and stare at screens for hours to watch other people’s stuff.
@@ -104,7 +132,7 @@ function Eatery(props) {
         </div>
       </div>
 
-      <div style={smallSection}>
+      <div style={section}>
         <div className="heading" style={{ color: COLOR }}>Research</div>
         <div className="body">
           I set out to understand why people don’t use the Discover page to discover new content.
@@ -123,9 +151,7 @@ function Eatery(props) {
           </ol>
           I found that the problem was with the content of stories and their social elements, rather than with their ordering as I originally hypothesized.
         </div>
-      </div>
 
-      <div style={smallSection}>
         <BlockQuote
           color={COLOR}
           text="People want to find interesting media to share with friends,
@@ -134,7 +160,7 @@ function Eatery(props) {
         ></BlockQuote>
       </div>
 
-      <div style={smallSection}>
+      <div style={section}>
         <div className="heading" style={{ color: COLOR }}>Ideation</div>
         <div className="body">
           With two of my friends, I set out to find possible solutions to the new
@@ -166,7 +192,7 @@ function Eatery(props) {
         </div>
       </div>
 
-      <div style={smallSection}>
+      <div style={section}>
         <div className="heading" style={{ color: COLOR }}>Solution</div>
         <div className="body">
           I decided to move forward with Public Group Stories and re-branded
@@ -184,7 +210,7 @@ function Eatery(props) {
 
       </div>
       </div>
-      <div style={smallSection}>
+      <div style={section}>
         <div className="emphatic" style={{ color: "#000" }}>What do people want to know before joining a clique?</div>
         <div className="body">
           A few other platforms have similar features. They tend to include the

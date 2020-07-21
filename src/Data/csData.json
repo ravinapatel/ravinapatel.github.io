@@ -2,7 +2,7 @@
   {
     "id": "connect4",
     "name": "Connect Four AI",
-    "description": "Built an AI and GUI for the classic Connect Four game",
+    "description": "An AI and GUI for the classic Connect Four game",
     "msg": "View repo",
     "url": "https://github.com/ravinapatel/Connect-Four-AI"
   },
@@ -12,6 +12,20 @@
     "description": "A survival-adventure game that I helped design and develop",
     "msg": "View game site",
     "url": "http://en-ci-gdiac.coecis.cornell.edu/gallery/fallen_flame/"
+  },
+  {
+    "id": "critter",
+    "name": "Critterworld",
+    "description": "An evolution simulator implemented as a networked Java service with a GUI. Created a parser and interpreter for a custom language that dictates species rules and a fault injector to simulate mutations and evolution.",
+    "msg": null,
+    "url": null
+  },
+  {
+    "id": "memory",
+    "name": "Color Memory Game",
+    "description": "A colorful memory game built on the FDRM-K64F board with a user interface embedded through LED signals",
+    "msg": "Learn more",
+    "url": "https://pages.github.coecis.cornell.edu/ece3140-sp2020/rpp62-tak62/"
   },
   {
     "id": "fractals",

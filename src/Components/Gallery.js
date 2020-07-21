@@ -76,6 +76,7 @@ function App(props) {
       }
     }
   }
+
   // Adjust size of gallery according to window size
   function responsiveDown() {
     if (window.width < totalWidth) {

@@ -115,7 +115,13 @@ function App() {
             </li>
 
             <li style={menuListItem} >
-              <NavLink to="/resume" style={menuLink} activeStyle={menuActiveLink} >resume</NavLink>
+              {/* <NavLink to="/resume" style={menuLink} activeStyle={menuActiveLink} >resume</NavLink> */}
+              <Link
+                to={"../../ravina-resume.pdf"}
+                target="_blank"
+                style={menuLink}>
+                resume
+              </Link>
             </li>
           </ul>
         </div>

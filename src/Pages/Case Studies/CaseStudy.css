@@ -1,0 +1,111 @@
+/* --------------------- EMPHASIS --------------------- */
+
+.emphatic {
+  text-align: left;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  font-size: 22px;
+  font-weight: normal;
+  text-decoration: none;
+  padding-bottom: 10px;
+  color: #000
+}
+
+.emphaticBlockText {
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  font-size: 24px;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 40px;
+  color: #000
+}
+
+.emphaticBlockSection {
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  font-size: 22px;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #f6f6f6;
+  color: #000
+}
+
+.bulletList {
+  padding-left: 20px;
+}
+
+/* ----------------------- LISTS ----------------------- */
+
+/* Dashed list */
+ul.dashed {
+  padding-left: 0;
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -20px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+/* -------------------- TEXT STYLES -------------------- */
+
+.heading {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: #000
+
+}
+
+.subheading {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: #000
+
+}
+
+.body {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.75;
+  color: #4d4d4d
+}
+
+.body3 {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.75;
+}
+
+.body2 {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.75;
+}
