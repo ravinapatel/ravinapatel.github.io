@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d87ad0f076f2949fbc02a58f5c015741",
+    "revision": "28b0830b3c901aea27f85daf20ca0daa",
     "url": "/index.html"
   },
   {
-    "revision": "f96b49b52e171bff4f5d",
-    "url": "/static/css/main.334461a3.chunk.css"
+    "revision": "6b7500cf38d3c8a9dc6c",
+    "url": "/static/css/main.fa8c3fb5.chunk.css"
   },
   {
-    "revision": "f9e5ddcc8822a9895f49",
-    "url": "/static/js/2.d8b127af.chunk.js"
+    "revision": "8474f0b441f02fab3cdd",
+    "url": "/static/js/2.320d07a1.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/static/js/2.d8b127af.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.320d07a1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f96b49b52e171bff4f5d",
-    "url": "/static/js/main.851ad0c1.chunk.js"
+    "revision": "6b7500cf38d3c8a9dc6c",
+    "url": "/static/js/main.4638a70f.chunk.js"
   },
   {
     "revision": "216563cf50e7c35b2f13",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "13ba5517444d4303b12e44c292de307e",
     "url": "/static/media/Mistletoe.13ba5517.jpg"
+  },
+  {
+    "revision": "2e09f5a7be567097be45848d9fc66d4c",
+    "url": "/static/media/Ravina.2e09f5a7.jpg"
   },
   {
     "revision": "51cc26d3a314b6ace43df0b058a57dfb",
@@ -84,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bouncy-fruit.3b2bc84e.gif"
   },
   {
-    "revision": "ae8ef26b86bdac146475a9d3a82182dc",
-    "url": "/static/media/brella.ae8ef26b.png"
+    "revision": "c71726499c71642f3d86b433630e02d0",
+    "url": "/static/media/brella.c7172649.png"
   },
   {
     "revision": "c15557118485fee9d96778b0a2a6e397",
@@ -94,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2a4987f4a62aa983e8e646291d4417d3",
     "url": "/static/media/clock-tower.2a4987f4.jpg"
+  },
+  {
+    "revision": "c5625afaf197ff7c7fb36f908b9b4e51",
+    "url": "/static/media/content.c5625afa.png"
   },
   {
     "revision": "7141270cc33b9dc1815e13af13d9c5f8",
@@ -136,6 +144,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/lexi.454cf2c4.jpg"
   },
   {
+    "revision": "a53d84ff1c3f69eed786963d5c91c333",
+    "url": "/static/media/market-research.a53d84ff.png"
+  },
+  {
     "revision": "bb8d821ea0f0336140102ea71b57a2f1",
     "url": "/static/media/meet-banner.bb8d821e.png"
   },
@@ -148,16 +160,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/moonlight.cb584d03.jpg"
   },
   {
+    "revision": "71b009b3a133a627a51f3df334eed60d",
+    "url": "/static/media/motivation.71b009b3.png"
+  },
+  {
+    "revision": "583c6f094b63f1bca4db5eb22a42f547",
+    "url": "/static/media/pain-points.583c6f09.png"
+  },
+  {
     "revision": "2562aa94ecfc671d62d5225549f92d16",
     "url": "/static/media/patch.2562aa94.png"
+  },
+  {
+    "revision": "e93b1b6bdce99603b7c72b2e3f198ded",
+    "url": "/static/media/personalization.e93b1b6b.png"
   },
   {
     "revision": "78cec6eee2090beeb12a1a15dd3a8c25",
     "url": "/static/media/pixel_gif_og.78cec6ee.gif"
   },
   {
-    "revision": "b984aa3565502cc50757122759fe308e",
-    "url": "/static/media/ravina-resume.b984aa35.png"
+    "revision": "00e308c099db3f7bd53f7ac75c6e1551",
+    "url": "/static/media/ravina-resume.00e308c0.png"
   },
   {
     "revision": "0ae7037f86fa04b9af2ff45ce33af6ce",
@@ -176,10 +200,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/smokey-cabin.877850b1.gif"
   },
   {
-    "revision": "6964bc47ae6b03b4561a4cd8158a2088",
-    "url": "/static/media/snap-banner-background.6964bc47.png"
-  },
-  {
     "revision": "470cb12f6e811d7e438675b6b3da5de6",
     "url": "/static/media/snap-banner.470cb12f.png"
   },
@@ -192,12 +212,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/starry-night.a0234ca2.gif"
   },
   {
-    "revision": "60f3b581f0b17bc8375e6a4c75658d3b",
-    "url": "/static/media/timeline.60f3b581.png"
+    "revision": "25086ff24531ba6ebfe431d77eae195c",
+    "url": "/static/media/time.25086ff2.png"
   },
   {
-    "revision": "90d21883ff8c73e020ac0b197b675c7a",
-    "url": "/static/media/title.90d21883.png"
+    "revision": "60f3b581f0b17bc8375e6a4c75658d3b",
+    "url": "/static/media/timeline.60f3b581.png"
   },
   {
     "revision": "a09d4fae1edb5023d0746a7ee62d7187",
