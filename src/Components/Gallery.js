@@ -34,6 +34,7 @@ function App(props) {
     url={item.url}
     width={width}
     square={props.square}
+    isInternal={item.isInternal}
   />)
 
   //FUNCTIONS

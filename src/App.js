@@ -20,6 +20,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 // TODO:
 // - rewrite case studies
+// - while loading: {loading screen} else: <FadeIn></FadeIn>
 // - project link should depend on isInternal not square prop
 // ----------
 // - fun animations
@@ -57,14 +58,17 @@ function App() {
           <Navbar></Navbar>
           <Switch className="websiteBody">
             <Route path="/about" component={About} />
-            {/* <Route path="/resume" component={Resume} /> */}
-            <Route path="/art" render={(props) => <Art {...props} chooseMoreData={chooseMoreData} />} />
-            {/* <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} /> */}
-            {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}
             <Route path="/code" render={(props) => <Code {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/motion" render={(props) => <Motion {...props} chooseMoreData={chooseMoreData} />} />
-            {/* <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} /> */}
-            {/* <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/resume" component={Resume} /> */}
+            <Route path="/art" render={(props) => <Art {...props} chooseMoreData={chooseMoreData} />} />
+            <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
+
+            {/* Incomplete Articles (comment out when pushing) */}
+            {/* <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
+            <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} />
+            <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} /> */}
+
             {/* must be last */}
             <Route path="/" component={Work} />
           </Switch>

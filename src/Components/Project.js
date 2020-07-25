@@ -149,7 +149,7 @@ function App(props) {
           </div>
         </div>
 
-        <a href={props.url} target={(props.square == "true") ? "" : "_blank"}>
+        <a href={props.url} target={(props.isInternal == "true") ? "" : "_blank"}>
           <img
             src={importImage(props.id)}
             alt="Project thumbnail"

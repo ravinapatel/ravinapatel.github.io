@@ -4,7 +4,8 @@
     "name": "Exceed",
     "description": "A way for professionals to continue growing in their industry. Full case study coming soon.",
     "msg": "View presentation",
-    "url": "https://docs.google.com/presentation/d/1QC8Xr-fdPhGcASEHUYQyG3M_lJIik3o67BKkYdIQKCI/edit?usp=sharing"
+    "url": "./exceed",
+    "isInternal": "true"
   },
   {
     "id": "buffer"
