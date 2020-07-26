@@ -4,6 +4,7 @@ import git from '../Images/about/git.png';
 import insta from '../Images/about/insta.png';
 import linkedIn from '../Images/about/linkedIn.png';
 import timeline from '../Images/about/timeline.png';
+import Button from "../Components/Button";
 import FadeIn from 'react-fade-in';
 import useWindowSize from "../Components/useWindowSize";
 
@@ -31,6 +32,7 @@ function App() {
   // Overall
   const MIDDLE_SPACING = 70
   const SECTION_SPACING = 70
+  const GREY = "#4d4d4d"
 
   const p = {
     paddingBottom: "5px",
@@ -124,12 +126,12 @@ function App() {
           <p style={{ textAlign: "center", fontWeight: "normal", paddingTop: 10 }} className="body">nice to meet you!</p>
 
           <div style={isBigScreen ? introLeft : middleScreenSection}>
-            <p style={p} className="body"> I’m Ravina, a junior studying Computer Science at Cornell
-            University. I have always loved creating and learning. Designing for
+            <p style={p} className="body2"> I’m Ravina, a junior studying Computer Science at Cornell
+            University. I have always loved <b>creating</b> and <b>learning</b>. Designing for
             challenging problems allows me to create enjoyable experience for people,
              while continuously learning new skills.</p>
 
-            <p style={p} className="body">
+            <p style={p} className="body2">
               If you would like to chat, feel free to email me at
             <div
                 className="hoverText"
@@ -144,7 +146,7 @@ function App() {
           </div>
 
           <div style={isBigScreen ? introRight : { display: "none" }}>
-            <p className="heading">Previously</p>
+            <p className="subheading" style={{ color: GREY }}>Previously</p>
             <p style={p} className="body3">
               <div style={bulletList}>
                 <ul className="dashed">
@@ -163,6 +165,10 @@ function App() {
                     target="_blank">Society of Women in Engineering</a> | Newsletter Designer</li>
                 </ul>
               </div>
+              <Button
+                text="View resume"
+                url="../../ravina-resume.pdf"
+              ></Button>
             </p>
 
           </div>

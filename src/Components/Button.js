@@ -12,17 +12,15 @@ function Button(props) {
   // animation styling is in ../App.css
   const button = {
     display: "inline-block",
-    boxShadow: "0px 6px 10px rgba(0, 0, 0, 0.05)",
-    borderRadius: "2px",
-    padding: "1em 30px",
-    color: "#4d4d4d"
+    border: "2px solid rgba(77, 77, 77, 0.2)",
+    borderRadius: "5px",
+    padding: "0.75em 20px"
   }
 
   return (
     <Link
       to={props.url}
       target="_blank"
-      download
       style={{ textDecoration: "none", color: "#373737", fontSize: "14px" }}>
 
       <div className="button" style={button}>{props.text}</div>

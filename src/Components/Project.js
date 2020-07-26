@@ -7,7 +7,7 @@ import '../App.css';
 // Props:
 //   - name
 //   - description
-//   - img
+//   - id
 //   - msg
 //   - url
 //   - width

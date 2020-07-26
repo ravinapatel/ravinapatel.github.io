@@ -66,11 +66,13 @@ ul.dashed > li:before {
 
 .button {
   transition: all 0.3s;
+  color: #4d4d4d;
   background-color: #fff;
 }
 
 .button:hover {
-  background-color: #d8d8d8;
+  color: #fff;
+  background-color: #4d4d4d;
 }
 
 .project .image{

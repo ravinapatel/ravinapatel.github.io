@@ -2,8 +2,8 @@
   {
     "id": "exceed",
     "name": "Exceed",
-    "description": "A way for professionals to continue growing in their industry. Full case study coming soon.",
-    "msg": "View presentation",
+    "description": "A way for professionals to continue growing in their industry",
+    "msg": "Read case study",
     "url": "./exceed",
     "isInternal": "true"
   },
@@ -37,17 +37,13 @@
     "msg": "Coming soon"
   },
   {
+    "id": "buffer"
+  },
+  {
     "id": "eatery",
     "name": "Eatery",
     "description": "A mini user research case study on the Eatery App's user experience",
     "msg": "Read case study",
     "url": "https://medium.com/@rpp62/eatery-5e53860455a1"
-  },
-  {
-    "id": "meet",
-    "name": "Let's meet",
-    "description": "An app to coordinate meeting times between a group of people",
-    "msg": "Read case study",
-    "url": "https://medium.com/@rpp62/lets-meet-9330b6041528"
   }
 ]
