@@ -144,6 +144,7 @@ function App(props) {
             <Button
               text="View work"
               url="./work"
+              isInternal="true"
             ></Button>
           </div>
           <div style={sectionStyle}>

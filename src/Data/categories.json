@@ -10,7 +10,7 @@
   {
     "id": "code",
     "name": "Programming",
-    "description": "<p> Sometimes I like to see my projects to development </p>",
+    "description": "<div> Sometimes I like to see my projects to development </div>",
     "msg": null,
     "url": "/code",
     "isInternal": "true"

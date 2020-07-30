@@ -5,6 +5,7 @@ import '../App.css';
 // PROPS
 // - text
 // - url
+// - isInternal
 
 function Button(props) {
 
@@ -18,13 +19,13 @@ function Button(props) {
   }
 
   return (
-    <Link
-      to={props.url}
-      target="_blank"
+    <a
+      href={props.url}
+      target={(props.isInternal == "true") ? "" : "_blank"}
       style={{ textDecoration: "none", color: "#373737", fontSize: "14px" }}>
 
       <div className="button" style={button}>{props.text}</div>
-    </Link>
+    </a>
   );
 }
 
