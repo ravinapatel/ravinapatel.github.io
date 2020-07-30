@@ -3,6 +3,8 @@ import me from '../Images/about/about-img.png';
 import git from '../Images/about/git.png';
 import insta from '../Images/about/insta.png';
 import linkedIn from '../Images/about/linkedIn.png';
+import mail from '../Images/about/mail.png';
+import resume from '../Images/about/resume.png';
 import timeline from '../Images/about/timeline.png';
 import Button from "../Components/Button";
 import FadeIn from 'react-fade-in';
@@ -142,25 +144,30 @@ function App(props) {
         <div style={containerStyle}>
           <div style={sectionStyle}>
             <Button
-              text="View work"
+              text="view work"
               url="./work"
               isInternal="true"
             ></Button>
           </div>
           <div style={sectionStyle}>
             <Button
-              text="View resume"
+              text="view resume"
               url="../../ravina-resume.pdf"
             ></Button>
           </div>
 
           <div style={{ display: "block", paddingTop: 30 }}>
-            <a href="https://github.com/ravinapatel" target="_blank">
-              <img src={git} alt="github" width={"20px"} className="social" align="center" /></a>
-            <a href="https://www.instagram.com/ravinart/" target="_blank">
-              <img src={insta} alt="insta" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+            <a href="mailto: rpp62@cornell.edu" target="_blank">
+              <img src={mail} alt="email" width={"20px"} className="social" align="center" /></a>
             <a href="https://www.linkedin.com/in/ravinapatel0/" target="_blank">
               <img src={linkedIn} alt="linkedIn" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+            <a href="https://www.instagram.com/ravinart/" target="_blank">
+              <img src={insta} alt="insta" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+            <a href="https://github.com/ravinapatel" target="_blank">
+              <img src={git} alt="github" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+            <a href="../../ravina-resume.pdf" target="_blank">
+              <img src={resume} alt="resume" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+
           </div>
 
         </div>

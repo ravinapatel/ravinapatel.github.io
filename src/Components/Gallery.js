@@ -114,14 +114,8 @@ function App(props) {
   }
 
   const titleStyle = {
-    textAlign: "center",
-    paddingBottom: PADDING,
-    height: "100%",
-    width: Number(totalWidth),
-    letterSpacing: "0.03em",
-    fontSize: "18px",
-    textDecoration: "none",
-    color: "#000000"
+    paddingBottom: 20,
+    width: Number(totalWidth)
   }
 
 

@@ -83,8 +83,7 @@ function Eatery(props) {
         {/* Intro */}
         <div style={section}>
           <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60 }} className="emphatic">
-            Snap Cliques allows people to find communities where they can discover
-            and share more content related to their interests.
+            Discover and share more content related to your interests.
         </div>
 
           <img src={Cover} alt="" width={WIDTH} ></img>
@@ -96,8 +95,8 @@ function Eatery(props) {
                 <div className="body" >User research, UI design, Prototyping, User testing</div>
               </div>
               <div style={tableColFinal}>
-                <div className="subheading" >Duration</div>
-                <div className="body" >4 months</div>
+                <div className="subheading" >Timeline</div>
+                <div className="body" >Fall 2019, 4 months</div>
               </div>
             </div>
           </div>

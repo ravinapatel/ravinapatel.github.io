@@ -4,6 +4,7 @@ import Intro from "../Components/WorkIntro";
 import data from "../Data/uxData.json";
 import categoriesData from "../Data/categories.json";
 import FadeIn from 'react-fade-in';
+import Button from "../Components/Button";
 
 // CONTENT
 // data for the "check out more of my projects section"
@@ -23,6 +24,22 @@ const sectionStyle = {
   paddingBottom: "50px"
 }
 
+const lastSectionStyle = {
+  display: "block",
+  paddingTop: "50px",
+  paddingBottom: "50px"
+}
+
+const button = {
+  display: "inline-block",
+  padding: 10
+}
+
+const titleStyle = {
+  paddingBottom: 20,
+  display: "block"
+}
+
 // RENDERING
 function App() {
   return (
@@ -32,7 +49,23 @@ function App() {
         <div className="container" style={containerStyle}>
           <div style={sectionStyle}><Gallery cols="2" totalWidth="800" padding="40" data={data} msg="work"></Gallery></div>
         </div>
-        <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="check out some other stuff I do" ></Gallery></div>
+        <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="play" ></Gallery></div>
+
+        <div style={lastSectionStyle}>
+          <div className="title" style={titleStyle}>like what you see?</div>
+          <div style={button}>
+            <Button
+              text="contact me"
+              url="mailto: rpp62@cornell.edu"
+            ></Button>
+          </div>
+          <div style={button}>
+            <Button
+              text="view resume"
+              url="../../ravina-resume.pdf"
+            ></Button>
+          </div>
+        </div>
       </div>
     </FadeIn>
   );
