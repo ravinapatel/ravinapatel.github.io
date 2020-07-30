@@ -118,7 +118,7 @@ function App(props) {
             learn and grow and keep up with recent events via short snackable content
             with a consistently high quality bar. However, most current platforms
             are geared towards long-term through courses and reading.
-        </div>
+          </div>
         </div>
 
         {/* Research */}
@@ -192,8 +192,6 @@ function App(props) {
         </div >
 
         {/* Building the Solution */}
-        {/* <div className="heading" style={{ color: COLOR, width: WIDTH, marginLeft: PADDING, marginRight: PADDING }}>Building the Solution</div> */}
-
         <div style={section}>
           <div className="heading" style={{ color: COLOR }}>Building the Solution</div>
           <div className="body" >
@@ -436,7 +434,7 @@ function App(props) {
         {/* Reflection */}
         <div style={section}>
           <div className="heading" style={{ color: COLOR }}>Reflection</div>
-          <div className="body" style={{ width: "70%" }}>
+          <div className="body" style={{ width: isSmallScreen ? "100%" : "70%" }}>
             Working on this projects was really exciting because the target user demographic
             was completely different from myself and my usual circle. I had to rely fully
             on user interviews and research to put myself in the shoes of the user.

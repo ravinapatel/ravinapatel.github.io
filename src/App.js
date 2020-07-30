@@ -63,11 +63,11 @@ function App() {
             {/* <Route path="/resume" component={Resume} /> */}
             <Route path="/art" render={(props) => <Art {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
+            <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
 
             {/* Incomplete Articles (comment out when pushing) */}
-            {/* <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} /> */}
 
             {/* must be last */}
             <Route path="/" component={Work} />

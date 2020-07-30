@@ -21,7 +21,8 @@
     "name": "Snap Cliques",
     "description": "A way to personalize Snapchat's Discover page",
     "msg": "Read case study",
-    "url": "https://medium.com/@rpp62/snap-cliques-discover-you-10b4f220908f"
+    "url": "./snap-cliques",
+    "isInternal": "true"
   },
   {
     "id": "fallen-flame",

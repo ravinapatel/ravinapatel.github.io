@@ -106,15 +106,15 @@ function App() {
         {/* Nav Links */}
         <div style={menuRight}>
           <ul style={menuList}>
-            <li style={menuListItem} >
+            <li className="link" style={menuListItem} >
               <NavLink exact to="/" style={menuLink} activeStyle={menuActiveLink} >work</NavLink>
             </li>
 
-            <li style={menuListItem} >
+            <li className="link" style={menuListItem} >
               <NavLink to="/about" style={menuLink} activeStyle={menuActiveLink} >about</NavLink>
             </li>
 
-            <li style={menuListItem} >
+            <li className="link" style={menuListItem} >
               {/* <NavLink to="/resume" style={menuLink} activeStyle={menuActiveLink} >resume</NavLink> */}
               <Link
                 to={"../../ravina-resume.pdf"}

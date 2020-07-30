@@ -14,25 +14,29 @@ function Body() {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: "70px",
+    paddingTop: "50px",
     paddingBottom: "70px"
   }
 
   const content = {
-    // flex: "0 0 500px",
     flex: window.width < 650 ? "0 0 80%" : "0 0 500px",
     textAlign: "center"
   }
 
   const body = {
-    fontSize: "16px",
+    fontSize: "18px",
+    letterSpacing: "0.03em"
+  }
+
+  const body2 = {
     letterSpacing: "0.03em"
   }
 
   const title = {
     fontSize: "20px",
     letterSpacing: "0.03em",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    paddingBottom: 20
   }
 
   // RENDERING
@@ -40,7 +44,8 @@ function Body() {
     <div className="container" style={container}>
       <div style={content}>
         <p style={title}>hi, I'm ravina!</p>
-        <p style={body}>product designer @cornell university. creating delightful experiences to improve quality of life :)</p>
+        <p style={body}>product designer @cornell university</p>
+        <p style={body}>creating <div className="rainbow" style={body2} >delightful</div> experiences <br></br> to improve quality of life :)</p>
       </div>
     </div >
   );

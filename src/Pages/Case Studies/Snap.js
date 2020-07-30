@@ -1,66 +1,27 @@
 import React from 'react';
 import BlockQuote from "../../Components/case_study_components/blockQuote";
-import Intro from "../../Components/case_study_components/intro";
-import Cover from "../../Images/portfolio/ux/snap-banner.png";
-import CoverBackground from "../../Images/portfolio/ux/snap-banner-background.png";
-import Title from "../../Images/portfolio/ux/title.png";
-import { ParallaxBanner } from 'react-scroll-parallax';
 import Gallery from "../../Components/Gallery";
 import uxData from "../../Data/uxData.json";
+import FadeIn from 'react-fade-in';
 import useWindowSize from "../../Components/useWindowSize";
 import './CaseStudy.css';
 
+// IMAGES
+
+import Cover from "../../Images/portfolio/ux/snap-banner.png";
+import currentDiscover from "../../Images/portfolio/ux/snap/current-discover.PNG";
+import quotes from "../../Images/portfolio/ux/snap/quotes.png";
+import trendsInsights from "../../Images/portfolio/ux/snap/trends-insights.png";
+import brainstorming from "../../Images/portfolio/ux/snap/brainstorming.png";
+import ideas from "../../Images/portfolio/ux/snap/ideas.png";
+import mockup from "../../Images/portfolio/ux/snap/mockup.jpg";
+import infoCard from "../../Images/portfolio/ux/snap/info-card.png";
+import iterations from "../../Images/portfolio/ux/snap/iterations.png";
+import cliquesSection from "../../Images/portfolio/ux/snap/cliques-section.png";
+import finalFlow from "../../Images/portfolio/ux/snap/final-flow.png";
+
 
 // Case study on Snapchat's Discover page
-// Components:
-// BlockQuote
-
-// CSS:
-// tableContainer - table - tableCol
-
-// STYLING
-const COLOR = "#AC65F1"
-const WIDTH = 800
-const SECTION_SPACING = 50
-const ID = "snap"       // must match id in uxData
-
-const contentStyle = {
-  textAlign: "center",
-}
-
-const section = {
-  display: "inline-block",
-  paddingBottom: SECTION_SPACING,
-  padding: SECTION_SPACING,
-  width: WIDTH
-}
-const tableContainer = {
-  display: "inline-block"
-}
-const table = {
-  MsFlex: 1,  /* IE 10 */
-  display: "flex",
-  width: WIDTH
-}
-const tableCol = {
-  flex: 1,
-}
-
-// CONTENTS
-const introData = [
-  {
-    title: "My Role",
-    body: "UX Researcher, UI Designer, Motion Designer",
-  },
-  {
-    title: "My Team",
-    body: "Riya Singh, Aarushi Parashar, Tushar Khan",
-  },
-  {
-    title: "Timeline",
-    body: "2 years",
-  },
-];
 
 // RENDERING
 function Eatery(props) {
@@ -69,189 +30,352 @@ function Eatery(props) {
   const window = useWindowSize();
   var isBigScreen = window.width > 900
   var isMediumScreen = window.width < 900
-  var isSmallScreen = window.width < 650
+  var isSmallScreen = window.width < 700
+
+  // STYLING
+  const COLOR = "#AC65F1"
+  const GREY = "#9a9a9a"
+  const WIDTH = isBigScreen ? 800 : "90%"
+  const PADDING = (window.width - WIDTH) / 2
+  const SECTION_SPACING = 50
+  const ID = "snap"       // must match the project id in uxData
+
+  const contentStyle = {
+    textAlign: "center",
+    overflow: "hidden"
+  }
+
+  const section = {
+    display: "inline-block",
+    paddingBottom: SECTION_SPACING,
+    paddingTop: SECTION_SPACING,
+    width: WIDTH,
+    marginLeft: PADDING,
+    marginRight: PADDING
+  }
+  const tableContainer = {
+    display: "inline-block",
+    marginTop: 30,
+    marginBottom: 30
+  }
+  const table = {
+    MsFlex: 1,  /* IE 10 */
+    display: isSmallScreen ? "block" : "flex",
+    width: WIDTH
+  }
+  const tableCol = {
+    flex: 1,
+    paddingRight: isSmallScreen ? 0 : 60, paddingBottom: isSmallScreen ? 60 : 0,
+  }
+  const tableColFinal = {
+    flex: 1,
+  }
+  const link = {
+    color: "#ababab",
+    textDecoration: "none",
+    cursor: "pointer"
+  }
 
   return (
-    <div style={contentStyle}>
-      <div style={{ width: 400, display: "inline-block", paddingBottom: 30 }} className="emphatic">This is what my project is about. This is what my project is
-          about. This is what my project is about.</div>
-      <ParallaxBanner
-        className="your-class"
-        layers={[
-          {
-            image: CoverBackground,
-            amount: 0.9,
-          },
-          {
-            image: Title,
-            amount: 0.3,
-          },
-        ]}
-        style={{
-          height: 500,
-          width: 900,
-          left: (window.width - 950) / 2
-        }}
-      >
-      </ParallaxBanner>
+    <FadeIn transitionDuration="500">
+      <div style={contentStyle}>
 
-      {/* <img src={Cover} alt="Eatery cover image" width="100%"></img> */}
+        {/* Intro */}
+        <div style={section}>
+          <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60 }} className="emphatic">
+            Snap Cliques allows people to find communities where they can discover
+            and share more content related to their interests.
+        </div>
 
-      <div style={tableContainer}>
-        <div style={table}>
-          <div style={tableCol}>
-            <div className="subheading" >My Role</div>
-            <div className="body" >blah blah blah</div>
-          </div>
-          <div style={tableCol}>
-            <div className="subheading" >Team</div>
-            <div className="body" >blah blah blah</div>
-          </div>
-          <div style={tableCol}>
-            <div className="subheading" >Duration</div>
-            <div className="body" >blah blah blah</div>
+          <img src={Cover} alt="" width={WIDTH} ></img>
+
+          <div style={tableContainer}>
+            <div style={table}>
+              <div style={tableCol}>
+                <div className="subheading" >My Roles</div>
+                <div className="body" >User research, UI design, Prototyping, User testing</div>
+              </div>
+              <div style={tableColFinal}>
+                <div className="subheading" >Duration</div>
+                <div className="body" >4 months</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div style={section}>
-        <div className="heading" style={{ color: "#000" }}>Background</div>
-        <div className="body">
-          People love to discover new content. We scroll through social media and stare at screens for hours to watch other people’s stuff.
-          Yet, people find Snapchat’s For You section overwhelmingly “annoying” because:
-          <ol>
-            <li>
-              The discover stories don’t align with their interests
-            </li>
-            <li>
-              They have no way of telling Snapchat exactly what they want to see
-            </li>
-          </ol>
-          How might Snapchat show people new content that they’re interested in?
+        {/* Background */}
+        <div style={section}>
+          <div className="heading" style={{ color: COLOR }}>Background</div>
+          <div className="body" style={{ width: isSmallScreen ? "100%" : "70%" }}>
+            People love to discover new content. We scroll through social media and
+            stare at screens for hours to watch other people’s stuff. Yet, people
+            find Snapchat’s For You section overwhelmingly “annoying” because:
+            <ol>
+              <li>
+                The discover stories don’t align with their interests
+              </li>
+              <li>
+                They have no way of telling Snapchat exactly what they want to see
+              </li>
+            </ol>
 
-        </div>
-      </div>
-
-      <div style={section}>
-        <div className="heading" style={{ color: COLOR }}>Research</div>
-        <div className="body">
-          I set out to understand why people don’t use the Discover page to discover new content.
-          My main takeaways from user interviews were:
-          <ol>
-            <li>
-              People like watching what they’re already interested in
-              <br></br>
-              “I use it for interests like sports or music”
-            </li>
-            <li>
-              People use the Friends section to stay engaged with what their friends are up to
-              <br></br>
-              “I watch stories to keep up with friends’ shenanigans”
-            </li>
-          </ol>
-          I found that the problem was with the content of stories and their social elements, rather than with their ordering as I originally hypothesized.
+            <div className="emphaticBlockSection" style={{ width: 400, textAlign: "center", display: "inline-block", }}>
+              How might we show people new content that they’re interested in?
+            </div>
+          </div>
         </div>
 
-        <BlockQuote
-          color={COLOR}
-          text="People want to find interesting media to share with friends,
-            but they can’t because Snapchat does not know what users are interested
-            in and Discover stories don’t foster social interactions."
-        ></BlockQuote>
-      </div>
+        {/* Research */}
+        <div style={section}>
+          <div style={tableContainer}>
+            <div className="heading" style={{ color: COLOR }}>Research</div>
+            <div style={table}>
+              <div style={tableCol}>
+                <div className="emphatic" style={{ color: "#000" }}><b>Why don't people discover on the Discover page?</b></div>
+                <div className="body">
+                  I set out to understand why people don’t use the Discover page to
+                  discover new content. I conducted user interviews with several Snapchat
+                  users of various backgrounds and uses for the app.
+                  <br></br><br></br>
+                  The goals for the interviews were to find out what people expect
+                  from the Discover page, and to understand what parts of the page
+                  people tend to use or ignore.
+                </div>
+              </div>
 
-      <div style={section}>
-        <div className="heading" style={{ color: COLOR }}>Ideation</div>
-        <div className="body">
-          With two of my friends, I set out to find possible solutions to the new
-          people problem. We came down to two main opportunity areas:
-        <ol>
-            <li>
-              Bringing content users want — How might we understand people’s interests?
-          </li>
-            <li>
-              Making Discover social — How might we increase and improve interaction between users?
-          </li>
-          </ol>
-          Hundreds of sticky notes later, I narrowed down the solutions to two main ideas
-          <ol>
-            <li>
-              Public Group Stories — create stories related to a specific interest that users can join
-          </li>
-            <li>
-              Local Connections — connect nearby people with similar interests
-          </li>
-          </ol>
-          Based on current Snapchat stories and the geomap, both ideas seemed to
-          be quite feasible for Snapchat. It then came down to which solution better
-          addressed my people problem. Public Group Stories would bring users
-          interesting content and promote social interaction. Local Connections
-          would increase user interaction, but it would not immediately deliver
-          interesting content. Since Public Group Stories better solved the problem,
-          I decided to move forward with this idea.
-        </div>
-      </div>
-
-      <div style={section}>
-        <div className="heading" style={{ color: COLOR }}>Solution</div>
-        <div className="body">
-          I decided to move forward with Public Group Stories and re-branded
-          the feature to be Snap Cliques! For this feature, there were many
-          flows necessary to create a cohesive feature:
-            <ul>
-            <li>Posting to a clique</li>
-            <li>Joining a clique</li>
-            <li>Suggesting a clique to a friend</li>
-            <li>Seeing information about a clique</li>
-          </ul>
-            I organized these flows in the following diagram:
-            <br></br>
-            I used this model to create my initial low-fidelity sketches:
-
-      </div>
-      </div>
-      <div style={section}>
-        <div className="emphatic" style={{ color: "#000" }}>What do people want to know before joining a clique?</div>
-        <div className="body">
-          A few other platforms have similar features. They tend to include the
-          group name, description, preview picture, and Join or Open button. For
-          Snap Cliques, I included each of those key elements.
-          <br></br>
-          <br></br>
-          However, most of these platforms use groups for personal exploration,
-          while Snap Cliques is meant to foster social interaction. Therefore, I
-          looked to social platforms like Instagram accounts and Facebook pages.
-          I found that showing friends’ activity and allowing users to share posts
-          were common ways to increase interpersonal engagement.
-
-          When I conducted user testing, I displayed the following content:
-          <ol>
-            <li>Description of the clique</li>
-            <li>Friends in the clique</li>
-            <li>Icon for the clique</li>
-          </ol>
-          and the following features:
-          <ol>
-            <li>Suggest the clique to a friend</li>
-            <li>Join the clique</li>
-          </ol>
-          During interviews, I found that many people wanted to see some posts
-           in a clique before joining. This prompted me to add a Preview feature:
-          <br></br>
-          <br></br>
-           I used design A during my user testing. Then I explored two options for
-            enabling people to preview a clique. There was a high demand for the
-             feature, so in B I made an explicit button for it. In C, I replaced
-              the button with the purple ring for watching stories. Since this icon
-               is very authentic to Snapchat, I felt that it was sufficiently clear.
-                So, I went with C because it maximizes clarity with authenticity.
+              <div style={tableCol}>
+                <img src={currentDiscover} alt="Market research" width={"60%"} ></img>
+                <p style={{ textAlign: "center", color: GREY }}>Current Discover page design</p>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div style={section}>
+          <div style={tableContainer}>
+            <div style={table}>
+              <div style={tableCol}>
+                <img src={quotes} alt="" width={"100%"} ></img>
+              </div>
+              <div style={tableCol}>
+                <div className="emphatic">
+                  I found that the problem was with the content of stories and their
+                  social elements, rather than with their ordering as I originally hypothesized.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Problem Synthesis */}
+        <div style={section}>
+          <div className="heading" style={{ color: COLOR, paddingBottom: 40 }}>Problem Synthesis</div>
+
+          <div className="body" style={{ width: isSmallScreen ? "100%" : "70%", paddingBottom: 40 }}>
+            I found summarized my findings from user research with the following
+            trends v. insights table in order to define the problem.
+          </div>
+          <img src={trendsInsights} alt="" width={"90%"} ></img>
+
+          <div className="emphaticBlockSection" style={{ marginTop: 60 }}>
+            People want to find interesting media to share with friends, but they
+            can’t because Snapchat does not know what users are interested in and
+            Discover stories don’t foster social interactions.
+          </div>
+        </div >
+
+        {/* Ideating */}
+        <div style={section}>
+          <div className="heading" style={{ color: COLOR }}>Ideating</div>
+
+          <div style={tableContainer}>
+            <div style={table}>
+              <div style={tableCol}>
+                <div className="body" >
+                  I asked two of my friends to join my brainstorming session. Coming from different
+                  countries and academic focuses, my friends brought new and unique perspectives
+                  to our session!
+                    <br></br> <br></br>
+                    After coming up with over fifty "How might we" questions, we aggregated
+                    related questions into six opportunity spaces, and we chose two to further work with:
+                    <ul>
+                    <li> <b>Bringing content users want:</b> How might we understand people’s interests? </li>
+                    <li> <b>Making Discover social:</b> How might we increase and improve interaction between users? </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style={tableCol}>
+                <img src={brainstorming} alt="" width={"100%"} ></img>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style={section}>
+          <div className="body" style={{ width: isSmallScreen ? "100%" : "70%" }}>
+            Then, we brainstormed countless ideas for the chosen opportunity areas. The
+            final six ideas were:
+          </div>
+
+          <img src={ideas} alt="" width={"100%"} ></img>
+
+          <div className="body" style={{ width: isSmallScreen ? "100%" : "70%" }}>
+            Through SWOT analysis and analysing feasibility v. impact for each of the six
+            ideas, I decided to go with Snap Cliques because it
+            best solved the people problem and had high feasibility.
+          </div>
+        </div >
+
+        {/* Building the Solution */}
+        <div style={section}>
+          <div className="heading" style={{ color: COLOR }}>Building the Solution</div>
+          <div className="body" >
+            Snap Cliques allows users to easily discover and engage with content of
+            interest.
+          </div>
+        </div>
+
+        <div style={section}>
+          <img src={mockup} alt="" width={"100%"} style={{ display: "block" }}></img>
+        </div>
+
+        {/* Content */}
+        <div style={section}>
+          <div style={tableContainer}>
+
+            <div className="heading" style={{ color: COLOR }}>Market Research</div>
+            <div style={table}>
+              <div style={tableCol}>
+                <div className="emphatic" ><b>What do people want to know before joining a clique?</b></div>
+                <div className="body" >
+                  A few other platforms have similar features. They tend to include the
+                  group name, description, preview picture, and Join or Open button.
+                  For Snap Cliques, I included each of those key elements.
+                  <br></br><br></br>
+                  However, most of these platforms use groups for personal exploration,
+                  while Snap Cliques is meant to foster social interaction. Therefore,
+                  I looked to social platforms like Instagram accounts and Facebook pages.
+                  I found that showing friends’ activity and allowing users to share posts
+                  were common ways to increase interpersonal engagement.
+                </div>
+              </div>
+
+              <div style={tableColFinal}>
+                <img src={infoCard} alt="" width={"80%"} ></img>
+              </div>
+            </div>
+          </div>
+
+          <BlockQuote
+            color={COLOR}
+            text="I chose content to draw interest in a clique, while providing
+                    social cues about which cliques their friends engage with."
+          ></BlockQuote>
+
+        </div>
+
+        {/* Visual Design */}
+        <div style={section}>
+          <div style={tableContainer}>
+
+            <div className="heading" style={{ color: COLOR }}>Visual Design</div>
+            <div style={table}>
+              <div style={tableCol}>
+                <img src={iterations} alt="" width={"100%"} ></img>
+              </div>
+
+              <div style={tableColFinal}>
+                <div className="body" >
+                  I went through many explorations for how to display information about a clique.
+                  Snapchat uses both views in its current design. However, I noticed
+                    that the view in <b>B</b> is more for miscellaneous capabilities. Since
+                    the Info card is meant for more essential information, I decided
+                    to go with <b>A</b>.
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Cliques Section */}
+        <div style={section}>
+          <div style={tableContainer}>
+
+            <div className="heading" style={{ color: COLOR }}><b>User Testing</b></div>
+            <div className="emphatic" ><b>Increasing feature engagement</b></div>
+            <div style={table}>
+              <div style={tableCol}>
+                <div className="body" >
+                  My research showed that Snapchat features that were more social
+                  were better liked and more frequently used. Therefore, I wanted to
+                  suggest cliques that a user's friends are in, in order to increase
+                  engagement with the feature.
+                  <br></br><br></br>
+                  During my user testing, I used layout <b>A</b> but found that many people
+                  were confused about what the two rows meant.
+                  <br></br><br></br>
+                  In explorations <b>B</b>, <b>C</b>, <b>D</b>, and <b>E</b>, I looked at different ways to organize
+                  the section within one row. I found <b>B</b> to be the most clear and
+                  seamless layout, so conducted a few more tests to see if it would be
+                  more intuitive. I found a much better understanding of the difference
+                  between your cliques and suggested cliques.
+                  <br></br><br></br>
+                  However, I also found that everyone used the search bar, rather
+                  than the Join a Clique button, so I removed this from the design.
+
+                </div>
+              </div>
+
+              <div style={tableColFinal}>
+                <img src={cliquesSection} alt="" width={"100%"} ></img>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {/* Final Designs */}
+        <div style={section}>
+          <div className="heading" style={{ color: COLOR }}>Final Designs</div>
+
+          <img src={finalFlow} alt="" width={"100%"} style={{ display: "block" }}></img>
+
+          <iframe src='https://www.youtube.com/embed/XvIjK84NwjU'
+            frameborder='0'
+            height="500"
+            allow='autoplay; encrypted-media'
+            allowfullscreen
+            title='video'
+          />
+
+        </div>
+
+        {/* Reflection */}
+        <div style={section}>
+          <div className="heading" style={{ color: COLOR }}>Reflection</div>
+          <div className="body" style={{ width: isSmallScreen ? "100%" : "70%" }}>
+            People are always looking for people to connect with over their interests.
+            Many social media apps attempt to create platforms to solve this problem.
+            However, Snapchat’s messy, just-woke-up vibe is powerful in its ability
+            to encourage users to share anything they create or find. Snap Cliques
+            leverages this power to enable people to connect with others over similar
+            interests.
+            <br></br><br></br>
+            Huge thank you to
+              <a href="https://www.cornellappdev.com/" style={link} class="text-link"
+              target="_blank"> Cornell AppDev</a> and my TA,
+              <a href="https://shoshanaswell.com/about" style={link} class="text-link"
+              target="_blank"> Shoshana Swell</a>,
+            for teaching me about Product Design, and guiding me through this case study!
+        </div>
+        </div>
+
+        {/* See more case studies */}
+        <div style={{ display: "inline-block", paddingTop: SECTION_SPACING }}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out another case study!"></Gallery></div>
+
       </div>
-
-      <div style={{ display: "inline-block", paddingTop: SECTION_SPACING }}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out another case study!"></Gallery></div>
-
-    </div>
+    </FadeIn >
   );
 }
 

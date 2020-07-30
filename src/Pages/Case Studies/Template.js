@@ -61,7 +61,7 @@ function Eatery(props) {
           This is a template with all the components to use when writing a case study
         </div>
 
-        <img src={Cover} alt="Project cover image" width={WIDTH} ></img>
+        <img src={Cover} alt="" width={WIDTH} ></img>
 
         <div style={tableContainer}>
           <div style={table}>
