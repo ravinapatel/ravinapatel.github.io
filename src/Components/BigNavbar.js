@@ -24,7 +24,7 @@ function App() {
   const menuLeft = {
     textAlign: "left",
     lineHeight: "15px",
-    paddingRight: MIDDLE_SPACING,
+    marginRight: MIDDLE_SPACING,
     display: "inline-block",
     paddingTop: 10,
     paddingLeft: 10
@@ -36,7 +36,7 @@ function App() {
     fontSize: "18px",
     textDecoration: "none",
     color: "#000000",
-    width: "auto"
+    width: "auto",
   }
 
   // Right Menu Styling
@@ -89,17 +89,18 @@ function App() {
       < nav style={navStyle}>
 
         {/* Name and Logo */}
-        <div style={menuLeft}>
+        <div className="logoContainer" style={menuLeft}>
+
           <Link to="/" style={nameStyle}>
             <img
               src={logo}
               alt="" width={18}
-              class="img-responsive"
+              className="logo"
               align="center"
               style={{ paddingRight: "10px" }}
             />
             ravina patel
-          </Link>
+        </Link>
           {/* <p style={taglineStyle}>product designer @cornell university</p> */}
         </div>
 

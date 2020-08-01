@@ -5,6 +5,7 @@ import data from "../Data/uxData.json";
 import categoriesData from "../Data/categories.json";
 import FadeIn from 'react-fade-in';
 import Button from "../Components/Button";
+import logo from '../Images/rp-icon.png';
 
 // CONTENT
 // data for the "check out more of my projects section"
@@ -40,6 +41,13 @@ const titleStyle = {
   display: "block"
 }
 
+const logoStyle = {
+  display: "block",
+  position: "absolute",
+  left: "50%",
+  top: "50%"
+}
+
 // RENDERING
 function App() {
   return (
@@ -52,7 +60,7 @@ function App() {
         <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="play" ></Gallery></div>
 
         <div style={lastSectionStyle}>
-          <div className="title" style={titleStyle}>like what you see?</div>
+          <div className="title" style={titleStyle}>don't want this to end?</div>
           <div style={button}>
             <Button
               text="contact me"

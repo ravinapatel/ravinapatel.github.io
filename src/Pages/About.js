@@ -134,6 +134,7 @@ function App(props) {
                     <div style={{ color: "#ababab", textDecoration: "none", cursor: "pointer", paddingLeft: 5 }} class="text-link" > rpp62@cornell.edu</div>
                     <div className="hoverTag" style={hoverTag}>{copied ? "Copied!" : "Copy to clipboard"}</div>
                   </div>
+                  !
                 </div>
 
               </div>
@@ -158,15 +159,15 @@ function App(props) {
 
           <div style={{ display: "block", paddingTop: 30 }}>
             <a href="mailto: rpp62@cornell.edu" target="_blank">
-              <img src={mail} alt="email" width={"20px"} className="social" align="center" /></a>
+              <img src={mail} alt="email" width={"17px"} className="social" align="center" /></a>
             <a href="https://www.linkedin.com/in/ravinapatel0/" target="_blank">
-              <img src={linkedIn} alt="linkedIn" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+              <img src={linkedIn} alt="linkedIn" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
             <a href="https://www.instagram.com/ravinart/" target="_blank">
-              <img src={insta} alt="insta" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+              <img src={insta} alt="insta" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
             <a href="https://github.com/ravinapatel" target="_blank">
-              <img src={git} alt="github" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+              <img src={git} alt="github" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
             <a href="../../ravina-resume.pdf" target="_blank">
-              <img src={resume} alt="resume" width={"20px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
+              <img src={resume} alt="resume" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
 
           </div>
 

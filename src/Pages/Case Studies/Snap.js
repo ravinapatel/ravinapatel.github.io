@@ -96,7 +96,7 @@ function Eatery(props) {
               </div>
               <div style={tableColFinal}>
                 <div className="subheading" >Timeline</div>
-                <div className="body" >Fall 2019, 4 months</div>
+                <div className="body" >Spring 2019, 4 months</div>
               </div>
             </div>
           </div>
