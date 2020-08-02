@@ -7,7 +7,6 @@ import useWindowSize from "../../Components/useWindowSize";
 import './CaseStudy.css';
 
 // IMAGES
-
 import Cover from "../../Images/portfolio/ux/snap-banner.png";
 import currentDiscover from "../../Images/portfolio/ux/snap/current-discover.PNG";
 import quotes from "../../Images/portfolio/ux/snap/quotes.png";
@@ -24,7 +23,7 @@ import finalFlow from "../../Images/portfolio/ux/snap/final-flow.png";
 // Case study on Snapchat's Discover page
 
 // RENDERING
-function Eatery(props) {
+function App(props) {
 
   // RESPONSIVENESS
   const window = useWindowSize();
@@ -117,10 +116,10 @@ function Eatery(props) {
                 They have no way of telling Snapchat exactly what they want to see
               </li>
             </ol>
+          </div>
 
-            <div className="emphaticBlockSection" style={{ width: 400, textAlign: "center", display: "inline-block", }}>
-              How might we show people new content that they’re interested in?
-            </div>
+          <div className="emphaticBlockSection" style={{ width: "80%" }}>
+            How might we show people new content that they’re interested in?
           </div>
         </div>
 
@@ -378,4 +377,4 @@ function Eatery(props) {
   );
 }
 
-export default Eatery;
+export default App;

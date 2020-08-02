@@ -57,6 +57,16 @@
   line-height: 1.75;
 }
 
+.aboutBody {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.5;
+  color: #1e1e1e
+}
+
 /* Dashed list */
 ul.dashed {
   padding-left: 0;
@@ -112,13 +122,18 @@ ul.dashed > li:before {
   opacity: 1;
 }
 
-.hoverTag {
+/* ABOUT */
+
+.tagInvisible {
   opacity: 0;
+  visibility: hidden;
   transition: all .2s;
 }
 
-.hoverText:hover .hoverTag {
+.tagVisible {
   opacity: 1;
+  visibility: visible;
+  transition: all .2s;
 }
 
 .social {
@@ -129,6 +144,67 @@ ul.dashed > li:before {
 .social:hover {
   opacity: 0.2;
 }
+
+.socialLight {
+  opacity: 0.4;
+  transition: all .2s;
+}
+
+.socialLight:hover {
+  opacity: 1;
+}
+
+/* about popup */
+.invisibleBlackTint {
+  transition: all 0.2s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.visibleBlackTint {
+  transition: all 0.2s ease-out;
+  visibility: visible;
+  opacity: 0.4;
+  height: auto;
+}
+
+.invisiblePopup {
+  transition: all 0.2s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.visiblePopup {
+  transition: all 0.2s ease-out;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+
+.imageBig {
+  animation: rainbowRing 20s infinite;
+  transform: scale(3,3) translateY(18px);
+  transition: transform 0.35s ease-in-out;
+  position: fixed;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.25);
+}
+
+.imageSmall {
+  animation: rainbowRing 20s infinite;
+  transition: transform 0.3s ease-in-out;
+  border-width: 2px;
+}
+
+.imageSmall:hover {
+  transform: scale(1.2,1.2) rotate(5deg) translateY(-2px);
+  transition: transform 0.0.2s ease-in-out;
+}
+
 
 /* hamburger menu */
 .invisible {
@@ -173,10 +249,12 @@ ul.dashed > li:before {
   transition: transform 0.35s ease-in-out;
 }
 
+/* FUN */
+
 /* rainbow */
-@keyframes colorchange {
+@keyframes rainbowText {
   0% {
-    color: #FF9254;
+    color: #FF5454;
   }
   
   10% {
@@ -220,17 +298,106 @@ ul.dashed > li:before {
   }
 }
 
+/* rainbow */
+@keyframes rainbowRing {
+  0% {
+    border: 2px solid #FF5454;
+  }
+  
+  10% {
+    border: 2px solid #FFDB5E;
+  }
+  
+  20% {
+    border: 2px solid #ECE42E;
+  }
+  
+  30% {
+    border: 2px solid #6CF500;
+  }
+  
+  40% {
+    border: 2px solid #00D789;
+  }
+  
+  50% {
+    border: 2px solid #00FFF0;
+  }
+  
+  60% {
+    border: 2px solid #00A3FF;
+  }
+  
+  70% {
+    border: 2px solid #7241FF;
+  }
+
+  80% {
+    border: 2px solid #CC00FF;
+  }
+  
+  90% {
+    border: 2px solid #FF00A8;
+  }
+  
+  100% {
+    border: 2px solid #FF5454;
+  }
+}
+
+/* gradient ring */
+@keyframes gradientRing {
+  0% {
+    border: 2px solid #00FFF0;
+  }
+  25% {
+    border: 2px solid #64DAFF;
+  }
+  50% {
+    border: 2px solid #7241FF;
+  }
+  
+  75% {
+    border: 2px solid #CC00FF;
+  }
+  100% {
+    border: 2px solid #FF00A8;
+  }
+}
+
+/* gradient text */
+@keyframes gradientText {
+  0% {
+    color: #00FFF0;
+  }
+  25% {
+    color: #64DAFF;
+  }
+  50% {
+    color: #7241FF;
+  }
+  75% {
+    color: #CC00FF;
+  }
+  100% {
+    color: #FF00A8;
+  }
+}
+
+
+
+
 .rainbow {
   display: inline-block;
   font-weight: medium;
-  animation: colorchange 20s infinite;
+  animation: rainbowText 20s infinite;
   transition: transform 1s ease-in-out;
   transform: translateY(0px) rotate(0deg);
   cursor: crosshair;
 }
 
 .rainbow:hover {
-  transform: translateY(0px) rotate(1070deg);
+  transform: translateY(0px) rotate(1075deg);
   transition: transform 1s ease-in-out;
 }
 
@@ -244,10 +411,10 @@ ul.dashed > li:before {
 }
 
 .logoContainer .logo {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .logoContainer:hover .logo {
-  transform: scale(1.3,1.3) rotate(-5deg) translateY(-2px);
-  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2,1.2) rotate(-5deg) translateY(-2px);
+  transition: transform 0.3s ease-in-out;
 }

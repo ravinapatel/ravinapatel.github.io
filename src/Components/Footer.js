@@ -1,29 +1,20 @@
 import React from 'react';
-
+import Socials from "./Socials";
 
 function App() {
   // Style
   const container = {
     color: "#ababab",
     width: "100%",
-    height: "150px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-  }
-
-  const content = {
-    flex: "0 0 500px",
     textAlign: "center",
     fontSize: "14px"
   }
 
   return (
-    <div className="container" style={container}>
-      <div style={content}>
-        <br></br>
-        <br></br>
-        <p>designed and developed by ravina patel</p>
+    <div style={container}>
+      <div style={{ paddingTop: 80, paddingBottom: 30 }}>
+        <p style={{ paddingBottom: 10 }}>designed and developed by ravina patel</p>
+        <Socials light="true"></Socials>
       </div>
     </div >
   );

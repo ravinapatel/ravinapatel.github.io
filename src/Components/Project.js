@@ -8,11 +8,12 @@ import '../App.css';
 //   - name
 //   - description
 //   - id
-//   - msg
+//   - msg                  where the link leads
 //   - url
-//   - width
+//   - width                calculated by Gallery
 //   - square
-//   - isInternal
+//   - isInternal           does link stay in this website
+//   - isLarge              for enlarging font size
 
 
 function App(props) {
@@ -84,7 +85,6 @@ function App(props) {
     }
   }
 
-
   // STYLING
   const containerStyle = {
     display: "flex",
@@ -104,7 +104,7 @@ function App(props) {
 
   const projectName = {
     letterSpacing: "0.03em",
-    fontSize: "18px",
+    fontSize: props.isLarge == "true" ? 22 : 18,
     fontWeight: "bold",
     textDecoration: "none",
     paddingBottom: 10
@@ -112,7 +112,7 @@ function App(props) {
 
   const projectDescription = {
     letterSpacing: "0.03em",
-    fontSize: "14px",
+    fontSize: props.isLarge == "true" ? 16 : 14,
     textDecoration: "none",
   }
 

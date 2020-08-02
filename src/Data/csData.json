@@ -9,14 +9,14 @@
   {
     "id": "fallen-flame",
     "name": "Fallen Flame",
-    "description": "A survival-adventure game that I helped design and develop",
+    "description": "A survival-adventure game that I designed and coded for",
     "msg": "View game site",
     "url": "http://en-ci-gdiac.coecis.cornell.edu/gallery/fallen_flame/"
   },
   {
     "id": "critter",
     "name": "Critterworld",
-    "description": "An evolution simulator implemented as a networked Java service with a GUI. Created a parser and interpreter for a custom language that dictates species rules and a fault injector to simulate mutations and evolution.",
+    "description": "A networked Java service and GUI that simulates evolution. Created a custom language and interpreter for species rules with a fault injector to show mutations.",
     "msg": null,
     "url": null
   },

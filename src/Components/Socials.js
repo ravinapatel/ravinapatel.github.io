@@ -1,0 +1,36 @@
+import React from 'react';
+import git from '../Images/about/git.png';
+import insta from '../Images/about/insta.png';
+import linkedIn from '../Images/about/linkedIn.png';
+import mail from '../Images/about/mail.png';
+import resume from '../Images/about/resume.png';
+
+
+// RENDERING
+function App(props) {
+
+  // PROPS
+  // - light      if true: light icons, which turn dark on hover
+
+  // STYLING
+  const PADDING = 30
+  const CLASS = props.light == "true" ? "socialLight" : "social"
+
+  return (
+    <div style={{ display: "block" }}>
+      <a href="mailto: rpp62@cornell.edu" target="_blank">
+        <img src={mail} alt="email" width={"17px"} className={CLASS} align="center" /></a>
+      <a href="https://www.linkedin.com/in/ravinapatel0/" target="_blank">
+        <img src={linkedIn} alt="linkedIn" width={"17px"} className={CLASS} align="center" style={{ paddingLeft: PADDING }} /></a>
+      <a href="../../ravina-resume.pdf" target="_blank">
+        <img src={resume} alt="resume" width={"17px"} className={CLASS} align="center" style={{ paddingLeft: PADDING }} /></a>
+      <a href="https://github.com/ravinapatel" target="_blank">
+        <img src={git} alt="github" width={"17px"} className={CLASS} align="center" style={{ paddingLeft: PADDING }} /></a>
+      <a href="https://www.instagram.com/ravinart/" target="_blank">
+        <img src={insta} alt="insta" width={"17px"} className={CLASS} align="center" style={{ paddingLeft: PADDING }} /></a>
+    </div>
+
+  );
+}
+
+export default App;

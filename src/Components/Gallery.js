@@ -25,7 +25,7 @@ function App(props) {
   var width = (totalWidth - (cols) * PADDING) / cols;
   const window = useWindowSize();
 
-  // Array of Project components
+  // Array of Project components (adding project props just have to be updated here)
   const projects = props.data.map(item => < Project
     id={item.id}
     name={item.name}
@@ -35,7 +35,9 @@ function App(props) {
     width={width}
     square={props.square}
     isInternal={item.isInternal}
+    isLarge={props.isLarge}
   />)
+
 
   //FUNCTIONS
   // Initiazlies `columns` to be the correct size based on `cols`

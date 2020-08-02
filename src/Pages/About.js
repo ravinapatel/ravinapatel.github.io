@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import me from '../Images/about/about-img.png';
-import git from '../Images/about/git.png';
-import insta from '../Images/about/insta.png';
-import linkedIn from '../Images/about/linkedIn.png';
-import mail from '../Images/about/mail.png';
-import resume from '../Images/about/resume.png';
 import timeline from '../Images/about/timeline.png';
 import Button from "../Components/Button";
+import Socials from "../Components/Socials";
 import FadeIn from 'react-fade-in';
 import useWindowSize from "../Components/useWindowSize";
 
@@ -27,8 +23,13 @@ function App(props) {
 
   // STATE
   const [copied, setCopied] = useState(false);
+  const [tagVisible, setTagVisible] = useState(false);
   function resetCopy() {
     setTimeout(() => { setCopied(false) }, 200);
+    setTagVisible(false);
+  }
+  function showTag() {
+    setTagVisible(true);
   }
   function copyToClipboard() {
     setCopied(true)
@@ -77,13 +78,15 @@ function App(props) {
     cursor: "pointer"
   }
   const hoverTag = {
-    padding: 10,
-    backgroundColor: "#fff",
+    padding: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    backgroundColor: "#4d4d4d",
     fontSize: 12,
-    display: "table",
+    display: "inline-block",
     boxShadow: "0px 6px 10px rgba(0, 0, 0, 0.05)",
     borderRadius: "2px",
-    color: "#4d4d4d",
+    color: "#fff",
     zIndex: 2000
   }
 
@@ -127,17 +130,23 @@ function App(props) {
                   <br></br><br></br>
                   If you would like to chat, feel free to email me at
                   <div
-                    className="hoverText"
-                    style={{ display: "inline-block" }}
-                    onClick={copyToClipboard}
-                    onMouseLeave={resetCopy}>
-                    <div style={{ color: "#ababab", textDecoration: "none", cursor: "pointer", paddingLeft: 5 }} class="text-link" > rpp62@cornell.edu</div>
-                    <div className="hoverTag" style={hoverTag}>{copied ? "Copied!" : "Copy to clipboard"}</div>
+                    style={{ display: "inline-block", verticalAlign: "top" }}>
+                    <div style={{ textAlign: "center" }}>
+                      <div
+                        style={{ color: "#ababab", cursor: "pointer", paddingLeft: 5 }}
+                        className="hoverText"
+                        onClick={copyToClipboard}
+                        onMouseEnter={showTag}
+                        onMouseLeave={resetCopy}>
+                        rpp62@cornell.edu
+                      </div>
+                      <div className={tagVisible ? "tagVisible" : "tagInvisible"} style={hoverTag}>{copied ? "Copied!" : "Copy to clipboard"}</div>
+                    </div>
                   </div>
                   !
                 </div>
-
               </div>
+
             </div>
           </div>
         </div>
@@ -157,24 +166,15 @@ function App(props) {
             ></Button>
           </div>
 
-          <div style={{ display: "block", paddingTop: 30 }}>
-            <a href="mailto: rpp62@cornell.edu" target="_blank">
-              <img src={mail} alt="email" width={"17px"} className="social" align="center" /></a>
-            <a href="https://www.linkedin.com/in/ravinapatel0/" target="_blank">
-              <img src={linkedIn} alt="linkedIn" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
-            <a href="https://www.instagram.com/ravinart/" target="_blank">
-              <img src={insta} alt="insta" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
-            <a href="https://github.com/ravinapatel" target="_blank">
-              <img src={git} alt="github" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
-            <a href="../../ravina-resume.pdf" target="_blank">
-              <img src={resume} alt="resume" width={"17px"} className="social" align="center" style={{ paddingLeft: 30 }} /></a>
-
+          {/* Socials */}
+          <div style={{ paddingTop: 30 }}>
+            <Socials></Socials>
           </div>
 
         </div>
       </div>
 
-    </FadeIn>
+    </FadeIn >
   );
 }
 
