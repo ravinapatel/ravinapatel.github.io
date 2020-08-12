@@ -5,12 +5,29 @@ import data from "../Data/uxData.json";
 import categoriesData from "../Data/categories.json";
 import FadeIn from 'react-fade-in';
 import Button from "../Components/Button";
+import ReactGA from 'react-ga';
 
 // CONTENT
 // data for the "check out more of my projects section"
 const moreData = [
   categoriesData[0], categoriesData[1], categoriesData[2]
 ];
+
+function clickResume() {
+  // GA Event
+  ReactGA.event({
+    category: 'Resume',
+    action: 'Opened resume from the button on the bottom of the work page'
+  })
+}
+function clickEmail() {
+  // GA Event
+  ReactGA.event({
+    category: 'Email',
+    action: 'Opened mail from the button on the bottom of the work page'
+  })
+}
+
 
 // STYLING
 const containerStyle = {
@@ -58,13 +75,13 @@ function App() {
         {/* More */}
         <div style={lastSectionStyle}>
           <div className="title" style={titleStyle}>don't want this to end?</div>
-          <div style={button}>
+          <div style={button} onClick={clickEmail}>
             <Button
               text="contact me"
               url="mailto: rpp62@cornell.edu"
             ></Button>
           </div>
-          <div style={button}>
+          <div style={button} onClick={clickResume}>
             <Button
               text="view resume"
               url="../../ravina-resume.pdf"

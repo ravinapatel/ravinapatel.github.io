@@ -1,5 +1,6 @@
 import React from 'react';
 import useWindowSize from "./useWindowSize";
+import ReactGA from 'react-ga';
 
 
 function Body() {
@@ -9,6 +10,15 @@ function Body() {
   var isBigScreen = window.width > 900
   // var isMediumScreen = window.width < 900
   var isSmallScreen = window.width < 700
+
+  // GOOGLE ANALYTICS
+  function hover() {
+    // GA Event
+    ReactGA.event({
+      category: 'Delightful Text',
+      action: 'Hovered over delightful text'
+    })
+  }
 
   // STYLING
   const container = {
@@ -45,7 +55,7 @@ function Body() {
       <div style={content}>
         <p style={title}>hi, I'm ravina!</p>
         <p style={body}>product designer @cornell university</p>
-        <p style={body}>creating <div className="rainbow" style={body} >delightful</div> experiences<br></br>to improve quality of life :)</p>
+        <p style={body}>creating <div className="rainbow" style={body} onMouseEnter={hover} >delightful</div> experiences<br></br>to improve quality of life :)</p>
       </div>
     </div >
   );

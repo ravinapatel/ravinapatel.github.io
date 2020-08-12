@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import Work from "./Pages/Work";
@@ -16,14 +16,12 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { ParallaxProvider } from 'react-scroll-parallax';
 
-
+import ReactGA from 'react-ga';
 
 // TODO:
-// - rewrite case studies
+// - write way + patch case study
 // - while loading: {loading screen} else: <FadeIn></FadeIn>
-// - project link should depend on isInternal not square prop
 // ----------
-// - fun animations
 // - calculate actual height of columns in Gallery
 
 
@@ -51,6 +49,16 @@ function chooseMoreData(data, ID) {
 }
 
 function App() {
+  const trackingId = "UA-172133344-1"; // Google Analytics tracking ID
+
+  useEffect(() => {
+
+    ReactGA.initialize(trackingId);
+    ReactGA.pageview(window.location.pathname + window.location.search); // report page view
+
+
+  }, [])
+
   return (
     <ParallaxProvider>
       <Router>

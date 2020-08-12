@@ -5,6 +5,7 @@ import X from '../Images/about/X.png';
 import me from '../Images/about/about-img.png';
 import AboutPopup from './AboutPopup';
 import useWindowSize from "./useWindowSize";
+import ReactGA from 'react-ga';
 
 // NAVBAR
 
@@ -16,7 +17,34 @@ function App() {
   // STATE
   const [isOpen, setIsOpen] = useState(false);
   function handleClick() {
+
+    // GA Event
+    if (!isOpen) {
+      ReactGA.event({
+        category: 'Profile image',
+        action: 'Click the profile picture to open about'
+      })
+    }
+
     setIsOpen(!isOpen);
+  }
+  function handleProfileHover() {
+    // GA Event
+    if (!isOpen) {
+      ReactGA.event({
+        category: 'Profile image',
+        action: 'Hover over profile image'
+      })
+    }
+  }
+  function handleLogoHover() {
+    // GA Event
+    if (!isOpen) {
+      ReactGA.event({
+        category: 'Logo',
+        action: 'Hover over logo'
+      })
+    }
   }
 
   //STYLING
@@ -99,6 +127,7 @@ function App() {
               alt="" width={40}
               className="logo"
               align="center"
+              onMouseEnter={handleLogoHover}
             />
           </a>
         </div>
@@ -113,6 +142,7 @@ function App() {
             className={isOpen ? "imageBig" : "imageSmall"}
             style={{ borderRadius: 500, zIndex: 3000, position: "absolute" }}
             onClick={handleClick}
+            onMouseEnter={handleProfileHover}
           />
         </div>
 

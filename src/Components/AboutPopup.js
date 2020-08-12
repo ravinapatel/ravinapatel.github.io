@@ -5,6 +5,7 @@ import Button from "./Button";
 import Socials from "./Socials";
 import FadeIn from 'react-fade-in';
 import useWindowSize from "./useWindowSize";
+import ReactGA from 'react-ga';
 
 
 // RENDERING
@@ -29,6 +30,26 @@ function App(props) {
   function copyToClipboard() {
     setCopied(true)
     navigator.clipboard.writeText("rpp62@cornell.edu")
+
+    // GA Event
+    ReactGA.event({
+      category: 'Email',
+      action: 'Copied email to clipboard from the link on the about popup'
+    })
+  }
+  function clickResume() {
+    // GA Event
+    ReactGA.event({
+      category: 'Resume',
+      action: 'Opened resume from the button on the about popup'
+    })
+  }
+  function clickEmail() {
+    // GA Event
+    ReactGA.event({
+      category: 'Email',
+      action: 'Opened email from the button on the about popup'
+    })
   }
 
   // STYLING
@@ -98,13 +119,13 @@ function App(props) {
         </div>
 
         {/* Buttons */}
-        <div style={sectionStyle}>
+        <div style={sectionStyle} onClick={clickEmail}>
           <Button
             text="contact me"
             url="mailto: rpp62@cornell.edu"
           ></Button>
         </div>
-        <div style={sectionStyle}>
+        <div style={sectionStyle} onClick={clickResume}>
           <Button
             text="view resume"
             url="../../ravina-resume.pdf"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import logo from '../Images/rp-icon.png';
+import ReactGA from 'react-ga';
 
 // MOBILE NAVBAR
 
@@ -8,7 +9,27 @@ function App() {
 
   // STATE
   const [isOpen, setIsOpen] = useState(false);
+
   function handleClick() {
+
+    // GA Event
+    if (!isOpen) {
+      ReactGA.event({
+        category: 'Hamburger',
+        action: 'Clicked the hamburger menu'
+      })
+    }
+
+    setIsOpen(!isOpen);
+  }
+  function handleResume() {
+
+    // GA Event
+    ReactGA.event({
+      category: 'Resume',
+      action: 'Opened resume from the hamburger menu'
+    })
+
     setIsOpen(!isOpen);
   }
 
@@ -100,7 +121,7 @@ function App() {
             target="_blank"
             style={menuLink}
             className="link"
-            onClick={handleClick}>
+            onClick={handleResume}>
             resume
           </Link>
         </div>
