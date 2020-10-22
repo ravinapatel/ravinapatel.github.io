@@ -229,13 +229,11 @@ function App(props) {
         <div style={section}>
           <div className="heading" style={{ color: COLOR }}>Building the Solution</div>
           <div className="body" >
-            Snap Cliques allows users to easily discover and engage with content of
-            interest.
+            Cliques are public group stories that people can join,
+            post to, and view. Users can see which cliques their friends are part of
+            and share content from cliques. Snap Cliques allows users to easily
+            discover and engage with content of interest.
           </div>
-        </div>
-
-        <div style={section}>
-          <img src={mockup} alt="" width={"100%"} style={{ display: "block" }}></img>
         </div>
 
         {/* Content */}
@@ -337,7 +335,9 @@ function App(props) {
         <div style={section}>
           <div className="heading" style={{ color: COLOR }}>Final Designs</div>
 
-          <img src={finalFlow} alt="" width={"100%"} style={{ display: "block" }}></img>
+          <img src={mockup} alt="" width={"100%"} style={{ display: "block", paddingBottom: 40 }}></img>
+
+          {/* <img src={finalFlow} alt="" width={"100%"} style={{ display: "block" }}></img> */}
 
           <iframe src='https://www.youtube.com/embed/XvIjK84NwjU'
             frameborder='0'

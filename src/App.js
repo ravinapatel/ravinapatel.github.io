@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import ReactGA from 'react-ga';
+
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Work from "./Pages/Work";
 import About from "./Pages/About";
@@ -11,22 +16,18 @@ import Template from "./Pages/Case Studies/Template";
 import Eatery from "./Pages/Case Studies/Eatery";
 import Exceed from "./Pages/Case Studies/Exceed";
 import Snap from "./Pages/Case Studies/Snap";
+import Patch from "./Pages/Case Studies/Patch";
 
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-import { ParallaxProvider } from 'react-scroll-parallax';
-
-import ReactGA from 'react-ga';
-
+// -----------------------------------------------------------------------------
 // TODO:
 // - write way + patch case study
 // - while loading: {loading screen} else: <FadeIn></FadeIn>
-// ----------
 // - calculate actual height of columns in Gallery
+// -----------------------------------------------------------------------------
 
 
-// chooses three projects from a dataset, prioritizing ones with urls and excluding
-// the one being currently viewed
+// chooses three projects from a dataset, prioritizing ones with urls and 
+// excluding the one being currently viewed
 function chooseMoreData(data, ID) {
   var x = []
   while (x.length < 3) {
@@ -49,14 +50,12 @@ function chooseMoreData(data, ID) {
 }
 
 function App() {
+
+  // GOOGLE ANALYTICS
   const trackingId = "UA-172133344-1"; // Google Analytics tracking ID
-
   useEffect(() => {
-
     ReactGA.initialize(trackingId);
     ReactGA.pageview(window.location.pathname + window.location.search); // report page view
-
-
   }, [])
 
   return (
@@ -72,6 +71,7 @@ function App() {
             <Route path="/art" render={(props) => <Art {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
+            <Route path="/patch" render={(props) => <Patch {...props} chooseMoreData={chooseMoreData} />} />
 
             {/* Incomplete Articles (comment out when pushing) */}
             {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}

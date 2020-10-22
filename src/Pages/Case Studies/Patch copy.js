@@ -9,16 +9,11 @@ import './CaseStudy.css';
 
 // IMAGES
 
-import Cover from "../../Images/portfolio/ux/exceed/exceed-banner.png";
-import solutionCover from "../../Images/portfolio/ux/exceed/solution-cover.png";
 import finalCover from "../../Images/portfolio/ux/exceed/final-cover.png";
 
-import marketResearch from "../../Images/portfolio/ux/exceed/market-research.png";
-import painPoints from "../../Images/portfolio/ux/exceed/pain-points.png";
+import Cover from "../../Images/portfolio/ux/patch/laptop-mockup.jpg";
+import laptopMockup from "../../Images/portfolio/ux/patch/laptop-mockup.jpg";
 import content from "../../Images/portfolio/ux/exceed/content.png";
-import dataTime from "../../Images/portfolio/ux/exceed/data-time.png";
-import dataMedia from "../../Images/portfolio/ux/exceed/data-media.png";
-import dataMore from "../../Images/portfolio/ux/exceed/data-more.png";
 
 import processTypes from "../../Images/portfolio/ux/exceed/process-time.png";
 import processSave from "../../Images/portfolio/ux/exceed/process-save.png";
@@ -47,12 +42,12 @@ function App(props) {
   var isSmallScreen = window.width < 700
 
   // STYLING
-  const COLOR = "#0F5BE5"
+  const COLOR = "#27C8D2"
   const GREY = "#9a9a9a"
   const WIDTH = isBigScreen ? 800 : "90%"
   const PADDING = (window.width - WIDTH) / 2
   const SECTION_SPACING = 50
-  const ID = "exceed"       // must match the project id in uxData
+  const ID = "patch"       // must match the project id in uxData
 
   const contentStyle = {
     textAlign: "center",
@@ -90,19 +85,9 @@ function App(props) {
       <div style={contentStyle}>
         {/* Intro */}
         <div style={section}>
-          <div style={{ display: "block" }}>
-            <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 30 }} className="emphatic">
-              A way for professionals who are content with their work to continue to learn and develop.
-            </div>
-          </div>
-          <div style={{ display: "block" }}>
-            <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 0, color: COLOR }} className="body">
-              WINNER IN A DESIGN COMPETITION
-            </div>
-          </div>
-          <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60, color: COLOR }} className="body">
-            (<a href="mailto: rpp62@cornell.edu" target="_blank"><div style={{ color: "#A8C0EB", display: "inline-block" }}>contact me</div></a> for details)
-          </div>
+          <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60 }} className="emphatic">
+            A way for consumers to give feedback and for developers to process and respond to it.
+        </div>
 
           <img src={Cover} alt="Project cover image" width={WIDTH} ></img>
 
@@ -110,95 +95,86 @@ function App(props) {
             <div style={table}>
               <div style={tableCol}>
                 <div className="subheading" >My Role</div>
-                <div className="body" >UX Researcher, UI Designer</div>
+                <div className="body" > Design lead</div>
+                <div className="body" > Focus: developer-facing web platform</div>
+              </div>
+              <div style={tableCol}>
+                <div className="subheading" >Team</div>
+                <div className="body" ><u>Developers</u>: Omar Rasheed, Yana Sang, Cameron Russell</div>
+                <div className="body" ><u>Designers</u>: Gracie Jing, Ravina Patel (me)</div>
               </div>
               <div style={tableCol}>
                 <div className="subheading" >Duration</div>
-                <div className="body" >5 days</div>
+                <div className="body" >2 months</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Challenge */}
+        {/* Background */}
         <div style={section}>
-          <div className="heading" style={{ color: COLOR }}>Challenge</div>
+          <div className="heading" style={{ color: COLOR }}>Background</div>
           <div className="body">
-            People who are content with their current employment want to casually
-            learn and grow and keep up with recent events via short snackable content
-            with a consistently high quality bar. However, most current platforms
-            are geared towards long-term through courses and reading.
+            As a developer or designer, getting feedback about your product’s
+            performance is critical to keeping up with the needs of the users
+            and satisfying customers. This problem exists with any digital
+            product, so why should features solving this problem have to be
+            built out for every product? Our team set out to create a solution
+            that we could easily use to get and organize feedback across all of
+            our apps.
           </div>
         </div>
 
         {/* Research */}
-        <div style={section}>
 
-          {/* a. Market research */}
-          <div style={tableContainer}>
-            <div className="heading" style={{ color: COLOR }}>Research</div>
-            <div style={table}>
-              <div style={tableCol}>
-                <div className="emphatic" style={{ color: "#000" }}><b>Rethinking discovery and learning for smaller time budgets</b></div>
-                <div className="body">
-                  I took a look at a few platforms that solve similar problems. Current
-                  learning platforms do a great job of motivating its users along their
-                  journeys, as well as allowing users to disover tools for whatever
-                subject they are interested in. However, in order to help <em> busy
-                professionals </em> successfully grow, I will have to deliver these
-                tools in ways condusive to small time budgets.
-              </div>
-              </div>
-              <div style={tableCol}>
-                <img src={marketResearch} alt="Market research" width={"80%"} style={{ paddingBottom: SECTION_SPACING }} ></img>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        {/* a. Market research */}
         {/* b. User research */}
         <div style={section}>
-          <div className="emphatic" style={{ color: "#000" }}><b>Understanding the content professional</b></div>
+          <div className="emphatic" style={{ color: "#000" }}>
+            <b>Why do people give feedback?</b>
+          </div>
 
           <div className="body">
-            In order to understand the needs and motivations of the target audience, I
-            conducted user interviews. I created data visualizations to organize my findings
-            and form my problem statement.
+            Spoke to consumers: what do they give feedback on? Do they ever give
+            feedback? Why or why not?
           </div>
         </div>
 
         <div style={section}>
-          <div className="subheading" style={{ color: GREY }}>Quantifying pain points</div>
-          <img src={dataTime} alt="" width={WIDTH} style={{ display: "block", paddingTop: 30, paddingBottom: 20 }}></img>
-        </div>
-
-        <div style={section}>
-          <div className="subheading" style={{ color: GREY }}>Types of media people prefer</div>
-          <img src={dataMedia} alt="" width={WIDTH} style={{ paddingTop: 30, paddingBottom: 20 }}></img>
-        </div>
-
-        <div style={section}>
-          <div className="subheading" style={{ color: GREY }}>More statistics</div>
-          <img src={dataMore} alt="" width={WIDTH} style={{ display: "block", paddingTop: 30, paddingBottom: 20 }}></img>
-        </div>
-
-        <div style={section}>
-          <div className="body">
-            I summarized my findings into the following common pain points. These
-            points will drive my design decisions for the rest of the project.
+          <div className="emphatic" style={{ color: "#000" }}>
+            <b>Why do people want feedback?</b>
           </div>
 
-          <img src={painPoints} alt="The four central pain points are for time, discovery, motivation, and cross-industry interest." width={WIDTH} style={{ paddingTop: 30, paddingBottom: 20 }}></img>
+          <div className="body">
+            Spoke to developers: how do they currently get feedback? What do they
+            wish to do with feedback? Are they able to accomplish that?
+          </div>
         </div>
+
 
         {/* Problem */}
+
         <div style={section}>
           <div className="heading" style={{ color: COLOR }}>Problem</div>
-          <div className="emphaticBlockText">
-            People who are content with their work want to continue growing according
-          to their interests, but they can't because they <b>don't have enough time</b> and
-          <b> cannot find the right content</b> to meet their goals.
-        </div>
+
+          <div className="body">
+            According to our two user groups (developers and consumers), we
+            we defined two people problems. My role in the project was for the
+            developer-facing platform, so I will focus more on the first problem:
+          </div>
+
+          <div className="emphaticBlockSection">
+            When developers get feedback from users about their product, they
+            want to easily process and respond to requests. They can’t do that
+            because the communication they receive is unorganized, and it is
+            difficult to contact users that experience issues.
+          </div>
+
+          <div className="emphaticBlockSection">
+            When consumers use apps, they want to offer their input to creators,
+            but they don't because it takes too long, and they feel like their
+            voice isn't heard.
+          </div>
         </div >
 
         {/* Building the Solution */}
@@ -223,7 +199,7 @@ function App(props) {
         <div style={section}>
           <div style={tableContainer}>
             <img src={timeIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 1: Time</div>
+            <div className="subheading" style={{ color: GREY }}>Visual Design</div>
             <div className="emphatic"><b>Fitting into a tight schedule</b></div>
             <div style={table}>
               <div style={tableCol}>
@@ -283,7 +259,7 @@ function App(props) {
         <div style={section}>
           <div style={tableContainer}>
             <img src={exploreIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 2: Discovery</div>
+            <div className="subheading" style={{ color: GREY }}>Iterations</div>
             <div className="emphatic"><b>Encouraging targetted search</b></div>
             <div style={table}>
               <div style={tableCol}>
@@ -313,7 +289,7 @@ function App(props) {
         <div style={section}>
           <div style={tableContainer}>
             <img src={motivationIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 3: Motivation</div>
+            <div className="subheading" style={{ color: GREY }}>Copy</div>
             <div className="emphatic"><b>Stay motivated</b></div>
             <div style={table}>
               <div style={tableCol}>
@@ -345,7 +321,7 @@ function App(props) {
         <div style={section}>
           <div style={tableContainer}>
             <img src={crossIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 4: Cross-Industry Interests</div>
+            <div className="subheading" style={{ color: GREY }}>Onboarding</div>
             <div className="emphatic"><b>Accomadating cross-industrial interests</b></div>
             <div style={table}>
               <div style={tableCol}>

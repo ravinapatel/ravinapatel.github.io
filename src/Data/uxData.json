@@ -11,10 +11,12 @@
     "id": "buffer"
   },
   {
-    "id": "way",
-    "name": "WAY",
-    "description": "A platform providing contactless pay options for local restaraunts",
-    "msg": "Coming soon"
+    "id": "patch",
+    "name": "Patch",
+    "description": "A mobile customer service plugin and an accompanying desktop app for developers to respond to reports",
+    "msg": "Read case study",
+    "url": "./patch",
+    "isInternal": "true"
   },
   {
     "id": "snap",
@@ -27,15 +29,16 @@
   {
     "id": "fallen-flame",
     "name": "Fallen Flame",
-    "description": "A survival-adventure game that I designed and coded for",
+    "description": "A survival-adventure game that I designed and coded",
     "msg": "View game site",
     "url": "http://en-ci-gdiac.coecis.cornell.edu/gallery/fallen_flame/"
   },
   {
-    "id": "patch",
-    "name": "Patch",
-    "description": "A mobile customer service plugin and an accompanying desktop app for developers to respond to reports",
-    "msg": "Coming soon"
+    "id": "way",
+    "name": "WAY",
+    "description": "A platform providing contactless pay options for local restaraunts",
+    "msg": "Visit website",
+    "url": "https://paywithway.com/"
   },
   {
     "id": "buffer"
