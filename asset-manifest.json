@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e15c2769.chunk.css",
-    "main.js": "/static/js/main.30267575.chunk.js",
-    "main.js.map": "/static/js/main.30267575.chunk.js.map",
+    "main.js": "/static/js/main.8e3a2b04.chunk.js",
+    "main.js.map": "/static/js/main.8e3a2b04.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c0ae09a.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c0ae09a.js.map",
-    "static/js/2.a4e78e4f.chunk.js": "/static/js/2.a4e78e4f.chunk.js",
-    "static/js/2.a4e78e4f.chunk.js.map": "/static/js/2.a4e78e4f.chunk.js.map",
+    "static/js/2.96a64616.chunk.js": "/static/js/2.96a64616.chunk.js",
+    "static/js/2.96a64616.chunk.js.map": "/static/js/2.96a64616.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.06df263aa59ec4d6269daa3cf269361b.js": "/precache-manifest.06df263aa59ec4d6269daa3cf269361b.js",
+    "precache-manifest.1aa9cc6259c84a6e4730a5f063cf67a4.js": "/precache-manifest.1aa9cc6259c84a6e4730a5f063cf67a4.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e15c2769.chunk.css.map": "/static/css/main.e15c2769.chunk.css.map",
-    "static/js/2.a4e78e4f.chunk.js.LICENSE.txt": "/static/js/2.a4e78e4f.chunk.js.LICENSE.txt",
+    "static/js/2.96a64616.chunk.js.LICENSE.txt": "/static/js/2.96a64616.chunk.js.LICENSE.txt",
     "static/media/Chalk.jpg": "/static/media/Chalk.484fb2d5.jpg",
     "static/media/Faded.jpg": "/static/media/Faded.3e3b2181.jpg",
     "static/media/Falling-Water.jpg": "/static/media/Falling-Water.fd736c41.jpg",
@@ -54,6 +54,7 @@
     "static/media/info-card.png": "/static/media/info-card.925c9304.png",
     "static/media/invaders-gif.gif": "/static/media/invaders-gif.bf2a4a31.gif",
     "static/media/iterations.png": "/static/media/iterations.876f91c9.png",
+    "static/media/laptop-mockup.jpg": "/static/media/laptop-mockup.16650a78.jpg",
     "static/media/lexi.jpg": "/static/media/lexi.454cf2c4.jpg",
     "static/media/market-research.png": "/static/media/market-research.a53d84ff.png",
     "static/media/meet-banner.png": "/static/media/meet-banner.bb8d821e.png",
@@ -84,12 +85,12 @@
     "static/media/timeline.png": "/static/media/timeline.60f3b581.png",
     "static/media/trends-insights.png": "/static/media/trends-insights.10a3bf46.png",
     "static/media/tylenol.jpg": "/static/media/tylenol.a09d4fae.jpg",
-    "static/media/way.png": "/static/media/way.9ad32d85.png"
+    "static/media/way.png": "/static/media/way.ce473bd9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7c0ae09a.js",
-    "static/js/2.a4e78e4f.chunk.js",
+    "static/js/2.96a64616.chunk.js",
     "static/css/main.e15c2769.chunk.css",
-    "static/js/main.30267575.chunk.js"
+    "static/js/main.8e3a2b04.chunk.js"
   ]
 }
