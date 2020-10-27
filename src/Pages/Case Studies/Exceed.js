@@ -97,7 +97,7 @@ function App(props) {
           </div>
           <div style={{ display: "block" }}>
             <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 0, color: COLOR }} className="body">
-              WINNER IN A DESIGN COMPETITION
+              DESIGN CASE COMPETITION WINNER
             </div>
           </div>
           <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60, color: COLOR }} className="body">
