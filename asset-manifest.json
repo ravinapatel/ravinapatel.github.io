@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e15c2769.chunk.css",
-    "main.js": "/static/js/main.8e3a2b04.chunk.js",
-    "main.js.map": "/static/js/main.8e3a2b04.chunk.js.map",
+    "main.js": "/static/js/main.7914cb7f.chunk.js",
+    "main.js.map": "/static/js/main.7914cb7f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c0ae09a.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c0ae09a.js.map",
-    "static/js/2.96a64616.chunk.js": "/static/js/2.96a64616.chunk.js",
-    "static/js/2.96a64616.chunk.js.map": "/static/js/2.96a64616.chunk.js.map",
+    "static/js/2.9e697f12.chunk.js": "/static/js/2.9e697f12.chunk.js",
+    "static/js/2.9e697f12.chunk.js.map": "/static/js/2.9e697f12.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1aa9cc6259c84a6e4730a5f063cf67a4.js": "/precache-manifest.1aa9cc6259c84a6e4730a5f063cf67a4.js",
+    "precache-manifest.46a55583e95f564e84046de0a8a18c74.js": "/precache-manifest.46a55583e95f564e84046de0a8a18c74.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e15c2769.chunk.css.map": "/static/css/main.e15c2769.chunk.css.map",
-    "static/js/2.96a64616.chunk.js.LICENSE.txt": "/static/js/2.96a64616.chunk.js.LICENSE.txt",
+    "static/js/2.9e697f12.chunk.js.LICENSE.txt": "/static/js/2.9e697f12.chunk.js.LICENSE.txt",
     "static/media/Chalk.jpg": "/static/media/Chalk.484fb2d5.jpg",
     "static/media/Faded.jpg": "/static/media/Faded.3e3b2181.jpg",
     "static/media/Falling-Water.jpg": "/static/media/Falling-Water.fd736c41.jpg",
@@ -56,6 +56,7 @@
     "static/media/iterations.png": "/static/media/iterations.876f91c9.png",
     "static/media/laptop-mockup.jpg": "/static/media/laptop-mockup.16650a78.jpg",
     "static/media/lexi.jpg": "/static/media/lexi.454cf2c4.jpg",
+    "static/media/many-apps.png": "/static/media/many-apps.bbfb6b4d.png",
     "static/media/market-research.png": "/static/media/market-research.a53d84ff.png",
     "static/media/meet-banner.png": "/static/media/meet-banner.bb8d821e.png",
     "static/media/meet.png": "/static/media/meet.01b2d244.png",
@@ -64,6 +65,7 @@
     "static/media/moonlight.jpg": "/static/media/moonlight.cb584d03.jpg",
     "static/media/motivation.png": "/static/media/motivation.71b009b3.png",
     "static/media/onboarding-interests.png": "/static/media/onboarding-interests.49ac8d56.png",
+    "static/media/organization.png": "/static/media/organization.6c0828e2.png",
     "static/media/pain-points.png": "/static/media/pain-points.fc2bd5a8.png",
     "static/media/patch.png": "/static/media/patch.2562aa94.png",
     "static/media/personalization.png": "/static/media/personalization.e93b1b6b.png",
@@ -84,13 +86,14 @@
     "static/media/time.png": "/static/media/time.55e26e9c.png",
     "static/media/timeline.png": "/static/media/timeline.60f3b581.png",
     "static/media/trends-insights.png": "/static/media/trends-insights.10a3bf46.png",
+    "static/media/two-way.png": "/static/media/two-way.62c35b82.png",
     "static/media/tylenol.jpg": "/static/media/tylenol.a09d4fae.jpg",
     "static/media/way.png": "/static/media/way.ce473bd9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7c0ae09a.js",
-    "static/js/2.96a64616.chunk.js",
+    "static/js/2.9e697f12.chunk.js",
     "static/css/main.e15c2769.chunk.css",
-    "static/js/main.8e3a2b04.chunk.js"
+    "static/js/main.7914cb7f.chunk.js"
   ]
 }
