@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import me from '../Images/about/about-img.png';
+import me from '../Images/about/about-img.jpg';
 import timeline from '../Images/about/timeline.png';
 import Button from "../Components/Button";
 import Socials from "../Components/Socials";
@@ -123,9 +123,9 @@ function App(props) {
 
               <div style={tableColFinal}>
                 <div className="body" style={{ paddingTop: isSmallScreen ? 0 : 70 }}>
-                  I’m Ravina, a junior studying Computer Science and User Experience
+                  I’m Ravina, a senior studying Computer Science and User Experience
                   at Cornell University. I have always loved <b>creating</b> and <b>learning</b>.
-                  Designing for challenging problems allows me to create delightful
+                  Designing for complex problems allows me to create delightful
                   experience for people, while continuously learning new skills.
                   <br></br><br></br>
                   If you would like to chat, feel free to email me at
@@ -167,9 +167,9 @@ function App(props) {
           </div>
 
           {/* Socials */}
-          <div style={{ paddingTop: 30 }}>
+          {/* <div style={{ paddingTop: 30 }}>
             <Socials></Socials>
-          </div>
+          </div> */}
 
         </div>
       </div>

@@ -114,8 +114,8 @@ function App() {
       <div style={overlay} className={isOpen ? "visible" : "invisible"} >
         <div style={text}>
           <NavLink exact to="/" style={menuLink} className="link" onClick={handleClick}>work</NavLink>
+          <NavLink to="/play" style={menuLink} className="link" onClick={handleClick}>play</NavLink>
           <NavLink to="/about" style={menuLink} className="link" onClick={handleClick}>about</NavLink>
-          {/* <NavLink to="/resume" style={menuLink} className={isOpen ? "visible" : "invisible"} onClick={handleClick}>resume</NavLink> */}
           <Link
             to={"../../ravina-resume.pdf"}
             target="_blank"
@@ -133,7 +133,8 @@ function App() {
           <Link to="/" >
             <img
               src={logo}
-              alt="" width={25}
+              alt=""
+              width={30}
               class="img-responsive"
               align="center"
               style={{ paddingRight: "10px" }}

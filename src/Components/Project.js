@@ -28,6 +28,7 @@ function App(props) {
       case 'buffer': return require('../Images/portfolio/ux/thumbnails/buffer.png');
       case 'snap': return require('../Images/portfolio/ux/thumbnails/snap.png');
       case 'meet': return require('../Images/portfolio/ux/thumbnails/meet.png');
+      case 'pandora': return require('../Images/portfolio/ux/thumbnails/pandora.png');
       case 'exceed': return require('../Images/portfolio/ux/thumbnails/exceed.png');
       case 'way': return require('../Images/portfolio/ux/thumbnails/way.png');
       case 'patch': return require('../Images/portfolio/ux/thumbnails/patch.png');
@@ -82,6 +83,12 @@ function App(props) {
       case 'smokey-cabin': return require('../Images/portfolio/motion/smokey-cabin.gif');
       case 'starry-night': return require('../Images/portfolio/motion/starry-night.gif');
       case 'red-sky': return require('../Images/portfolio/motion/red-sky.gif');
+
+      // DIGITAL
+      case 'day-toggle': return require('../Images/portfolio/digital/day-toggle.png');
+      case 'cards': return require('../Images/portfolio/digital/cards.png');
+      case 'print': return require('../Images/portfolio/digital/print.png');
+
     }
   }
 

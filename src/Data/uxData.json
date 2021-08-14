@@ -1,11 +1,9 @@
 [
   {
-    "id": "exceed",
-    "name": "Exceed",
-    "description": "A way for professionals to continue growing in their industry",
-    "msg": "Read case study",
-    "url": "./exceed",
-    "isInternal": "true"
+    "id": "pandora",
+    "name": "Pandora",
+    "description": "Revamped Pandora charts to increase the media value of charts and make internal curation more efficient",
+    "msg": "Coming soon"
   },
   {
     "id": "buffer"
@@ -19,19 +17,20 @@
     "isInternal": "true"
   },
   {
+    "id": "exceed",
+    "name": "Exceed",
+    "description": "A way for professionals to continue growing in their industry",
+    "msg": "Read case study",
+    "url": "./exceed",
+    "isInternal": "true"
+  },
+  {
     "id": "snap",
     "name": "Snap Cliques",
     "description": "A case study on Snapchat uncovering a way to personalize and enhance the Discover page",
     "msg": "Read case study",
     "url": "./snap-cliques",
     "isInternal": "true"
-  },
-  {
-    "id": "fallen-flame",
-    "name": "Fallen Flame",
-    "description": "A survival-adventure game that I designed and coded",
-    "msg": "View game site",
-    "url": "http://en-ci-gdiac.coecis.cornell.edu/gallery/fallen_flame/"
   },
   {
     "id": "way",

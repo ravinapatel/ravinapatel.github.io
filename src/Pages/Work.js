@@ -70,9 +70,9 @@ function App() {
         <div className="container" style={containerStyle}>
           <div style={sectionStyle}><Gallery cols="2" totalWidth="800" padding="40" data={data} isLarge="true" msg="work"></Gallery></div>
         </div>
-        <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="play" ></Gallery></div>
+        {/* <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="play" ></Gallery></div> */}
 
-        {/* More */}
+        {/* Reach Out */}
         <div style={lastSectionStyle}>
           <div className="title" style={titleStyle}>don't want this to end?</div>
           <div style={button} onClick={clickEmail}>

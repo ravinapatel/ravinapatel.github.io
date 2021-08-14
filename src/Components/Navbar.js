@@ -9,7 +9,7 @@ function App() {
   const window = useWindowSize();
 
   return (
-    window.width > 900 ?
+    window.width > 1130 ?
       <BigNavbar></BigNavbar> :
       <MobileNavbar></MobileNavbar>
   );

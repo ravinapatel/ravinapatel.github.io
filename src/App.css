@@ -7,6 +7,10 @@
   color: #eee; /* WebKit/Blink Browsers */
 }
 
+html, body {
+  height: 100%;
+}
+
 /* ABOUT PAGE TEXT STYLES */
 
 .heading {
@@ -384,9 +388,6 @@ ul.dashed > li:before {
   }
 }
 
-
-
-
 .rainbow {
   display: inline-block;
   font-weight: medium;
@@ -410,11 +411,27 @@ ul.dashed > li:before {
   transition: transform 0.2s ease-in-out;
 }
 
-.logoContainer .logo {
+/* .logoContainer .logo {
   transition: transform 0.3s ease-in-out;
 }
 
 .logoContainer:hover .logo {
   transform: scale(1.2,1.2) rotate(-5deg) translateY(-2px);
   transition: transform 0.3s ease-in-out;
+} */
+
+.navOpen{
+  margin-right: 790px;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.navClose{
+  margin-right: 450px;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
