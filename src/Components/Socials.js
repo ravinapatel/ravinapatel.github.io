@@ -1,9 +1,9 @@
 import React from 'react';
-import git from '../Images/about/git.png';
-import insta from '../Images/about/insta.png';
-import linkedIn from '../Images/about/linkedIn.png';
-import mail from '../Images/about/mail.png';
-import resume from '../Images/about/resume.png';
+import git from '../Icons/git.png';
+import insta from '../Icons/insta.png';
+import linkedIn from '../Icons/linkedIn.png';
+import mail from '../Icons/mail.png';
+import resume from '../Icons/resume.png';
 import ReactGA from 'react-ga';
 
 

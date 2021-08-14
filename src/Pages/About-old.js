@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import me from '../Images/about/about-img.png';
-import git from '../Images/about/git.png';
-import insta from '../Images/about/insta.png';
-import linkedIn from '../Images/about/linkedIn.png';
+import me from '../Images/about/about-img.jpg';
+import git from '../Icons/git.png';
+import insta from '../Icons/insta.png';
+import linkedIn from '../Icons/linkedIn.png';
 import timeline from '../Images/about/timeline.png';
 import Button from "../Components/Button";
 import FadeIn from 'react-fade-in';
@@ -127,13 +127,13 @@ function App() {
 
           <div style={isBigScreen ? introLeft : middleScreenSection}>
             <p style={p} className="body2"> I’m Ravina, a junior studying Computer Science at Cornell
-            University. I have always loved <b>creating</b> and <b>learning</b>. Designing for
-            challenging problems allows me to create enjoyable experience for people,
-             while continuously learning new skills.</p>
+              University. I have always loved <b>creating</b> and <b>learning</b>. Designing for
+              challenging problems allows me to create enjoyable experience for people,
+              while continuously learning new skills.</p>
 
             <p style={p} className="body2">
               If you would like to chat, feel free to email me at
-            <div
+              <div
                 className="hoverText"
                 style={{ display: "inline-block", paddingLeft: 5 }}
                 onClick={copyToClipboard}
@@ -141,8 +141,8 @@ function App() {
                 <div style={link} class="text-link" > rpp62@cornell.edu</div>
                 <div className="hoverTag" style={hoverTag}>{copied ? "Copied!" : "Copy to clipboard"}</div>
               </div>
-            .
-          </p>
+              .
+            </p>
           </div>
 
           <div style={isBigScreen ? introRight : { display: "none" }}>
@@ -180,8 +180,8 @@ function App() {
           <div style={isBigScreen ? left : middleScreenSection}>
             <p className="heading">My Journey to UX</p>
             <p style={p} className="body2">At heart, I have always been a creator. I love being faced
-            with complex challenges and trying to come up with elegant solutions.
-          This passion is what initially drove me to Computer Science.</p>
+              with complex challenges and trying to come up with elegant solutions.
+              This passion is what initially drove me to Computer Science.</p>
 
             <p style={p} className="body2">
               During my freshman year of college, I discovered digital product design and fell
@@ -189,7 +189,7 @@ function App() {
               beautiful products that improve quality of life for countless people.
               Now, my background in Computer Science gives me a strong understanding
               of the technology industry and technological constraints, as well as an
-            ability to rapidly prototype my designs.</p>
+              ability to rapidly prototype my designs.</p>
           </div>
 
           <div style={isBigScreen ? right : middleScreenSection}>
@@ -205,7 +205,7 @@ function App() {
 
             <p className="body2">
               I'm always looking for interesting opportunities and conversations, so feel free to email me at
-            <div
+              <div
                 className="hoverText"
                 style={{ display: "inline-block", paddingRight: 5 }}
                 onClick={copyToClipboard}
@@ -213,8 +213,8 @@ function App() {
                 <div style={link} class="text-link" > rpp62@cornell.edu</div>
                 <div className="hoverTag" style={hoverTag}>{copied ? "Copied!" : "Copy to clipboard"}</div>
               </div>
-            or connect with me:
-          </p>
+              or connect with me:
+            </p>
 
             <div style={{ display: "inline-block", zIndex: -2000 }}>
               <a href="https://github.com/ravinapatel" target="_blank">

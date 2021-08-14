@@ -27,8 +27,8 @@ function Body() {
     textAlign: "center",
     height: 150,
     display: "block",
-    paddingTop: 50,
-    paddingBottom: 100
+    paddingTop: 10,
+    paddingBottom: 80
   }
 
   const content = {

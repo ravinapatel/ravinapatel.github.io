@@ -9,9 +9,9 @@ import ReactGA from 'react-ga';
 
 // CONTENT
 // data for the "check out more of my projects section"
-const moreData = [
-  categoriesData[0], categoriesData[1], categoriesData[2]
-];
+// const moreData = [
+//   categoriesData[0], categoriesData[1], categoriesData[2]
+// ];
 
 function clickResume() {
   // GA Event
@@ -68,16 +68,15 @@ function App() {
 
         {/* UX Projects */}
         <div className="container" style={containerStyle}>
-          <div style={sectionStyle}><Gallery cols="2" totalWidth="800" padding="40" data={data} isLarge="true" msg="work"></Gallery></div>
+          <div style={sectionStyle}><Gallery cols="2" totalWidth="800" padding="40" data={data} isLarge="true" ></Gallery></div>
         </div>
-        {/* <div style={sectionStyle}><Gallery cols={moreData.length} totalWidth="800" square="true" data={moreData} msg="play" ></Gallery></div> */}
 
-        {/* Reach Out */}
+        {/* CTAs */}
         <div style={lastSectionStyle}>
           <div className="title" style={titleStyle}>don't want this to end?</div>
           <div style={button} onClick={clickEmail}>
             <Button
-              text="contact me"
+              text="say hi!"
               url="mailto: rpp62@cornell.edu"
             ></Button>
           </div>

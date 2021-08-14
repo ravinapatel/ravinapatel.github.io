@@ -1,5 +1,5 @@
 import React from 'react';
-import carrot from '../Images/carrot.png';
+import carrot from '../Icons/carrot.png';
 import '../App.css';
 
 // A component that displays a project of a dynamic width

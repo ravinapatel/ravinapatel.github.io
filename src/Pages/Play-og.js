@@ -15,6 +15,7 @@ import code from '../Icons/code.png';
 
 import useWindowSize from "../Components/useWindowSize";
 
+
 // RENDERING
 function App(props) {
   // CONTENT
@@ -22,12 +23,13 @@ function App(props) {
   const ID = "art"
   const window = useWindowSize();
 
+
   // STATE
   const [hover, setHover] = useState("none");
 
   // STYLING
   const containerStyle = {
-    textAlign: "center",
+    textAlign: "center"
   }
 
   const artLeftSectionStyle = {
@@ -52,15 +54,6 @@ function App(props) {
     paddingBottom: "50px"
   }
 
-  const stickyContainer = {
-    textAlign: "center",
-    height: "100%",
-    position: "-webkit-sticky",
-    position: "sticky",
-    top: "20px",
-    zIndex: "5"
-  }
-
   const pillContainer = {
     display: "inline-block",
     textAlign: "center",
@@ -69,6 +62,9 @@ function App(props) {
     boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
     border: "none",
     padding: "10px 20px",
+    position: "-webkit-sticky",
+    position: "sticky",
+    top: "20px",
     width: "fit-content"
   }
 
@@ -117,9 +113,9 @@ function App(props) {
   // CONTENT
   const [type, setType] = useState("design")
   return (
-    <div>
+    <FadeIn transitionDuration="500">
 
-      <div style={stickyContainer}>
+      <div className="container" style={containerStyle}>
         <div style={pillContainer}>
           <div style={optContainer}>
             <button
@@ -157,8 +153,7 @@ function App(props) {
         </div>
       </div>
 
-      <div style={containerStyle}>
-
+      <div className="container" style={containerStyle}>
         {
           type == "art" &&
           // ART
@@ -193,12 +188,9 @@ function App(props) {
           </FadeIn>
         }
 
-        {/* SEE MORE */}
         <div style={moreStyle}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out a case study!"></Gallery></div>
-
       </div>
-
-    </div>
+    </FadeIn >
   );
 }
 

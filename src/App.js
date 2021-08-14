@@ -9,9 +9,6 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import Work from "./Pages/Work";
 import About from "./Pages/About";
 import Play from "./Pages/Play";
-import Art from "./Pages/Art";
-import Code from "./Pages/Code";
-import Motion from "./Pages/Motion";
 
 import Template from "./Pages/Case Studies/Template";
 import Eatery from "./Pages/Case Studies/Eatery";
@@ -70,13 +67,6 @@ function App() {
             <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/patch" render={(props) => <Patch {...props} chooseMoreData={chooseMoreData} />} />
-
-            {/* Depracated Pages */}
-            {/* <Route path="/code" render={(props) => <Code {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/motion" render={(props) => <Motion {...props} chooseMoreData={chooseMoreData} />} /> */}
-            {/* <Route path="/resume" component={Resume} /> */}
-            <Route path="/art" render={(props) => <Art {...props} chooseMoreData={chooseMoreData} />} />
-
 
             {/* Incomplete Articles (comment out when pushing) */}
             {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}
