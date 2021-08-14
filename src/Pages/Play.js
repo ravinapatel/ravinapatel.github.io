@@ -29,11 +29,11 @@ function App(props) {
 
   // GOOGLE ANALYTICS
   function clickSection(section) {
-    // GA Event
     setType(section)
+    // GA Event
     ReactGA.event({
       category: section,
-      action: 'Opened' + section + 'section of Play'
+      action: 'Opened ' + section + ' section of Play'
     })
   }
 
