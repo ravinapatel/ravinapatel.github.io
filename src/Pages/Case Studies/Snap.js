@@ -81,9 +81,9 @@ function App(props) {
 
         {/* Intro */}
         <div style={section}>
-          <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60 }} className="emphatic">
+          <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 60 }} className="emphatic">
             Discover and share more content related to your interests.
-        </div>
+          </div>
 
           <img src={Cover} alt="" width={WIDTH} ></img>
 
@@ -193,10 +193,10 @@ function App(props) {
                   I asked two of my friends to join my brainstorming session. Coming from different
                   countries and academic focuses, my friends brought new and unique perspectives
                   to our session!
-                    <br></br> <br></br>
-                    After coming up with over fifty "How might we" questions, we aggregated
-                    related questions into six opportunity spaces, and we chose two to further work with:
-                    <ul>
+                  <br></br> <br></br>
+                  After coming up with over fifty "How might we" questions, we aggregated
+                  related questions into six opportunity spaces, and we chose two to further work with:
+                  <ul>
                     <li> <b>Bringing content users want:</b> How might we understand people’s interests? </li>
                     <li> <b>Making Discover social:</b> How might we increase and improve interaction between users? </li>
                   </ul>
@@ -285,10 +285,10 @@ function App(props) {
                 <div className="body" >
                   I went through many explorations for how to display information about a clique.
                   Snapchat uses both views in its current design. However, I noticed
-                    that the view in <b>B</b> is more for miscellaneous capabilities. Since
-                    the Info card is meant for more essential information, I decided
-                    to go with <b>A</b>.
-                  </div>
+                  that the view in <b>B</b> is more for miscellaneous capabilities. Since
+                  the Info card is meant for more essential information, I decided
+                  to go with <b>A</b>.
+                </div>
               </div>
             </div>
           </div>
@@ -361,12 +361,12 @@ function App(props) {
             interests.
             <br></br><br></br>
             Huge thank you to
-              <a href="https://www.cornellappdev.com/" style={link} class="text-link"
+            <a href="https://www.cornellappdev.com/" style={link} class="text-link"
               target="_blank"> Cornell AppDev</a> and my TA,
-              <a href="https://shoshanaswell.com/about" style={link} class="text-link"
+            <a href="https://shoshanaswell.com/about" style={link} class="text-link"
               target="_blank"> Shoshana Swell</a>,
             for teaching me about Product Design, and guiding me through this case study!
-        </div>
+          </div>
         </div>
 
         {/* See more case studies */}

@@ -14,7 +14,7 @@ import Template from "./Pages/Case Studies/Template";
 import Eatery from "./Pages/Case Studies/Eatery";
 import Exceed from "./Pages/Case Studies/Exceed";
 import Snap from "./Pages/Case Studies/Snap";
-import Patch from "./Pages/Case Studies/Patch Complete";
+import Patch from "./Pages/Case Studies/Patch";
 
 // -----------------------------------------------------------------------------
 // TODO:

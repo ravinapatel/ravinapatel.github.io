@@ -57,7 +57,7 @@ function Eatery(props) {
     <div style={contentStyle}>
       {/* Intro */}
       <div style={section}>
-        <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60 }} className="emphatic">
+        <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 60 }} className="emphatic">
           This is a template with all the components to use when writing a case study
         </div>
 
@@ -88,7 +88,7 @@ function Eatery(props) {
             <div className="heading">01</div>
             <div className="heading">Cool thing about this</div>
             <div className="body">People love to discover new content. We scroll through social media and stare at screens for hours to watch other people’s stuff.
-          Yet, people find Snapchat’s For You section overwhelmingly “annoying” because</div>
+              Yet, people find Snapchat’s For You section overwhelmingly “annoying” because</div>
           </div>
           <img src={image} alt="image" width={300} ></img>
         </div>
@@ -102,7 +102,7 @@ function Eatery(props) {
             <div className="heading">01</div>
             <div className="heading">Cool thing about this</div>
             <div className="body">People love to discover new content. We scroll through social media and stare at screens for hours to watch other people’s stuff.
-          Yet, people find Snapchat’s For You section overwhelmingly “annoying” because</div>
+              Yet, people find Snapchat’s For You section overwhelmingly “annoying” because</div>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@ function Eatery(props) {
           I set out to understand why people don’t use the Discover page to discover new content.
           My main takeaways from user interviews were:
 
-        {/* Numbered List */}
+          {/* Numbered List */}
           <ol>
             <li>
               People like watching what they’re already interested in
@@ -178,7 +178,7 @@ function Eatery(props) {
                 would increase user interaction, but it would not immediately deliver
                 interesting content. Since Public Group Stories better solved the problem,
                 I decided to move forward with this idea.
-                </div>
+              </div>
             </div>
             <div style={tableCol}>
               <div className="subheading" >Team</div>
@@ -188,7 +188,7 @@ function Eatery(props) {
                 would increase user interaction, but it would not immediately deliver
                 interesting content. Since Public Group Stories better solved the problem,
                 I decided to move forward with this idea.
-                </div>
+              </div>
             </div>
             <div style={tableCol}>
               <div className="subheading" >Duration</div>

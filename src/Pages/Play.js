@@ -28,12 +28,30 @@ function App(props) {
 
 
   // GOOGLE ANALYTICS
-  function clickSection(section) {
-    setType(section)
+  function clickArt() {
+    setType("art")
     // GA Event
     ReactGA.event({
-      category: section,
-      action: 'Opened ' + section + ' section of Play'
+      category: 'Art',
+      action: 'Opened Art section of play'
+    })
+  }
+
+  function clickDigital() {
+    setType("digital")
+    // GA Event
+    ReactGA.event({
+      category: 'Digital',
+      action: 'Opened Digital section of play'
+    })
+  }
+
+  function clickCode() {
+    setType("code")
+    // GA Event
+    ReactGA.event({
+      category: 'Code',
+      action: 'Opened Code section of play'
     })
   }
 
@@ -137,7 +155,7 @@ function App(props) {
           <div style={optContainer}>
             <button
               style={type == "art" ? pillActive : pillInactive}
-              onClick={() => clickSection("art")}
+              onClick={clickArt}
               onMouseEnter={() => setHover("art")}
               onMouseLeave={() => setHover("none")}>
               <img src={artIcon} alt="art" width={"22"} align="center" />
@@ -148,7 +166,7 @@ function App(props) {
           <div style={optContainer}>
             <button
               style={type == "digital" ? pillActive : pillInactive}
-              onClick={() => clickSection("digital")}
+              onClick={clickDigital}
               onMouseEnter={() => setHover("digital")}
               onMouseLeave={() => setHover("none")}>
               <img src={digitalIcon} alt="digital" width={"22"} align="center" />
@@ -159,7 +177,7 @@ function App(props) {
           <div style={optContainer}>
             <button
               style={type == "code" ? pillActive : pillInactive}
-              onClick={() => clickSection("code")}
+              onClick={clickCode}
               onMouseEnter={() => setHover("code")}
               onMouseLeave={() => setHover("none")}>
               <img src={codeIcon} alt="code" width={"22"} align="center" />

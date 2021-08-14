@@ -91,16 +91,16 @@ function App(props) {
         {/* Intro */}
         <div style={section}>
           <div style={{ display: "block" }}>
-            <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 30 }} className="emphatic">
+            <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 30 }} className="emphatic">
               A way for professionals who are content with their work to continue to learn and develop.
             </div>
           </div>
           <div style={{ display: "block" }}>
-            <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 0, color: COLOR }} className="body">
+            <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 0, color: COLOR }} className="body">
               DESIGN CASE COMPETITION WINNER
             </div>
           </div>
-          <div style={{ width: 400, textAlign: "center", display: "inline-block", paddingBottom: 60, color: COLOR }} className="body">
+          <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 60, color: COLOR }} className="body">
             (<a href="mailto: rpp62@cornell.edu" target="_blank"><div style={{ color: "#A8C0EB", display: "inline-block" }}>contact me</div></a> for details)
           </div>
 
@@ -144,10 +144,10 @@ function App(props) {
                   I took a look at a few platforms that solve similar problems. Current
                   learning platforms do a great job of motivating its users along their
                   journeys, as well as allowing users to disover tools for whatever
-                subject they are interested in. However, in order to help <em> busy
-                professionals </em> successfully grow, I will have to deliver these
-                tools in ways condusive to small time budgets.
-              </div>
+                  subject they are interested in. However, in order to help <em> busy
+                    professionals </em> successfully grow, I will have to deliver these
+                  tools in ways condusive to small time budgets.
+                </div>
               </div>
               <div style={tableCol}>
                 <img src={marketResearch} alt="Market research" width={"80%"} style={{ paddingBottom: SECTION_SPACING }} ></img>
@@ -196,9 +196,9 @@ function App(props) {
           <div className="heading" style={{ color: COLOR }}>Problem</div>
           <div className="emphaticBlockText">
             People who are content with their work want to continue growing according
-          to their interests, but they can't because they <b>don't have enough time</b> and
-          <b> cannot find the right content</b> to meet their goals.
-        </div>
+            to their interests, but they can't because they <b>don't have enough time</b> and
+            <b> cannot find the right content</b> to meet their goals.
+          </div>
         </div >
 
         {/* Building the Solution */}
@@ -251,8 +251,8 @@ function App(props) {
                 <div >
                   <div className="body" style={{ paddingTop: 10 }}>
                     I <b>emphasized the watch or read time</b> of content to encourage users
-                  to consume content that fits with their time.
-                </div>
+                    to consume content that fits with their time.
+                  </div>
                 </div>
               </div>
 
@@ -267,8 +267,8 @@ function App(props) {
                 <div >
                   <div className="body" style={{ paddingTop: 10 }}>
                     Users can <b>save content for later</b>, and jot down notes as they watch or listen.
-                  This way, they can easily pick up where they left off.
-                </div>
+                    This way, they can easily pick up where they left off.
+                  </div>
                 </div>
               </div>
               <div style={tableColFinal}>
@@ -323,7 +323,7 @@ function App(props) {
                     issue I found through user research was that people thought they
                     needed to dedicate much more time than necessary to learning, and
                     thus they fell short. I used copy to <b>encourage setting attainable
-                    goals</b> during onboarding.
+                      goals</b> during onboarding.
                     <br></br> <br></br>
                     In order to sustain motivation, users earn achievements as they
                     learn more with Exceed. They are rewarded for several actions, such as
@@ -355,10 +355,10 @@ function App(props) {
                     In order to allow users to continue to grow in each of their non-industry
                     conforming interests, I decided to collect their interests during onboarding.
                     These will be used to curate their feeds.
-                  <br></br> <br></br>
+                    <br></br> <br></br>
                     <b>Interaction note: </b> As users select interests, additional similar
-                  interests show up.
-                </div>
+                    interests show up.
+                  </div>
                 </div>
               </div>
               <div style={tableColFinal} >
@@ -448,18 +448,18 @@ function App(props) {
             Working on this projects was really exciting because the target user demographic
             was completely different from myself and my usual circle. I had to rely fully
             on user interviews and research to put myself in the shoes of the user.
-          <br></br>
             <br></br>
-          The 5-day time constraint also pushed me to research, ideate, and build quickly.
-          I followed used Google's design sprint framework to work through the problem.
-          <br></br>
+            <br></br>
+            The 5-day time constraint also pushed me to research, ideate, and build quickly.
+            I followed used Google's design sprint framework to work through the problem.
+            <br></br>
             <br></br>
             <b>Next Steps</b>
             <br></br>
-          If I were to continue working on this project, I would like to conduct A/B testing
-          to quantify the effects of the design system on the target audience. Based on the
-          collected data, I could continue to refine the visual design.
-        </div>
+            If I were to continue working on this project, I would like to conduct A/B testing
+            to quantify the effects of the design system on the target audience. Based on the
+            collected data, I could continue to refine the visual design.
+          </div>
         </div>
 
 
