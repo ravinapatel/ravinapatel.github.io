@@ -6,6 +6,7 @@ import logo from '../Icons/rp-icon.png';
 // NAVBAR
 
 function App() {
+  // STATE
   const [playMode, setPlayMode] = useState("false")
 
   //STYLING

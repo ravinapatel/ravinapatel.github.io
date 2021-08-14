@@ -4,14 +4,13 @@ import logo from '../Icons/rp-icon.png';
 import ReactGA from 'react-ga';
 
 // MOBILE NAVBAR
-
 function App() {
 
   // STATE
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
-
+    setIsOpen(!isOpen);
     // GA Event
     if (!isOpen) {
       ReactGA.event({
@@ -19,18 +18,15 @@ function App() {
         action: 'Clicked the hamburger menu'
       })
     }
-
-    setIsOpen(!isOpen);
   }
-  function handleResume() {
 
+  function handleResume() {
+    setIsOpen(!isOpen);
     // GA Event
     ReactGA.event({
       category: 'Resume',
       action: 'Opened resume from the hamburger menu'
     })
-
-    setIsOpen(!isOpen);
   }
 
   // STYLING

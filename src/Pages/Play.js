@@ -9,21 +9,34 @@ import uxData from "../Data/uxData.json";
 import codeData from "../Data/csData.json";
 import digitalData from "../Data/digitalData.json";
 
-import art from '../Icons/palette.png';
-import design from '../Icons/vector.png';
-import code from '../Icons/code.png';
+import artIcon from '../Icons/palette.png';
+import digitalIcon from '../Icons/vector.png';
+import codeIcon from '../Icons/code.png';
 
 import useWindowSize from "../Components/useWindowSize";
+import ReactGA from 'react-ga';
+
 
 // RENDERING
 function App(props) {
-  // CONTENT
-  // data for the "check out more of my projects section"
-  const ID = "art"
+  const ID = "null"              // exclude data of type ID in see more section
   const window = useWindowSize();
 
   // STATE
   const [hover, setHover] = useState("none");
+  const [type, setType] = useState("digital")
+
+
+  // GOOGLE ANALYTICS
+  function clickSection(section) {
+    // GA Event
+    setType(section)
+    ReactGA.event({
+      category: section,
+      action: 'Opened' + section + 'section of Play'
+    })
+  }
+
 
   // STYLING
   const containerStyle = {
@@ -114,8 +127,8 @@ function App(props) {
     marginLeft: "-30px"
   }
 
+
   // CONTENT
-  const [type, setType] = useState("design")
   return (
     <div>
 
@@ -124,21 +137,21 @@ function App(props) {
           <div style={optContainer}>
             <button
               style={type == "art" ? pillActive : pillInactive}
-              onClick={() => setType("art")}
+              onClick={() => clickSection("art")}
               onMouseEnter={() => setHover("art")}
               onMouseLeave={() => setHover("none")}>
-              <img src={art} alt="art" width={"22"} align="center" />
+              <img src={artIcon} alt="art" width={"22"} align="center" />
             </button>
             <div className={hover == "art" ? "tagVisible" : "tagInvisible"} style={hoverTag}>art</div>
           </div>
 
           <div style={optContainer}>
             <button
-              style={type == "design" ? pillActive : pillInactive}
-              onClick={() => setType("design")}
+              style={type == "digital" ? pillActive : pillInactive}
+              onClick={() => clickSection("digital")}
               onMouseEnter={() => setHover("digital")}
               onMouseLeave={() => setHover("none")}>
-              <img src={design} alt="design" width={"22"} align="center" />
+              <img src={digitalIcon} alt="digital" width={"22"} align="center" />
             </button>
             <div className={hover == "digital" ? "tagVisible" : "tagInvisible"} style={hoverTag}>digital</div>
           </div>
@@ -146,10 +159,10 @@ function App(props) {
           <div style={optContainer}>
             <button
               style={type == "code" ? pillActive : pillInactive}
-              onClick={() => setType("code")}
+              onClick={() => clickSection("code")}
               onMouseEnter={() => setHover("code")}
               onMouseLeave={() => setHover("none")}>
-              <img src={code} alt="code" width={"22"} align="center" />
+              <img src={codeIcon} alt="code" width={"22"} align="center" />
             </button>
             <div className={hover == "code" ? "tagVisible" : "tagInvisible"} style={hoverTag}>code</div>
           </div>
@@ -158,7 +171,6 @@ function App(props) {
       </div>
 
       <div style={containerStyle}>
-
         {
           type == "art" &&
           // ART
@@ -174,8 +186,8 @@ function App(props) {
         }
 
         {
-          type == "design" &&
-          // DESIGN
+          type == "digital" &&
+          // DIGITAL
           <FadeIn transitionDuration="500">
             <div className="container" style={containerStyle}>
               <div style={sectionStyle}><Gallery cols="2" totalWidth="1100" totalWidthMobile="350" data={digitalData} isLarge="true" msg=""></Gallery></div>

@@ -24,8 +24,8 @@ import Patch from "./Pages/Case Studies/Patch Complete";
 // -----------------------------------------------------------------------------
 
 
-// chooses three projects from a dataset, prioritizing ones with urls and 
-// excluding the one being currently viewed
+// chooses three projects from a dataset `data`, prioritizing ones with urls and 
+// excluding the one being currently viewed (indicated by `ID`)
 function chooseMoreData(data, ID) {
   var x = []
   while (x.length < 3) {
