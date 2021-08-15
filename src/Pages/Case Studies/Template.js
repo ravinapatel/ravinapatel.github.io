@@ -90,14 +90,14 @@ function Eatery(props) {
             <div className="body">People love to discover new content. We scroll through social media and stare at screens for hours to watch other people’s stuff.
               Yet, people find Snapchat’s For You section overwhelmingly “annoying” because</div>
           </div>
-          <img src={image} alt="image" width={300} ></img>
+          <img src={image} alt="image description" width={300} ></img>
         </div>
       </div>
 
       {/* Image + Text */}
       <div style={section}>
         <div style={{ display: isSmallScreen ? "block" : "flex" }}>
-          <img src={image} alt="image" width={300} ></img>
+          <img src={image} alt="image description" width={300} ></img>
           <div style={{ paddingLeft: isSmallScreen ? 0 : 60, paddingTop: isSmallScreen ? 60 : 0 }}>
             <div className="heading">01</div>
             <div className="heading">Cool thing about this</div>

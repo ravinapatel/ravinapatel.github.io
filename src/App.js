@@ -10,8 +10,6 @@ import Work from "./Pages/Work";
 import About from "./Pages/About";
 import Play from "./Pages/Play";
 
-import Template from "./Pages/Case Studies/Template";
-import Eatery from "./Pages/Case Studies/Eatery";
 import Pandora from "./Pages/Case Studies/Pandora";
 import Exceed from "./Pages/Case Studies/Exceed";
 import Snap from "./Pages/Case Studies/Snap";
@@ -31,14 +29,14 @@ function chooseMoreData(data, ID) {
   var x = []
   while (x.length < 3) {
     for (var i = 0; i < data.length; i++) {
-      if (data[i].id != ID && data[i].id != "buffer" && data[i].url != null) {
+      if (data[i].id !== ID && data[i].id !== "buffer" && data[i].url !== null) {
         x.push(data[i]);
       }
       if (x.length > 2) break;
     }
     if (x.length < 3) {
-      for (var i = 0; i < data.length; i++) {
-        if (data[i].id != ID && data[i].id != "buffer") {
+      for (i = 0; i < data.length; i++) {
+        if (data[i].id !== ID && data[i].id !== "buffer") {
           x.push(data[i]);
         }
         if (x.length > 2) break;

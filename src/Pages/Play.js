@@ -154,35 +154,35 @@ function App(props) {
         <div style={pillContainer}>
           <div style={optContainer}>
             <button
-              style={type == "art" ? pillActive : pillInactive}
+              style={type === "art" ? pillActive : pillInactive}
               onClick={clickArt}
               onMouseEnter={() => setHover("art")}
               onMouseLeave={() => setHover("none")}>
               <img src={artIcon} alt="art" width={"22"} align="center" />
             </button>
-            <div className={hover == "art" ? "tagVisible" : "tagInvisible"} style={hoverTag}>art</div>
+            <div className={hover === "art" ? "tagVisible" : "tagInvisible"} style={hoverTag}>art</div>
           </div>
 
           <div style={optContainer}>
             <button
-              style={type == "digital" ? pillActive : pillInactive}
+              style={type === "digital" ? pillActive : pillInactive}
               onClick={clickDigital}
               onMouseEnter={() => setHover("digital")}
               onMouseLeave={() => setHover("none")}>
               <img src={digitalIcon} alt="digital" width={"22"} align="center" />
             </button>
-            <div className={hover == "digital" ? "tagVisible" : "tagInvisible"} style={hoverTag}>digital</div>
+            <div className={hover === "digital" ? "tagVisible" : "tagInvisible"} style={hoverTag}>digital</div>
           </div>
 
           <div style={optContainer}>
             <button
-              style={type == "code" ? pillActive : pillInactive}
+              style={type === "code" ? pillActive : pillInactive}
               onClick={clickCode}
               onMouseEnter={() => setHover("code")}
               onMouseLeave={() => setHover("none")}>
               <img src={codeIcon} alt="code" width={"22"} align="center" />
             </button>
-            <div className={hover == "code" ? "tagVisible" : "tagInvisible"} style={hoverTag}>code</div>
+            <div className={hover === "code" ? "tagVisible" : "tagInvisible"} style={hoverTag}>code</div>
           </div>
 
         </div>
@@ -190,7 +190,7 @@ function App(props) {
 
       <div style={containerStyle}>
         {
-          type == "art" &&
+          type === "art" &&
           // ART
           <FadeIn transitionDuration="500">
             < div className="container" style={containerStyle}>
@@ -204,7 +204,7 @@ function App(props) {
         }
 
         {
-          type == "digital" &&
+          type === "digital" &&
           // DIGITAL
           <FadeIn transitionDuration="500">
             <div className="container" style={containerStyle}>
@@ -214,7 +214,7 @@ function App(props) {
         }
 
         {
-          type == "code" &&
+          type === "code" &&
           // CODE
           <FadeIn transitionDuration="500">
             <div className="container" style={containerStyle}>

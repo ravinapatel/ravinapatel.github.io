@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import React from 'react';
 import '../App.css';
 
 // PROPS
@@ -21,7 +20,7 @@ function Button(props) {
   return (
     <a
       href={props.url}
-      target={(props.isInternal == "true") ? "" : "_blank"}
+      target={(props.isInternal === "true") ? "" : "_blank"}
       style={{ textDecoration: "none", color: "#373737", fontSize: "14px" }}>
 
       <div className="button" style={button}>{props.text}</div>

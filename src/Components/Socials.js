@@ -16,7 +16,7 @@ function App(props) {
 
   // STYLING
   const PADDING = 30
-  const CLASS = props.light == "true" ? "socialLight" : "social"
+  const CLASS = props.light === "true" ? "socialLight" : "social"
 
   function handleClick(social) {
     // GA Event

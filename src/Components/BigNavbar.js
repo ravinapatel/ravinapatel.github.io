@@ -89,7 +89,7 @@ function App() {
       < nav style={navStyle}>
 
         {/* Name and Logo */}
-        <div className={`logoContainer ${playMode == "true" ? "navOpen" : "navClose"}`} style={menuLeft}>
+        <div className={`logoContainer ${playMode === "true" ? "navOpen" : "navClose"}`} style={menuLeft}>
           <Link to="/" style={nameStyle} onClick={() => setPlayMode("false")}>
             <img
               src={logo}

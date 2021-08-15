@@ -2,7 +2,7 @@ import React from 'react';
 import Gallery from "../Components/Gallery";
 import Intro from "../Components/WorkIntro";
 import data from "../Data/uxData.json";
-import categoriesData from "../Data/categories.json";
+// import categoriesData from "../Data/categories.json";
 import FadeIn from 'react-fade-in';
 import Button from "../Components/Button";
 import ReactGA from 'react-ga';

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import me from '../Images/about/about-img.jpg';
-import timeline from '../Images/about/timeline.png';
 import Button from "../Components/Button";
-import Socials from "../Components/Socials";
 import FadeIn from 'react-fade-in';
 import useWindowSize from "../Components/useWindowSize";
 
@@ -18,7 +16,6 @@ function App(props) {
   // RESPONSIVENESS
   const window = useWindowSize();
   var isBigScreen = window.width > 900
-  var isMediumScreen = window.width < 900
   var isSmallScreen = window.width < 700
 
   // STATE
@@ -37,12 +34,9 @@ function App(props) {
   }
 
   // STYLING
-  const COLOR = "#0F5BE5"
-  const GREY = "#9a9a9a"
   const WIDTH = isBigScreen ? 800 : "90%"
   const PADDING = (window.width - WIDTH) / 2
   const SECTION_SPACING = 50
-  const ID = "about"       // must match the project id in uxData
 
   const contentStyle = {
     textAlign: "center",
@@ -72,11 +66,6 @@ function App(props) {
     flex: 1
   }
 
-  const link = {
-    color: "#ababab",
-    textDecoration: "none",
-    cursor: "pointer"
-  }
   const hoverTag = {
     padding: 5,
     paddingLeft: 10,

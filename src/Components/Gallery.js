@@ -49,7 +49,7 @@ function App(props) {
   // Adds each project into the `columns` array in the correct (shortest) column
   function placeProjects() {
     for (var i = 0; i < props.data.length; i++) {
-      if (!(cols == 1 && props.data[i].id == "buffer")) {
+      if (!(cols === 1 && props.data[i].id === "buffer")) {
         columns[chooseColumn()].push(projects[i]);
       }
     }
@@ -73,7 +73,7 @@ function App(props) {
 
   // Custom Mobile Display
   function mobileDisplay() {
-    if (window.width < 900 && totalWidth != props.totalWidthMobile) {
+    if (window.width < 900 && totalWidth !== props.totalWidthMobile) {
       if (props.totalWidthMobile != null) {
         setTotalWidth(props.totalWidthMobile)
       }
@@ -91,12 +91,12 @@ function App(props) {
   }
 
   // Adjust size of gallery according to window size
-  function responsiveUp() {
-    if (window.width > 900) {
-      setCols(props.cols)
-      setTotalWidth(props.totalWidth)
-    }
-  }
+  // function responsiveUp() {
+  //   if (window.width > 900) {
+  //     setCols(props.cols)
+  //     setTotalWidth(props.totalWidth)
+  //   }
+  // }
 
   // STYLING
   const containerStyle = {

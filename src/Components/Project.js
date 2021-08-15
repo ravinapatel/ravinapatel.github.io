@@ -111,7 +111,7 @@ function App(props) {
 
   const projectName = {
     letterSpacing: "0.03em",
-    fontSize: props.isLarge == "true" ? 22 : 18,
+    fontSize: props.isLarge === "true" ? 22 : 18,
     fontWeight: "bold",
     textDecoration: "none",
     paddingBottom: 10
@@ -119,7 +119,7 @@ function App(props) {
 
   const projectDescription = {
     letterSpacing: "0.03em",
-    fontSize: props.isLarge == "true" ? 16 : 14,
+    fontSize: props.isLarge === "true" ? 16 : 14,
     textDecoration: "none",
   }
 
@@ -156,12 +156,12 @@ function App(props) {
           </div>
         </div>
 
-        <a href={props.url} target={(props.isInternal == "true") ? "" : "_blank"}>
+        <a href={props.url} target={(props.isInternal === "true") ? "" : "_blank"}>
           <img
             src={importImage(props.id)}
             alt="Project thumbnail"
             width={props.width}
-            height={props.square == "true" ? props.width : "null"}
+            height={props.square === "true" ? props.width : "null"}
             align="center"
             className={(props.name != null) ? "image" : ""}
           />
