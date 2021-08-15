@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.39a78c12.chunk.css",
-    "main.js": "/static/js/main.3d05970d.chunk.js",
-    "main.js.map": "/static/js/main.3d05970d.chunk.js.map",
+    "main.js": "/static/js/main.1e4dba5b.chunk.js",
+    "main.js.map": "/static/js/main.1e4dba5b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c0ae09a.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c0ae09a.js.map",
-    "static/js/2.29c574b4.chunk.js": "/static/js/2.29c574b4.chunk.js",
-    "static/js/2.29c574b4.chunk.js.map": "/static/js/2.29c574b4.chunk.js.map",
+    "static/js/2.4ba3a523.chunk.js": "/static/js/2.4ba3a523.chunk.js",
+    "static/js/2.4ba3a523.chunk.js.map": "/static/js/2.4ba3a523.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e3aee72dfbdae0dcdcd3314873dabdc2.js": "/precache-manifest.e3aee72dfbdae0dcdcd3314873dabdc2.js",
+    "precache-manifest.42b68e650e5a850a3facf09988efb3e3.js": "/precache-manifest.42b68e650e5a850a3facf09988efb3e3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.39a78c12.chunk.css.map": "/static/css/main.39a78c12.chunk.css.map",
-    "static/js/2.29c574b4.chunk.js.LICENSE.txt": "/static/js/2.29c574b4.chunk.js.LICENSE.txt",
+    "static/js/2.4ba3a523.chunk.js.LICENSE.txt": "/static/js/2.4ba3a523.chunk.js.LICENSE.txt",
     "static/media/Chalk.jpg": "/static/media/Chalk.484fb2d5.jpg",
     "static/media/Faded.jpg": "/static/media/Faded.3e3b2181.jpg",
     "static/media/Falling-Water.jpg": "/static/media/Falling-Water.fd736c41.jpg",
@@ -69,6 +69,7 @@
     "static/media/onboarding-interests.png": "/static/media/onboarding-interests.49ac8d56.png",
     "static/media/organization.png": "/static/media/organization.6c0828e2.png",
     "static/media/pain-points.png": "/static/media/pain-points.fc2bd5a8.png",
+    "static/media/pandora-banner.png": "/static/media/pandora-banner.5e098ae3.png",
     "static/media/pandora.png": "/static/media/pandora.25ac71cd.png",
     "static/media/patch.png": "/static/media/patch.2562aa94.png",
     "static/media/personalization.png": "/static/media/personalization.e93b1b6b.png",
@@ -84,7 +85,7 @@
     "static/media/shmoke.jpg": "/static/media/shmoke.2a38a836.jpg",
     "static/media/smokey-cabin.gif": "/static/media/smokey-cabin.877850b1.gif",
     "static/media/snap-banner.png": "/static/media/snap-banner.470cb12f.png",
-    "static/media/snap.png": "/static/media/snap.2d5fd139.png",
+    "static/media/snap.png": "/static/media/snap.6a767779.png",
     "static/media/solution-cover.png": "/static/media/solution-cover.d0f1a708.png",
     "static/media/starry-night.gif": "/static/media/starry-night.a0234ca2.gif",
     "static/media/time.png": "/static/media/time.55e26e9c.png",
@@ -96,8 +97,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7c0ae09a.js",
-    "static/js/2.29c574b4.chunk.js",
+    "static/js/2.4ba3a523.chunk.js",
     "static/css/main.39a78c12.chunk.css",
-    "static/js/main.3d05970d.chunk.js"
+    "static/js/main.1e4dba5b.chunk.js"
   ]
 }
