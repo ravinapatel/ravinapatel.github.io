@@ -55,7 +55,8 @@ function App(props) {
   const tableContainer = {
     display: "inline-block",
     marginTop: 30,
-    marginBottom: 30
+    marginBottom: 30,
+    width: WIDTH
   }
   const table = {
     MsFlex: 1,  /* IE 10 */

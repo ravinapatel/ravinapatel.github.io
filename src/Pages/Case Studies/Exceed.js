@@ -70,7 +70,8 @@ function App(props) {
   const tableContainer = {
     display: "inline-block",
     marginTop: 30,
-    marginBottom: 30
+    marginBottom: 30,
+    width: WIDTH
   }
   const table = {
     MsFlex: 1,  /* IE 10 */
@@ -112,7 +113,7 @@ function App(props) {
                 <div className="subheading" >My Role</div>
                 <div className="body" >UX Researcher, UI Designer</div>
               </div>
-              <div style={tableCol}>
+              <div style={tableColFinal}>
                 <div className="subheading" >Duration</div>
                 <div className="body" >5 days</div>
               </div>

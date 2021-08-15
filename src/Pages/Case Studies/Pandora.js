@@ -7,12 +7,10 @@ import useWindowSize from "../../Components/useWindowSize";
 import FadeIn from 'react-fade-in';
 import './CaseStudy.css';
 
-// IMAGES
 import Cover from "../../Images/portfolio/ux/pandora-banner.png";
 
 
 // Pandora Internship
-
 // RENDERING
 function App(props) {
 
@@ -24,7 +22,6 @@ function App(props) {
 
   // STYLING
   const COLOR = "#D632C5"
-  const GREY = "#9a9a9a"
   const WIDTH = isBigScreen ? 800 : "90%"
   const PADDING = (window.width - WIDTH) / 2
   const SECTION_SPACING = 50
@@ -46,7 +43,8 @@ function App(props) {
   const tableContainer = {
     display: "inline-block",
     marginTop: 30,
-    marginBottom: 30
+    marginBottom: 30,
+    width: WIDTH
   }
   const table = {
     MsFlex: 1,  /* IE 10 */
@@ -78,7 +76,7 @@ function App(props) {
                 <div className="subheading" >Timeline</div>
                 <div className="body" >Summer 2021, 10 weeks</div>
               </div>
-              <div style={tableCol}>
+              <div style={tableColFinal}>
                 <div className="subheading" >My Role</div>
                 <div className="body" > Product Design Intern</div>
               </div>

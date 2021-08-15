@@ -51,7 +51,8 @@ function App(props) {
   const tableContainer = {
     display: "inline-block",
     marginTop: 30,
-    marginBottom: 30
+    marginBottom: 30,
+    width: WIDTH
   }
   const table = {
     MsFlex: 1,  /* IE 10 */
@@ -89,7 +90,7 @@ function App(props) {
                 <div className="body" ><b>Developers</b>: Omar Rasheed, Yana Sang, Cameron Russell</div>
                 <div className="body" ><b>Designers</b>: Gracie Jing (mobile), Me (web)</div>
               </div>
-              <div style={tableCol}>
+              <div style={tableColFinal}>
                 <div className="subheading" >Duration</div>
                 <div className="body" >2 months</div>
               </div>
