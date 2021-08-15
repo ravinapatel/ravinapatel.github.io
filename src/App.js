@@ -12,6 +12,7 @@ import Play from "./Pages/Play";
 
 import Template from "./Pages/Case Studies/Template";
 import Eatery from "./Pages/Case Studies/Eatery";
+import Pandora from "./Pages/Case Studies/Pandora";
 import Exceed from "./Pages/Case Studies/Exceed";
 import Snap from "./Pages/Case Studies/Snap";
 import Patch from "./Pages/Case Studies/Patch";
@@ -64,6 +65,7 @@ function App() {
           <Switch className="websiteBody">
             <Route path="/about" component={About} />
             <Route path="/play" render={(props) => <Play {...props} chooseMoreData={chooseMoreData} />} />
+            <Route path="/pandora" render={(props) => <Pandora {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/patch" render={(props) => <Patch {...props} chooseMoreData={chooseMoreData} />} />
