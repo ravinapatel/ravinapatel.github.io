@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import FadeIn from 'react-fade-in';
 
 import Gallery from "../Components/Gallery";
@@ -29,6 +29,7 @@ function App(props) {
 
   // GOOGLE ANALYTICS
   function clickArt() {
+    scrollToTop()
     setType("art")
     // GA Event
     ReactGA.event({
@@ -38,6 +39,7 @@ function App(props) {
   }
 
   function clickDigital() {
+    scrollToTop()
     setType("digital")
     // GA Event
     ReactGA.event({
@@ -47,6 +49,7 @@ function App(props) {
   }
 
   function clickCode() {
+    scrollToTop()
     setType("code")
     // GA Event
     ReactGA.event({
@@ -145,10 +148,14 @@ function App(props) {
     marginLeft: "-30px"
   }
 
+  function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
 
   // CONTENT
   return (
-    <div>
+    <div id="title">
 
       <div style={stickyContainer}>
         <div style={pillContainer}>
@@ -160,7 +167,7 @@ function App(props) {
               onMouseLeave={() => setHover("none")}>
               <img src={artIcon} alt="art" width={"22"} align="center" />
             </button>
-            <div className={hover === "art" ? "tagVisible" : "tagInvisible"} style={hoverTag}>art</div>
+            <div className={hover === "art" ? "tagVisible" : "tagInvisible"} style={hoverTag}>Art</div>
           </div>
 
           <div style={optContainer}>
@@ -171,7 +178,7 @@ function App(props) {
               onMouseLeave={() => setHover("none")}>
               <img src={digitalIcon} alt="digital" width={"22"} align="center" />
             </button>
-            <div className={hover === "digital" ? "tagVisible" : "tagInvisible"} style={hoverTag}>digital</div>
+            <div className={hover === "digital" ? "tagVisible" : "tagInvisible"} style={hoverTag}>Digital</div>
           </div>
 
           <div style={optContainer}>
@@ -182,7 +189,7 @@ function App(props) {
               onMouseLeave={() => setHover("none")}>
               <img src={codeIcon} alt="code" width={"22"} align="center" />
             </button>
-            <div className={hover === "code" ? "tagVisible" : "tagInvisible"} style={hoverTag}>code</div>
+            <div className={hover === "code" ? "tagVisible" : "tagInvisible"} style={hoverTag}>Code</div>
           </div>
 
         </div>
@@ -227,8 +234,8 @@ function App(props) {
         <div style={moreStyle}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out a case study!"></Gallery></div>
 
       </div>
-
     </div>
+
   );
 }
 

@@ -90,10 +90,10 @@ function App(props) {
           <div className="heading" style={{ color: COLOR }}>Background</div>
           <div className="body">
             In the summer of 2021, I was a Product Design Intern on Pandora’s
-            Creator Catalog Team. This team is in charge of building tools that
-            allow artists and record labels to easily engage with Pandora’s
-            services. I was given full ownership and creative freedom on a
-            project that I researched, designed, and prototyped.
+            Creator Catalog Team. This team builds tools that allow artists and
+            record labels to easily engage with Pandora’s services. I was given
+            full ownership and creative freedom on a project that I researched,
+            designed, and prototyped. <br></br> <br></br>
 
             My project revolved around the end-to-end service of Pandora
             Charts. For this project...

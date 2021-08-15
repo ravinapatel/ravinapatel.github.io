@@ -93,7 +93,7 @@ function App() {
           <Link to="/" style={nameStyle} onClick={() => setPlayMode("false")}>
             <img
               src={logo}
-              alt="" width={18}
+              alt="" width={24}
               className="logo"
               align="center"
               style={{ paddingRight: "10px" }}
