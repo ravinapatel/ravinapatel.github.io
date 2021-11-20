@@ -124,7 +124,7 @@ function App(props) {
             I worked on both the internal and external experience of charts
             that affected various user groups ranging from record labels to
             listeners. From this challenge, I got experience creating a
-            wholistic experience that spans multiple platforms, contexts, and
+            holistic experience that spans multiple platforms, contexts, and
             users. I learned to think about how the tools I designed would
             affect each other, and how to prioritize various (and occasionally
             conflicting) user needs and business goals.

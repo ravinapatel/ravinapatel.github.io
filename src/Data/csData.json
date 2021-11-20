@@ -1,5 +1,12 @@
 [
   {
+    "id": "simplay",
+    "name": "SimPlay",
+    "description": "A web app that generates a Spotify playlist of songs with similar lyrics and audio features to an input song",
+    "msg": "View app",
+    "url": "http://tar-4300.herokuapp.com/"
+  },
+  {
     "id": "connect4",
     "name": "Connect Four AI",
     "description": "An AI and GUI for the classic Connect Four game",
@@ -38,12 +45,6 @@
     "description": "Re-creation of the classic Space Invaders game",
     "msg": null,
     "url": null
-  },
-  {
-    "id": "buffer"
-  },
-  {
-    "id": "buffer"
   },
   {
     "id": "weather",

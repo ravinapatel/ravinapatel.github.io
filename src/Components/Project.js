@@ -39,6 +39,7 @@ function App(props) {
       case 'eatery-long': return require('../Images/portfolio/ux/eatery-banner.png');
 
       // CS
+      case 'simplay': return require('../Images/portfolio/cs/simplay.png');
       case 'code': return require('../Images/portfolio/cs/fractals-gif.gif');
       case 'connect4': return require('../Images/portfolio/cs/board-gif.gif');
       case 'fractals': return require('../Images/portfolio/cs/fractals-gif.gif');
@@ -85,7 +86,7 @@ function App(props) {
       case 'red-sky': return require('../Images/portfolio/motion/red-sky.gif');
 
       // DIGITAL
-      case 'toggle': return require('../Images/portfolio/digital/toggle.png');
+      case 'toggle': return require('../Images/portfolio/digital/toggle.gif');
       case 'cards': return require('../Images/portfolio/digital/cards.png');
       case 'print': return require('../Images/portfolio/digital/print.png');
 
