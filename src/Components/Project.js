@@ -85,7 +85,7 @@ function App(props) {
       case 'red-sky': return require('../Images/portfolio/motion/red-sky.gif');
 
       // DIGITAL
-      case 'day-toggle': return require('../Images/portfolio/digital/day-toggle.png');
+      case 'toggle': return require('../Images/portfolio/digital/toggle.png');
       case 'cards': return require('../Images/portfolio/digital/cards.png');
       case 'print': return require('../Images/portfolio/digital/print.png');
 
