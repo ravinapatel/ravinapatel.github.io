@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Project from "./Project";
 import useWindowSize from "./useWindowSize";
 
@@ -7,107 +7,90 @@ function App(props) {
   // A component that displays an array of project data as a gallery of Project Components 
 
   // Props:
-  //   - cols               number of columns for the gallery
+  //   - numColsArray       [bigScreen, medScreen, smallScreen]
   //   - totalWidth         total width of the gallery
   //   - data               array of project data
-  //   - msg                title of gallery section
+  //   - title              title of gallery section
   //   - square             bool indicating whether project images should be squares
   //   - padding            optional padding value
-  //   - totalWidthMobile   optional total width for mobile
 
-  // STATE
-  const [cols, setCols] = useState(props.cols);
-  const [totalWidth, setTotalWidth] = useState(props.totalWidth);
 
-  // CONSTANTS
-  const PADDING = props.padding != null ? props.padding : 20;
-  var columns = [];
-  var width = (totalWidth - (cols) * PADDING) / cols;
+  // RESONSIVENESS
   const window = useWindowSize();
+  var isBigScreen = window.width > 1200
+  var isSmallScreen = window.width < 700
+  
+  // DATA
+  if (!props.numColsArray) return null;   // wait for `numColsArray` to fetch
+
+  const PADDING = props.padding != null ? props.padding : 20;
+  function getNumCols() {
+    if (isBigScreen) return props.numColsArray[0];
+    else if (isSmallScreen) return props.numColsArray[2];
+    else return props.numColsArray[1];
+  }
+  var numCols = getNumCols();
 
   // Array of Project components (adding project props just have to be updated here)
   const projects = props.data.map(item => < Project
     id={item.id}
     name={item.name}
     description={item.description}
+    descriptionShort={item.descriptionShort}
     msg={item.msg}
     url={item.url}
-    width={width}
+    // width={bigScreenColwidth}
+    width={"100%"}
     square={props.square}
     isInternal={item.isInternal}
     isLarge={props.isLarge}
   />)
 
+  // SCRIPT
+  function createColumns() {
+    // Initiaze `columns` to be the correct size based on `numColsArray`
+    var columns = [];
+    if (isBigScreen) numCols = props.numColsArray[0];
+    else if (isSmallScreen) numCols = props.numColsArray[2];
+    else numCols = props.numColsArray[1];
 
-  //FUNCTIONS
-  // Initiazlies `columns` to be the correct size based on `cols`
-  function columnsInit() {
-    for (var i = 0; i < cols; i++) {
+    for (var i = 0; i < numCols; i++) {
       columns.push([]);
     }
-  }
-  // Adds each project into the `columns` array in the correct (shortest) column
-  function placeProjects() {
-    for (var i = 0; i < props.data.length; i++) {
-      if (!(cols === 1 && props.data[i].id === "buffer")) {
-        columns[chooseColumn()].push(projects[i]);
-      }
+    
+    // Popoulate `columns` with projects
+    for (var j = 0; j < props.data.length; j++) {
+      var idx = j % numCols;
+      columns[idx].push(projects[j]);
     }
+    return columns
   }
-  // Finds the shortest column
-  function chooseColumn() {
-    var col = 0;
-    var min = 1000000000;
-    for (var i = 0; i < columns.length; i++) {
-      if (height(columns[i]) < min) {
-        min = height(columns[i]);
-        col = i;
-      }
-    }
-    return col
-  }
-  // Future: should really return actual height of column, not number of elements
-  function height(array) {
-    return array.length
-  }
+  var columns = createColumns();
 
-  // Custom Mobile Display
-  function mobileDisplay() {
-    if (window.width < 900 && totalWidth !== props.totalWidthMobile) {
-      if (props.totalWidthMobile != null) {
-        setTotalWidth(props.totalWidthMobile)
-      }
-    }
-  }
 
-  // Adjust size of gallery according to window size
-  function responsiveDown() {
-    if (window.width < totalWidth) {
-      if (cols > 1) {
-        setCols(cols - 1)
-        setTotalWidth(totalWidth - width - 1.5 * PADDING)
-      }
-    }
-  }
-
-  // Adjust size of gallery according to window size
-  // function responsiveUp() {
-  //   if (window.width > 900) {
-  //     setCols(props.cols)
-  //     setTotalWidth(props.totalWidth)
-  //   }
-  // }
 
   // STYLING
   const containerStyle = {
+    textAlign: "center",
+  }
+
+  const contentStyle1 = {
+    display: "inline-block",
+    position: "relative",
+    width: isBigScreen ? props.totalWidth : 0.9 * window.width,
+    // width: width,
+  }
+  const contentStyle2 = {
     display: "flex",
-    width: Number(totalWidth)
+    // backgroundColor: "yellow"
+    // display: one column ? "block" : "flex",
   }
 
   const columnStyle = {
+    flex: 1/numCols,
     paddingRight: PADDING / 2,
     paddingLeft: PADDING / 2,
-    width: width
+    // width: isBigScreen ? width : "100%"
   }
 
   const rowStyle = {
@@ -117,17 +100,11 @@ function App(props) {
 
   const titleStyle = {
     paddingBottom: 20,
-    width: Number(totalWidth)
+    width: isBigScreen ? props.totalWidth : 0.9 * window.width
   }
 
 
-  // SCRIPT
-  columnsInit();
-  placeProjects();
-  mobileDisplay();
-  responsiveDown();
-  // responsiveUp();
-
+  // RENDERING
   var columnsComponents = columns.map(col =>
     <div className="column" style={columnStyle}>
       {col.map(row =>
@@ -139,11 +116,13 @@ function App(props) {
   )
 
   return (
-    <div>
-      <div className="title" style={titleStyle}>{props.msg}</div>
-      <div className="container" style={containerStyle}>
-        {columnsComponents}
-      </div >
+    <div style={containerStyle}>
+      <div className="sectionTitle" style={titleStyle}>{props.title}</div>
+      <div style={contentStyle1}>
+        <div style={contentStyle2}>
+          {columnsComponents}
+        </div >
+      </div>
     </div>
   );
 }

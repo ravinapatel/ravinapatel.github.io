@@ -1,0 +1,54 @@
+[
+  {
+    "id": "pandora",
+    "name": "Pandora",
+    "description": "Revamped Pandora Charts to increase their media value and make internal curation more efficient",
+    "msg": "Read case study",
+    "url": "./pandora",
+    "isInternal": "true"
+  },
+  {
+    "id": "buffer"
+  },
+  {
+    "id": "snap",
+    "name": "Snap Cliques",
+    "description": "Prototyped a feature that increases personalization and social interaction in Snapchat’s Discover page",
+    "msg": "Read case study",
+    "url": "./snap-cliques",
+    "isInternal": "true"
+  },
+  {
+    "id": "exceed",
+    "name": "Exceed",
+    "description": "Winner in a design case competition. Designed an on-the-go solution for professionals to continue learning",
+    "msg": "Read case study",
+    "url": "./exceed",
+    "isInternal": "true"
+  },
+  {
+    "id": "patch",
+    "name": "Patch",
+    "description": "Designed a mobile customer service plugin and an accompanying desktop app for developers manage reports",
+    "msg": "Read case study",
+    "url": "./patch",
+    "isInternal": "true"
+  },
+  {
+    "id": "way",
+    "name": "WAY",
+    "description": "Refreshed the design system and simplified the ordering flow for a contactless pay platform for local restaraunts",
+    "msg": "Visit website",
+    "url": "https://paywithway.com/"
+  },
+  {
+    "id": "buffer"
+  },
+  {
+    "id": "eatery",
+    "name": "Eatery",
+    "description": "Conducted a mini user research study on the Eatery app's user experience",
+    "msg": "Read on Medium",
+    "url": "https://medium.com/@rpp62/eatery-5e53860455a1"
+  }
+]

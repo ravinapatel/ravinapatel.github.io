@@ -1,38 +1,49 @@
 import React from 'react';
+import {useRef} from 'react';
+// import Intro from "../../Components/WorkIntro";
+
 
 import Gallery from "../../Components/Gallery";
-import BlockQuote from "../../Components/case_study_components/blockQuote";
+// import Cover from "../../Components/case_study_components/Cover";
 import uxData from "../../Data/uxData.json";
 import useWindowSize from "../../Components/useWindowSize";
 import FadeIn from 'react-fade-in';
+import Link from "../../Components/Link";
+import ScrollToTop from "../../Components/ScrollToTop";
 import './CaseStudy.css';
 
 // IMAGES
 
-import Cover from "../../Images/portfolio/ux/exceed/exceed-banner.png";
-import solutionCover from "../../Images/portfolio/ux/exceed/solution-cover.png";
-import finalCover from "../../Images/portfolio/ux/exceed/final-cover.png";
+import exceedCover from "../../Images/portfolio/ux/exceed/exceed-banner.png";
+// import solutionCover from "../../Images/portfolio/ux/exceed/solution-cover.png";
+// import finalCover from "../../Images/portfolio/ux/exceed/final-cover.png";
 
-import marketResearch from "../../Images/portfolio/ux/exceed/market-research.png";
+import solutionPreview from "../../Images/portfolio/ux/exceed/solution-preview.png";
+import solutionPreviewSmall from "../../Images/portfolio/ux/exceed/solution-preview-small.png";
 import painPoints from "../../Images/portfolio/ux/exceed/pain-points.png";
-import content from "../../Images/portfolio/ux/exceed/content.png";
-import dataTime from "../../Images/portfolio/ux/exceed/data-time.png";
-import dataMedia from "../../Images/portfolio/ux/exceed/data-media.png";
-import dataMore from "../../Images/portfolio/ux/exceed/data-more.png";
+import contentRequirements from "../../Images/portfolio/ux/exceed/content-requirements.png";
+import mediaGraph from "../../Images/portfolio/ux/exceed/media-graph.png";
+import mediaGraphSmall from "../../Images/portfolio/ux/exceed/media-graph-small.png";
+
+// import marketResearch from "../../Images/portfolio/ux/exceed/market-research.png";
+// import content from "../../Images/portfolio/ux/exceed/content.png";
+// import dataTime from "../../Images/portfolio/ux/exceed/data-time.png";
+// import dataMedia from "../../Images/portfolio/ux/exceed/data-media.png";
+// import dataMore from "../../Images/portfolio/ux/exceed/data-more.png";
 
 import processTypes from "../../Images/portfolio/ux/exceed/process-time.png";
 import processSave from "../../Images/portfolio/ux/exceed/process-save.png";
 import processCard from "../../Images/portfolio/ux/exceed/process-card.png";
 import processExplore from "../../Images/portfolio/ux/exceed/process-explore.png";
-import timeIcon from "../../Images/portfolio/ux/exceed/time-icon.png";
-import exploreIcon from "../../Images/portfolio/ux/exceed/explore-icon.png";
-import motivationIcon from "../../Images/portfolio/ux/exceed/motivation-icon.png";
-import crossIcon from "../../Images/portfolio/ux/exceed/cross-icon.png";
+// import timeIcon from "../../Images/portfolio/ux/exceed/time-icon.png";
+// import exploreIcon from "../../Images/portfolio/ux/exceed/explore-icon.png";
+// import motivationIcon from "../../Images/portfolio/ux/exceed/motivation-icon.png";
+// import crossIcon from "../../Images/portfolio/ux/exceed/cross-icon.png";
 
-import personalization from "../../Images/portfolio/ux/exceed/personalization.png";
+// import personalization from "../../Images/portfolio/ux/exceed/personalization.png";
 import motivation from "../../Images/portfolio/ux/exceed/motivation.png";
-import interests from "../../Images/portfolio/ux/exceed/onboarding-interests.png";
-import time from "../../Images/portfolio/ux/exceed/time.png";
+// import interests from "../../Images/portfolio/ux/exceed/onboarding-interests.png";
+// import time from "../../Images/portfolio/ux/exceed/time.png";
 
 
 // The Exceed App
@@ -40,90 +51,225 @@ import time from "../../Images/portfolio/ux/exceed/time.png";
 // RENDERING
 function App(props) {
 
+
+  // USE REF HOOK FOR SCROLL TO ELEMENT
+  const scrollToDiv = (ref) => ref.current?.scrollIntoView({behavior: 'smooth'});
+  const el1 = useRef();
+  const el2 = useRef();
+
   // RESPONSIVENESS
   const window = useWindowSize();
   var isBigScreen = window.width > 900
-  var isMediumScreen = window.width < 900
   var isSmallScreen = window.width < 700
+
 
   // STYLING
   const COLOR = "#0F5BE5"
-  const GREY = "#9a9a9a"
-  const WIDTH = isBigScreen ? 800 : "90%"
-  const PADDING = (window.width - WIDTH) / 2
-  const SECTION_SPACING = 50
+  const RESPONSIVE_WIDTH = isBigScreen ? 800 : "90%"
+  const SECTION_SPACING = 42
   const ID = "exceed"       // must match the project id in uxData
 
   const contentStyle = {
     textAlign: "center",
-    overflow: "hidden"
+    overflow: "hidden",
+    backgroundColor: "#FFFFFF"
   }
-
   const section = {
-    display: "inline-block",
+    display: "block",
     paddingBottom: SECTION_SPACING,
     paddingTop: SECTION_SPACING,
-    width: WIDTH,
-    marginLeft: PADDING,
-    marginRight: PADDING
+    width: RESPONSIVE_WIDTH,
+    margin: "auto",
   }
   const tableContainer = {
-    display: "inline-block",
+    display: "block",
     marginTop: 30,
     marginBottom: 30,
-    width: WIDTH
+    width: isBigScreen ? 800 : "100%",
   }
   const table = {
     MsFlex: 1,  /* IE 10 */
     display: isSmallScreen ? "block" : "flex",
-    width: WIDTH
+    width: RESPONSIVE_WIDTH
   }
-  const tableCol = {
-    flex: 1,
+
+  const introTableCol1 = {
+    flex: .5,
+    paddingRight: isSmallScreen ? 0 : 60, 
+    paddingBottom: isSmallScreen ? 60 : 0,
+  }
+  const introTableCol2 = {
+    flex: .3,
     paddingRight: isSmallScreen ? 0 : 60, paddingBottom: isSmallScreen ? 60 : 0,
   }
-  const tableColFinal = {
+  const introTableColFinal = {
+    flex: .2,
+  }
+
+  const processTableCol = {
+    flex: 1,
+    display: "block",
+    paddingRight: isSmallScreen ? 0 : 60, 
+    paddingBottom: isSmallScreen ? 30 : 0,
+  }
+  const processTableColFinal = {
     flex: 1,
   }
 
+  const sectionFull = {
+    display: "block",
+    marginBottom: SECTION_SPACING,
+    marginTop: SECTION_SPACING,
+    width: "100%",
+    textAlign: "center"
+  }
+  const tableContainerFull = {
+    display: "inline-block",
+    marginBottom: 10,
+    width: "90%",
+  }
+  if (window.width > 1050) tableContainerFull.width = "75%"
+  else if (!isBigScreen) tableContainerFull.width = "90%"
+  else tableContainerFull.width = "800px"
+
+  const tableFull = {
+    MsFlex: 1,  /* IE 10 */
+    display: isSmallScreen ? "block" : "flex",
+    paddingBottom: isSmallScreen ? 40 : 40
+  }
+  const imageFull = {
+    // width: "100%",
+    width: isBigScreen ? "75%" : "100%",
+    // maxHeight: window.height, 
+    borderTop: "2px solid #000", 
+    borderBottom: "2px solid #000", 
+    borderLeft: isBigScreen ? "2px solid #000" : "none",
+    borderRight: isBigScreen ? "2px solid #000" : "none",
+    height: "auto",
+    marginBottom: SECTION_SPACING, 
+    objectFit: 'cover'
+  }
+
+  const sectionDataFull = {
+    // width: "100%",
+    // borderTop: "2px solid #000",
+    // borderBottom: "2px solid #000",
+    display: "inline-block",
+    textAlign: "center",
+    marginBottom: SECTION_SPACING,
+    marginTop: SECTION_SPACING,
+    width: isBigScreen ? "85%" : "100%",
+    backgroundColor: "#FFFFFF",
+    padding: "30px 0px"
+  }
+
+  const dataRowLeft = {
+    verticalAlign: "top",
+    margin: "20px 0px",
+    borderBottom: "1px solid #DDD",
+    borderRight: "1px solid #DDD",
+    padding: "20px 0px",
+    width: isSmallScreen ? "50%" : "60%"
+  }
+  const dataRowRight = {
+    verticalAlign: "top",
+    margin: "20px 0px",
+    borderBottom: "1px solid #DDD",
+    padding: "20px 0px 20px 20px",
+    width: isSmallScreen ? "50%" : "40%"
+  }
+  const dataRowLeftFinal = {
+    verticalAlign: "top",
+    margin: "20px 0px",
+    borderRight: "1px solid #DDD",
+    padding: "20px 0px",
+    width: isSmallScreen ? "50%" : "60%"
+  }
+  const dataRowRightFinal = {
+    verticalAlign: "top",
+    margin: "20px 0px",
+    padding: "20px 20px",
+    width: isSmallScreen ? "50%" : "40%"
+  }
+
+  // moreStyle is also spec in Play.js
+  const moreStyle = {
+    verticalAlign: "top",
+    display: "inline-block",
+    paddingTop: SECTION_SPACING,
+    paddingBottom: SECTION_SPACING,
+  }
+  if (window.width > 1200) {          // big screen (according to gallery thresholds)
+    moreStyle.height = 550
+  }
+  else if (window.width < 700) {      // small screen
+    moreStyle.height = "auto"
+  }
+  else if (window.width < 940) {      // small-medium screen
+    moreStyle.height = 550
+  }
+  else {
+    moreStyle.height = 620            // big-medium screen
+  }
+
+  // RENDERING
   return (
     <FadeIn transitionDuration="500">
+      {/* <Cover reference={el1} click={()=> scrollToDiv(el2)} id={ID} color={COLOR}></Cover> */}
+      <ScrollToTop></ScrollToTop>
       <div style={contentStyle}>
+        <div style={{marginBottom: SECTION_SPACING}}>
+          {/* <Intro reference={el1} click={()=> scrollToDiv(el2)}></Intro> */}
+        </div>
+
+        {/* Title */}
+        <div style={section}>
+          <div className="title0" style={{ color: "#000", marginTop: -SECTION_SPACING, paddingTop: SECTION_SPACING, marginBottom: -SECTION_SPACING }} ref={el2}>Exceed</div>
+        </div>
+        
+        {/* Block quote */}
+        <div style={section}>
+          <div className="body blockQuote">
+          In the summer of 2020, I participated in a series of case competitions hosted by 
+          Paravane Ventures. My submission, Exceed, won first place for a competition where 
+          we were challenged to design a way for professionals to continue to learn and develop.
+          </div>
+        </div>
+        
         {/* Intro */}
         <div style={section}>
-          <div style={{ display: "block" }}>
-            <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 30 }} className="emphatic">
-              A way for professionals who are content with their work to continue to learn and develop.
-            </div>
-          </div>
-          <div style={{ display: "block" }}>
-            <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 0, color: COLOR }} className="body">
-              DESIGN CASE COMPETITION WINNER
-            </div>
-          </div>
-          <div style={{ width: !isSmallScreen ? 400 : "", textAlign: "center", display: "inline-block", paddingBottom: 60, color: COLOR }} className="body">
-            (<a href="mailto: rpp62@cornell.edu" target="_blank"><div style={{ color: "#A8C0EB", display: "inline-block" }}>contact me</div></a> for details)
-          </div>
-
-          <img src={Cover} alt="Project cover image" width={WIDTH} ></img>
-
           <div style={tableContainer}>
             <div style={table}>
-              <div style={tableCol}>
-                <div className="subheading" >My Role</div>
-                <div className="body" >UX Researcher, UI Designer</div>
+              <div style={introTableCol1}>
+                <div className="subheading" >Honors</div>
+                <div className="body" >First place in Paravane Venture’s case competition</div>
+                <Link text={"Case Winners 2020"} url={"https://paravaneventures.com/design2020/"} isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
               </div>
-              <div style={tableColFinal}>
-                <div className="subheading" >Duration</div>
+              <div style={introTableCol2}>
+                <div className="subheading" >Roles</div>
+                <div className="body" >Product Designer</div>
+              </div>
+              <div style={introTableColFinal}>
+                <div className="subheading" >Timeline</div>
                 <div className="body" >5 days</div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Preview */}
+        {/* FULL SECTION: Solution preview image */}
+        <img 
+          src={exceedCover} 
+          alt="Screenshots of the final solution" 
+          style={imageFull}>
+        </img>
+
+
         {/* Challenge */}
         <div style={section}>
           <div className="heading" style={{ color: COLOR }}>Challenge</div>
+          <div className="title1" style={{ color: "#000" }}>Learn on the go</div>
           <div className="body">
             People who are content with their current employment want to casually
             learn and grow and keep up with recent events via short snackable content
@@ -132,35 +278,47 @@ function App(props) {
           </div>
         </div>
 
-        {/* Research */}
-        <div style={section}>
 
-          {/* a. Market research */}
-          <div style={tableContainer}>
-            <div className="heading" style={{ color: COLOR }}>Research</div>
-            <div style={table}>
-              <div style={tableCol}>
-                <div className="emphatic" style={{ color: "#000" }}><b>Rethinking discovery and learning for smaller time budgets</b></div>
-                <div className="body">
-                  I took a look at a few platforms that solve similar problems. Current
-                  learning platforms do a great job of motivating its users along their
-                  journeys, as well as allowing users to disover tools for whatever
-                  subject they are interested in. However, in order to help <em> busy
-                    professionals </em> successfully grow, I will have to deliver these
-                  tools in ways condusive to small time budgets.
-                </div>
-              </div>
-              <div style={tableCol}>
-                <img src={marketResearch} alt="Market research" width={"80%"} style={{ paddingBottom: SECTION_SPACING }} ></img>
-              </div>
-            </div>
+        {/* a. Market research */}
+        <div style={section}>
+          <div className="heading" style={{ color: COLOR }}>Research</div>
+          <div className="title1" style={{ color: "#000" }}><b>Market research</b></div>
+          <div className="callout" style={{ color: "#000" }}>Rethinking discovery and learning for smaller time budgets</div>
+          <div className="body">
+            I took a look at a few platforms that solve similar problems (Skillshare, LinkedIn 
+            Learning, Medium) to find out what’s working and opportunity areas.
+            <br></br><br></br>
+            <b>What they do well</b>
+            <ul>
+              <li>Motivate users along their journey with goal setting</li>
+              <li>Enable deep dives into topics with pages for specific subjects</li>
+              <li>Allow users to save content for later</li>
+            </ul>
+            
+            <b>Opportunity spaces</b>
+            <ul>
+              <li>Lots of content types take up a long time or require ongoing commitment that busy professionals may not always have</li>
+              <ul>
+                <li>
+                  <span style={{color: "#000", fontWeight: "bold"}}>How might we </span> 
+                  <span>allow busy professionals to learn on-the-go?</span>
+                </li>
+              </ul>
+              <li>Current solutions only focus on solo learning</li>
+              <ul>
+                <li>
+                  <span style={{color: "#000", fontWeight: "bold"}}>How might we </span> 
+                  <span>enable professionals to learn from each other?</span>
+                </li>
+              </ul>
+            </ul>
           </div>
         </div>
 
         {/* b. User research */}
         <div style={section}>
-          <div className="emphatic" style={{ color: "#000" }}><b>Understanding the content professional</b></div>
-
+          <div className="title1" style={{ color: "#000" }}><b>User research</b></div>
+          <div className="callout" style={{ color: "#000" }}>Understanding the content professional</div>
           <div className="body">
             In order to understand the needs and motivations of the target audience, I
             conducted user interviews. I created data visualizations to organize my findings
@@ -168,293 +326,213 @@ function App(props) {
           </div>
         </div>
 
-        <div style={section}>
-          <div className="subheading" style={{ color: GREY }}>Quantifying pain points</div>
-          <img src={dataTime} alt="" width={WIDTH} style={{ display: "block", paddingTop: 30, paddingBottom: 20 }}></img>
+
+        {/* Data visualization */}
+        <div style={sectionDataFull}>
+          <table style={{width: "90%", display: "inline-block", textAlign: "left"}}>
+            <tr>
+              <th style={dataRowLeft}>Data Trend</th>
+              <th style={dataRowRight}>Insight</th>
+            </tr>
+            <tr >
+              <td style={dataRowLeft}>
+                <div style={{display:"inline-block", width: isSmallScreen ? "100%" : "200px", paddingRight: isBigScreen ? "80px" : "20px", paddingBottom: isBigScreen ? "0px" : "20px"}}>
+                  <div className='highlight'>
+                    31%
+                  </div>
+                  <div className="body" style={{width: "100%"}}>
+                    of respondents said time was an issue they currently face in trying to learn
+                  </div>
+                </div>
+                <div style={{display:"inline-block", width: isSmallScreen ? "100%" : "200px"}}>
+                  <div className='highlight'>
+                    80%
+                  </div>
+                  <div className="body">
+                    of those people hoped to spend at least 60 min per day on career growth
+                  </div>
+                </div>
+              </td>
+              <td className="body" style={dataRowRight}>
+                People think they need to spend more time than they actually have on career growth. They don’t know about “casual learning”.
+              </td>
+            </tr>
+            <tr>
+              <td style={dataRowLeft}>
+                <img src={isSmallScreen ? mediaGraphSmall : mediaGraph} alt="TODO" width={isBigScreen ? "90%" : "90%"}></img>
+              </td>
+              <td className="body" style={dataRowRight}>
+                People are most interested in consuming a mix of videos, podcasts, courses, and articles.
+              </td>
+            </tr>
+            <tr>
+              <td style={dataRowLeftFinal}>
+                <div style={{display:"inline-block", width: "200px", paddingRight: "40px"}}>
+                  <div className='highlight' style={{display:"inline-block"}}>
+                    31%
+                  </div>
+                  <div className="body" style={{display:"inline-block"}}>
+                    of respondents said time was an issue they currently face in trying to learn
+                  </div>
+                </div>
+              </td>
+              <td className="body" style={dataRowRightFinal}>
+                When people know what they want to learn about, they don't know how to go about it.
+              </td>
+            </tr>
+          </table>
         </div>
 
         <div style={section}>
-          <div className="subheading" style={{ color: GREY }}>Types of media people prefer</div>
-          <img src={dataMedia} alt="" width={WIDTH} style={{ paddingTop: 30, paddingBottom: 20 }}></img>
-        </div>
-
-        <div style={section}>
-          <div className="subheading" style={{ color: GREY }}>More statistics</div>
-          <img src={dataMore} alt="" width={WIDTH} style={{ display: "block", paddingTop: 30, paddingBottom: 20 }}></img>
-        </div>
-
-        <div style={section}>
-          <div className="body">
+          <div className="body blockQuote">
             I summarized my findings into the following common pain points. These
             points will drive my design decisions for the rest of the project.
           </div>
 
-          <img src={painPoints} alt="The four central pain points are for time, discovery, motivation, and cross-industry interest." width={WIDTH} style={{ paddingTop: 30, paddingBottom: 20 }}></img>
+          <img src={painPoints} alt="The three central pain points are discovery, time, and motivation." width={RESPONSIVE_WIDTH} style={{ paddingTop: 60, paddingBottom: 20 }}></img>
         </div>
 
-        {/* Problem */}
+        {/* Content requirements */}
         <div style={section}>
-          <div className="heading" style={{ color: COLOR }}>Problem</div>
-          <div className="emphaticBlockText">
-            People who are content with their work want to continue growing according
-            to their interests, but they can't because they <b>don't have enough time</b> and
-            <b> cannot find the right content</b> to meet their goals.
-          </div>
-        </div >
-
-        {/* Building the Solution */}
-        <div style={section}>
-          <div className="heading" style={{ color: COLOR }}>Building the Solution</div>
+          <div className="heading" style={{ color: COLOR }}>Solution</div>
+          <div className="title1" ><b>Content requirements</b></div>
           <div className="body" >
-            My research shows that people want to continue learning and growing even
-            after they are content with their work.
-            <br></br> <br></br>
-            Exceed delivers a curated feed of content that makes it easy and fun
-            to learn between busy schedules. Its onboarding process makes the content
-            and learning experience personalized to your interests, goals, and needs.
-
+            Referencing the two opportunity spaces we uncovered through research:
+            <ul>
+              <li><b>How might we</b> allow busy professionals to learn on-the-go?</li>
+              <li><b>How might we</b> enable professionals to learn from each other?</li>
+            </ul>
+            Exceed aims to deliver four main capabilities to professionals: consuming content, finding career/networking events, searching for tools, and saving content for later.
           </div>
         </div>
 
-        {/* <div style={section}>
-          <img src={solutionCover} alt="" width={"100%"} style={{ display: "block" }}></img>
-        </div> */}
 
-        {/* 01. Time */}
+        {/* FULL SECTION: Content image */}
+        <img 
+          src={contentRequirements} 
+          alt="The main sections in Exceed are: Home, Events, Search, and My list." 
+          style={imageFull}>
+        </img>
+
+        {/* Pain points */}
         <div style={section}>
-          <div style={tableContainer}>
-            <img src={timeIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 1: Time</div>
-            <div className="emphatic"><b>Fitting into a tight schedule</b></div>
-            <div style={table}>
-              <div style={tableCol}>
-                <div >
-                  <div className="body" >
-                    Through user and market research, I chose three media types that were
-                    conducive to short time budgets: video, audio, and text.
-                  </div>
+          <div className="title1" ><b>Targeting pain points</b></div>
+          <div className="body" style={{marginBottom: SECTION_SPACING}}>
+            The four pain points that I came up with summarized my market and user research 
+            insights well, so I decided to use them to drive my design decisions.
+          </div>
+        </div>
+
+
+        {/* 01. Discovery */}
+        <div style={sectionFull}>
+          <div style={tableContainerFull}>
+            <div style={tableFull}>
+              <div style={processTableCol}>
+                <div className="tag2" style={{marginBottom: 20, color: COLOR}} >PAIN POINT 1: DISCOVERY</div>
+                <div className="title2" ><b>Encouraging targeted search</b></div>
+                <div className="body" >
+                  I went through a few iterations for the Search entry point. User research showed that people struggled to find tools to learn specific topics, so my goal was to <b>make searching for a topic easy</b>.
+                  <br></br><br></br>
+                  Options A and B kept the overall information architecture simple, but they made made it difficult to know what to search for. I went with option C because it allows users to dive into topics they're interested in and explore trending content.
                 </div>
               </div>
-              <div style={tableColFinal}>
-                <img src={processTypes} alt="Specify interests in onboarding" width={"100%"} ></img>
+              <div style={processTableColFinal}>
+                <img src={processExplore} alt="Explorations for the search entry point." width={"100%"} ></img>
               </div>
             </div>
           </div>
         </div>
 
-        <div style={section}>
-          <div style={tableContainer}>
-            <div style={table}>
-              <div style={tableCol}>
-                <img src={processCard} alt="Specify interests in onboarding" width={"100%"} ></img>
-              </div>
-              <div style={tableColFinal}>
-                <div >
-                  <div className="body" style={{ paddingTop: 10 }}>
-                    I <b>emphasized the watch or read time</b> of content to encourage users
-                    to consume content that fits with their time.
-                  </div>
+        {/* 02. Time */}
+        <div style={sectionFull}>
+          <div style={tableContainerFull}>
+            <div style={tableFull}>
+              <div style={processTableCol}>
+                <div className="tag2" style={{marginBottom: 20, color: COLOR}} >PAIN POINT 2: TIME</div>
+                <div className="title2" ><b>Fitting into a tight schedule</b></div>
+                <div className="body" >
+                  Through user and market research, I chose three media types that were conducive to short time budgets: video, audio, and text.                </div>
                 </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div style={section}>
-          <div style={tableContainer}>
-            <div style={table}>
-              <div style={tableCol}>
-                <div >
-                  <div className="body" style={{ paddingTop: 10 }}>
-                    Users can <b>save content for later</b>, and jot down notes as they watch or listen.
-                    This way, they can easily pick up where they left off.
-                  </div>
-                </div>
-              </div>
-              <div style={tableColFinal}>
-                <img src={processSave} alt="Specify interests in onboarding" width={"100%"} ></img>
+              <div style={processTableColFinal}>
+                <img src={processTypes} alt="Screenshots of media types" width={"100%"} ></img>
               </div>
             </div>
-          </div>
-        </div>
-
-
-        {/* 02. Discovery */}
-        <div style={section}>
-          <div style={tableContainer}>
-            <img src={exploreIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 2: Discovery</div>
-            <div className="emphatic"><b>Encouraging targetted search</b></div>
-            <div style={table}>
-              <div style={tableCol}>
-                <div >
-                  <div className="body">
-                    I went through a few interations for the Search entry point. User
-                    research showed that people struggled to find tools to learn specific
-                    topics. Therefore, my design goal for the search functionality was to
-                    <b> make searching for a topic easy</b>.
-                    <br></br><br></br>
-                    Originally, I considered embedding a simple search functionality at
-                    the top of the home feed (as in iterations A and B). However, this made
-                    it difficult to know what to search for. Iteration C allows users
-                    to explore topics they're interested in and see trending content. This
-                    makes it easier to understand what type of topics they can search for.
-                  </div>
+            <div style={tableFull}>
+              <div style={processTableCol}>
+                <div className="body" style={{paddingBottom: 10}} >
+                  I <b>emphasized the watch or read time</b> of content to encourage users to consume content that fits with their time.
                 </div>
+                <img src={processCard} alt="Screenshots of media cards emphasizing watch or read time" width={isSmallScreen ? "90%" : "70%"} ></img>
               </div>
-              <div style={tableColFinal}>
-                <img src={processExplore} alt="Home and events pages" width={"100%"} ></img>
+              <div style={processTableColFinal}>
+                <div className="body" style={{paddingBottom: 10}} >
+                  Users can <b>save content for later</b>, and jot down notes as they watch or listen. This way, they can easily pick up where they left off.
+                </div>
+                <img src={processSave} alt="Saving content flow" width={"100%"} ></img>
               </div>
             </div>
           </div>
         </div>
 
         {/* 03. Motivation */}
-        <div style={section}>
-          <div style={tableContainer}>
-            <img src={motivationIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 3: Motivation</div>
-            <div className="emphatic"><b>Stay motivated</b></div>
-            <div style={table}>
-              <div style={tableCol}>
-                <div >
-                  <div className="body">
-                    Set weekly goals and earn achievements as you progress. A central
-                    issue I found through user research was that people thought they
-                    needed to dedicate much more time than necessary to learning, and
-                    thus they fell short. I used copy to <b>encourage setting attainable
-                      goals</b> during onboarding.
-                    <br></br> <br></br>
-                    In order to sustain motivation, users earn achievements as they
-                    learn more with Exceed. They are rewarded for several actions, such as
-                    consistent learning and the amount of content consumed. The number of
-                    topics learned is displayed at the top of the page, as a reminder of
-                    the user's progress and motivation to increase the number by learning
-                    more.
-                  </div>
+        <div style={sectionFull}>
+          <div style={tableContainerFull}>
+            <div style={tableFull}>
+              <div style={processTableCol}>
+                <div className="tag2" style={{marginBottom: 20, color: COLOR}} >PAIN POINT 3: MOTIVATION</div>
+                <div className="title2" ><b>Staying motivated</b></div>
+                <div className="body" >
+                  <b>Goal setting</b>
+                  <br></br>
+                  A central issue I found through user research was that people thought they needed to dedicate much 
+                  more time than they have, setting them up for failure. I used copy to <b>encourage setting attainable 
+                  goals</b> during onboarding.                  
+                  <br></br><br></br>
+
+                  <b>Gamification</b>
+                  <br></br>
+                  I used gamification elements to sustain motivation
+                  <ul>
+                    <li>Achievements: Users earn achievements as they learn more with Exceed. They are rewarded for several actions, such as consistent learning and the amount of content consumed.</li>
+                    <li>Stats: The number of topics learned is displayed at the top of the page, as a reminder of the user's progress and as motivation to increase the number by learning more.</li>
+                  </ul>
                 </div>
               </div>
-              <div style={tableColFinal}>
-                <img src={motivation} alt="Set goals and earn achievements" width={"100%"} ></img>
+              <div style={processTableColFinal}>
+                <img src={motivation} alt="Screenshots of goals and achievements" width={"100%"} ></img>
               </div>
             </div>
           </div>
         </div>
 
-        {/* 04. Interests */}
-        <div style={section}>
-          <div style={tableContainer}>
-            <img src={crossIcon} alt="" style={{ display: "block", paddingBottom: 20 }}></img>
-            <div className="subheading" style={{ color: GREY }}>Pain point 4: Cross-Industry Interests</div>
-            <div className="emphatic"><b>Accomadating cross-industrial interests</b></div>
-            <div style={table}>
-              <div style={tableCol}>
-                <div >
-
-                  <div className="body" >
-                    In order to allow users to continue to grow in each of their non-industry
-                    conforming interests, I decided to collect their interests during onboarding.
-                    These will be used to curate their feeds.
-                    <br></br> <br></br>
-                    <b>Interaction note: </b> As users select interests, additional similar
-                    interests show up.
-                  </div>
-                </div>
-              </div>
-              <div style={tableColFinal} >
-                <img src={interests} alt="Specify interests in onboarding" width={"70%"} ></img>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Final Designs */}
-        {/* <div className="heading" style={{ color: COLOR, width: WIDTH, marginLeft: PADDING, marginRight: PADDING }}>Final Designs</div> */}
-
         <div style={section}>
-          <div className="heading" style={{ color: COLOR, paddingBottom: 20 }}>Final Designs</div>
-          <img src={finalCover} alt="" width={"100%"} style={{ display: "block" }}></img>
+          <div className="title1" style={{ color: "#000" }}><b>Final submission</b></div>
         </div>
 
-        {/* Curated content */}
-        <div style={section}>
-          <div style={tableContainer}>
-            <div style={table}>
-              <div style={tableCol}>
-                <div>
-                  <div className="heading">01</div>
-                  <div className="emphatic"><b>Curated content</b></div>
-                  <div className="body">
-                    A personalized feed of content and events to learn and grow from,
-                    based on a user's interests. Content is either video, audio, or text
-                    that can be easily consumed on-the-go.
-                  </div>
-                </div>
-              </div>
-              <div style={tableColFinal}>
-                <img src={content} alt="Home and events pages" width={"100%"} ></img>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Discovery */}
-        <div style={section}>
-          <div style={tableContainer}>
-            <div style={table}>
-              <div style={tableCol}>
-                <img src={personalization} alt="Home and events pages" width={"100%"} ></img>
-              </div>
-              <div style={tableColFinal}>
-                <div >
-                  <div className="heading">02</div>
-                  <div className="emphatic"><b>Built for discovery</b></div>
-                  <div className="body">
-                    Search for any subject or explore content related
-                    to a specific topic of interest. See what's trending if you don't know
-                    where to start!
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Saving */}
-        <div style={section}>
-          <div style={tableContainer}>
-            <div style={table}>
-              <div style={tableCol}>
-                <div >
-                  <div className="heading">03</div>
-                  <div className="emphatic"><b>Save lists and notes for later</b></div>
-                  <div className="body">
-                    Save interesting content for later, and jot down thoughts at any time. All
-                    saved content and notes are collected into My List for easy access.
-                  </div>
-                </div>
-              </div>
-              <div style={tableColFinal}>
-                <img src={time} alt="Save content and ideas for later" width={"100%"} ></img>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* FULL SECTION: Final solution image */}
+        <img 
+          src={isSmallScreen ? solutionPreviewSmall : solutionPreview} 
+          alt="Final solution" 
+          style={imageFull}>
+        </img>
 
         {/* Reflection */}
         <div style={section}>
           <div className="heading" style={{ color: COLOR }}>Reflection</div>
-          <div className="body" style={{ width: isSmallScreen ? "100%" : "70%" }}>
+          <div className="title1" style={{ color: "#000" }}><b>How it went</b></div>
+          <div className="body">
             Working on this projects was really exciting because the target user demographic
             was completely different from myself and my usual circle. I had to rely fully
             on user interviews and research to put myself in the shoes of the user.
-            <br></br>
-            <br></br>
+
+            <br></br><br></br>
             The 5-day time constraint also pushed me to research, ideate, and build quickly.
             I followed used Google's design sprint framework to work through the problem.
-            <br></br>
-            <br></br>
+
+            <br></br><br></br>
             <b>Next Steps</b>
             <br></br>
             If I were to continue working on this project, I would like to conduct A/B testing
@@ -464,9 +542,18 @@ function App(props) {
         </div>
 
 
+        {/* SEE MORE */}
+        <div style={moreStyle}>
+          <Gallery 
+            numColsArray={[props.chooseMoreData(uxData, ID).length,props.chooseMoreData(uxData, ID).length,1]} 
+            totalWidth={800}
+            data={props.chooseMoreData(uxData, ID)} 
+            title="check out another case study!"
+            square="false" 
+            isLarge="false">
+          </Gallery>
+        </div>
 
-
-        <div style={{ display: "inline-block", paddingTop: SECTION_SPACING }}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out another case study!"></Gallery></div>
 
       </div>
     </FadeIn >

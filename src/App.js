@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import { ParallaxProvider } from 'react-scroll-parallax';
+// import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Work from "./Pages/Work";
 import About from "./Pages/About";
@@ -13,11 +13,12 @@ import Play from "./Pages/Play";
 import Pandora from "./Pages/Case Studies/Pandora";
 import Exceed from "./Pages/Case Studies/Exceed";
 import Snap from "./Pages/Case Studies/Snap";
-import Patch from "./Pages/Case Studies/Patch";
+// import Patch from "./Pages/Case Studies/Patch";
+// import CaseStudy from "./Pages/Case Studies/CaseStudy";
 
 // -----------------------------------------------------------------------------
 // TODO:
-// - write way + patch case study
+// - write resell case study
 // - while loading: {loading screen} else: <FadeIn></FadeIn>
 // - calculate actual height of columns in Gallery
 // -----------------------------------------------------------------------------
@@ -56,17 +57,20 @@ function App() {
   }, [])
 
   return (
-    <ParallaxProvider>
+    // <ParallaxProvider>
       <Router>
         <div className="App">
           <Navbar></Navbar>
           <Switch className="websiteBody">
             <Route path="/about" component={About} />
             <Route path="/play" render={(props) => <Play {...props} chooseMoreData={chooseMoreData} />} />
+            {/* <Route path="/pandora" render={(props) => <CaseStudy {...props} id='pandora' chooseMoreData={chooseMoreData} />} /> */}
             <Route path="/pandora" render={(props) => <Pandora {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
+            {/* <Route path="/exceed" render={(props) => <CaseStudy {...props} id='exceed' chooseMoreData={chooseMoreData} />} /> */}
             <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/patch" render={(props) => <Patch {...props} chooseMoreData={chooseMoreData} />} />
+            {/* <Route path="/snap-cliques" render={(props) => <CaseStudy {...props} id='snap' chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/resell" render={(props) => <CaseStudy {...props} id='resell'  chooseMoreData={chooseMoreData} />} /> */}
 
             {/* Incomplete Articles (comment out when pushing) */}
             {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}
@@ -78,7 +82,7 @@ function App() {
           <Footer></Footer>
         </div>
       </Router>
-    </ParallaxProvider>
+    // </ParallaxProvider>
   );
 }
 

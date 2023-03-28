@@ -11,29 +11,28 @@ function App() {
 
   //STYLING
   // Overall
-  const HEIGHT = 150
+  const HEIGHT = 80
 
   const navStyle = {
     textAlign: "center",
     width: "100%",
     height: HEIGHT,
-    backgroundColor: "white",
+    zIndex: "900",
+    position: "relative"
   }
 
   // Left Menu Styling
+  // NOTE: marginRight: MIDDLE_SPACING set in App.css
   const menuLeft = {
     textAlign: "left",
     lineHeight: "15px",
-    // marginRight: MIDDLE_SPACING set in App.css
+    marginRight: 780,
     display: "inline-block",
-    paddingTop: 10,
-    paddingLeft: 10
   }
 
   const nameStyle = {
     textTransform: "lowercase",
-    letterSpacing: "0.03em",
-    fontSize: "18px",
+    fontSize: "22px",
     textDecoration: "none",
     color: "#000000",
     width: "auto",
@@ -62,25 +61,24 @@ function App() {
   const menuLink = {
     display: "flex",
     alignItems: "center",
-    padding: "0 3px",
     height: "100%",
     textTransform: "lowercase",
-    letterSpacing: "0.03em",
-    fontSize: "14px",
+    fontSize: "18px",
     textDecoration: "none",
-    color: "#ababab"
+    fontWeight: "normal",
+    color: "#000",
   }
 
   const menuActiveLink = {
     display: "flex",
     alignItems: "center",
-    padding: "0 3px",
-    height: "100%",
+    height: 30,
     textTransform: "lowercase",
-    letterSpacing: "0.03em",
-    fontSize: "14px",
+    fontSize: "18px",
     textDecoration: "none",
-    color: "#000000"
+    fontWeight: "500",
+    color: "#000",
+    borderBottom: "2px solid #000",
   }
 
   // RENDERING
@@ -100,21 +98,20 @@ function App() {
             />
             ravina patel
           </Link>
-          {/* <p style={taglineStyle}>product designer @cornell university</p> */}
         </div>
 
         {/* Nav Links */}
         <div style={menuRight}>
           <ul style={menuList}>
-            <li className="link" style={menuListItem} >
+            <li className="navLink" style={menuListItem} >
               <NavLink exact to="/" style={menuLink} activeStyle={menuActiveLink} onClick={() => setPlayMode("false")}>work</NavLink>
             </li>
 
-            <li className="link" style={menuListItem} >
+            <li className="navLink" style={menuListItem} >
               <NavLink to="/play" style={menuLink} activeStyle={menuActiveLink} onClick={() => setPlayMode("true")}>play</NavLink>
             </li>
 
-            <li className="link" style={menuListItem} >
+            <li className="navLink" style={menuListItem} >
               <NavLink to="/about" style={menuLink} activeStyle={menuActiveLink} onClick={() => setPlayMode("false")} >about</NavLink>
             </li>
 

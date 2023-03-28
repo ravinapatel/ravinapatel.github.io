@@ -1,21 +1,102 @@
 import React from 'react';
-import Socials from "./Socials";
+import useWindowSize from "./useWindowSize";
+import Link from "./Link";
+import backgroundVideo from '../Images/gradient-cover.mp4'
 
 function App() {
+
+  // RESONSIVENESS
+  const window = useWindowSize();
+  var isBigScreen = window.width > 1130
+  var isSmallScreen = window.width < 700
+
+  const HEIGHT = isSmallScreen ? 350 : 210
+
+
   // Style
   const container = {
-    color: "#ababab",
+    // backgroundImage: "url(/gradient-cover.gif)",
+    // backgroundSize: 'cover',
+    // borderTop: '2px solid #000',
+    // borderBottom: '2px solid #000',
     width: "100%",
+    height: HEIGHT,
+    backgroundSize: 'cover',
+    display: "block",
     textAlign: "center",
-    fontSize: "14px"
+    fontSize: "14px",
+    marginTop: "64px"
   }
+  const backgroundVideoStyle = {
+    width: window.width,
+    height: HEIGHT,
+    objectFit: "cover",
+    position: "absolute",
+    left: 0
+  }
+
+  const content = {
+    display: "inline-block",
+    position: "relative",
+    textAlign: "left",
+    width: isBigScreen ? 1100 : "90%",
+  }
+
+  const row = {
+    display: isSmallScreen ? "block" : "flex",
+  }
+  const columnLeft = {
+    flex: isBigScreen ? "80%" : "70%",
+    textAlign: "left"
+  }
+  const columnRight = {
+    marginTop: isSmallScreen ? "48px" : "0px",
+    flex: isBigScreen ? "20%" : "30%",
+    textAlign: isSmallScreen ? "left" : "right"
+  }
+
+  const codeStyle = {
+    textTransform: "uppercase",
+    fontSize: "14px",
+    marginBottom: "-8px"
+  }
+  const stripStyle = {
+    textTransform: "uppercase",
+    padding: "42px 0px 20px 0px",
+    overflow: "hidden",
+    textOverflow: "clip",
+    whiteSpace: "nowrap",
+  }
+
+  let stripTextRaw = " Based in NYC | © 2023 Ravina Patel | Built in React.js | V3.0 | ";
+  let stripText = stripTextRaw.replace(" ", "&nbsp;").slice(6).repeat(4);
 
   return (
     <div style={container}>
-      <div style={{ paddingTop: 80, paddingBottom: 30 }}>
-        <p style={{ paddingBottom: 10 }}>designed and developed by ravina patel</p>
-        <Socials light="true"></Socials>
+
+      <video autoPlay muted loop style={backgroundVideoStyle} id="backgroundVideo">
+        <source src={backgroundVideo} type="video/mp4"/>
+      </video>
+
+      <div style={content}>
+        <div style={row}>
+          <div style={columnLeft}>
+            <p className='body'>designed and built by ravina patel</p>
+            <p className='code' style={codeStyle}>last updated: mar 2023</p>
+            <p className='code tag'>v3.0</p>
+          </div>
+          
+          <div style={columnRight}>
+            <p className='body' style={{marginBottom: "10px"}}>let's build together :)</p>
+            <Link text="Email me" url="mailto: rpp62@cornell.edu" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
+            <Link text="View resume" url="./ravina-resume.pdf" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
+          </div>
+        </div>
       </div>
+        {/* <div className='scrollingText' style={stripStyle}> */}
+        <div className='code' style={stripStyle}>
+          {stripText}
+        </div>
     </div >
   );
 }

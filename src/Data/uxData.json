@@ -1,54 +1,42 @@
 [
   {
     "id": "pandora",
-    "name": "Pandora",
-    "description": "Revamped Pandora Charts to increase their media value and make internal curation more efficient",
-    "msg": "Read case study",
+    "name": "Pandora Charts",
+    "description": "Designed Pandora's first independent charts website and optimized the internal chart curation experience. Completed this project during my summer 2021 internship.",
+    "descriptionShort": "Designing Pandora's charts website and optimizing its internal chart curation experience",
+    "msg": "See more",
     "url": "./pandora",
-    "isInternal": "true"
-  },
-  {
-    "id": "buffer"
-  },
-  {
-    "id": "snap",
-    "name": "Snap Cliques",
-    "description": "Prototyped a feature that increases personalization and social interaction in Snapchat’s Discover page",
-    "msg": "Read case study",
-    "url": "./snap-cliques",
+    "msg2": "Visit Pandora Charts",
+    "url2": "https://pandoracharts.com/",
     "isInternal": "true"
   },
   {
     "id": "exceed",
     "name": "Exceed",
-    "description": "Winner in a design case competition. Designed an on-the-go solution for professionals to continue learning",
+    "description": "Designed an on-the-go solution for professionals to continue learning skills. Winner in a design case competition hosted by Paravane Ventures.",
+    "descriptionShort": "Enabling professionals to continue learning skills on the go",
     "msg": "Read case study",
     "url": "./exceed",
+    "msg2": "Product Design Case Winners 2020",
+    "url2": "https://paravaneventures.com/design2020/",
+    "isInternal": "true",
+    "ribbon": "true"
+  },
+  {
+    "id": "resell",
+    "name": "Resell",
+    "description": "Designed an app from scratch to facilitate thrifting and selling on Cornell's campus. Worked with engineers to get to beta testing in two semesters.",
+    "descriptionShort": "Facilitating thrifting and selling on Cornell's campus",
+    "msg": "Coming soon",
     "isInternal": "true"
   },
   {
-    "id": "patch",
-    "name": "Patch",
-    "description": "Designed a mobile customer service plugin and an accompanying desktop app for developers manage reports",
+    "id": "snap",
+    "name": "Snap Cliques",
+    "description": "Prototyped a feature that increases personalization and social interaction in Snapchat’s Discover page",
+    "descriptionShort": "Increasing personalization and social interaction in Snapchat’s Discover page",
     "msg": "Read case study",
-    "url": "./patch",
+    "url": "./snap-cliques",
     "isInternal": "true"
-  },
-  {
-    "id": "way",
-    "name": "WAY",
-    "description": "Refreshed the design system and simplified the ordering flow for a contactless pay platform for local restaraunts",
-    "msg": "Visit website",
-    "url": "https://paywithway.com/"
-  },
-  {
-    "id": "buffer"
-  },
-  {
-    "id": "eatery",
-    "name": "Eatery",
-    "description": "Conducted a mini user research study on the Eatery app's user experience",
-    "msg": "Read on Medium",
-    "url": "https://medium.com/@rpp62/eatery-5e53860455a1"
   }
 ]

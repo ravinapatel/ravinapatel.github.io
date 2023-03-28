@@ -1,6 +1,6 @@
-import React from 'react';
-import carrot from '../Icons/carrot.png';
+import React, { useState } from 'react';
 import '../App.css';
+import Link from "./Link";
 
 // A component that displays a project of a dynamic width
 
@@ -19,7 +19,7 @@ import '../App.css';
 function App(props) {
 
   // CONSTANTS
-  const textPadding = "30";
+  const textPadding = 30;
 
   // If you change image file names/location, this is the only place that needs to be updated
   function importImage(id) {
@@ -29,13 +29,14 @@ function App(props) {
       case 'snap': return require('../Images/portfolio/ux/thumbnails/snap.png');
       case 'meet': return require('../Images/portfolio/ux/thumbnails/meet.png');
       case 'pandora': return require('../Images/portfolio/ux/thumbnails/pandora.png');
+      case 'resell': return require('../Images/portfolio/ux/thumbnails/resell.png');
       case 'exceed': return require('../Images/portfolio/ux/thumbnails/exceed.png');
       case 'way': return require('../Images/portfolio/ux/thumbnails/way.png');
       case 'patch': return require('../Images/portfolio/ux/thumbnails/patch.png');
       case 'eatery': return require('../Images/portfolio/ux/thumbnails/eatery.png');
       case 'fallen-flame': return require('../Images/portfolio/ux/thumbnails/fallen-flame.png');
-      case 'snap-long': return require('../Images/portfolio/ux/snap-banner.png');
-      case 'meet-long': return require('../Images/portfolio/ux/meet-banner.png');
+      case 'snap-long': return require('../Images/portfolio/ux/banners/snap-banner.png');
+      case 'meet-long': return require('../Images/portfolio/ux/banners/meet-banner.png');
       case 'eatery-long': return require('../Images/portfolio/ux/eatery-banner.png');
 
       // CS
@@ -62,7 +63,7 @@ function App(props) {
       case 'lexi': return require('../Images/portfolio/art/lexi.jpg');
 
       // WATERCOLOR ART
-      case 'affection': return require('../Images/portfolio/art/affection.jpg');
+      case 'affection': return require('../Images/portfolio/art/affection.png');
       case 'bird': return require('../Images/portfolio/art/bird.jpg');
       case 'birds': return require('../Images/portfolio/art/birds.jpg');
       case 'falling-water': return require('../Images/portfolio/art/Falling-Water.jpg');
@@ -89,25 +90,40 @@ function App(props) {
       case 'toggle': return require('../Images/portfolio/digital/toggle.gif');
       case 'cards': return require('../Images/portfolio/digital/cards.png');
       case 'print': return require('../Images/portfolio/digital/print.png');
+      
+      default: return require('../Images/portfolio/digital/print.png');
 
     }
   }
 
+  const [isHover, setIsHover] = useState(false);
+
   // STYLING
   const containerStyle = {
-    display: "flex",
-    position: "relative",
     width: Number(props.width),
+    height: "auto"
+    // border: (props.name != null) ? "1px solid #000" : "none"
   }
 
   // Info = Name + Description
   const infoStyle = {
     textAlign: "left",
-    position: "absolute",
-    bottom: Number(textPadding),
-    left: Number(textPadding),
-    width: Number(props.width) - 2 * Number(textPadding),
+    display: "block",
+    position: "relative",
+    width: Number(props.width) - 2 * textPadding,
     color: "black",
+    borderTop: (props.name != null) ? "1px solid #000" : "none",
+    // zIndex: 100
+  }
+
+  if (!isHover || props.name == null) {
+    infoStyle.padding = "0px"
+  }
+  else if (props.url != null) {
+    infoStyle.padding = "16px 20px 10px 20px"
+  }
+  else {
+    infoStyle.padding = "16px 20px 16px 20px"
   }
 
   const projectName = {
@@ -124,52 +140,40 @@ function App(props) {
     textDecoration: "none",
   }
 
-  // Top-right message indicating click behavior (e.g. Read case study)
-  const msgStyle = {
-    display: "inline-block",
-    position: "absolute",
-    textAlign: "right",
-    top: Number(textPadding),
-    right: Number(textPadding),
-    width: Number(props.width) - 2 * Number(textPadding),
-    color: "black",
-    transition: `opacity 300 ms ease-in -out`,
-  }
 
   // RENDERING
   return (
-    <div className="project" style={containerStyle}>
-      <div style={containerStyle}>
-        <div className="text" style={infoStyle}>
-          <div style={projectName} >{props.name}</div>
-          <div style={projectDescription}>{props.description}</div>
-        </div>
+    <div 
+      className={(props.name != null) ? "project" : ""}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)} 
+      style={containerStyle}>
 
-        <div className="text" style={msgStyle}>
-          <div style={projectDescription} >
-            {props.msg}
-            <img
-              src={carrot}
-              alt="" width={6}
-              class="img-responsive"
-              style={{ paddingLeft: "10px", opacity: props.msg != null ? 1 : 0 }}
-            />
-          </div>
-        </div>
+      <a href={props.url} target={(props.isInternal === "true") ? "" : "_blank"} style={{display: "block"}}>
+        <img
+          src={importImage(props.id)}
+          alt="Project thumbnail"
+          width={props.width}
+          height={props.square === "true" ? props.width : "null"}
+          align="center"
+          className={(props.name != null) ? "image" : ""}
+        />
+      </a>
 
-        <a href={props.url} target={(props.isInternal === "true") ? "" : "_blank"}>
-          <img
-            src={importImage(props.id)}
-            alt="Project thumbnail"
-            width={props.width}
-            height={props.square === "true" ? props.width : "null"}
-            align="center"
-            className={(props.name != null) ? "image" : ""}
-          />
-        </a>
-        {/* <Link to={props.url} ><img src={importImage(props.id)} alt="Logo" width={props.width} class="img-responsive" alt="" align="center" style={image} /></Link> */}
-
+      <div className={(props.name != null) ? "details" : ""} style={infoStyle}>
+        <div style={projectName} >{props.name}</div>
+        <div style={projectDescription}>{props.isLarge==="true" ? props.description : props.descriptionShort}</div>
+        <Link 
+          text={props.msg} 
+          url={props.url} 
+          isInternal="false" 
+          type={props.isLarge==="true"? "block" : "small"} 
+          icon="arrowDiagonal" 
+          color="rgba(0, 0, 0, 1)"
+          style={{paddingTop: props.isLarge==="true" ? "auto" : 100 }}>
+        </Link>
       </div>
+
     </div >
   );
 }

@@ -12,16 +12,22 @@ function Button(props) {
   // animation styling is in ../App.css
   const button = {
     display: "inline-block",
-    border: "2px solid rgba(77, 77, 77, 0.2)",
-    borderRadius: "5px",
-    padding: "0.75em 20px"
+    borderRadius: "0px",
+    backgroundColor: "white"
+  }
+
+  const textStyle = {
+    textDecoration: "none", 
+    color: "#000", 
+    fontSize: "18px",
+    fontWeight: 500
   }
 
   return (
     <a
       href={props.url}
       target={(props.isInternal === "true") ? "" : "_blank"}
-      style={{ textDecoration: "none", color: "#373737", fontSize: "14px" }}>
+      style={textStyle}>
 
       <div className="button" style={button}>{props.text}</div>
     </a>

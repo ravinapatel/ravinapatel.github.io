@@ -95,10 +95,10 @@ function App() {
   const menuLink = {
     display: "block",
     textTransform: "lowercase",
-    letterSpacing: "0.03em",
+    // letterSpacing: "0.03em",
     fontSize: "24px",
     textDecoration: "none",
-    fontWeight: "bold",
+    // fontWeight: "bold",
     color: "#4d4d4d",
     padding: 20
   }
@@ -109,9 +109,9 @@ function App() {
       {/* Menu */}
       <div style={overlay} className={isOpen ? "visible" : "invisible"} >
         <div style={text}>
-          <NavLink exact to="/" style={menuLink} className="link" onClick={handleClick}>work</NavLink>
-          <NavLink to="/play" style={menuLink} className="link" onClick={handleClick}>play</NavLink>
-          <NavLink to="/about" style={menuLink} className="link" onClick={handleClick}>about</NavLink>
+          <NavLink exact to="/" style={menuLink} className="navLink" onClick={handleClick}>work</NavLink>
+          <NavLink to="/play" style={menuLink} className="navLink" onClick={handleClick}>play</NavLink>
+          <NavLink to="/about" style={menuLink} className="navLink" onClick={handleClick}>about</NavLink>
           <Link
             to={"../../ravina-resume.pdf"}
             target="_blank"
@@ -131,9 +131,8 @@ function App() {
               src={logo}
               alt=""
               width={30}
-              class="img-responsive"
               align="center"
-              style={{ paddingRight: "10px" }}
+              style={{ paddingRight: "10px", zIndex: "900", position: "sticky" }}
             />
           </Link>
         </div>

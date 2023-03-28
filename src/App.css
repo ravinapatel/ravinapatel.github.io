@@ -13,7 +13,111 @@ html {
 
 html, body {
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
+
+#backgroundVideo {
+  position: relative;
+  z-index: -500;
+}
+
+/* NEW TEXT STYLES */
+.code {
+  font-family: 'Inconsolata', monospace;
+}
+
+.tag {
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  font-weight: bold;
+  color: #4d4d4d;
+  padding: 5px 10px;
+  width: fit-content;
+  /* border: 1px solid rgba(0, 0, 0, 0.25); */
+  background-color: #00000010;
+  border-radius: 4px;
+  cursor: crosshair;
+}
+
+.sectionTitle {
+  font-family: 'Inconsolata', monospace;
+  font-size: 28px;
+  /* font-weight: bold; */
+  padding: 48px 0px 96px 0px;
+  /* width: fit-content; */
+}
+
+.linkText {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6D0FE5;
+  text-decoration: none;
+  padding-right: 6;
+}
+
+.link {
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.link:hover {
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.scrollingText {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 90s linear infinite;
+  -webkit-animation: my-animation 90s linear infinite;
+  animation: my-animation 90s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.tag2 {
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  font-weight: bold;
+  color: #000000;
+  padding: 5px 10px;
+  width: fit-content;
+  background-color: #EDEDED;
+}
+
+
 
 /* ABOUT PAGE TEXT STYLES */
 
@@ -37,6 +141,16 @@ html, body {
   color: #1e1e1e
 }
 
+.bodyBig {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.75;
+  color: #1e1e1e
+}
+
 .body {
   text-align: left;
   letter-spacing: 0.03em;
@@ -47,22 +161,33 @@ html, body {
   color: #1e1e1e
 }
 
-.body3 {
+.bodyLight {
   text-align: left;
   letter-spacing: 0.03em;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
   text-decoration: none;
   line-height: 1.75;
+  color: #525252
 }
 
 .body2 {
   text-align: left;
   letter-spacing: 0.03em;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   text-decoration: none;
-  line-height: 1.75;
+  line-height: 1.50;
+  color: #1e1e1e
+}
+.body2Light {
+  text-align: left;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1.50;
+  color: #525252
 }
 
 .aboutBody {
@@ -101,33 +226,82 @@ ul.dashed > li:before {
 
 /* ANIMATIONS */
 
+.circleButton {
+  transition: all 0.2s;
+  border: 1px solid #000;
+  width: 42px;
+  height: 42px;
+}
+
+.circleButton:hover {
+  border-bottom: 4px solid #000;
+  width: 42px;
+  height: 45px;
+}
+
 .button {
-  transition: all 0.3s;
-  color: #4d4d4d;
-  background-color: #fff;
+  transition: all 0.2s;
+  border: 1px solid #000;
+  padding: 18px 24px;
+  margin: 18px 0px;
 }
 
 .button:hover {
-  color: #fff;
-  background-color: #4d4d4d;
+  border-bottom: 4px solid #000;    /* if border increases by x... */
+  margin: 18px 0px 15px 0px;          /* then bottom margin decreases by x! */
 }
 
-.project .image{
-  opacity: 1;
-  transition: all .2s;
+.imgButton {
+  transition: all 0.1s;
+  border: 1px solid transparent;
+  border-bottom: 4px solid transparent;
 }
 
-.project .text{
+.imgButton:hover {
+  border: 1px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+/* KINDA WORKS */
+.project {
+  border: none;
+  transition: transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project:hover {
+  border: 1px solid #000;
+  border-bottom: 4px solid #000;
+  transition: all 0.2 ease-in-out;
+}
+
+.project .details{
+  transform: translateY(-100%);
   opacity: 0;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+}
+
+.project:hover .details{
+  transform: translateY(0%);
+  opacity: 1;
+  max-height: 500px;
+  transition: max-height 0.2s ease-in-out;
+}
+
+/* SCROLL TO TOP */
+.slideOut {
+  opacity: 0;
+  transform: translateY(100%);
+  visibility: hidden;
   transition: all .2s;
 }
 
-.project:hover .image{
-  opacity: 0.1;
-}
-
-.project:hover .text{
+.slideIn {
   opacity: 1;
+  visibility: visible;
+  transition: all .2s;
 }
 
 /* ABOUT */
@@ -406,11 +580,11 @@ ul.dashed > li:before {
   transition: transform 1s ease-in-out;
 }
 
-.link {
+.navLink {
   transition: transform 0.1s ease-in-out;
 }
 
-.link:hover {
+.navLink:hover {
   transform: translateY(-5px);
   transition: transform 0.2s ease-in-out;
 }
@@ -425,7 +599,7 @@ ul.dashed > li:before {
 } */
 
 .navOpen{
-  margin-right: 790px;
+  /* margin-right: 700px; */
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
@@ -433,7 +607,7 @@ ul.dashed > li:before {
 }
 
 .navClose{
-  margin-right: 450px;
+  /* margin-right: 700px; */
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import FadeIn from 'react-fade-in';
 
 import Gallery from "../Components/Gallery";
@@ -9,21 +9,20 @@ import uxData from "../Data/uxData.json";
 import codeData from "../Data/csData.json";
 import digitalData from "../Data/digitalData.json";
 
-import artIcon from '../Icons/palette.png';
-import digitalIcon from '../Icons/vector.png';
-import codeIcon from '../Icons/code.png';
-
 import useWindowSize from "../Components/useWindowSize";
 import ReactGA from 'react-ga';
 
 
 // RENDERING
 function App(props) {
-  const ID = "null"              // exclude data of type ID in see more section
+
+  // RESONSIVENESS
   const window = useWindowSize();
+  var isBigScreen = window.width > 1200
+
+  const ID = "null"              // exclude data of type ID in see more section
 
   // STATE
-  const [hover, setHover] = useState("none");
   const [type, setType] = useState("digital")
 
 
@@ -62,6 +61,7 @@ function App(props) {
   // STYLING
   const containerStyle = {
     textAlign: "center",
+    marginTop: -50
   }
 
   const artLeftSectionStyle = {
@@ -69,7 +69,7 @@ function App(props) {
     display: "inline-block",
     paddingTop: "50px",
     paddingBottom: "50px",
-    paddingRight: window.width > 720 ? "50px" : "0px"
+    paddingRight: isBigScreen ? "50px" : "0px"
   }
 
   const sectionStyle = {
@@ -79,17 +79,29 @@ function App(props) {
     paddingBottom: "50px"
   }
 
+  // moreStyle is also spec in Exceed2.js
   const moreStyle = {
     verticalAlign: "top",
     display: "inline-block",
     paddingTop: "50px",
-    paddingBottom: "50px"
+    paddingBottom: "50px",
+  }
+  if (window.width > 1200) {          // big screen (according to gallery thresholds)
+    moreStyle.height = 550
+  }
+  else if (window.width < 700) {      // small screen
+    moreStyle.height = "auto"
+  }
+  else if (window.width < 940) {      // small-medium screen
+    moreStyle.height = 550
+  }
+  else {
+    moreStyle.height = 620            // big-medium screen
   }
 
   const stickyContainer = {
     textAlign: "center",
     height: "100%",
-    position: "-webkit-sticky",
     position: "sticky",
     top: "20px",
     zIndex: "5"
@@ -98,11 +110,12 @@ function App(props) {
   const pillContainer = {
     display: "inline-block",
     textAlign: "center",
-    borderRadius: "100px",
-    backgroundColor: "#fff",
-    boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
-    border: "none",
-    padding: "10px 20px",
+    // backgroundImage: "url(/pillsBackground.png)",
+    // backgroundSize: 'cover',
+    backgroundColor: "#f0f0f0",
+    borderRadius: 100,
+    border: "1px solid #000",
+    padding: "4px 4px",
     width: "fit-content"
   }
 
@@ -115,37 +128,24 @@ function App(props) {
     display: "inline-block",
     position: "relative",
     backgroundColor: "#fff",
-    border: "none",
+    border: "1px solid #7b7b7b",
     cursor: "pointer",
-    padding: "0px 20px"
+    padding: "8px 20px",
+    borderRadius: 100,
   }
 
   const pillInactive = {
     display: "inline-block",
     position: "relative",
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(0, 0, 0, 0)",
     border: "none",
     cursor: "pointer",
-    padding: "0px 20px",
-    opacity: ".3"
+    padding: "0px 21px",
   }
 
-  const hoverTag = {
-    width: "40px",
-    backgroundColor: "#4d4d4d",
-    color: "#fff",
-    textAlign: "center",
-    borderRadius: "2px",
-    padding: "5px 10px",
-    fontSize: 12,
-    boxShadow: "0px 6px 10px rgba(0, 0, 0, 0.05)",
-
-    /* Position the tooltip */
-    position: "absolute",
-    zIndex: "1",
-    top: "130%",
-    left: "50%",
-    marginLeft: "-30px"
+  const pillLabel = {
+    color: "#000",
+    fontSize: "16px"
   }
 
   function scrollToTop() {
@@ -157,81 +157,81 @@ function App(props) {
   return (
     <div id="title">
 
+      {/* PILLS */}
       <div style={stickyContainer}>
         <div style={pillContainer}>
           <div style={optContainer}>
             <button
               style={type === "art" ? pillActive : pillInactive}
-              onClick={clickArt}
-              onMouseEnter={() => setHover("art")}
-              onMouseLeave={() => setHover("none")}>
-              <img src={artIcon} alt="art" width={"22"} align="center" />
+              onClick={clickArt}>
+              <div style={pillLabel}>Traditional</div>
             </button>
-            <div className={hover === "art" ? "tagVisible" : "tagInvisible"} style={hoverTag}>Art</div>
           </div>
 
           <div style={optContainer}>
             <button
               style={type === "digital" ? pillActive : pillInactive}
-              onClick={clickDigital}
-              onMouseEnter={() => setHover("digital")}
-              onMouseLeave={() => setHover("none")}>
-              <img src={digitalIcon} alt="digital" width={"22"} align="center" />
+              onClick={clickDigital}>
+              <div style={pillLabel}>Digital</div>
             </button>
-            <div className={hover === "digital" ? "tagVisible" : "tagInvisible"} style={hoverTag}>Digital</div>
           </div>
 
           <div style={optContainer}>
             <button
               style={type === "code" ? pillActive : pillInactive}
-              onClick={clickCode}
-              onMouseEnter={() => setHover("code")}
-              onMouseLeave={() => setHover("none")}>
-              <img src={codeIcon} alt="code" width={"22"} align="center" />
+              onClick={clickCode}>
+              <div style={pillLabel}>Code</div>
             </button>
-            <div className={hover === "code" ? "tagVisible" : "tagInvisible"} style={hoverTag}>Code</div>
           </div>
 
         </div>
       </div>
 
       <div style={containerStyle}>
+        {/* GALLERIES */}
         {
           type === "art" &&
-          // ART
+          // Art
           <FadeIn transitionDuration="500">
             < div className="container" style={containerStyle}>
-              <div style={artLeftSectionStyle}><Gallery cols="2" totalWidth="700" totalWidthMobile="350" data={lineData} msg="line"></Gallery></div>
+              <div style={artLeftSectionStyle}><Gallery numColsArray={[2,2,1]} totalWidth={700} data={lineData} title="line" square="false"></Gallery></div>
               <div style={sectionStyle}>
-                <Gallery cols="2" totalWidth="350" data={watercolorData} msg="watercolor"></Gallery>
-                <div style={{ paddingTop: "100px" }}><Gallery cols="2" totalWidth="350" data={otherData} msg="other"></Gallery></div>
+                <Gallery numColsArray={[2,2,1]} totalWidth={350} data={watercolorData} title="watercolor" square="false"></Gallery>
+                <div style={{ paddingTop: "100px" }}><Gallery numColsArray={[2,2,1]} totalWidth={350} data={otherData} title="etc" square="false"></Gallery></div>
               </div>
             </div>
           </FadeIn>
         }
-
         {
           type === "digital" &&
-          // DIGITAL
+          // Digital
           <FadeIn transitionDuration="500">
             <div className="container" style={containerStyle}>
-              <div style={sectionStyle}><Gallery cols="2" totalWidth="1100" totalWidthMobile="350" data={digitalData} isLarge="true" msg=""></Gallery></div>
+              <div style={sectionStyle}><Gallery numColsArray={[2,1,1]} totalWidth={1100} data={digitalData} title="" square="false"></Gallery></div>
             </div>
           </FadeIn>
         }
-
         {
           type === "code" &&
-          // CODE
+          // Code
           <FadeIn transitionDuration="500">
             <div className="container" style={containerStyle}>
-              <div style={sectionStyle}><Gallery cols="3" totalWidth="1100" data={codeData} isLarge="true" msg="" ></Gallery></div>
+            <div style={sectionStyle}><Gallery numColsArray={[3,2,1]} totalWidth={1100} data={codeData} title="" square="false" isLarge="true"></Gallery></div>
             </div>
           </FadeIn>
         }
 
         {/* SEE MORE */}
-        <div style={moreStyle}><Gallery cols={props.chooseMoreData(uxData, ID).length} totalWidth="800" data={props.chooseMoreData(uxData, ID)} msg="check out a case study!"></Gallery></div>
+        <div style={moreStyle}>
+          <Gallery 
+            numColsArray={[props.chooseMoreData(uxData, ID).length,props.chooseMoreData(uxData, ID).length,1]} 
+            totalWidth={800}
+            data={props.chooseMoreData(uxData, ID)} 
+            title="check out a case study!"
+            square="false" 
+            isLarge="false">
+          </Gallery>
+        </div>
 
       </div>
     </div>
