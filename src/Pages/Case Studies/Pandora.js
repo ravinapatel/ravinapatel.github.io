@@ -172,7 +172,7 @@ function App(props) {
         {/* Block quote */}
         <div style={section}>
           <div className="body blockQuote">
-          Designed an internal tool make internal curation more efficient and revamped 
+          Designed an internal tool to make curation more efficient and revamped 
           the Pandora Charts site to increase its media value. 
           </div>
         </div>

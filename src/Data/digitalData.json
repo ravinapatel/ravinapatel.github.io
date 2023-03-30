@@ -3,21 +3,30 @@
     "id": "bouncy-fruit"
   },
   {
-    "id": "cards"
+    "id": "cards-light"
+  },
+  {
+    "id": "cards-dark"
+  },
+  {
+    "id": "toggle"
+  },
+  {
+    "id": "cherries"
+  },
+  {
+    "id": "holo-sticker"
   },
   {
     "id": "print"
   },
   {
-    "id": "toggle"
+    "id": "smokey-cabin"
   },
   {
     "id": "red-sky"
   },
   {
     "id": "starry-night"
-  },
-  {
-    "id": "smokey-cabin"
   }
 ]

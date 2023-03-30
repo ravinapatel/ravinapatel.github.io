@@ -34,7 +34,6 @@ function App(props) {
       case 'way': return require('../Images/portfolio/ux/thumbnails/way.png');
       case 'patch': return require('../Images/portfolio/ux/thumbnails/patch.png');
       case 'eatery': return require('../Images/portfolio/ux/thumbnails/eatery.png');
-      case 'fallen-flame': return require('../Images/portfolio/ux/thumbnails/fallen-flame.png');
       case 'snap-long': return require('../Images/portfolio/ux/banners/snap-banner.png');
       case 'meet-long': return require('../Images/portfolio/ux/banners/meet-banner.png');
       case 'eatery-long': return require('../Images/portfolio/ux/eatery-banner.png');
@@ -49,6 +48,7 @@ function App(props) {
       case 'weather': return require('../Images/portfolio/cs/brella.png');
       case 'memory': return require('../Images/portfolio/cs/memory.gif');
       case 'critter': return require('../Images/portfolio/cs/critterworld.gif');
+      case 'fallen-flame': return require('../Images/portfolio/cs/fallen-flame.png');
 
       // LINE ART
       case 'art': return require('../Images/portfolio/art/feels.jpg');
@@ -88,8 +88,11 @@ function App(props) {
 
       // DIGITAL
       case 'toggle': return require('../Images/portfolio/digital/toggle.gif');
-      case 'cards': return require('../Images/portfolio/digital/cards.png');
+      case 'cards-light': return require('../Images/portfolio/digital/cards-light.png');
+      case 'cards-dark': return require('../Images/portfolio/digital/cards-dark.png');
+      case 'cherries': return require('../Images/portfolio/digital/cherries.png');
       case 'print': return require('../Images/portfolio/digital/print.png');
+      case 'holo-sticker': return require('../Images/portfolio/digital/holo-sticker.png');
       
       default: return require('../Images/portfolio/digital/print.png');
 
@@ -166,9 +169,9 @@ function App(props) {
         <Link 
           text={props.msg} 
           url={props.url} 
-          isInternal="false" 
+          isInternal={props.isInternal}
           type={props.isLarge==="true"? "block" : "small"} 
-          icon="arrowDiagonal" 
+          icon="arrowRight" 
           color="rgba(0, 0, 0, 1)"
           style={{paddingTop: props.isLarge==="true" ? "auto" : 100 }}>
         </Link>

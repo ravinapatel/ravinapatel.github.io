@@ -258,7 +258,7 @@ function App(props) {
 
         {/* Overview */}
         <div style={section}>
-          <div className="heading" style={{ color: COLOR }}>Overview</div>
+          <div className="heading" style={{ color: COLOR }}>Problem</div>
           <div className="body">
             People love to discover new content. We scroll through social media and stare at screens for hours to watch other 
             people’s stuff. Yet, people find Snapchat’s Discover page overwhelmingly “annoying” because:
@@ -381,7 +381,7 @@ function App(props) {
         {/* Ideating */}
         <div style={section}>
           <div style={tableContainer}>
-          <div className="heading" style={{ color: COLOR }}>Ideating</div>
+          <div className="heading" style={{ color: COLOR }}>Ideation</div>
             <div style={table}>
               <div style={bigLeftCol}>
                 <div className="body" >
@@ -552,6 +552,7 @@ function App(props) {
           to encourage users to share anything they create or find. Snap Cliques leverages this power to enable 
           people to connect with others over similar interests. 
 
+          <br></br> <br></br>
           I wrote this case study as part of 
           <Link text={"Cornell AppDev"} url={"https://www.cornellappdev.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
           ’s Intro to Digital 

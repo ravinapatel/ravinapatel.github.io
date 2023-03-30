@@ -7,6 +7,7 @@ import Button from "../Components/Button";
 import Polaroid from "../Components/Polaroid";
 import FadeIn from 'react-fade-in';
 import backgroundVideo from '../Images/gradient-cover.mp4'
+import Socials from '../Components/Socials'
 
 
 function App(props) {
@@ -177,6 +178,7 @@ function App(props) {
               <Button text={"Say hi!"} url="mailto: rpp62@cornell.edu" isInternal="false"></Button>
             </div>
             <Button text={"View resume"} url="./ravina-resume.pdf" isInternal="false"></Button>
+            {/* <Socials></Socials> */}
           </div>
         </div>
 
