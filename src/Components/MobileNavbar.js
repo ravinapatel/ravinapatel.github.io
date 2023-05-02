@@ -2,14 +2,25 @@ import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import logo from '../Icons/rp-icon.png';
 import ReactGA from 'react-ga';
+import useWindowSize from "./useWindowSize";
 
 // MOBILE NAVBAR
 function App() {
 
+  // CONSTANTS
+  const windowSize = useWindowSize();
+  const PADDING = 28;
+  const HEIGHT = 64;
+
   // STATE
   const [isOpen, setIsOpen] = useState(false);
 
-  function handleClick() {
+  // FUNCTIONS
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  function toggleHamburger() {
     setIsOpen(!isOpen);
     // GA Event
     if (!isOpen) {
@@ -18,6 +29,11 @@ function App() {
         action: 'Clicked the hamburger menu'
       })
     }
+  }
+
+  function choosePage() {
+    setIsOpen(!isOpen);
+    scrollToTop();
   }
 
   function handleResume() {
@@ -31,25 +47,26 @@ function App() {
 
   // STYLING
   const container = {
-    padding: 20
+  }
+
+  const navContainer = {
+    height: HEIGHT,
   }
 
   const leftSection = {
-    display: "inline-block",
-    textAlign: "left",
-    width: "50%"
+    verticalAlign: "top",
+    cursor: "pointer",
+    position: "absolute",
+    left: PADDING,
+    top: 20,
   }
 
   const rightSection = {
-    display: "inline-block",
-    textAlign: "right",
-    width: "50%"
-  }
-
-  const section = {
-    display: "inline-block",
     verticalAlign: "top",
-    cursor: "pointer"
+    cursor: "pointer",
+    position: "absolute",
+    right: PADDING,
+    top: 20,
   }
 
   const overlay = {
@@ -62,7 +79,7 @@ function App() {
     right: "0",
     bottom: "0",
     backgroundColor: "#fff",
-    zIndex: "1000"
+    zIndex: "900"
   }
 
   const line = {
@@ -72,13 +89,6 @@ function App() {
     height: 2,
     backgroundColor: "black",
     margin: "6px 0 0 6px",
-    zIndex: "1000"
-  }
-
-  const hamburger = {
-    position: isOpen ? "fixed" : "sticky",
-    right: "0%",
-    paddingRight: isOpen ? 20 : 0,
     zIndex: "1000"
   }
 
@@ -95,10 +105,8 @@ function App() {
   const menuLink = {
     display: "block",
     textTransform: "lowercase",
-    // letterSpacing: "0.03em",
     fontSize: "24px",
     textDecoration: "none",
-    // fontWeight: "bold",
     color: "#4d4d4d",
     padding: 20
   }
@@ -109,9 +117,9 @@ function App() {
       {/* Menu */}
       <div style={overlay} className={isOpen ? "visible" : "invisible"} >
         <div style={text}>
-          <NavLink exact to="/" style={menuLink} className="navLink" onClick={handleClick}>work</NavLink>
-          <NavLink to="/play" style={menuLink} className="navLink" onClick={handleClick}>play</NavLink>
-          <NavLink to="/about" style={menuLink} className="navLink" onClick={handleClick}>about</NavLink>
+          <NavLink exact to="/" style={menuLink} className="navLink" onClick={choosePage}>work</NavLink>
+          <NavLink to="/play" style={menuLink} className="navLink" onClick={choosePage}>play</NavLink>
+          <NavLink to="/about" style={menuLink} className="navLink" onClick={choosePage}>about</NavLink>
           <Link
             to={"../../ravina-resume.pdf"}
             target="_blank"
@@ -123,32 +131,31 @@ function App() {
         </div>
       </div>
 
-      {/* Logo */}
-      <div style={leftSection}>
-        <div style={section}>
-          <Link to="/" >
-            <img
-              src={logo}
-              alt=""
-              width={30}
-              align="center"
-              style={{ paddingRight: "10px", zIndex: "900", position: "sticky" }}
-            />
-          </Link>
-        </div>
-      </div>
-
-      {/* Hamburger */}
-      <div style={rightSection}>
-        <div style={section} onClick={handleClick}>
-          <div style={hamburger}>
-            <div style={line} className={isOpen ? "line1x" : "line1"}></div>
-            <div style={line} className={isOpen ? "line2x" : "line2"}></div>
-            <div style={line} className={isOpen ? "line3x" : "line3"}></div>
+      <div className="navContainer" style={navContainer}>
+        {/* Logo */}
+        <div style={leftSection}>
+          <div>
+            <Link to="/" >
+              <img
+                src={logo}
+                alt=""
+                width={30}
+                align="center"
+                style={{ paddingRight: "10px", zIndex: "900", position: "sticky" }}
+                onClick={scrollToTop}
+              />
+            </Link>
           </div>
         </div>
-      </div>
-    </div >
+
+        {/* Hamburger */}
+        <div style={rightSection} onClick={toggleHamburger}>
+          <div style={line} className={isOpen ? "line1x" : "line1"}></div>
+          <div style={line} className={isOpen ? "line2x" : "line2"}></div>
+          <div style={line} className={isOpen ? "line3x" : "line3"}></div>
+        </div>
+      </div >
+    </div>
   );
 }
 

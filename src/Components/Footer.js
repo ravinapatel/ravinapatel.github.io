@@ -15,8 +15,8 @@ function App() {
 
   // Style
   const container = {
-    // backgroundImage: "url(/gradient-cover.gif)",
-    // backgroundSize: 'cover',
+    backgroundImage: "url(/cover.png)",
+    backgroundSize: 'cover',
     // borderTop: '2px solid #000',
     // borderBottom: '2px solid #000',
     width: "100%",
@@ -26,13 +26,6 @@ function App() {
     textAlign: "center",
     fontSize: "14px",
     marginTop: "64px"
-  }
-  const backgroundVideoStyle = {
-    width: window.width,
-    height: HEIGHT,
-    objectFit: "cover",
-    position: "absolute",
-    left: 0
   }
 
   const content = {
@@ -73,11 +66,6 @@ function App() {
 
   return (
     <div style={container}>
-
-      <video autoPlay muted loop style={backgroundVideoStyle} id="backgroundVideo">
-        <source src={backgroundVideo} type="video/mp4"/>
-      </video>
-
       <div style={content}>
         <div style={row}>
           <div style={columnLeft}>
@@ -87,9 +75,10 @@ function App() {
           </div>
           
           <div style={columnRight}>
-            <p className='body' style={{marginBottom: "10px"}}>let's build together :)</p>
+            <p className='body' style={{marginBottom: "10px"}}>let's create together :)</p>
             <Link text="Email me" url="mailto: rpp62@cornell.edu" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
             <Link text="View resume" url="./ravina-resume.pdf" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
+            <Link text="LinkedIn" url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
           </div>
         </div>
       </div>

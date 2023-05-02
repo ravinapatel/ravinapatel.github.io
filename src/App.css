@@ -45,7 +45,7 @@ html, body {
   font-family: 'Inconsolata', monospace;
   font-size: 28px;
   /* font-weight: bold; */
-  padding: 48px 0px 96px 0px;
+  padding: 48px 0px 48px 0px;
   /* width: fit-content; */
 }
 
@@ -143,7 +143,7 @@ html, body {
 
 .bodyBig {
   text-align: left;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   font-size: 20px;
   font-weight: normal;
   text-decoration: none;
@@ -153,7 +153,7 @@ html, body {
 
 .body {
   text-align: left;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
@@ -163,7 +163,7 @@ html, body {
 
 .bodyLight {
   text-align: left;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
@@ -173,7 +173,7 @@ html, body {
 
 .body2 {
   text-align: left;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   font-size: 14px;
   font-weight: normal;
   text-decoration: none;
@@ -182,7 +182,7 @@ html, body {
 }
 .body2Light {
   text-align: left;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   font-size: 14px;
   font-weight: normal;
   text-decoration: none;
@@ -192,7 +192,7 @@ html, body {
 
 .aboutBody {
   text-align: left;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   font-size: 16px;
   font-weight: normal;
   text-decoration: none;
@@ -290,7 +290,7 @@ ul.dashed > li:before {
   transition: max-height 0.2s ease-in-out;
 }
 
-/* SCROLL TO TOP */
+/* SCROLL TO TOP BUTTON*/
 .slideOut {
   opacity: 0;
   transform: translateY(100%);
@@ -589,27 +589,13 @@ ul.dashed > li:before {
   transition: transform 0.2s ease-in-out;
 }
 
-/* .logoContainer .logo {
-  transition: transform 0.3s ease-in-out;
-}
-
-.logoContainer:hover .logo {
-  transform: scale(1.2,1.2) rotate(-5deg) translateY(-2px);
-  transition: transform 0.3s ease-in-out;
-} */
-
-.navOpen{
-  /* margin-right: 700px; */
-  -webkit-transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
-  transition: all .2s ease-out;
-}
-
-.navClose{
-  /* margin-right: 700px; */
-  -webkit-transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
-  transition: all .2s ease-out;
+/* set {height: 80} in react file*/
+.navContainer {
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index: 900;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(0,0,0,0.05);
 }

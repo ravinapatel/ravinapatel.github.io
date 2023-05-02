@@ -17,8 +17,8 @@ import ReactGA from 'react-ga';
 function App(props) {
 
   // RESONSIVENESS
-  const window = useWindowSize();
-  var isBigScreen = window.width > 1200
+  const windowSize = useWindowSize();
+  var isBigScreen = windowSize.width > 1200
 
   const ID = "null"              // exclude data of type ID in see more section
 
@@ -61,7 +61,7 @@ function App(props) {
   // STYLING
   const containerStyle = {
     textAlign: "center",
-    marginTop: -50
+    marginTop: 20
   }
 
   const artLeftSectionStyle = {
@@ -86,13 +86,13 @@ function App(props) {
     paddingTop: "50px",
     paddingBottom: "50px",
   }
-  if (window.width > 1200) {          // big screen (according to gallery thresholds)
+  if (windowSize.width > 1200) {          // big screen (according to gallery thresholds)
     moreStyle.height = 550
   }
-  else if (window.width < 700) {      // small screen
+  else if (windowSize.width < 700) {      // small screen
     moreStyle.height = "auto"
   }
-  else if (window.width < 940) {      // small-medium screen
+  else if (windowSize.width < 940) {      // small-medium screen
     moreStyle.height = 550
   }
   else {
@@ -103,7 +103,7 @@ function App(props) {
     textAlign: "center",
     height: "100%",
     position: "sticky",
-    top: "20px",
+    top: "80px",
     zIndex: "5"
   }
 
@@ -148,9 +148,13 @@ function App(props) {
     fontSize: "16px"
   }
 
+  // function scrollToTop() {
+  //   document.body.scrollTop = 0; // For Safari
+  //   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  // }
+
   function scrollToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
   // CONTENT
@@ -207,7 +211,7 @@ function App(props) {
           // Digital
           <FadeIn transitionDuration="500">
             <div className="container" style={containerStyle}>
-              <div style={sectionStyle}><Gallery numColsArray={[2,1,1]} totalWidth={1100} data={digitalData} title="" square="false"></Gallery></div>
+              <div style={sectionStyle}><Gallery numColsArray={[2,1,1]} totalWidth={1122} data={digitalData} title="" square="false"></Gallery></div>
             </div>
           </FadeIn>
         }
@@ -216,7 +220,7 @@ function App(props) {
           // Code
           <FadeIn transitionDuration="500">
             <div className="container" style={containerStyle}>
-            <div style={sectionStyle}><Gallery numColsArray={[3,2,1]} totalWidth={1100} data={codeData} title="" square="false" isLarge="true"></Gallery></div>
+            <div style={sectionStyle}><Gallery numColsArray={[3,2,1]} totalWidth={1122} data={codeData} title="" square="false" isLarge="true"></Gallery></div>
             </div>
           </FadeIn>
         }

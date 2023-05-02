@@ -22,7 +22,7 @@ function App(props) {
   const SECTION_PADDING = 100
 
   const containerStyle = {
-    paddingTop: 50,
+    paddingTop: 120,
     textAlign: "center",
   }
   const content = {

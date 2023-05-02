@@ -54,7 +54,8 @@ function App(props) {
   const contentStyle = {
     textAlign: "center",
     overflow: "hidden",
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF",
+    paddingTop: 32
   }
   const section = {
     display: "block",
@@ -225,14 +226,12 @@ function App(props) {
         
         {/* Block quote */}
         <div style={section}>
-          <div className="body blockQuote">
+          <div className="body blockQuote" style={{marginBottom: 56}}>
           I began my product design journey with Cornell AppDev’s course, Intro to Digital Product Design. During this class, I completed a case study for a new Snapchat feature, from the research to the prototype phase.
           
           </div>
-        </div>
         
         {/* Intro */}
-        <div style={section}>
           <div style={tableContainer}>
             <div style={table}>
               <div style={introTableCol}>

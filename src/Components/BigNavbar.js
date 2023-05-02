@@ -6,27 +6,29 @@ import logo from '../Icons/rp-icon.png';
 // NAVBAR
 
 function App() {
-  // STATE
-  const [playMode, setPlayMode] = useState("false")
+
+  // FUNCTIONS
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
 
   //STYLING
   // Overall
-  const HEIGHT = 80
+  const HEIGHT = 64
 
   const navStyle = {
     textAlign: "center",
     width: "100%",
     height: HEIGHT,
     zIndex: "900",
-    position: "relative"
+    position: "fixed"
   }
 
   // Left Menu Styling
-  // NOTE: marginRight: MIDDLE_SPACING set in App.css
   const menuLeft = {
     textAlign: "left",
     lineHeight: "15px",
-    marginRight: 780,
+    marginRight: 880,
     display: "inline-block",
   }
 
@@ -83,20 +85,21 @@ function App() {
 
   // RENDERING
   return (
-    <div className="container" >
+    <div className="navContainer" style={{height:HEIGHT}}>
       < nav style={navStyle}>
 
         {/* Name and Logo */}
-        <div className={`logoContainer ${playMode === "true" ? "navOpen" : "navClose"}`} style={menuLeft}>
-          <Link to="/" style={nameStyle} onClick={() => setPlayMode("false")}>
+        <div style={menuLeft}>
+          <Link to="/" style={nameStyle} >
             <img
               src={logo}
-              alt="" width={24}
+              alt="" width={32}
               className="logo"
               align="center"
               style={{ paddingRight: "10px" }}
+              onClick={scrollToTop}
             />
-            ravina patel
+            {/* ravina patel */}
           </Link>
         </div>
 
@@ -104,15 +107,15 @@ function App() {
         <div style={menuRight}>
           <ul style={menuList}>
             <li className="navLink" style={menuListItem} >
-              <NavLink exact to="/" style={menuLink} activeStyle={menuActiveLink} onClick={() => setPlayMode("false")}>work</NavLink>
+              <NavLink exact to="/" style={menuLink} activeStyle={menuActiveLink} onClick={scrollToTop}>work</NavLink>
             </li>
 
             <li className="navLink" style={menuListItem} >
-              <NavLink to="/play" style={menuLink} activeStyle={menuActiveLink} onClick={() => setPlayMode("true")}>play</NavLink>
+              <NavLink to="/play" style={menuLink} activeStyle={menuActiveLink} onClick={scrollToTop}>play</NavLink>
             </li>
 
             <li className="navLink" style={menuListItem} >
-              <NavLink to="/about" style={menuLink} activeStyle={menuActiveLink} onClick={() => setPlayMode("false")} >about</NavLink>
+              <NavLink to="/about" style={menuLink} activeStyle={menuActiveLink} onClick={scrollToTop}>about</NavLink>
             </li>
 
             {/* <li className="link" style={menuListItem} >

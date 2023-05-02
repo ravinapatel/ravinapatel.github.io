@@ -72,7 +72,8 @@ function App(props) {
   const contentStyle = {
     textAlign: "center",
     overflow: "hidden",
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF",
+    paddingTop: 32
   }
   const section = {
     display: "block",
@@ -229,15 +230,13 @@ function App(props) {
         
         {/* Block quote */}
         <div style={section}>
-          <div className="body blockQuote">
+          <div className="body blockQuote" style={{marginBottom: 56}}>
           In the summer of 2020, I participated in a series of case competitions hosted by 
           Paravane Ventures. My submission, Exceed, won first place for a competition where 
           we were challenged to design a way for professionals to continue to learn and develop.
           </div>
-        </div>
         
         {/* Intro */}
-        <div style={section}>
           <div style={tableContainer}>
             <div style={table}>
               <div style={introTableCol1}>
@@ -272,9 +271,8 @@ function App(props) {
           <div className="title1" style={{ color: "#000" }}>Learn on the go</div>
           <div className="body">
             People who are content with their current employment want to casually
-            learn and grow and keep up with recent events via short snackable content
-            with a consistently high quality bar. However, most current platforms
-            are geared towards long-term through courses and reading.
+            learn, grow, and keep up with recent events on the go. However, most current platforms
+            are geared towards long-term learning through courses and reading.
           </div>
         </div>
 
@@ -369,10 +367,10 @@ function App(props) {
               <td style={dataRowLeftFinal}>
                 <div style={{display:"inline-block", width: "200px", paddingRight: "40px"}}>
                   <div className='highlight' style={{display:"inline-block"}}>
-                    31%
+                    50%
                   </div>
                   <div className="body" style={{display:"inline-block"}}>
-                    of respondents said time was an issue they currently face in trying to learn
+                    of respondents struggle with finding the appropriate tools to learn specific topics
                   </div>
                 </div>
               </td>
@@ -384,7 +382,7 @@ function App(props) {
         </div>
 
         <div style={section}>
-          <div className="body blockQuote">
+          <div className="body">
             I summarized my findings into the following common pain points. These
             points will drive my design decisions for the rest of the project.
           </div>

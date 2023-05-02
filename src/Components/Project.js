@@ -73,6 +73,7 @@ function App(props) {
       case 'winter': return require('../Images/portfolio/art/Winter.jpg');
 
       // OTHER ART
+      case 'cacti': return require('../Images/portfolio/art/cacti.jpg');
       case 'chalk': return require('../Images/portfolio/art/Chalk.jpg');
       case 'clock-tower': return require('../Images/portfolio/art/clock-tower.jpg');
       case 'henna': return require('../Images/portfolio/art/Henna.jpg');

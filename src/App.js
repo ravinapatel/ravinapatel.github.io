@@ -61,7 +61,7 @@ function App() {
       <Router>
         <div className="App">
           <Navbar></Navbar>
-          <Switch className="websiteBody">
+          <Switch>
             <Route path="/about" component={About} />
             <Route path="/play" render={(props) => <Play {...props} chooseMoreData={chooseMoreData} />} />
             {/* <Route path="/pandora" render={(props) => <CaseStudy {...props} id='pandora' chooseMoreData={chooseMoreData} />} /> */}

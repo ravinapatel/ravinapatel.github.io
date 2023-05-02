@@ -46,7 +46,11 @@ function App() {
 
   // STYLING
   const containerStyle = {
-    textAlign: "center"
+    textAlign: "center",
+  }
+
+  const refContainerStyle = {
+    paddingTop: 42,
   }
 
   const lastSectionStyle = {
@@ -73,7 +77,8 @@ function App() {
   }
 
   function getDir(index) {
-    return (index % 2 === 0) ? "left" : "right"
+    // return (index % 2 === 0) ? "left" : "right"  // alternates the direction
+    return "left"
   }
 
   const projects = data.map((item, index) => < ProjectPrev
@@ -104,15 +109,15 @@ function App() {
 
   return (
     <FadeIn transitionDuration="500">
-      <div className="container" style={containerStyle}>
+      <div style={containerStyle}>
 
         {/* Intro */}
         <Intro reference={el1} click={()=> scrollToDiv(el2)}></Intro>
 
         {/* UX Projects */}
         
-        <div className="container" style={containerStyle}>
-          <div className="sectionTitle" ref={el2} >selected work</div>
+        <div style={refContainerStyle} ref={el2}>
+          <div className="sectionTitle" >selected work</div>
           {projectDivs}
 
           {/* <div className="link" >Click on Me!</div>

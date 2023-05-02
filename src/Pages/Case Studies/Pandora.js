@@ -44,7 +44,8 @@ function App(props) {
   const contentStyle = {
     textAlign: "center",
     overflow: "hidden",
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF",
+    paddingTop: 32
   }
   const section = {
     display: "block",
@@ -171,14 +172,12 @@ function App(props) {
         
         {/* Block quote */}
         <div style={section}>
-          <div className="body blockQuote">
+          <div className="body blockQuote" style={{marginBottom: 56}}>
           Designed an internal tool to make curation more efficient and revamped 
           the Pandora Charts site to increase its media value. 
           </div>
-        </div>
         
         {/* Intro */}
-        <div style={section}>
           <div style={tableContainer}>
             <div style={table}>
               <div style={introTableCol1}>
@@ -287,7 +286,7 @@ function App(props) {
           <div className="heading" style={{ color: COLOR }}>Research Synthesis</div>
           <div className="title1" style={{ color: "#000" }}><b>Understanding the curators</b></div>
           <div className="body">
-            I used the insights gathered from the interviews, to create a user journey 
+            I used the insights gathered from the interviews to create a user journey 
             map that depicts the current process of publishing charts. This map served 
             as a tool to identify pain points and potential opportunities within the 
             workflow.
@@ -349,9 +348,9 @@ function App(props) {
           <div className="body">
             I devised a new flow for Pandora Charts that spans curating internally, 
             publishing onto the external Pandora Charts site, and updating associating 
-            chart playlists on the listener app. The entire curation process is centralized 
-            onto a single internal tool, and the user flow diagram highlights several 
-            automated side effects that previously required human action. 
+            chart playlists on the listener app. The entire curation process is <b>centralized 
+            onto a single internal tool</b>, and the user flow diagram highlights several 
+            <b> automated side effects</b> that previously required human action. 
           </div>
         </div>
         {/* FULL SECTION: User flow */}
