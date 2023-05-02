@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.978517ea.chunk.css",
-    "main.js": "/static/js/main.87c55da1.chunk.js",
-    "main.js.map": "/static/js/main.87c55da1.chunk.js.map",
+    "main.css": "/static/css/main.af2701c5.chunk.css",
+    "main.js": "/static/js/main.4d3bc1ea.chunk.js",
+    "main.js.map": "/static/js/main.4d3bc1ea.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ed9d8f35.js",
     "runtime-main.js.map": "/static/js/runtime-main.ed9d8f35.js.map",
-    "static/js/2.cf952822.chunk.js": "/static/js/2.cf952822.chunk.js",
-    "static/js/2.cf952822.chunk.js.map": "/static/js/2.cf952822.chunk.js.map",
+    "static/js/2.dcb0d33c.chunk.js": "/static/js/2.dcb0d33c.chunk.js",
+    "static/js/2.dcb0d33c.chunk.js.map": "/static/js/2.dcb0d33c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4d651e9124f04c93d28bc0f74c4cd15a.js": "/precache-manifest.4d651e9124f04c93d28bc0f74c4cd15a.js",
+    "precache-manifest.c7c9362c4bdbc6d3e7037c1cc29669d4.js": "/precache-manifest.c7c9362c4bdbc6d3e7037c1cc29669d4.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.978517ea.chunk.css.map": "/static/css/main.978517ea.chunk.css.map",
-    "static/js/2.cf952822.chunk.js.LICENSE.txt": "/static/js/2.cf952822.chunk.js.LICENSE.txt",
+    "static/css/main.af2701c5.chunk.css.map": "/static/css/main.af2701c5.chunk.css.map",
+    "static/js/2.dcb0d33c.chunk.js.LICENSE.txt": "/static/js/2.dcb0d33c.chunk.js.LICENSE.txt",
     "static/media/Chalk.jpg": "/static/media/Chalk.484fb2d5.jpg",
     "static/media/Faded.jpg": "/static/media/Faded.3e3b2181.jpg",
     "static/media/Falling-Water.jpg": "/static/media/Falling-Water.fd736c41.jpg",
@@ -31,6 +31,7 @@
     "static/media/brainstorming.png": "/static/media/brainstorming.ec679690.png",
     "static/media/brella.png": "/static/media/brella.c0f166d6.png",
     "static/media/building-sketch.jpg": "/static/media/building-sketch.c1555711.jpg",
+    "static/media/cacti.jpg": "/static/media/cacti.c702d33b.jpg",
     "static/media/cards-dark.png": "/static/media/cards-dark.6cb2d2b5.png",
     "static/media/cards-light.png": "/static/media/cards-light.e81ab584.png",
     "static/media/cherries.png": "/static/media/cherries.0330b596.png",
@@ -50,7 +51,7 @@
     "static/media/fractals-gif.gif": "/static/media/fractals-gif.b4029427.gif",
     "static/media/gradient-cover.mp4": "/static/media/gradient-cover.ee085691.mp4",
     "static/media/head-back.jpg": "/static/media/head-back.8212a0fd.jpg",
-    "static/media/holo-sticker.png": "/static/media/holo-sticker.f1712b19.png",
+    "static/media/holo-sticker.png": "/static/media/holo-sticker.297c16ae.png",
     "static/media/ideas.png": "/static/media/ideas.f7419ac1.png",
     "static/media/info-card.png": "/static/media/info-card.dbb848dc.png",
     "static/media/invaders-gif.gif": "/static/media/invaders-gif.bf2a4a31.gif",
@@ -73,7 +74,7 @@
     "static/media/opps.png": "/static/media/opps.e89bd1c0.png",
     "static/media/pain-points.png": "/static/media/pain-points.aef8912a.png",
     "static/media/painting.jpg": "/static/media/painting.07cfc63e.jpg",
-    "static/media/pandora.png": "/static/media/pandora.346cf3ea.png",
+    "static/media/pandora.png": "/static/media/pandora.7c6c2632.png",
     "static/media/patch.png": "/static/media/patch.2562aa94.png",
     "static/media/pixel_gif_og.gif": "/static/media/pixel_gif_og.78cec6ee.gif",
     "static/media/print.png": "/static/media/print.ae529caa.png",
@@ -102,8 +103,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ed9d8f35.js",
-    "static/js/2.cf952822.chunk.js",
-    "static/css/main.978517ea.chunk.css",
-    "static/js/main.87c55da1.chunk.js"
+    "static/js/2.dcb0d33c.chunk.js",
+    "static/css/main.af2701c5.chunk.css",
+    "static/js/main.4d3bc1ea.chunk.js"
   ]
 }
