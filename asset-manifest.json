@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.af2701c5.chunk.css",
-    "main.js": "/static/js/main.4d3bc1ea.chunk.js",
-    "main.js.map": "/static/js/main.4d3bc1ea.chunk.js.map",
+    "main.css": "/static/css/main.ac13211b.chunk.css",
+    "main.js": "/static/js/main.8b0032da.chunk.js",
+    "main.js.map": "/static/js/main.8b0032da.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ed9d8f35.js",
     "runtime-main.js.map": "/static/js/runtime-main.ed9d8f35.js.map",
-    "static/js/2.dcb0d33c.chunk.js": "/static/js/2.dcb0d33c.chunk.js",
-    "static/js/2.dcb0d33c.chunk.js.map": "/static/js/2.dcb0d33c.chunk.js.map",
+    "static/js/2.0e9ef237.chunk.js": "/static/js/2.0e9ef237.chunk.js",
+    "static/js/2.0e9ef237.chunk.js.map": "/static/js/2.0e9ef237.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c7c9362c4bdbc6d3e7037c1cc29669d4.js": "/precache-manifest.c7c9362c4bdbc6d3e7037c1cc29669d4.js",
+    "precache-manifest.9797daf4a4b439e20e07daa275ea3992.js": "/precache-manifest.9797daf4a4b439e20e07daa275ea3992.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.af2701c5.chunk.css.map": "/static/css/main.af2701c5.chunk.css.map",
-    "static/js/2.dcb0d33c.chunk.js.LICENSE.txt": "/static/js/2.dcb0d33c.chunk.js.LICENSE.txt",
-    "static/media/Chalk.jpg": "/static/media/Chalk.484fb2d5.jpg",
+    "static/css/main.ac13211b.chunk.css.map": "/static/css/main.ac13211b.chunk.css.map",
+    "static/js/2.0e9ef237.chunk.js.LICENSE.txt": "/static/js/2.0e9ef237.chunk.js.LICENSE.txt",
     "static/media/Faded.jpg": "/static/media/Faded.3e3b2181.jpg",
     "static/media/Falling-Water.jpg": "/static/media/Falling-Water.fd736c41.jpg",
     "static/media/Henna.jpg": "/static/media/Henna.230f92cd.jpg",
@@ -20,9 +19,9 @@
     "static/media/Sunset-Sketch.jpg": "/static/media/Sunset-Sketch.51cc26d3.jpg",
     "static/media/Sunset.jpg": "/static/media/Sunset.c04c9b38.jpg",
     "static/media/Winter.jpg": "/static/media/Winter.681bed19.jpg",
-    "static/media/Wood-Mandala.jpg": "/static/media/Wood-Mandala.22c915ea.jpg",
     "static/media/affection.png": "/static/media/affection.50f36e42.png",
     "static/media/affinity-map.png": "/static/media/affinity-map.e825fd71.png",
+    "static/media/arch.png": "/static/media/arch.bac8edbe.png",
     "static/media/bird.jpg": "/static/media/bird.5a56d710.jpg",
     "static/media/birds.jpg": "/static/media/birds.e31c1b1d.jpg",
     "static/media/bnat.png": "/static/media/bnat.8f37dce0.png",
@@ -36,7 +35,6 @@
     "static/media/cards-light.png": "/static/media/cards-light.e81ab584.png",
     "static/media/cherries.png": "/static/media/cherries.0330b596.png",
     "static/media/cliques-section.png": "/static/media/cliques-section.83c83619.png",
-    "static/media/clock-tower.jpg": "/static/media/clock-tower.2a4987f4.jpg",
     "static/media/content-requirements.png": "/static/media/content-requirements.335d8273.png",
     "static/media/critterworld.gif": "/static/media/critterworld.9977c6f9.gif",
     "static/media/current-discover-mock.png": "/static/media/current-discover-mock.0314b532.png",
@@ -48,6 +46,7 @@
     "static/media/exceed.png": "/static/media/exceed.3b0fda80.png",
     "static/media/fallen-flame.png": "/static/media/fallen-flame.dd59900c.png",
     "static/media/feels.jpg": "/static/media/feels.12503a14.jpg",
+    "static/media/fool.png": "/static/media/fool.e654f567.png",
     "static/media/fractals-gif.gif": "/static/media/fractals-gif.b4029427.gif",
     "static/media/gradient-cover.mp4": "/static/media/gradient-cover.ee085691.mp4",
     "static/media/head-back.jpg": "/static/media/head-back.8212a0fd.jpg",
@@ -99,12 +98,14 @@
     "static/media/tylenol.jpg": "/static/media/tylenol.a09d4fae.jpg",
     "static/media/uke.jpg": "/static/media/uke.e1710005.jpg",
     "static/media/user-flow.png": "/static/media/user-flow.edd1ab64.png",
-    "static/media/way.png": "/static/media/way.ce473bd9.png"
+    "static/media/wallflower.png": "/static/media/wallflower.6db91c89.png",
+    "static/media/way.png": "/static/media/way.ce473bd9.png",
+    "static/media/wood.jpg": "/static/media/wood.22c915ea.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ed9d8f35.js",
-    "static/js/2.dcb0d33c.chunk.js",
-    "static/css/main.af2701c5.chunk.css",
-    "static/js/main.4d3bc1ea.chunk.js"
+    "static/js/2.0e9ef237.chunk.js",
+    "static/css/main.ac13211b.chunk.css",
+    "static/js/main.8b0032da.chunk.js"
   ]
 }
