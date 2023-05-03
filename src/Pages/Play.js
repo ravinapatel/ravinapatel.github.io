@@ -124,24 +124,25 @@ function App(props) {
     position: "relative"
   }
 
-  const pillActive = {
-    display: "inline-block",
-    position: "relative",
-    backgroundColor: "#fff",
-    border: "1px solid #7b7b7b",
-    cursor: "pointer",
-    padding: "8px 20px",
-    borderRadius: 100,
-  }
+  // const pillActive = {
+  //   display: "inline-block",
+  //   position: "relative",
+  //   backgroundColor: "#fff",
+  //   border: "1px solid #7b7b7b",
+  //   cursor: "pointer",
+  //   padding: "8px 20px",
+  //   borderRadius: 100,
+  // }
 
-  const pillInactive = {
-    display: "inline-block",
-    position: "relative",
-    backgroundColor: "rgba(0, 0, 0, 0)",
-    border: "none",
-    cursor: "pointer",
-    padding: "0px 21px",
-  }
+  // const pillInactive = {
+  //   display: "inline-block",
+  //   position: "relative",
+  //   // backgroundColor: "rgba(0, 0, 0, 0)",
+  //   border: "none",
+  //   cursor: "pointer",
+  //   padding: "8px 20px",
+  //   borderRadius: 100,
+  // }
 
   const pillLabel = {
     color: "#000",
@@ -166,7 +167,8 @@ function App(props) {
         <div style={pillContainer}>
           <div style={optContainer}>
             <button
-              style={type === "art" ? pillActive : pillInactive}
+              className={type === "art" ? "pillOption pillOptionActive" : "pillOption pillOptionInactive"}
+              style={{marginRight: 4}}
               onClick={clickArt}>
               <div style={pillLabel}>Traditional</div>
             </button>
@@ -174,7 +176,8 @@ function App(props) {
 
           <div style={optContainer}>
             <button
-              style={type === "digital" ? pillActive : pillInactive}
+              className={type === "digital" ? "pillOption pillOptionActive" : "pillOption pillOptionInactive"}
+              style={{marginRight: 4}}
               onClick={clickDigital}>
               <div style={pillLabel}>Digital</div>
             </button>
@@ -182,7 +185,7 @@ function App(props) {
 
           <div style={optContainer}>
             <button
-              style={type === "code" ? pillActive : pillInactive}
+              className={type === "code" ? "pillOption pillOptionActive" : "pillOption pillOptionInactive"}
               onClick={clickCode}>
               <div style={pillLabel}>Code</div>
             </button>

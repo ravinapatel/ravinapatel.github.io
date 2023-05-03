@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Link, NavLink } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 import logo from '../Icons/rp-icon.png';
+import MyLink from "./Link";
 
 
 // NAVBAR
@@ -15,7 +16,6 @@ function App() {
   //STYLING
   // Overall
   const HEIGHT = 64
-
   const navStyle = {
     textAlign: "center",
     width: "100%",
@@ -24,6 +24,7 @@ function App() {
     position: "fixed",
   }
 
+  // Left Menu Styling
   const leftSection = {
     display: "inline-block",
     height: HEIGHT,
@@ -32,17 +33,6 @@ function App() {
     position: "absolute",
     left: "5%",
   }
-
-  const rightSection = {
-    display: "inline-block",
-    height: HEIGHT,
-    textAlign: "right",
-    width: "50%",
-    position: "absolute",
-    right: "5%",
-  }
-
-
   const nameStyle = {
     display: "inline-block",
     textTransform: "lowercase",
@@ -55,41 +45,24 @@ function App() {
   }
 
   // Right Menu Styling
-
+  const rightSection = {
+    display: "inline-block",
+    height: HEIGHT,
+    textAlign: "right",
+    width: "50%",
+    position: "absolute",
+    right: "5%",
+  }
   const menuList = {
     margin: "0",
     padding: "0",
     height: "100%",
     listStyleType: "none",
   }
-
   const menuListItem = {
     display: "inline-block",
     marginLeft: "20px",
     height: "100%",
-  }
-
-  const menuLink = {
-    display: "flex",
-    alignItems: "center",
-    height: "100%",
-    textTransform: "lowercase",
-    fontSize: "18px",
-    textDecoration: "none",
-    fontWeight: "normal",
-    color: "#000",
-  }
-
-  const menuActiveLink = {
-    display: "flex",
-    alignItems: "center",
-    height: 30,
-    textTransform: "lowercase",
-    fontSize: "18px",
-    textDecoration: "none",
-    fontWeight: "500",
-    color: "#000",
-    borderBottom: "2px solid #000",
   }
 
   // RENDERING
@@ -115,26 +88,17 @@ function App() {
         {/* Nav Links */}
         <div style={rightSection}>
           <ul style={menuList}>
-            <li className="navLink" style={menuListItem} >
-              <NavLink exact to="/" style={menuLink} activeStyle={menuActiveLink} onClick={scrollToTop}>work</NavLink>
+            <li style={menuListItem} >
+              <MyLink text={"work"} url={"/"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
             </li>
 
-            <li className="navLink" style={menuListItem} >
-              <NavLink to="/play" style={menuLink} activeStyle={menuActiveLink} onClick={scrollToTop}>play</NavLink>
+            <li style={menuListItem} >
+              <MyLink text={"play"} url={"/play"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
             </li>
 
-            <li className="navLink" style={menuListItem} >
-              <NavLink to="/about" style={menuLink} activeStyle={menuActiveLink} onClick={scrollToTop}>about</NavLink>
+            <li style={menuListItem} >
+              <MyLink text={"about"} url={"/about"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
             </li>
-
-            {/* <li className="link" style={menuListItem} >
-              <Link
-                to={"../../ravina-resume.pdf"}
-                target="_blank"
-                style={menuLink}>
-                resume
-              </Link>
-            </li> */}
           </ul>
         </div>
 

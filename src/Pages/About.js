@@ -106,7 +106,7 @@ function App(props) {
     display: "flex"
   }
 
-  const bio1 = "Hi there, thanks for dropping by! I'm Ravina, a product designer with a passion for creating intuitive and delightful experiences. I studied Computer Science and User Experience at Cornell University, and I'm currently creating tools that empower artists at Pandora Music."
+  const bio1 = "Hi there, thanks for dropping by! I'm Ravina, a product designer with a passion for creating intuitive and delightful experiences. I studied Computer Science and User Experience at Cornell University, and I'm currently creating tools that empower artists at Pandora."
   const bio2 = "When I'm not designing, I'm exploring the city to learn how to be a New Yorker, trying out new dessert spots, and learning French! Let's connect and create something amazing together."
 
   const polaroidMap = {

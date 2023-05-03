@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../Icons/rp-icon.png';
 import ReactGA from 'react-ga';
 import useWindowSize from "./useWindowSize";
+import MyLink from "./Link";
 
 // MOBILE NAVBAR
 function App() {
@@ -49,16 +50,12 @@ function App() {
   const container = {
   }
 
-  const navContainer = {
-    height: HEIGHT,
-  }
-
   const leftSection = {
     verticalAlign: "top",
     cursor: "pointer",
     position: "absolute",
     left: PADDING,
-    top: 20,
+    top: 20
   }
 
   const rightSection = {
@@ -78,7 +75,8 @@ function App() {
     left: "0",
     right: "0",
     bottom: "0",
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(0,0,0,0.05)",
+    backdropFilter: "blur(30px)",
     zIndex: "900"
   }
 
@@ -93,45 +91,19 @@ function App() {
   }
 
   const text = {
-    textAlign: "center",
     position: "absolute",
-    top: "50%",
-    left: "50%",
-    fontSize: "50px",
-    color: "black",
-    transform: "translate(-50%,-50%)", // center text
-  }
-
-  const menuLink = {
-    display: "block",
-    textTransform: "lowercase",
-    fontSize: "24px",
-    textDecoration: "none",
-    color: "#4d4d4d",
-    padding: 20
+    left: PADDING,
+    top: 72
   }
 
   // RENDERING
   return (
     <div style={container} >
-      {/* Menu */}
-      <div style={overlay} className={isOpen ? "visible" : "invisible"} >
-        <div style={text}>
-          <NavLink exact to="/" style={menuLink} className="navLink" onClick={choosePage}>work</NavLink>
-          <NavLink to="/play" style={menuLink} className="navLink" onClick={choosePage}>play</NavLink>
-          <NavLink to="/about" style={menuLink} className="navLink" onClick={choosePage}>about</NavLink>
-          <Link
-            to={"../../ravina-resume.pdf"}
-            target="_blank"
-            style={menuLink}
-            className="link"
-            onClick={handleResume}>
-            resume
-          </Link>
-        </div>
-      </div>
+      {/* Background blur */}
+      <div style={overlay} className={isOpen ? "visible" : "invisible"} onClick={toggleHamburger}></div>
 
-      <div className="navContainer" style={navContainer}>
+      {/* Nav Sheet */}
+      <div className={isOpen ? "navContainerOpen" : "navContainer"}>
         {/* Logo */}
         <div style={leftSection}>
           <div>
@@ -154,8 +126,19 @@ function App() {
           <div style={line} className={isOpen ? "line2x" : "line2"}></div>
           <div style={line} className={isOpen ? "line3x" : "line3"}></div>
         </div>
+
+        {/* Menu items */}
+        <div className={isOpen ? "visible" : "invisible"} style={text}>
+          <MyLink text={"work"} url={"/"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
+          <MyLink text={"play"} url={"/play"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
+          <MyLink text={"about"} url={"/about"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
+        </div>
       </div >
+
+      
     </div>
+
+    
   );
 }
 

@@ -8,6 +8,7 @@ import '../App.css';
 // - block          "inline" | "block" | "small"
 // - icon
 // - color
+// - fontWeight     "bold" | "regular" (default "bold")
 
 function Button(props) {
 
@@ -33,16 +34,15 @@ function Button(props) {
 
   const textStyle = {
     display: "inline-block",
-    fontFamily: "Arial, Helvetica, sans-serif",
     fontSize: "18px",
-    fontWeight: "bold",
+    fontWeight: props.fontWeight==null ? "bold" : props.fontWeight,
     color: props.color,
     textDecoration: "none",
-    paddingRight: 6
+    paddingRight: props.icon==="" ? 0 : 6,
   }
 
   const iconStyle = {
-    display: "inline-block",
+    display: props.icon==="" ? "none" : "inline-block",
     width: "14px"
   }
 

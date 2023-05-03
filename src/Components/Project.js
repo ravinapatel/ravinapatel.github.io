@@ -61,6 +61,7 @@ function App(props) {
       case 'faded': return require('../Images/portfolio/art/Faded.jpg');
       case 'shmoke': return require('../Images/portfolio/art/shmoke.jpg');
       case 'lexi': return require('../Images/portfolio/art/lexi.jpg');
+      case 'arch': return require('../Images/portfolio/art/arch.png');
 
       // WATERCOLOR ART
       case 'affection': return require('../Images/portfolio/art/affection.png');
@@ -73,12 +74,12 @@ function App(props) {
       case 'winter': return require('../Images/portfolio/art/Winter.jpg');
 
       // OTHER ART
+      case 'fool': return require('../Images/portfolio/art/fool.png');
+      case 'wallflower': return require('../Images/portfolio/art/wallflower.png');
       case 'cacti': return require('../Images/portfolio/art/cacti.jpg');
-      case 'chalk': return require('../Images/portfolio/art/Chalk.jpg');
-      case 'clock-tower': return require('../Images/portfolio/art/clock-tower.jpg');
       case 'henna': return require('../Images/portfolio/art/Henna.jpg');
       case 'sunset-sketch': return require('../Images/portfolio/art/Sunset-Sketch.jpg');
-      case 'wood-mandala': return require('../Images/portfolio/art/Wood-Mandala.jpg');
+      case 'wood-mandala': return require('../Images/portfolio/art/wood.jpg');
 
       // MOTION
       case 'motion': return require('../Images/portfolio/motion/bouncy-fruit.gif');
