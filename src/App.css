@@ -21,11 +21,14 @@ html, body {
   z-index: -500;
 }
 
+
+/* --------------------------------------------------------------------------------------------- */
 /* NEW TEXT STYLES */
+
+/* overall */
 .code {
   font-family: 'Inconsolata', monospace;
 }
-
 .tag {
   font-family: 'Inconsolata', monospace;
   text-transform: uppercase;
@@ -35,20 +38,28 @@ html, body {
   color: #4d4d4d;
   padding: 5px 10px;
   width: fit-content;
-  /* border: 1px solid rgba(0, 0, 0, 0.25); */
   background-color: #00000010;
   border-radius: 4px;
   cursor: crosshair;
 }
-
+.tag2 {
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  font-weight: bold;
+  color: #000000;
+  padding: 5px 10px;
+  width: fit-content;
+  background-color: #EDEDED;
+}
 .sectionTitle {
   font-family: 'Inconsolata', monospace;
   font-size: 28px;
-  /* font-weight: bold; */
   padding: 48px 0px 48px 0px;
-  /* width: fit-content; */
 }
 
+/* links */
 .linkText {
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
@@ -58,7 +69,6 @@ html, body {
   text-decoration: none;
   padding-right: 6;
 }
-
 .link {
   transition: all 0.2s;
   background-color: rgba(255, 255, 255, 0);
@@ -72,6 +82,7 @@ html, body {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* scrolling text */
 .scrollingText {
   /* animation properties */
   -moz-transform: translateX(100%);
@@ -82,19 +93,16 @@ html, body {
   -webkit-animation: my-animation 90s linear infinite;
   animation: my-animation 90s linear infinite;
 }
-
 /* for Firefox */
 @-moz-keyframes my-animation {
   from { -moz-transform: translateX(100%); }
   to { -moz-transform: translateX(-100%); }
 }
-
 /* for Chrome */
 @-webkit-keyframes my-animation {
   from { -webkit-transform: translateX(100%); }
   to { -webkit-transform: translateX(-100%); }
 }
-
 @keyframes my-animation {
   from {
     -moz-transform: translateX(100%);
@@ -108,19 +116,6 @@ html, body {
   }
 }
 
-.tag2 {
-  font-family: 'Inconsolata', monospace;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  font-weight: bold;
-  color: #000000;
-  padding: 5px 10px;
-  width: fit-content;
-  background-color: #EDEDED;
-}
-
-
 
 /* ABOUT PAGE TEXT STYLES */
 
@@ -133,7 +128,6 @@ html, body {
   text-transform: uppercase;
   padding-bottom: 10px;
 }
-
 .heading2 {
   text-align: left;
   letter-spacing: 0.03em;
@@ -146,37 +140,30 @@ html, body {
 
 .bodyBig {
   text-align: left;
-  /* letter-spacing: 0.03em; */
   font-size: 20px;
   font-weight: normal;
   text-decoration: none;
   line-height: 1.75;
   color: #1e1e1e
 }
-
 .body {
   text-align: left;
-  /* letter-spacing: 0.03em; */
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
   line-height: 1.75;
   color: #1e1e1e
 }
-
 .bodyLight {
   text-align: left;
-  /* letter-spacing: 0.03em; */
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
   line-height: 1.75;
   color: #525252
 }
-
 .body2 {
   text-align: left;
-  /* letter-spacing: 0.03em; */
   font-size: 14px;
   font-weight: normal;
   text-decoration: none;
@@ -185,35 +172,19 @@ html, body {
 }
 .body2Light {
   text-align: left;
-  /* letter-spacing: 0.03em; */
   font-size: 14px;
   font-weight: normal;
   text-decoration: none;
   line-height: 1.50;
   color: #525252
 }
-
 .aboutBody {
   text-align: left;
-  /* letter-spacing: 0.03em; */
   font-size: 16px;
   font-weight: normal;
   text-decoration: none;
   line-height: 1.5;
   color: #1e1e1e
-}
-
-/* Dashed list */
-ul.dashed {
-  padding-left: 0;
-  list-style-type: none;
-}
-ul.dashed > li {
-  text-indent: -10px;
-}
-ul.dashed > li:before {
-  content: "- ";
-  text-indent: -5px;
 }
 
 /* Work section + Gallery titles */
@@ -227,23 +198,8 @@ ul.dashed > li:before {
 }
 
 
+/* --------------------------------------------------------------------------------------------- */
 /* BUTTON ANIMATIONS */
-
-.circleButton {
-  transition: all 0.1s;
-  border: 1px solid #000;
-  width: 42px;
-  height: 42px;
-}
-.circleButton:hover {
-  box-shadow: 0 3px #000;
-  transform: translateY(-3px);
-}
-.circleButton:active {
-  transition: all 0.1s;
-  box-shadow: 0 0px #000;
-  transform: translateY(2px);
-}
 
 .button {
   transition: all 0.1s;
@@ -277,7 +233,6 @@ ul.dashed > li:before {
   transform: translateY(2px);
 }
 
-/* KINDA WORKS */
 .project {
   border: none;
   transition: all 0.1s ease-in-out;
@@ -293,7 +248,6 @@ ul.dashed > li:before {
   box-shadow: 0 0px #000;
   transform: translateY(2px);
 }
-
 .project .details{
   transform: translateY(-100%);
   opacity: 0;
@@ -308,105 +262,68 @@ ul.dashed > li:before {
   transition: max-height 0.5s ease-in-out;
 }
 
-/* SCROLL TO TOP BUTTON*/
+/* scroll to top button */
+.circleButton {
+  transition: all 0.1s;
+  border: 1px solid #000;
+  width: 42px;
+  height: 42px;
+}
+.circleButton:hover {
+  box-shadow: 0 3px #000;
+  transform: translateY(-3px);
+}
+.circleButton:active {
+  transition: all 0.1s;
+  box-shadow: 0 0px #000;
+  transform: translateY(2px);
+}
 .slideOut {
   opacity: 0;
   transform: translateY(100%);
   visibility: hidden;
   transition: all .2s;
 }
-
 .slideIn {
   opacity: 1;
   visibility: visible;
   transition: all .2s;
 }
 
-/* ABOUT */
 
-.tagInvisible {
-  opacity: 0;
-  visibility: hidden;
-  transition: all .2s;
+/* --------------------------------------------------------------------------------------------- */
+/* PLAY */
+
+.pillOption {
+  transition: all 0.1s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 100px;
 }
 
-.tagVisible {
-  opacity: 1;
-  visibility: visible;
-  transition: all .2s;
+.pillOptionActive {
+  border: 1px solid #7b7b7b;
+  background-color: rgba(255,255,255,1);
 }
 
-.social {
-  opacity: 1;
-  transition: all .2s;
+.pillOptionInactive {
+  transition: all 0.1s ease-in-out;
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.social:hover {
-  opacity: 0.2;
-}
-
-.socialLight {
-  opacity: 0.4;
-  transition: all .2s;
-}
-
-.socialLight:hover {
-  opacity: 1;
-}
-
-/* about popup */
-.invisibleBlackTint {
-  transition: all 0.2s ease-out;
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.visibleBlackTint {
-  transition: all 0.2s ease-out;
-  visibility: visible;
-  opacity: 0.4;
-  height: auto;
-}
-
-.invisiblePopup {
-  transition: all 0.2s ease-out;
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.visiblePopup {
-  transition: all 0.2s ease-out;
-  visibility: visible;
-  opacity: 1;
-  height: auto;
+.pillOptionInactive:hover {
+  transition: all 0.1s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 
-.imageBig {
-  animation: rainbowRing 20s infinite;
-  transform: scale(3,3) translateY(18px);
-  transition: transform 0.35s ease-in-out;
-  position: fixed;
-  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.25);
-}
+/* --------------------------------------------------------------------------------------------- */
+/* NAV */
 
-.imageSmall {
-  animation: rainbowRing 20s infinite;
-  transition: transform 0.3s ease-in-out;
-  border-width: 2px;
-}
-
-.imageSmall:hover {
-  transform: scale(1.2,1.2) rotate(5deg) translateY(-2px);
-  transition: transform 0.0.2s ease-in-out;
-}
-
-
-/* hamburger menu */
 .invisible {
   transition: all 0.2s ease-out;
   visibility: hidden;
@@ -473,7 +390,12 @@ ul.dashed > li:before {
   border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 
-/* FUN */
+
+
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+/* UNUSED */
 
 /* rainbow */
 @keyframes rainbowText {
@@ -622,28 +544,86 @@ ul.dashed > li:before {
   transition: transform 1s ease-in-out;
 }
 
-.pillOption {
-  transition: all 0.1s ease-in-out;
-  background-color: rgba(0, 0, 0, 0);
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 100px;
+/* about */
+.tagInvisible {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+}
+.tagVisible {
+  opacity: 1;
+  visibility: visible;
+  transition: all .2s;
+}
+.social {
+  opacity: 1;
+  transition: all .2s;
+}
+.social:hover {
+  opacity: 0.2;
+}
+.socialLight {
+  opacity: 0.4;
+  transition: all .2s;
+}
+.socialLight:hover {
+  opacity: 1;
 }
 
-.pillOptionActive {
-  border: 1px solid #7b7b7b;
-  background-color: rgba(255,255,255,1);
+/* about popup */
+.invisibleBlackTint {
+  transition: all 0.2s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.visibleBlackTint {
+  transition: all 0.2s ease-out;
+  visibility: visible;
+  opacity: 0.4;
+  height: auto;
+}
+.invisiblePopup {
+  transition: all 0.2s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.visiblePopup {
+  transition: all 0.2s ease-out;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+.imageBig {
+  animation: rainbowRing 20s infinite;
+  transform: scale(3,3) translateY(18px);
+  transition: transform 0.35s ease-in-out;
+  position: fixed;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.25);
+}
+.imageSmall {
+  animation: rainbowRing 20s infinite;
+  transition: transform 0.3s ease-in-out;
+  border-width: 2px;
+}
+.imageSmall:hover {
+  transform: scale(1.2,1.2) rotate(5deg) translateY(-2px);
+  transition: transform 0.0.2s ease-in-out;
 }
 
-.pillOptionInactive {
-  transition: all 0.1s ease-in-out;
-  border: 1px solid transparent;
-  background-color: rgba(0, 0, 0, 0);
-}
 
-.pillOptionInactive:hover {
-  transition: all 0.1s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.08);
+/* Dashed list */
+ul.dashed {
+  padding-left: 0;
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -10px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -5px;
 }
