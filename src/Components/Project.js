@@ -106,8 +106,9 @@ function App(props) {
   // STYLING
   const containerStyle = {
     width: Number(props.width),
-    height: "auto"
-    // border: (props.name != null) ? "1px solid #000" : "none"
+    height: "auto",
+    borderRadius: "10px",
+    border: (props.name == null) ? "1px solid #e4e4e4" : ""
   }
 
   // Info = Name + Description
@@ -117,7 +118,7 @@ function App(props) {
     position: "relative",
     width: Number(props.width) - 2 * textPadding,
     color: "black",
-    borderTop: (props.name != null) ? "1px solid #000" : "none",
+    // borderTop: (props.name != null) ? "1px solid #000" : "none",
     // zIndex: 100
   }
 
@@ -136,7 +137,7 @@ function App(props) {
     fontSize: props.isLarge === "true" ? 22 : 18,
     fontWeight: "bold",
     textDecoration: "none",
-    paddingBottom: 10
+    paddingBottom: (props.name != null) ? 10 : 0
   }
 
   const projectDescription = {
@@ -161,7 +162,8 @@ function App(props) {
           width={props.width}
           height={props.square === "true" ? props.width : "null"}
           align="center"
-          className={(props.name != null) ? "image" : ""}
+          style={{zIndex: -10, borderRadius: 10}}                      /* borderRadius should match containerStyle radius in this file and .imgButton in App.css*/
+          // className={(props.name != null) ? "image" : ""}
         />
       </a>
 

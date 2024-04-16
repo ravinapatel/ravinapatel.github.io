@@ -16,6 +16,8 @@ import Snap from "./Pages/Case Studies/Snap";
 // import Patch from "./Pages/Case Studies/Patch";
 // import CaseStudy from "./Pages/Case Studies/CaseStudy";
 
+// import "./Fonts/GOCake-Regular.ttf"
+
 // -----------------------------------------------------------------------------
 // TODO:
 // - write resell case study

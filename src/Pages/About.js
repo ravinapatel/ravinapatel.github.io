@@ -164,7 +164,7 @@ function App(props) {
               src={ProfilePicture}
               alt="Ravina"
               width= {isSmallScreen ? "50%" : "100%"}
-              // style={{border: "2px solid #000"}}
+              style={{borderRadius: 10}}
             />
           </div>
           <div style={headerColumnRight}>

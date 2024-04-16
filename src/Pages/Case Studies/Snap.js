@@ -193,20 +193,20 @@ function App(props) {
   const moreStyle = {
     verticalAlign: "top",
     display: "inline-block",
-    paddingTop: SECTION_SPACING,
-    paddingBottom: SECTION_SPACING,
+    paddingTop: "50px",
+    paddingBottom: "50px",
   }
   if (window.width > 1200) {          // big screen (according to gallery thresholds)
-    moreStyle.height = 550
+    moreStyle.height = 420
   }
   else if (window.width < 700) {      // small screen
     moreStyle.height = "auto"
   }
   else if (window.width < 940) {      // small-medium screen
-    moreStyle.height = 550
+    moreStyle.height = 450
   }
   else {
-    moreStyle.height = 620            // big-medium screen
+    moreStyle.height = 500            // big-medium screen
   }
 
   // RENDERING

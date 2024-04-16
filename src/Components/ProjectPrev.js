@@ -112,14 +112,14 @@ function App(props) {
   if (props.direction === "left" || isSmallScreen) {
     left = contentCol
     right = imageCol
-    columnLeft.flex = "60%"
-    columnRight.flex = "40%"
+    columnLeft.flex = "50%"
+    columnRight.flex = "50%"
   }
   else  {
     left = imageCol
     right = contentCol
-    columnLeft.flex = "40%"
-    columnRight.flex = "60%"
+    columnLeft.flex = "50%"
+    columnRight.flex = "50%"
   }
 
   // RENDERING

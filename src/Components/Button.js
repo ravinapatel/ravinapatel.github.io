@@ -12,7 +12,6 @@ function Button(props) {
   // animation styling is in ../App.css
   const button = {
     display: "inline-block",
-    borderRadius: "0px",
     backgroundColor: "white"
   }
 

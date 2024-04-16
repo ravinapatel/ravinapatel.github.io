@@ -10,7 +10,7 @@ function App() {
   var isBigScreen = window.width > 1130
   var isSmallScreen = window.width < 700
 
-  const HEIGHT = isSmallScreen ? 350 : 210
+  const HEIGHT = "auto"
 
 
   // Style
@@ -69,13 +69,13 @@ function App() {
       <div style={content}>
         <div style={row}>
           <div style={columnLeft}>
-            <p className='body'>designed and built by ravina patel</p>
-            <p className='code' style={codeStyle}>last updated: mar 2023</p>
-            <p className='code tag'>v3.0</p>
+            <p className='body'>made with react.js  &lt;3</p>
+            <p className='code' style={codeStyle}>last updated: apr 2024</p>
+            <p className='code tag'>v3.1</p>
           </div>
           
           <div style={columnRight}>
-            <p className='body' style={{marginBottom: "10px"}}>let's create together :)</p>
+            <p className='body' style={{marginBottom: "10px"}}>let's build together :)</p>
             <Link text="Email me" url="mailto: rpp62@cornell.edu" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
             <Link text="View resume" url="./ravina-resume.pdf" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
             <Link text="LinkedIn" url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>

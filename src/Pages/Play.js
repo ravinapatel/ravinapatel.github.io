@@ -61,7 +61,6 @@ function App(props) {
   // STYLING
   const containerStyle = {
     textAlign: "center",
-    marginTop: 20
   }
 
   const artLeftSectionStyle = {
@@ -87,16 +86,16 @@ function App(props) {
     paddingBottom: "50px",
   }
   if (windowSize.width > 1200) {          // big screen (according to gallery thresholds)
-    moreStyle.height = 550
+    moreStyle.height = 420
   }
   else if (windowSize.width < 700) {      // small screen
     moreStyle.height = "auto"
   }
   else if (windowSize.width < 940) {      // small-medium screen
-    moreStyle.height = 550
+    moreStyle.height = 450
   }
   else {
-    moreStyle.height = 620            // big-medium screen
+    moreStyle.height = 500            // big-medium screen
   }
 
   const stickyContainer = {
@@ -200,11 +199,11 @@ function App(props) {
           type === "art" &&
           // Art
           <FadeIn transitionDuration="500">
-            < div className="container" style={containerStyle}>
+            <div style={{marginTop: 20}}>
               <div style={artLeftSectionStyle}><Gallery numColsArray={[2,2,1]} totalWidth={700} data={lineData} title="line" square="false"></Gallery></div>
               <div style={sectionStyle}>
                 <Gallery numColsArray={[2,2,1]} totalWidth={350} data={watercolorData} title="watercolor" square="false"></Gallery>
-                <div style={{ paddingTop: "100px" }}><Gallery numColsArray={[2,2,1]} totalWidth={350} data={otherData} title="etc" square="false"></Gallery></div>
+                <div style={{ paddingTop: "60px" }}><Gallery numColsArray={[2,2,1]} totalWidth={350} data={otherData} title="etc" square="false"></Gallery></div>
               </div>
             </div>
           </FadeIn>
@@ -213,8 +212,8 @@ function App(props) {
           type === "digital" &&
           // Digital
           <FadeIn transitionDuration="500">
-            <div className="container" style={containerStyle}>
-              <div style={sectionStyle}><Gallery numColsArray={[2,1,1]} totalWidth={1122} data={digitalData} title="" square="false"></Gallery></div>
+            <div>
+              <div style={sectionStyle}><Gallery numColsArray={[2,2,1]} totalWidth={1122} data={digitalData} title="" square="false"></Gallery></div>
             </div>
           </FadeIn>
         }
@@ -222,7 +221,7 @@ function App(props) {
           type === "code" &&
           // Code
           <FadeIn transitionDuration="500">
-            <div className="container" style={containerStyle}>
+            <div>
             <div style={sectionStyle}><Gallery numColsArray={[3,2,1]} totalWidth={1122} data={codeData} title="" square="false" isLarge="true"></Gallery></div>
             </div>
           </FadeIn>

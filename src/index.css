@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Brand";   /*Can be any text to refer to it in .css*/
+  src: local("Gracheva"),
+    url("./Fonts/Gracheva.otf") format("opentype");
+}

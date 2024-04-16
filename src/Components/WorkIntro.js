@@ -1,7 +1,8 @@
 import React from 'react';
 import useWindowSize from "./useWindowSize";
 import me from '../Images/about/me.png';
-import carrot from '../Images/about/carrot.png';
+// import carrot from '../Images/about/carrot.png';
+import carrot from '../Icons/arrow.png';
 import FadeIn from 'react-fade-in';
 import backgroundVideo from '../Images/gradient-cover.mp4'
 
@@ -19,17 +20,12 @@ function Body({ reference, click }) {
   const container = {
     width: "100%",
     height: window.height,
-    // marginTop: -80,
-    backgroundImage: "url(/cover.png)",
-    // backgroundSize: 'cover',
+    backgroundImage: "url(/cover-2024-flip.png)",
     backgroundSize: "" + window.width + "px " + window.height + "px",
     // backgroundPosition: "top center",
-    color: "#4d4d4d",
     textAlign: "center",
     display: "block",
     verticalAlign: "middle",
-    // position: "relative",
-    // zIndex: "-600px"
   }
   const carrotContainer = {
     position: "absolute",
@@ -48,17 +44,9 @@ function Body({ reference, click }) {
     width: isBigScreen ? 1100 : "90%",
   }
   const body = {
-    marginTop: 10,
-    fontSize: isSmallScreen ? 24 : 28,
-    width: isBigScreen ? 800 : "90%",
-    // backgroundImage: "linear-gradient(to right, #333 10%, rgba(255, 255, 255, 0) 0%)",
-    // backgroundPosition: "top",
-    // backgroundPosition: "left",
-    // backgroundPosition: "right",
-    // backgroundPosition: "bottom",
-    // backgroundSize: "10px 5px",
-    // backgroundRepeat: "repeat-x",
-    // backgroundImage: "url(data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='15' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e)",
+    marginTop: -4,
+    // fontSize: isSmallScreen ? 18 : 20,
+    width: isBigScreen ? 600 : "90%",
   }
   const profilePic = {
     borderRadius: '50%',
@@ -97,8 +85,11 @@ function Body({ reference, click }) {
     <FadeIn transitionDuration="500">
       <div className="container" style={container}>
         <div style={content}>
-          <div style={name}>hi, i'm ravina :)</div>
-          <p style={body}>creating delightful, holistic experiences by crafting natural interactions and beautiful interfaces
+          <div style={name} className='brand'>hi, i'm ravina :)</div>
+          <p className= {isSmallScreen ? 'body' : 'bodyBig'} style={body}>
+            transforming uncharted spaces into simple, natural experiences
+            <br></br>
+            currently: product designer @siriusxm
           </p>
         </div>
 
@@ -114,7 +105,7 @@ function Body({ reference, click }) {
         </div> */}
 
         <div style={carrotContainer}>
-          <img ref={reference} onClick={click} src={carrot} alt="" width={"30"} style={{cursor: "pointer"}} ></img>
+          <img ref={reference} onClick={click} src={carrot} alt="" width={"16"} style={{cursor: "pointer"}} ></img>
         </div>  
 
       </div >
