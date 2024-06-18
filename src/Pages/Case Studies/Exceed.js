@@ -201,7 +201,7 @@ function App(props) {
     paddingBottom: "50px",
   }
   if (window.width > 1200) {          // big screen (according to gallery thresholds)
-    moreStyle.height = 420
+    moreStyle.height = 450
   }
   else if (window.width < 700) {      // small screen
     moreStyle.height = "auto"
@@ -519,23 +519,28 @@ function App(props) {
 
         {/* Reflection */}
         <div style={section}>
-          <div className="heading" style={{ color: COLOR }}>Reflection</div>
+          <div className="heading" style={{ color: COLOR }}>Impact & Reflection</div>
           <div className="title1" style={{ color: "#000" }}><b>How it went</b></div>
           <div className="body">
+            My submission won first place in the case competition!
+            <Link text={"Case Winners 2020"} url={"https://paravaneventures.com/design2020/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+
+            <br></br><br></br>
             Working on this project was really exciting because the target user demographic
             was completely different from myself and my usual circle. I had to rely fully
             on user interviews and research to put myself in the shoes of the user.
 
             <br></br><br></br>
-            The 5-day time constraint also pushed me to research, ideate, and build quickly.
-            I followed used Google's design sprint framework to work through the problem.
+            The 5-day time constraint also pushed me to research, ideate, and build very quickly.
+            I followed Google's design sprint framework to work through the process.
 
             <br></br><br></br>
             <b>Next Steps</b>
             <br></br>
-            If I were to continue working on this project, I would like to conduct A/B testing
-            to quantify the effects of the design system on the target audience. Based on the
-            collected data, I could continue to refine the visual design.
+            If I were to continue working on this project, I would further flesh out flows 
+            around progressing towards goals. Since motivation and time were key pain points for
+            professionals, I think making users feel proud of themselves for learning would 
+            provide a lot of value.
           </div>
         </div>
 

@@ -13,6 +13,8 @@ import useWindowSize from "./useWindowSize";
 //   - url
 //   - msg2                 cta text for link to [url2]
 //   - url2
+//   - msg3                 cta text for link to [url3]
+//   - url3
 //   - isInternal           does [url] stay in this website
 //   - direction            "left" or "right", indicating the rel pos of the content
 
@@ -87,6 +89,7 @@ function App(props) {
       <div style={projectName}>{props.name}</div>
       <div className= {isSmallScreen ? 'body' : 'bodyBig'}>{props.description}</div>
       <Link text={props.msg2} url={props.url2} isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+      <Link text={props.msg3} url={props.url3} isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
       <Button text={props.msg} url={props.url} isInternal={props.isInternal}></Button>
     </div>
 

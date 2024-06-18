@@ -143,7 +143,7 @@ function App(props) {
     paddingBottom: "50px",
   }
   if (window.width > 1200) {          // big screen (according to gallery thresholds)
-    moreStyle.height = 420
+    moreStyle.height = 450
   }
   else if (window.width < 700) {      // small screen
     moreStyle.height = "auto"
@@ -173,8 +173,12 @@ function App(props) {
         {/* Block quote */}
         <div style={section}>
           <div className="body blockQuote" style={{marginBottom: 56}}>
-          Designed an internal tool to make curation more efficient and revamped 
-          the Pandora Charts site to increase its media value. 
+          Designed the first independent Pandora Charts site, and designed an internal tool to make 
+          curation more efficient. Both of these projects launched in the year following my internship.
+          <br></br>
+          <br></br>
+          See it live:<Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+
           </div>
         
         {/* Intro */}

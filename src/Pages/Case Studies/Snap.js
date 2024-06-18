@@ -197,7 +197,7 @@ function App(props) {
     paddingBottom: "50px",
   }
   if (window.width > 1200) {          // big screen (according to gallery thresholds)
-    moreStyle.height = 420
+    moreStyle.height = 450
   }
   else if (window.width < 700) {      // small screen
     moreStyle.height = "auto"

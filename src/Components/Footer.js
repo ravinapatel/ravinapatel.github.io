@@ -25,7 +25,8 @@ function App() {
     display: "block",
     textAlign: "center",
     fontSize: "14px",
-    marginTop: "64px"
+    marginTop: "64px",
+    borderTop: "2px solid rgba(0,0,0,0.05)"
   }
 
   const content = {
@@ -61,7 +62,7 @@ function App() {
     whiteSpace: "nowrap",
   }
 
-  let stripTextRaw = " Based in NYC | © 2023 Ravina Patel | Built in React.js | V3.0 | ";
+  let stripTextRaw = " Based in NYC | © 2023 Ravina Patel | Built in React.js | V3.1 | ";
   let stripText = stripTextRaw.replace(" ", "&nbsp;").slice(6).repeat(4);
 
   return (
@@ -75,7 +76,7 @@ function App() {
           </div>
           
           <div style={columnRight}>
-            <p className='body' style={{marginBottom: "10px"}}>let's build together :)</p>
+            <p className='body' style={{marginBottom: "10px"}}>let's build together!</p>
             <Link text="Email me" url="mailto: rpp62@cornell.edu" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
             <Link text="View resume" url="./ravina-resume.pdf" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
             <Link text="LinkedIn" url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>

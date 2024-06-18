@@ -21,14 +21,33 @@ html, body {
   z-index: -500;
 }
 
+.inlineLink {
+  color: #000;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20;
+  border-radius: 4;
+}
+
+.inlineLink:hover {
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.inlineLink:active {
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 
 /* --------------------------------------------------------------------------------------------- */
 /* NEW TEXT STYLES */
 
 /* overall */
 .brand {
-  /* font-family: "Brand"; */
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Brand";
+  /* font-family: 'Open Sans', sans-serif; */
 }
 .code {
   font-family: 'Inconsolata', monospace;
@@ -60,6 +79,7 @@ html, body {
 .sectionTitle {
   font-family: 'Inconsolata', monospace;
   font-size: 28px;
+  font-weight: bold;
   padding: 48px 0px 48px 0px;
 }
 
@@ -274,16 +294,22 @@ html, body {
 
 /* scroll to top button */
 .circleButton {
+  cursor: pointer;
+  border-radius: 100px;
   transition: all 0.1s;
   border: 1px solid #000;
   width: 42px;
   height: 42px;
 }
 .circleButton:hover {
+  cursor: pointer;
+  border-radius: 100px;
   box-shadow: 0 3px #000;
   transform: translateY(-3px);
 }
 .circleButton:active {
+  cursor: pointer;
+  border-radius: 100px;
   transition: all 0.1s;
   box-shadow: 0 0px #000;
   transform: translateY(2px);
@@ -298,6 +324,18 @@ html, body {
   opacity: 1;
   visibility: visible;
   transition: all .2s;
+}
+
+/* scroll to section button */
+.iconButton {
+  transition: all 0.1s;
+}
+.iconButton:hover {
+  transform: translateY(-6px);
+}
+.iconButton:active {
+  transition: all 0.1s;
+  transform: translateY(2px);
 }
 
 

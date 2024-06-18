@@ -17,7 +17,7 @@
     "descriptionShort": "Enabling professionals to continue learning skills on the go",
     "msg": "Read case study",
     "url": "./exceed",
-    "msg2": "Product Design Case Winners 2020",
+    "msg2": "Case Winners 2020",
     "url2": "https://paravaneventures.com/design2020/",
     "isInternal": "true",
     "ribbon": "true"
@@ -28,8 +28,10 @@
     "description": "Designed an app to facilitate thrifting and selling on Cornell's campus. Worked with engineers to get from research to beta testing in two semesters.",
     "descriptionShort": "Facilitating thrifting and selling on Cornell's campus",
     "msg": "Coming soon",
-    "msg2": "Resell on Google Play",
-    "url2": "https://play.google.com/store/apps/details?id=com.cornellappdev.resell.android",
+    "msg2": "App Store",
+    "msg3": "Google Play",
+    "url2": "https://apps.apple.com/us/app/resell-cornell-marketplace/id1622452299",
+    "url3": "https://play.google.com/store/apps/details?id=com.cornellappdev.resell.android",
     "isInternal": "true"
   },
   {

@@ -6,7 +6,7 @@ import useWindowSize from "./useWindowSize";
 import MyLink from "./Link";
 
 // MOBILE NAVBAR
-function App() {
+function App(props) {
 
   // CONSTANTS
   const windowSize = useWindowSize();
@@ -104,20 +104,19 @@ function App() {
 
       {/* Nav Sheet */}
       <div className={isOpen ? "navContainerOpen" : "navContainer"}>
+
         {/* Logo */}
         <div style={leftSection}>
-          <div>
-            <Link to="/" >
-              <img
-                src={logo}
-                alt=""
-                width={30}
-                align="center"
-                style={{ paddingRight: "10px", zIndex: "900", position: "sticky" }}
-                onClick={scrollToTop}
-              />
-            </Link>
-          </div>
+          <a href="/">          
+            <img
+              src={logo}
+              alt="" width={32}
+              className="logo"
+              align="center"
+              style={{ paddingRight: "10px" }}
+              onClick={scrollToTop}
+            />
+          </a>
         </div>
 
         {/* Hamburger */}
@@ -129,9 +128,9 @@ function App() {
 
         {/* Menu items */}
         <div className={isOpen ? "visible" : "invisible"} style={text}>
-          <MyLink text={"work"} url={"/"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
-          <MyLink text={"play"} url={"/play"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
-          <MyLink text={"about"} url={"/about"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
+          <MyLink text={"work"} url={"/"} isInternal="true" type="block" icon="" fontWeight={props.active==="work"?"bold":"regular"} color="rgba(0, 0, 0, 1)"></MyLink>
+          <MyLink text={"play"} url={"/play"} isInternal="true" type="block" icon="" fontWeight={props.active==="play"?"bold":"regular"} color="rgba(0, 0, 0, 1)"></MyLink>
+          <MyLink text={"about"} url={"/about"} isInternal="true" type="block" icon="" fontWeight={props.active==="about"?"bold":"regular"} color="rgba(0, 0, 0, 1)"></MyLink>
         </div>
       </div >
 

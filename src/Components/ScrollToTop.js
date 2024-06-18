@@ -22,6 +22,7 @@ function Button(props) {
       setVisible(false)
     }
   };
+  
   window.addEventListener('scroll', updateVisible);
 
 
@@ -37,8 +38,6 @@ function Button(props) {
   }
   const button = {
     display: "inline-block",
-    borderRadius: "100px",
-    cursor: "pointer"
   }
   const iconStyle = {
     width: "18px"

@@ -64,7 +64,12 @@ function App() {
     padding: 10
   }
 
-  const titleStyle = {
+  const titleStyle1 = {
+    paddingBottom: 42,
+    display: "block"
+  }
+
+  const titleStyle2 = {
     paddingBottom: 0,
     display: "block"
   }
@@ -89,6 +94,8 @@ function App() {
     url={item.url}
     msg2={item.msg2}
     url2={item.url2}
+    msg3={item.msg3}
+    url3={item.url3}
     direction={getDir(index)}
     isInternal={item.isInternal}
   />)
@@ -117,7 +124,7 @@ function App() {
         {/* UX Projects */}
         
         <div style={refContainerStyle} ref={el2}>
-          <div className="sectionTitle" >selected work</div>
+          <div className="sectionTitle" style={titleStyle1}>selected work</div>
           {projectDivs}
 
           {/* <div className="link" >Click on Me!</div>
@@ -126,7 +133,7 @@ function App() {
 
         {/* CTAs */}
         <div style={lastSectionStyle}>
-          <div className="sectionTitle" style={titleStyle}>wanna connect?</div>
+          <div className="sectionTitle" style={titleStyle2}>wanna connect?</div>
           <div style={button} onClick={clickEmail}>
             <Button
               text="Say hi!"

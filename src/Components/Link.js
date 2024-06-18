@@ -49,14 +49,14 @@ function Button(props) {
   // CONDITIONAL STYLING (BASED ON PROPS.TYPE)
   if (props.type === "inline") {
     containerStyle.padding = "0px 5px"
-    containerStyle.margin = "-2px 0px 0px 2px"
+    containerStyle.margin = "-2px -2px 0px -4px"
     containerStyle.display = "inline-block"
     textStyle.fontSize = "18px"
     textStyle.paddingRight = 4
   }
   else if (props.type === "block") {
     containerStyle.padding = "8px 8px"
-    containerStyle.margin = "12px 0px 0px -8px"
+    containerStyle.margin = "6px 0px 0px -8px"
     textStyle.fontSize = "18px"
   }
   else if (props.type === "small") {

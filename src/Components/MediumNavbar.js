@@ -6,7 +6,7 @@ import MyLink from "./Link";
 
 // NAVBAR
 
-function App() {
+function App(props) {
 
   // FUNCTIONS
   function scrollToTop() {
@@ -33,16 +33,6 @@ function App() {
     position: "absolute",
     left: "5%",
   }
-  const nameStyle = {
-    display: "inline-block",
-    textTransform: "lowercase",
-    fontSize: "22px",
-    textDecoration: "none",
-    color: "#000000",
-    width: "auto",
-    height: "100%",
-    paddingTop: 29,
-  }
 
   // Right Menu Styling
   const rightSection = {
@@ -59,10 +49,26 @@ function App() {
     height: "100%",
     listStyleType: "none",
   }
-  const menuListItem = {
+  const menuListItemWork = {
     display: "inline-block",
     marginLeft: "20px",
+    marginTop: "6px",
     height: "100%",
+    width: "50px",
+  }
+  const menuListItemPlay = {
+    display: "inline-block",
+    marginLeft: "20px",
+    marginTop: "6px",
+    height: "100%",
+    width: "40px",
+  }
+  const menuListItemAbout = {
+    display: "inline-block",
+    marginLeft: "20px",
+    marginTop: "6px",
+    height: "100%",
+    width: "58px",
   }
 
   // RENDERING
@@ -70,34 +76,33 @@ function App() {
     <div className="navContainer" style={{height:HEIGHT}}>
       < nav style={navStyle}>
 
-        {/* Name and Logo */}
+        {/* Logo */}
         <div style={leftSection}>
-          <Link to="/" style={nameStyle} >
+          <a href="/">          
             <img
               src={logo}
               alt="" width={32}
               className="logo"
               align="center"
-              style={{ marginTop: "-24px", padding: "10px", paddingLeft: "0px" }}
+              style={{ marginTop: "8px", padding: "10px", paddingLeft: "4px" }}
               onClick={scrollToTop}
             />
-            {/* ravina patel */}
-          </Link>
+          </a>
         </div>
 
         {/* Nav Links */}
         <div style={rightSection}>
           <ul style={menuList}>
-            <li style={menuListItem} >
-              <MyLink text={"work"} url={"/"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
+            <li style={menuListItemWork} >
+              <MyLink text={"work"} url={"/"} isInternal="true" type="block" icon="" fontWeight={props.active==="work"?"bold":"regular"} color="rgba(0, 0, 0, 1)"></MyLink>
             </li>
 
-            <li style={menuListItem} >
-              <MyLink text={"play"} url={"/play"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
+            <li style={menuListItemPlay} >
+              <MyLink text={"play"} url={"/play"} isInternal="true" type="block" icon="" fontWeight={props.active==="play"?"bold":"regular"} color="rgba(0, 0, 0, 1)"></MyLink>
             </li>
 
-            <li style={menuListItem} >
-              <MyLink text={"about"} url={"/about"} isInternal="true" type="block" icon="" fontWeight="regular" color="rgba(0, 0, 0, 1)"></MyLink>
+            <li style={menuListItemAbout} >
+              <MyLink text={"about"} url={"/about"} isInternal="true" type="block" icon="" fontWeight={props.active==="about"?"bold":"regular"} color="rgba(0, 0, 0, 1)"></MyLink>
             </li>
           </ul>
         </div>

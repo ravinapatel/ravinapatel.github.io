@@ -1,11 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import useWindowSize from "./useWindowSize";
-import me from '../Images/about/me.png';
-// import carrot from '../Images/about/carrot.png';
 import carrot from '../Icons/arrow.png';
 import FadeIn from 'react-fade-in';
-import backgroundVideo from '../Images/gradient-cover.mp4'
-
+import ScrollToSection from "./ScrollToSection";
+// import backgroundVideo from '../Images/gradient-cover.mp4'
 
 
 function Body({ reference, click }) {
@@ -13,7 +11,7 @@ function Body({ reference, click }) {
   // RESONSIVENESS
   const window = useWindowSize();
   var isBigScreen = window.width > 1200
-  var isMediumScreen = window.width < 900 && window.width > 700
+  // var isMediumScreen = window.width < 900 && window.width > 700
   var isSmallScreen = window.width < 700
 
   // STYLING
@@ -22,7 +20,6 @@ function Body({ reference, click }) {
     height: window.height,
     backgroundImage: "url(/cover-2024-flip.png)",
     backgroundSize: "" + window.width + "px " + window.height + "px",
-    // backgroundPosition: "top center",
     textAlign: "center",
     display: "block",
     verticalAlign: "middle",
@@ -45,12 +42,13 @@ function Body({ reference, click }) {
   }
   const body = {
     marginTop: -4,
-    // fontSize: isSmallScreen ? 18 : 20,
-    width: isBigScreen ? 600 : "90%",
+    display: "inline-block"
   }
-  const profilePic = {
-    borderRadius: '50%',
-    border: '1px solid #000',
+  const name = {
+    fontSize: isBigScreen ? 72 : 64,
+    paddingBottom: 12,
+    color: "black",
+    fontWeight: "bold"
   }
 
   // STYLING VERSION 2
@@ -66,12 +64,6 @@ function Body({ reference, click }) {
   //   color: "7c7c7c",
   //   paddingBottom: 6
   // }
-  const name = {
-    fontSize: isBigScreen ? 48 : 36,
-    paddingBottom: 12,
-    color: "black",
-    fontWeight: "bold"
-  }
   // const content2 = {
   //   width: "100%",
   //   margin: 0,
@@ -85,11 +77,10 @@ function Body({ reference, click }) {
     <FadeIn transitionDuration="500">
       <div className="container" style={container}>
         <div style={content}>
-          <div style={name} className='brand'>hi, i'm ravina :)</div>
+          <div style={name} className='brand'>hi! i'm ravina</div>
           <p className= {isSmallScreen ? 'body' : 'bodyBig'} style={body}>
             transforming uncharted spaces into simple, natural experiences
             <br></br>
-            currently: product designer @siriusxm
           </p>
         </div>
 
@@ -105,9 +96,8 @@ function Body({ reference, click }) {
         </div> */}
 
         <div style={carrotContainer}>
-          <img ref={reference} onClick={click} src={carrot} alt="" width={"16"} style={{cursor: "pointer"}} ></img>
+          <ScrollToSection reference={reference} click={click}></ScrollToSection>
         </div>  
-
       </div >
     </FadeIn>
   );

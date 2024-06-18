@@ -14,6 +14,6 @@ code {
 
 @font-face {
   font-family: "Brand";   /*Can be any text to refer to it in .css*/
-  src: local("Gracheva"),
-    url("./Fonts/Gracheva.otf") format("opentype");
+  src: local("TrailFree"),
+    url("./Fonts/TrailFree.ttf") format("opentype");
 }

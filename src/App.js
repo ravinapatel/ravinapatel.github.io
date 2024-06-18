@@ -13,15 +13,14 @@ import Play from "./Pages/Play";
 import Pandora from "./Pages/Case Studies/Pandora";
 import Exceed from "./Pages/Case Studies/Exceed";
 import Snap from "./Pages/Case Studies/Snap";
-// import Patch from "./Pages/Case Studies/Patch";
-// import CaseStudy from "./Pages/Case Studies/CaseStudy";
 
+// import CaseStudy from "./Pages/Case Studies/CaseStudy";
 // import "./Fonts/GOCake-Regular.ttf"
 
 // -----------------------------------------------------------------------------
 // TODO:
-// - write resell case study
 // - while loading: {loading screen} else: <FadeIn></FadeIn>
+    // https://react.dev/reference/react/lazy#suspense-for-code-splitting
 // - calculate actual height of columns in Gallery
 // -----------------------------------------------------------------------------
 
@@ -64,22 +63,27 @@ function App() {
         <div className="App">
           <Navbar></Navbar>
           <Switch>
+
+            {/* IMPORTANT: when adding routes here, be sure to update the function in Navbar.js */}
+
             <Route path="/about" component={About} />
             <Route path="/play" render={(props) => <Play {...props} chooseMoreData={chooseMoreData} />} />
-            {/* <Route path="/pandora" render={(props) => <CaseStudy {...props} id='pandora' chooseMoreData={chooseMoreData} />} /> */}
             <Route path="/pandora" render={(props) => <Pandora {...props} chooseMoreData={chooseMoreData} />} />
             <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
-            {/* <Route path="/exceed" render={(props) => <CaseStudy {...props} id='exceed' chooseMoreData={chooseMoreData} />} /> */}
             <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
+
+            {/* Paths to render Notion case studies */}
+            {/* <Route path="/pandora" render={(props) => <CaseStudy {...props} id='pandora' chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/exceed" render={(props) => <CaseStudy {...props} id='exceed' chooseMoreData={chooseMoreData} />} /> */}
             {/* <Route path="/snap-cliques" render={(props) => <CaseStudy {...props} id='snap' chooseMoreData={chooseMoreData} />} /> */}
             {/* <Route path="/resell" render={(props) => <CaseStudy {...props} id='resell'  chooseMoreData={chooseMoreData} />} /> */}
 
             {/* Incomplete Articles (comment out when pushing) */}
             {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}
             {/* <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} /> */}
+            
+            <Route path="/" component={Work} />     {/* must be last */}
 
-            {/* must be last */}
-            <Route path="/" component={Work} />
           </Switch>
           <Footer></Footer>
         </div>
