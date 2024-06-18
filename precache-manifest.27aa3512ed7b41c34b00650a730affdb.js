@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "40ba687f9bcb589568abee6677960df4",
+    "revision": "5447e499602e861582a49e6cc39539d0",
     "url": "/index.html"
   },
   {
-    "revision": "b4f0d474bdd721ba4005",
-    "url": "/static/css/main.ac13211b.chunk.css"
+    "revision": "b398aa28f98387016b7d",
+    "url": "/static/css/main.ad89d7dd.chunk.css"
   },
   {
-    "revision": "f46463f4b57ff3a35b91",
-    "url": "/static/js/2.0e9ef237.chunk.js"
+    "revision": "3b56e6afc02ced664d66",
+    "url": "/static/js/2.d5f865db.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/static/js/2.0e9ef237.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.d5f865db.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b4f0d474bdd721ba4005",
-    "url": "/static/js/main.8b0032da.chunk.js"
+    "revision": "b398aa28f98387016b7d",
+    "url": "/static/js/main.da709a02.chunk.js"
   },
   {
     "revision": "35f67668c217d61057f5",
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c04c9b3854ce60170280b190bc5f6404",
     "url": "/static/media/Sunset.c04c9b38.jpg"
+  },
+  {
+    "revision": "3ff3046d4d03d1e7a1bb5cb0b3e72fba",
+    "url": "/static/media/TrailFree.3ff3046d.ttf"
   },
   {
     "revision": "681bed193b9ef7bba271631aff3e800a",
@@ -148,8 +152,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/exceed-banner.bdf0c0fc.png"
   },
   {
-    "revision": "3b0fda80cf9d9e06540b4937ee1e59ee",
-    "url": "/static/media/exceed.3b0fda80.png"
+    "revision": "6ffe88674f9db228da2aa8f72e8eb115",
+    "url": "/static/media/exceed.6ffe8867.png"
   },
   {
     "revision": "dd59900c6b94807d414faef47d462e76",
@@ -168,12 +172,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fractals-gif.b4029427.gif"
   },
   {
+    "revision": "4c5908313c918eec28d672370984d0b4",
+    "url": "/static/media/gradient-blobs-tall.4c590831.png"
+  },
+  {
+    "revision": "8537f680fa2f5bff3c13748cda9856c8",
+    "url": "/static/media/gradient-blobs.8537f680.png"
+  },
+  {
     "revision": "ee0856917b4d7139d2b6de85b3a97eb0",
     "url": "/static/media/gradient-cover.ee085691.mp4"
   },
   {
     "revision": "8212a0fd03f0d9f6c0dc54fb181e4f8a",
     "url": "/static/media/head-back.8212a0fd.jpg"
+  },
+  {
+    "revision": "64074cd439f7b15cfd0d809522ca2422",
+    "url": "/static/media/hip-hop.64074cd4.png"
   },
   {
     "revision": "297c16aed3cd90448d7d9268c9c997e0",
@@ -208,8 +224,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/market-research.b7562e05.png"
   },
   {
-    "revision": "4fb68b548fc1331cf3a277cf9c476860",
-    "url": "/static/media/me.4fb68b54.png"
+    "revision": "5d69a5e9c00898825e112418874ce15f",
+    "url": "/static/media/me.5d69a5e9.png"
   },
   {
     "revision": "229de3b865031ed5f446c16ebd1950b2",
@@ -268,8 +284,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/painting.07cfc63e.jpg"
   },
   {
-    "revision": "7c6c263232291c5b10c3ec2921d06025",
-    "url": "/static/media/pandora.7c6c2632.png"
+    "revision": "33444a249eae6b124dcf9a370b6f0b14",
+    "url": "/static/media/pandora.33444a24.png"
   },
   {
     "revision": "2562aa94ecfc671d62d5225549f92d16",
@@ -316,8 +332,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/red-sky.918daed0.gif"
   },
   {
-    "revision": "6bd6d946e228b48629c0a85c9b6b2637",
-    "url": "/static/media/resell.6bd6d946.png"
+    "revision": "d70899ff19f7525aec2942d0980c3ce5",
+    "url": "/static/media/resell.d70899ff.png"
+  },
+  {
+    "revision": "91111272230e0f8eec230f362e75f316",
+    "url": "/static/media/sew.91111272.jpg"
   },
   {
     "revision": "2a38a83636aa91aebdc4bf788c80d450",
@@ -336,12 +356,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/snap-banner.c9fd70b6.png"
   },
   {
-    "revision": "98cbbf46833dcf948ababe4cc0c76881",
-    "url": "/static/media/snap.98cbbf46.png"
+    "revision": "1f5eae22a3ecdfd939fea5e82ef74afc",
+    "url": "/static/media/snap.1f5eae22.png"
   },
   {
-    "revision": "a92a22f14b211395525251f238f1721b",
-    "url": "/static/media/snap.a92a22f1.png"
+    "revision": "98cbbf46833dcf948ababe4cc0c76881",
+    "url": "/static/media/snap.98cbbf46.png"
   },
   {
     "revision": "cf6da59953c8245cf6998ebf7b725d61",
