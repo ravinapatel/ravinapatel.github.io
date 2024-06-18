@@ -6,10 +6,7 @@ import Blob from "../Images/about/gradient-blobs.png";
 import BlobTall from "../Images/about/gradient-blobs-tall.png";
 import Link from "../Components/Link";
 import Button from "../Components/Button";
-import Polaroid from "../Components/Polaroid";
 import FadeIn from 'react-fade-in';
-import backgroundVideo from '../Images/gradient-cover.mp4'
-import Socials from '../Components/Socials'
 import Carousel from '../Components/Carousel'
 
 
@@ -125,7 +122,7 @@ function App(props) {
   for (const leftCol of [headerColumnLeft, expColumnLeft]) {
     if (isBigScreen) leftCol.margin = "0px 50px 0px 0px"
     else if (isSmallMediumScreen) leftCol.margin = "0px 42px 42px 0px"
-    else leftCol.marginRight = "10%"
+    else leftCol.marginRight = "50px"
   }
 
   const blobContainer = {
@@ -215,18 +212,22 @@ function App(props) {
             <div className='tag' style={tagStyle}>product designer</div>
             <div className='tag' style={tagStyle}>learner</div>
             <div className='tag' style={lastTagStyle}>new yorker-in-training</div>
-            <div className='body' style={{padding: "0px 0px 20px 0px"}}>
-              Hi there! As a product designer, I'm passionate about transforming unsolved, complex problems into simple solutions that feel natural.
+            <div className='body' style={{padding: "0px 0px 16px 0px"}}>
+              Hi there! I'm a product designer, passionate about transforming unsolved, complex spaces into simple experiences that feel natural.
             </div>
-            <div className='body' style={{padding: "0px 0px 10px 0px"}}>
+            <div className='body' style={{padding: "0px 0px 16px 0px"}}>
               Currently, I’m building creator tools at <Link text={"SiriusXM"} url={"https://www.siriusxm.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>. 
               Before this, I studied Computer Science and User Experience at <Link text={"Cornell University"} url={"https://www.cornell.edu/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>,
-              built apps with cross-functional teams in <Link text={"Cornell AppDev"} url={"https://www.cornellappdev.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>,
-              and interned at 
-              a <Link text={"bunch"} url={"https://www.vidmob.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link> 
-              &nbsp; <Link text={"of"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
-              &nbsp; <Link text={"places"} url={"https://paravaneventures.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
-                .
+              built apps with <Link text={"Cornell AppDev"} url={"https://www.cornellappdev.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>,
+              and interned at a bunch of places &#40;
+              <Link text={"1"} url={"https://www.vidmob.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link> 
+              ,&nbsp; <Link text={"2"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+              ,&nbsp; <Link text={"3"} url={"https://paravaneventures.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+              &#41;.
+            </div>
+
+            <div className='body' style={{padding: "0px 0px 8px 0px"}}>
+              I love building cool products and experiences, so if you'd like to work together, feel free to reach out!
             </div>
             <div style={{paddingRight: 18, display: "inline-block"}}>
               <Button text={"Say hi!"} url="mailto: rpp62@cornell.edu" isInternal="false"></Button>

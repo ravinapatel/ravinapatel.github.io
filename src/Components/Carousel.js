@@ -4,11 +4,6 @@ import useWindowSize from "./useWindowSize";
 import arrowRight from '../Images/icons/arrowRight.png';
 import arrowLeft from '../Images/icons/arrowLeft.png';
 
-// DESIGN ____________________________________________________________________
-// move the arrows to be next to each other
-// create a negative top margin
-
-
 function Carousel() {
 
   // RESONSIVENESS
@@ -113,7 +108,7 @@ function Carousel() {
       </div>
       
       <div style={imgContainer} ref={elementRef} onScroll={showBothArrows}>
-        <Polaroid id="hiphop" caption={polaroidMap["hiphop"]} angle={"rotate(0deg)"} width={POLAROID_WIDTH-20}></Polaroid>          
+        <Polaroid id="hiphop" caption={polaroidMap["hiphop"]} angle={"rotate(0deg)"} width={POLAROID_WIDTH}></Polaroid>          
         <Polaroid id="duo" caption={polaroidMap["duo"]} angle={"rotate(-1deg)"} width={POLAROID_WIDTH}></Polaroid>
         <Polaroid id="sew" caption={polaroidMap["sew"]} angle={"rotate(1deg)"} width={POLAROID_WIDTH}></Polaroid>
         <Polaroid id="painting" caption={polaroidMap["painting"]} angle={"rotate(0deg)"} width={POLAROID_WIDTH}></Polaroid>

@@ -18,7 +18,7 @@ function App(props) {
   function importImage(id) {
     switch (id) {
       case 'sew': return require('../Images/about/sew.jpg');
-      case 'hiphop': return require('../Images/about/hip-hop.jpg');
+      case 'hiphop': return require('../Images/about/hip-hop.png');
       case 'bnat': return require('../Images/about/bnat.png');
       case 'uke': return require('../Images/about/uke.jpg');
       case 'painting': return require('../Images/about/painting.jpg');
