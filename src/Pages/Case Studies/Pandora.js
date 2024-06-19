@@ -177,7 +177,7 @@ function App(props) {
           curation more efficient. Both of these projects launched in the year following my internship.
           <br></br>
           <br></br>
-          See it live:<Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+          See it live:&nbsp;<Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
 
           </div>
         
@@ -378,7 +378,7 @@ function App(props) {
             artist involvement, and builds listener audiences.
           </div>
           <div className="body">
-            See the live site here: 
+            See the live site here:&nbsp;
             <Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
             
             <br></br><br></br>
@@ -441,7 +441,7 @@ function App(props) {
             shipped in the year following my internship!
           </div>
           <div className="body">
-            See the live site here: 
+            See the live site here:&nbsp;
             <Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
             
             <br></br><br></br>

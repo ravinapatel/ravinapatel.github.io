@@ -522,7 +522,7 @@ function App(props) {
           <div className="heading" style={{ color: COLOR }}>Impact & Reflection</div>
           <div className="title1" style={{ color: "#000" }}><b>How it went</b></div>
           <div className="body">
-            My submission won first place in the case competition!
+            My submission won first place in the case competition!&nbsp;
             <Link text={"Case Winners 2020"} url={"https://paravaneventures.com/design2020/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
 
             <br></br><br></br>

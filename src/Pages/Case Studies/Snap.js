@@ -552,12 +552,12 @@ function App(props) {
           people to connect with others over similar interests. 
 
           <br></br> <br></br>
-          I wrote this case study as part of 
+          I wrote this case study as part of&nbsp;
           <Link text={"Cornell AppDev"} url={"https://www.cornellappdev.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
           ’s Intro to Digital 
-          Product Design course. Thank you to my course instructor, 
+          Product Design course. Thank you to my course instructor,&nbsp;
           <Link text={"TK"} url={"https://tkkong.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
-          , and my TA, 
+          , and my TA,&nbsp;
           <Link text={"Shoshana Swell"} url={"https://shoshanaswell.co/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
           , for teaching me about Product Design and guiding me through this case study!
 
