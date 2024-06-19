@@ -53,13 +53,13 @@ function Carousel() {
   const POLAROID_WIDTH = isSmallScreen ? 220 : 250;
   const container = {
     textAlign: "center",
-    marginTop: -70,
+    marginTop: isSmallScreen ? -110 : -70,
   }
   const buttonContainer = {
     display: "inline-block",
     width: isBigScreen ? 1100 : "90%",
     textAlign: "right",
-    marginBottom: 20,
+    marginBottom: isSmallScreen ? 60 : 20,
   }
   const iconStyle = {
     width: "18px"

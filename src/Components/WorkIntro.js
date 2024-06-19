@@ -42,13 +42,15 @@ function Body({ reference, click }) {
   }
   const body = {
     marginTop: -4,
-    display: "inline-block"
+    display: "inline-block",
+    marginRight: "10%"
   }
   const name = {
     fontSize: isBigScreen ? 72 : 64,
     paddingBottom: 12,
     color: "black",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    marginRight: "10%"
   }
 
   // STYLING VERSION 2
