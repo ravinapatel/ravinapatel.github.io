@@ -10,12 +10,10 @@ import Work from "./Pages/Work";
 import About from "./Pages/About";
 import Play from "./Pages/Play";
 
-import Pandora from "./Pages/Case Studies/Pandora";
 import Exceed from "./Pages/Case Studies/Exceed";
-import Snap from "./Pages/Case Studies/Snap";
-
-// import CaseStudy from "./Pages/Case Studies/CaseStudy";
-// import "./Fonts/GOCake-Regular.ttf"
+import Resell from "./Pages/Case Studies/Resell";
+import Profile from "./Pages/Case Studies/Profile";
+import ShareableAsssets from "./Pages/Case Studies/ShareableAssets";
 
 // -----------------------------------------------------------------------------
 // TODO:
@@ -23,30 +21,6 @@ import Snap from "./Pages/Case Studies/Snap";
     // https://react.dev/reference/react/lazy#suspense-for-code-splitting
 // - calculate actual height of columns in Gallery
 // -----------------------------------------------------------------------------
-
-
-// chooses three projects from a dataset `data`, prioritizing ones with urls and 
-// excluding the one being currently viewed (indicated by `ID`)
-function chooseMoreData(data, ID) {
-  var x = []
-  while (x.length < 3) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].id !== ID && data[i].id !== "buffer" && data[i].url !== null) {
-        x.push(data[i]);
-      }
-      if (x.length > 2) break;
-    }
-    if (x.length < 3) {
-      for (i = 0; i < data.length; i++) {
-        if (data[i].id !== ID && data[i].id !== "buffer") {
-          x.push(data[i]);
-        }
-        if (x.length > 2) break;
-      }
-    }
-  }
-  return x
-}
 
 function App() {
 
@@ -65,22 +39,15 @@ function App() {
           <Switch>
 
             {/* IMPORTANT: when adding routes here, be sure to update the function in Navbar.js */}
-
             <Route path="/about" component={About} />
-            <Route path="/play" render={(props) => <Play {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/pandora" render={(props) => <Pandora {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/exceed" render={(props) => <Exceed {...props} chooseMoreData={chooseMoreData} />} />
-            <Route path="/snap-cliques" render={(props) => <Snap {...props} chooseMoreData={chooseMoreData} />} />
+            <Route path="/play" render={(props) => <Play/>} />
+            <Route path="/shareable-assets" render={(props) => <ShareableAsssets/>} />
+            <Route path="/exceed" render={(props) => <Exceed/>} />
+            <Route path="/resell" render={(props) => <Resell/>} />
+            <Route path="/profile" render={(props) => <Profile/>} />
 
             {/* Paths to render Notion case studies */}
-            {/* <Route path="/pandora" render={(props) => <CaseStudy {...props} id='pandora' chooseMoreData={chooseMoreData} />} /> */}
-            {/* <Route path="/exceed" render={(props) => <CaseStudy {...props} id='exceed' chooseMoreData={chooseMoreData} />} /> */}
-            {/* <Route path="/snap-cliques" render={(props) => <CaseStudy {...props} id='snap' chooseMoreData={chooseMoreData} />} /> */}
-            {/* <Route path="/resell" render={(props) => <CaseStudy {...props} id='resell'  chooseMoreData={chooseMoreData} />} /> */}
-
-            {/* Incomplete Articles (comment out when pushing) */}
-            {/* <Route path="/template" render={(props) => <Template {...props} chooseMoreData={chooseMoreData} />} /> */}
-            {/* <Route path="/eatery" render={(props) => <Eatery {...props} chooseMoreData={chooseMoreData} />} /> */}
+            {/* <Route path="/pandora" render={(props) => <CaseStudy {...props} id='pandora'/>} /> */}
             
             <Route path="/" component={Work} />     {/* must be last */}
 

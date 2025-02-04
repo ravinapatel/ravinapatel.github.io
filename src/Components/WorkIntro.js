@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import useWindowSize from "./useWindowSize";
-import carrot from '../Icons/arrow.png';
 import FadeIn from 'react-fade-in';
 import ScrollToSection from "./ScrollToSection";
 // import backgroundVideo from '../Images/gradient-cover.mp4'
@@ -18,7 +17,7 @@ function Body({ reference, click }) {
   const container = {
     width: "100%",
     height: window.height,
-    backgroundImage: "url(/cover-2024-flip.png)",
+    backgroundImage: "url(/cover.png)",
     backgroundSize: "" + window.width + "px " + window.height + "px",
     textAlign: "center",
     display: "block",
@@ -99,6 +98,7 @@ function Body({ reference, click }) {
 
         <div style={carrotContainer}>
           <ScrollToSection reference={reference} click={click}></ScrollToSection>
+          {/* <SelectedWorkTitle style={{position: "absolute", bottom: "-20px"}}></SelectedWorkTitle> */}
         </div>  
       </div >
     </FadeIn>

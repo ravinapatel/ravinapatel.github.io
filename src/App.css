@@ -80,7 +80,6 @@ html, body {
   font-family: 'Inconsolata', monospace;
   font-size: 28px;
   font-weight: bold;
-  padding: 48px 0px 48px 0px;
 }
 
 /* links */
@@ -247,20 +246,20 @@ html, body {
 .imgButton {
   transition: all 0.1s;
   border: 1px solid #e4e4e4;
-  border-radius: 10px;
+  border-radius: 16px;
 }
 .imgButton:hover {
   border: 1px solid #000;
   box-shadow: 0 4px #000;
   transform: translateY(-3px);
-  border-radius: 10px;
+  border-radius: 16px;
 }
 .imgButton:active{
   transition: all 0.1s;
   border: 1px solid #000;
   box-shadow: 0 0px #000;
   transform: translateY(2px);
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 .project {
@@ -314,9 +313,15 @@ html, body {
   box-shadow: 0 0px #000;
   transform: translateY(2px);
 }
-.slideOut {
+.slideOutDown {
   opacity: 0;
   transform: translateY(100%);
+  visibility: hidden;
+  transition: all .2s;
+}
+.slideOutUp {
+  opacity: 0;
+  transform: translateY(-100%);
   visibility: hidden;
   transition: all .2s;
 }

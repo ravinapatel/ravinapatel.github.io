@@ -15,7 +15,7 @@ function App() {
 
   // Style
   const container = {
-    backgroundImage: "url(/cover.png)",
+    backgroundImage: "url(/cover-footer.png)",
     backgroundSize: 'cover',
     // borderTop: '2px solid #000',
     // borderBottom: '2px solid #000',
@@ -71,15 +71,15 @@ function App() {
         <div style={row}>
           <div style={columnLeft}>
             <p className='body'>made with react.js  &lt;3</p>
-            <p className='code' style={codeStyle}>last updated: apr 2024</p>
-            <p className='code tag'>v3.1</p>
+            <p className='code' style={codeStyle}>last updated: feb 2025</p>
+            <p className='code tag'>v3.2</p>
           </div>
           
           <div style={columnRight}>
             <p className='body' style={{marginBottom: "10px"}}>let's build together!</p>
-            <Link text="Email me" url="mailto: rpp62@cornell.edu" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
-            <Link text="View resume" url="./ravina-resume.pdf" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
-            <Link text="LinkedIn" url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="small" icon="arrowDiagonalGrey" color="rgba(0, 0, 0, 0.5)"></Link>
+            <Link text="Email me" url="mailto: 7ravina7@gmail.com" isInternal="false" type="small" icon="arrowDiagonal" color="grey"></Link>
+            <Link text="View resume" url="./ravina-resume.pdf" isInternal="false" type="small" icon="arrowDiagonal" color="grey"></Link>
+            <Link text="LinkedIn" url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="small" icon="arrowDiagonal" color="grey"></Link>
           </div>
         </div>
       </div>

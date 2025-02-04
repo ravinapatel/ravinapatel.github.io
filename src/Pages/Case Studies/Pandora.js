@@ -379,7 +379,7 @@ function App(props) {
           </div>
           <div className="body">
             See the live site here:&nbsp;
-            <Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+            <Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal"></Link>
             
             <br></br><br></br>
             <b>Key features:</b>
@@ -442,7 +442,7 @@ function App(props) {
           </div>
           <div className="body">
             See the live site here:&nbsp;
-            <Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+            <Link text={"Pandora Charts"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal"></Link>
             
             <br></br><br></br>
             My project revolved around the end-to-end service of Pandora Charts. During my internship...

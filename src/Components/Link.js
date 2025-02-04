@@ -5,9 +5,9 @@ import '../App.css';
 // - text
 // - url
 // - isInternal
-// - block          "inline" | "block" | "small"
+// - type           "inline" | "block" | "small"
 // - icon
-// - color
+// - color          "grey" (default "black")
 // - fontWeight     "bold" | "regular" (default "bold")
 
 function Button(props) {
@@ -15,10 +15,9 @@ function Button(props) {
   // IMPORT IMAGES
   function importImage(icon) {
     switch (icon) {
-      case 'arrowRight': return require('../Images/icons/arrowRight.png');
-      case 'arrowDiagonal': return require('../Images/icons/arrowDiagonal.png');
-      case 'arrowDiagonalGrey': return require('../Images/icons/arrowDiagonalGrey.png');
-      default: require('../Images/icons/arrowRight.png');
+      case 'arrowRight': return require('../Icons/arrow-right.svg');
+      case 'arrowDiagonal': return require('../Icons/arrow-up-right.svg');
+      default: return require('../Icons/arrow-right.svg');
     }
   }
 
@@ -28,31 +27,32 @@ function Button(props) {
     width: "fit-content",
     borderRadius: 4,
     cursor: "pointer",
-    display: "block"
+    display: "block",
   }
   if (props.text == null) containerStyle.display = "none"
 
   const textStyle = {
     display: "inline-block",
+    // verticalAlign: "middle",
     fontSize: "18px",
     fontWeight: props.fontWeight==null ? "bold" : props.fontWeight,
-    color: props.color,
     textDecoration: "none",
     paddingRight: props.icon==="" ? 0 : 6,
   }
 
   const iconStyle = {
     display: props.icon==="" ? "none" : "inline-block",
-    width: "14px"
+    verticalAlign: "middle",
+    width: "20px"
   }
 
   // CONDITIONAL STYLING (BASED ON PROPS.TYPE)
   if (props.type === "inline") {
     containerStyle.padding = "0px 5px"
-    containerStyle.margin = "-2px -2px 0px -4px"
+    containerStyle.margin = "0px 0px -2px -4px"
     containerStyle.display = "inline-block"
     textStyle.fontSize = "18px"
-    textStyle.paddingRight = 4
+    textStyle.paddingRight = 2
   }
   else if (props.type === "block") {
     containerStyle.padding = "8px 8px"
@@ -63,16 +63,27 @@ function Button(props) {
     containerStyle.padding = "4px 4px"
     containerStyle.margin = "2px 0px 0px -4px"
     textStyle.fontSize = "14px"
-    iconStyle.width = "10px"
+    textStyle.paddingRight = 4
+    iconStyle.width = "16px"
   }
+
+  // CONDITIONAL STYLE (BASED ON PROPS.COLOR)
+  function getClassVar(colorName) {
+    switch (colorName) {
+      case 'grey': return 'greyText icon--grey'
+      default: return 'blackText';
+    }
+  }
+  const classVar = getClassVar(props.color)
 
 
   return (
     <a className="link" style={containerStyle} href={props.url} target={(props.isInternal === "true") ? "" : "_blank"}>
 
-      <div style={textStyle} >{props.text}</div>
+      <div className={classVar} style={textStyle} >{props.text}</div>
       <img
         src={importImage(props.icon)}
+        className={classVar}
         alt="Arrow icon"
         style={iconStyle}
       />

@@ -1,18 +1,223 @@
-/* --------------------- EMPHASIS --------------------- */
+/* ---------------------- LAYOUT ---------------------- */
 
-.bulletList {
-  padding-left: 20px;
+.pageContainer {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  gap: 100px;
 }
 
+.section {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  width: 90%; /* Ensures the section takes full width of its container */
+  max-width: 800px; /* Max width for the section to restrict it to 800px */
+  gap: 24px;
+  margin: auto;
+}
+.section-wide {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  width: 90%; /* Ensures the section takes full width of its container */
+  max-width: 1100px; /* Max width for the section to restrict it to 800px */
+  gap: 24px;
+  margin: auto;
+  /* background-color: yellow; */
+}
+
+.width-responsive {
+  width: 90%; /* Ensures the section takes full width of its container */
+  max-width: 800px; /* Max width for the section to restrict it to 800px */
+}
+
+.spacer {
+  height: 24px;
+}
+
+.flex--vert {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;  /* Stack sections vertically */
+}
+.flex--horiz {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.flex-align-horiz--center {
+  align-items: center;
+}
+.flex-align-horiz--spread {
+  justify-content: space-between;
+}
+.flex-align-vert--center {
+  align-items: center;
+}
+
+
+/* ---------------------- CARDS ----------------------- */
+
+.card-surface--white{
+  position: relative;           /* Ensure the pseudo-element is positioned relative to the card */
+  padding: 32px 40px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
+  --gradient-start: #ececec;  /* Default solid grey */
+  --gradient-mid: #ececec;
+  --gradient-end: #ececec; 
+  --angle: 180deg;              /* Default .card-dir--top */
+}
+.card-surface--grey{
+  position: relative;           /* Ensure the pseudo-element is positioned relative to the card */
+  padding: 32px 40px;
+  border-radius: 16px;
+  background: #fafafa;
+  --gradient-start: #ececec;  /* Default solid grey */
+  --gradient-mid: #ececec; 
+  --gradient-end: #ececec; 
+  --angle: 90deg;               /* Default .card-dir--shine (which is top-bottom) */
+}
+.card-surface--white::after, .card-surface--grey::after {
+  content: '';                  /* Required for pseudo-elements */
+  position: absolute;           /* Position the pseudo-element relative to the card-surface */
+  top: -2px;                    /* Offset by -2px to create a 2px stroke */
+  left: -2px;
+  right: -2px;
+  bottom: -2px; 
+  background: linear-gradient(var(--angle), var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%); /* Gradient border */
+  border-radius: 18px;
+  z-index: -1;
+}
+.card-stroke--purple {
+  --gradient-start: #d6a4f7;
+  --gradient-mid: #ececec;
+  --gradient-end: #ececec;
+}
+.card-stroke--blue {
+  --gradient-start: #A6BEFF;
+  --gradient-mid: #ececec;
+  --gradient-end: #ececec;
+}
+.card-stroke--green {
+  --gradient-start: #B4ECB6;
+  --gradient-mid: #ececec;
+  --gradient-end: #ececec;
+}
+.card-stroke--red {
+  --gradient-start: #fbb3cd;
+  --gradient-mid: #ececec;
+  --gradient-end: #ececec;
+}
+.card-dir--top {
+  --angle: 180deg;
+}
+.card-dir--corner {
+  --angle: 135deg;
+}
+
+/* nesting cards makes the grey card's border break for some reason, so use this instead */
+.card-nested-surface--grey{
+  position: relative;
+  padding: 32px 40px;
+  border-radius: 16px;
+  background: #fafafa;
+  border: 2px solid #ececec;
+}
+/* flat stroke to enable button animations */
+.card-surface-stroke--white-none{
+  position: relative;
+  padding: 32px 40px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
+}
+
+.card-stroke--none {
+  border: 0px;
+}
+/* card-dir does not work intuitively with card-stroke--shine */
+.card-stroke--shine {
+  --gradient-start: #ececec;
+  --gradient-mid: #fff;
+  --gradient-end: #ececec;
+  --angle: 90deg;              /* sets .card-dir--top-bottom as default */
+}
+
+
+/* ----------------------- ICONS ----------------------- */
+
+/* filters generated from: https://codepen.io/sosuke/pen/Pjoqqp */
+
+.icon--pink {
+  filter: invert(57%) sepia(32%) saturate(5059%) hue-rotate(308deg) brightness(108%) contrast(95%);
+}
+.icon--green {
+  filter: invert(43%) sepia(66%) saturate(6614%) hue-rotate(114deg) brightness(113%) contrast(95%);
+}
+.icon--blue {
+  filter: invert(28%) sepia(65%) saturate(2520%) hue-rotate(215deg) brightness(84%) contrast(89%);
+}
+.icon--purple {
+  filter: invert(49%) sepia(19%) saturate(4390%) hue-rotate(228deg) brightness(100%) contrast(94%);
+}
+.icon--grey {
+  filter: invert(65%) sepia(6%) saturate(33%) hue-rotate(314deg) brightness(91%) contrast(88%);
+}
+.icon-margin--top {
+  padding-top: 16;
+}
+
+
+/* --------------------- EMPHASIS --------------------- */
 
 .blockQuote {
   border-left: 3px solid black;
   padding-left: 16px;
 }
+.callout {
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+  padding: 20px 20px;
+  margin: 10px 0px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+.highlight {
+  text-align: left;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  font-size: 42px;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 0px 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #c6d7f7 50%);
+  width: fit-content;
+}
+.quoteHighlight {
+  text-align: left;
+  line-height: 2;
+  font-size: 24px;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 0px 5px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bold;
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #e8e8e8 50%);
+  width: fit-content;
+}
+
 
 /* ----------------------- LISTS ----------------------- */
 
-
+.bulletList {
+  padding-left: 20px;
+}
 li {
   padding-bottom: 12px;
 }
@@ -30,109 +235,64 @@ ul.dashed > li:before {
   text-indent: -5px;
 }
 
+
 /* -------------------- TEXT STYLES -------------------- */
 
-.highlight {
-  text-align: left;
-  letter-spacing: 0.03em;
-  line-height: 1.5;
-  font-size: 42px;
-  font-weight: normal;
-  text-decoration: none;
-  padding: 0px 5px;
-  margin-bottom: 10px;
-  color: #000;
-  font-weight: bold;
-  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #c6d7f7 50%);
-  width: fit-content;
+.greenText {
+  color: #07B00C;
 }
-
-.quoteHighlight {
-  text-align: left;
-  line-height: 2;
-  font-size: 24px;
-  font-weight: normal;
-  text-decoration: none;
-  padding: 0px 5px;
-  margin-bottom: 10px;
+.redText {
+  color: #F43B7E;
+}
+.blueText {
+  color: #2C57CB;
+}
+.purpleText {
+  color: #9E70F6;
+}
+.greyText {
+  color: #969696;
+}
+.blackText {
   color: #000;
-  font-weight: bold;
-  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #e8e8e8 50%);
-  width: fit-content;
 }
 
 .title0 {
-  text-align: left;
-  line-height: 1.5;
   font-size: 42px;
-  font-weight: normal;
-  text-decoration: none;
-  padding-bottom: 10px;
-  color: #000;
-  font-weight: bold;
 }
-
 .title1 {
-  text-align: left;
-  line-height: 1.5;
   font-size: 28px;
-  font-weight: normal;
-  text-decoration: none;
-  padding-bottom: 10px;
-  color: #000;
-  font-weight: bold;
 }
-
 .title2 {
-  text-align: left;
-  line-height: 1.5;
   font-size: 22px;
-  font-weight: normal;
-  text-decoration: none;
-  padding-bottom: 10px;
-  color: #000;
-  font-weight: bold;
 }
-
 .heading {
-  /* text-align: left; */
   letter-spacing: 0.03em;
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
   text-transform: uppercase;
-  padding-bottom: 10px;
-  color: #000
+  margin-bottom: -12px;
 }
-
 .subheading {
-  text-align: left;
   letter-spacing: 0.03em;
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
   text-transform: uppercase;
-  padding-bottom: 10px;
-  color: #000
 }
-
-.body {
-  text-align: left;
+.body-medium {
   font-size: 18px;
-  font-weight: normal;
-  text-decoration: none;
   line-height: 1.5;
-  color: #4d4d4d
-}
-
-.callout {
-  text-align: left;
   font-weight: 600;
+}
+.body {
   font-size: 18px;
   line-height: 1.5;
-  color: #000;
-  padding: 20px 20px;
-  margin: 10px 0px;
-  background-color: #f0f0f0;
-  border-radius: 6px;
+}
+
+/* image styles */
+
+.highlights-image {
+  width: 100%;
+  border-radius: 16px;
+  border: 2px solid #ececec;
 }

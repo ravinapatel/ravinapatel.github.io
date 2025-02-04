@@ -1,95 +1,104 @@
 import React from 'react';
 import useWindowSize from "../useWindowSize";
-// import carrot from '../../Images/about/carrot.png';
 import FadeIn from 'react-fade-in';
+import Link from "../Link";
+import uxData from "../../Data/uxData.json";
+import { getProjectImage } from '../Helpers'
 
-import exceed from "../../Images/portfolio/ux/exceed/exceed-cover.png";
-import exceedSmall from "../../Images/portfolio/ux/exceed/exceed-cover-small.png";
-import pandora from "../../Images/portfolio/ux/banners/pandora-banner.png";
-import resell from "../../Images/portfolio/ux/banners/exceed-banner.png";
-import snap from "../../Images/portfolio/ux/banners/snap-banner.png";
-import data from "../../Data/uxData.json";
-
+// Props:
+//   - id
+//   - description           todo: use prop! // could make this default to uxData description
+//   - metadata
 
 function Body(props) {
 
-  // RESONSIVENESS
-  const window = useWindowSize();
-  var isBigScreen = window.width > 1200
-  var isSmallScreen = window.width < 700
+  // GET DATA
+  const metadataSection = (metadata) => {
+    return (
+      <div className='flex--horiz flex-align-horiz--spread'>
+        {props.metadata.map(([key, value], index) => (
+          <div key={index} >
+            <div className="subheading" style={{paddingBottom: 8}}>{key}</div>
+            <div className="body" style={{ whiteSpace: "pre-line" }}>{value}</div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+  const projectData = uxData.find(item => item.id === props.id)
 
-  function getImage(id) {
-    switch (id) {
-      case 'snap': return snap;
-      case 'pandora': return pandora;
-      case 'resell': return resell;
-      case 'exceed': return isSmallScreen ? exceedSmall : exceed;
-      default: return isSmallScreen ? exceedSmall : exceed;
-    }
-  }
 
   // STYLING
-  const container = {
-    position: "relative",
-    textAlign: "center",
-    width: "100%",
-    height: "400px",
-    // height: window.height,
-    marginTop: -80,
-    // backgroundImage: `url(${getImage(props.id)})`,
-    backgroundImage: "url(/gradient-cover.gif)",
-    backgroundSize: 'cover',
-    // backgroundPosition: 'center',
-    color: "#4d4d4d",
-    textAlign: "center",
-    display: "block",
-    borderBottom: '2px solid #000',
-    zIndex: -50
-  }
-
-  const content = {
-    display: "inline-block",
-    // backgroundColor: "green",
-    position: "absolute",
-    textAlign: "center",
-    top: isSmallScreen ? 200 : "40%",
-    transform: "translate(-50%)",
-    width: isBigScreen ? 1100 : "90%",
-  }
-
-  const body = {
-    display: "inline-block",
-    marginTop: 10,
-    fontSize: isSmallScreen ? 28 : 32,
-    width: isSmallScreen ? "100%" : 550,
-    color: "#000"
-  }
-
-  const projects = data.map(item =>
-    [item.id, item.name, item.descriptionShort]
-  )
-  function getProjData(id) {
-    return projects.filter(proj =>
-      proj[0] === id
-    )[0]
-  }
+  const imgContainerStyle = {
+    position: 'relative',
+    width: '100%',
+    height: '400px',          // Adjust based on your requirement
+    marginTop: 16
+  };
+  const imgStyle = {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',       // Ensures the image fills the container
+    objectPosition: "50% 0%"  // specs which direction it gets cropped
+  };
+  const overlayStyle = {
+    content: "''",            // Required for pseudo-element
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background: 'linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
+  };
 
   // RENDERING
   return (
     <FadeIn transitionDuration="500">
-      <div className="container" style={container}>
-        <div style={content}>
-          <div className="heading" style={{ textAlign: "center", color: props.color }}>{getProjData(props.id)[1]}</div>
-          <p style={body}>
-          {getProjData(props.id)[2]}
-          </p>
+
+      {/* gradient */}
+      <img 
+        src={getProjectImage(props.id, "gradient")}
+        alt=""
+        width={"100%"}
+        style={{position: "absolute", zIndex: -50}}
+        >
+      </img>
+
+      {/* cover banner */}
+      <div className="section" style={{marginTop: 90, marginBottom: 60}}>
+        <div className='flex--vert flex-align-horiz--center' >
+          <div className="title0" style={{textAlign: "center"}}><b>{projectData.name}</b></div>
+          <div className="body">{projectData.descriptionShort}</div>
+          <div className='flex--horiz' style={{marginTop: -16}}>
+            <Link text={projectData.msg2} url={projectData.url2} isInternal="false" type="block" icon="arrowDiagonal"></Link>
+            <Link text={projectData.msg3} url={projectData.url3} isInternal="false" type="block" icon="arrowDiagonal"></Link>
+          </div>
+          <div style={imgContainerStyle}>
+            <img 
+              src={getProjectImage(props.id, "banner")}
+              alt=""
+              width={"100%"}
+              style={imgStyle}
+              >
+            </img>
+            <div style={overlayStyle}></div>
+          </div>
         </div>
-
-        {/* <div style={carrotContainer}>
-          <img ref={props.reference} onClick={props.click} src={carrot} alt="" width={"30"} style={{cursor: "pointer"}} ></img>
-        </div>   */}
-
       </div >
+
+      {/* metadata */}
+      <div className='section' >
+        <div className="body blockQuote">
+          {props.description}
+          <div className='flex--horiz'>
+            <Link text={projectData.msg2} url={projectData.url2} isInternal="false" type="block" icon="arrowDiagonal"></Link>
+            <Link text={projectData.msg3} url={projectData.url3} isInternal="false" type="block" icon="arrowDiagonal"></Link>
+          </div>
+        </div>
+        <div className='spacer'></div>
+        {metadataSection()}
+      </div>
+
     </FadeIn>
   );
 }

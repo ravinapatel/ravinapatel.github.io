@@ -218,11 +218,11 @@ function App(props) {
             <div className='body' style={{padding: "0px 0px 16px 0px"}}>
               Currently, I’m building creator tools at <Link text={"SiriusXM"} url={"https://www.siriusxm.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>. 
               Before this, I studied Computer Science and User Experience at <Link text={"Cornell University"} url={"https://www.cornell.edu/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>,
-              built apps with <Link text={"Cornell AppDev"} url={"https://www.cornellappdev.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>,
+              built apps with <Link text={"Cornell AppDev"} url={"https://www.cornellappdev.com/"} isInternal="false" type="inline" icon="arrowDiagonal"></Link>,
               and interned at a bunch of places &#40;
-              <Link text={"1"} url={"https://www.vidmob.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link> 
-              ,&nbsp; <Link text={"2"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
-              ,&nbsp; <Link text={"3"} url={"https://paravaneventures.com/"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+              <Link text={"1"} url={"https://www.vidmob.com/"} isInternal="false" type="inline" icon="arrowDiagonal"></Link> 
+              ,&nbsp; <Link text={"2"} url={"https://pandoracharts.com/"} isInternal="false" type="inline" icon="arrowDiagonal"></Link>
+              ,&nbsp; <Link text={"3"} url={"https://paravaneventures.com/"} isInternal="false" type="inline" icon="arrowDiagonal"></Link>
               &#41;.
             </div>
 
@@ -230,16 +230,15 @@ function App(props) {
               I love building cool products and experiences, so if you'd like to work together, feel free to reach out!
             </div>
             <div style={{paddingRight: 18, display: "inline-block"}}>
-              <Button text={"Say hi!"} url="mailto: rpp62@cornell.edu" isInternal="false"></Button>
+              <Button text={"Say hi!"} url="mailto: 7ravina7@gmail.com" isInternal="false"></Button>
             </div>
             <Button text={"View resume"} url="./ravina-resume.pdf" isInternal="false"></Button>
-            {/* <Socials></Socials> */}
           </div>
         </div>
 
         {/* LET'S CHAT */}
           {/* <div style={connectContent}>
-            <div style={contactLink}><Link text={"Email me"} url="mailto: rpp62@cornell.edu" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
+            <div style={contactLink}><Link text={"Email me"} url="mailto: 7ravina7@gmail.com" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
             <div style={contactLink}><Link text={"Resume"} url="../../ravina-resume.pdf" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
             <div style={contactLink}><Link text={"LinkedIn"} url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
             <div style={contactLink}><Link text={"Instagram"} url="https://www.instagram.com/ravinart/" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
@@ -268,7 +267,7 @@ function App(props) {
            {/* / riding the <a href="https://tombirchard.substack.com/p/starting-something-new-and-the-dunning" target="_blank" className='inlineLink'>Dunning-Kruger curve</a>  */}
         </div>
         <div className='body' style={learningTitle}>
-          riding the <Link text={"Dunning-Kruger Curve"} url={"https://upload.wikimedia.org/wikipedia/commons/4/46/Dunning%E2%80%93Kruger_Effect_01.svg"} isInternal="false" type="inline" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link>
+          riding the <Link text={"Dunning-Kruger Curve"} url={"https://upload.wikimedia.org/wikipedia/commons/4/46/Dunning%E2%80%93Kruger_Effect_01.svg"} isInternal="false" type="inline" icon="arrowDiagonal"></Link>
           {/* <a href="https://upload.wikimedia.org/wikipedia/commons/4/46/Dunning%E2%80%93Kruger_Effect_01.svg" target="_blank" className='inlineLink'>Dunning-Kruger curve</a>  */}
         </div>
         {/* <div style={hScrollContainer}>

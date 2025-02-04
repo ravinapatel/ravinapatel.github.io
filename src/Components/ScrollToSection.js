@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import '../App.css';
-import arrow from '../Icons/arrow.png';
+import arrow from '../Icons/arrow-down.svg';
 
 function Button({reference, click}) {
 
   // STATE
-  const MIN_SCROLL = 80
+  const MIN_SCROLL = 100
   const [visible, setVisible] = useState(false)
   
   const updateVisible = () => {
@@ -35,11 +35,11 @@ function Button({reference, click}) {
     padding: 16
   }
   const iconStyle = {
-    width: "18px"
+    width: "32px"
   }
 
   return (
-    <div ref={reference} className={ visible ? "slideIn" : "slideOut"} style={container}>
+    <div ref={reference} className={ visible ? "slideIn" : "slideOutDown"} style={container}>
       <button
       style={button}
       className="iconButton"
@@ -47,7 +47,7 @@ function Button({reference, click}) {
         <div>
           <img 
             src={arrow} 
-            alt="Scroll to top arrow" 
+            alt="Scroll down arrow" 
             style={iconStyle}>
           </img>
         </div>

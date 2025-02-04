@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import Polaroid from "./Polaroid";
 import useWindowSize from "./useWindowSize";
-import arrowRight from '../Images/icons/arrowRight.png';
-import arrowLeft from '../Images/icons/arrowLeft.png';
+import arrowRight from '../Icons/arrow-right.svg';
+import arrowLeft from '../Icons/arrow-left.svg';
 
 function Carousel() {
 
@@ -62,7 +62,7 @@ function Carousel() {
     marginBottom: isSmallScreen ? 60 : 20,
   }
   const iconStyle = {
-    width: "18px"
+    width: "24px"
   }
   
   const imgContainer = {

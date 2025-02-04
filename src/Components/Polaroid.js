@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import useWindowSize from "./useWindowSize";
+import { getProjectImage } from './Helpers'
 
 // PROPS
 // - id
@@ -13,22 +14,6 @@ function App(props) {
   // RESONSIVENESS
   const window = useWindowSize();
   var isSmallScreen = window.width < 700
-
-  // IMPORT IMAGES
-  function importImage(id) {
-    switch (id) {
-      case 'sew': return require('../Images/about/sew.jpg');
-      case 'hiphop': return require('../Images/about/hip-hop.png');
-      case 'bnat': return require('../Images/about/bnat.png');
-      case 'uke': return require('../Images/about/uke.jpg');
-      case 'painting': return require('../Images/about/painting.jpg');
-      case 'raas': return require('../Images/about/raas.JPG');
-      case 'react': return require('../Images/about/react.png');
-      case 'duo': return require('../Images/about/duo.png');
-      case 'snapIdeating': return require('../Images/portfolio/ux/snap/brainstorming.png');
-      default: return require('../Images/about/duo.png');
-    }
-  }
 
   // STYLING
   const picStyle = {
@@ -57,7 +42,7 @@ function App(props) {
   // RENDERING
   return (    
   <div style={polaroid}>
-    <img src={importImage(props.id)} alt="" style={picStyle}/>
+    <img src={getProjectImage(props.id, "thumbnail")} alt="" style={picStyle}/>
     <div className={isSmallScreen ? 'body2' : 'body'} style={captionStyle}>{props.caption}</div>
   </div>
   );

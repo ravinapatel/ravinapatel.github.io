@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import FadeIn from 'react-fade-in';
+import useWindowSize from "../Components/useWindowSize";
+import ReactGA from 'react-ga';
 
-import Gallery from "../Components/Gallery";
 import lineData from "../Data/lineArtData.json";
 import otherData from "../Data/otherArtData.json";
 import watercolorData from "../Data/watercolorArtData.json";
@@ -9,8 +10,8 @@ import uxData from "../Data/uxData.json";
 import codeData from "../Data/csData.json";
 import digitalData from "../Data/digitalData.json";
 
-import useWindowSize from "../Components/useWindowSize";
-import ReactGA from 'react-ga';
+import Gallery from "../Components/Gallery";
+import ChooseAnother from "../Components/ChooseAnother";
 
 
 // RENDERING
@@ -61,6 +62,7 @@ function App(props) {
   // STYLING
   const containerStyle = {
     textAlign: "center",
+    paddingTop: 48,
   }
 
   const artLeftSectionStyle = {
@@ -226,20 +228,13 @@ function App(props) {
             </div>
           </FadeIn>
         }
-
-        {/* SEE MORE */}
-        <div style={moreStyle}>
-          <Gallery 
-            numColsArray={[props.chooseMoreData(uxData, ID).length,props.chooseMoreData(uxData, ID).length,1]} 
-            totalWidth={800}
-            data={props.chooseMoreData(uxData, ID)} 
-            title="check out a case study!"
-            square="false" 
-            isLarge="false">
-          </Gallery>
-        </div>
-
       </div>
+
+      {/* read another case */}
+      <div style={containerStyle}>
+        <ChooseAnother id={ID}></ChooseAnother>
+      </div>
+
     </div>
 
   );

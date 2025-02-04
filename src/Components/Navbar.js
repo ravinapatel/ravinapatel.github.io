@@ -21,9 +21,10 @@ function App() {
     if (url.includes("work")) { setActive("work") }
     else if (url.includes("play")) { setActive("play") }
     else if (url.includes("about")) { setActive("about") }
-    else if (url.includes("pandora")) { setActive("none") }
+    else if (url.includes("shareable-assets")) { setActive("none") }
+    else if (url.includes("profile")) { setActive("none") }
+    else if (url.includes("resell")) { setActive("none") }
     else if (url.includes("exceed")) { setActive("none") }
-    else if (url.includes("snap-cliques")) { setActive("none") }
     else { setActive("work") }
   }, []);
     

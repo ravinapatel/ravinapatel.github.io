@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../App.css';
-import arrow from "../Icons/upArrow.png";
+import arrow from "../Icons/arrow-up.svg";
 
 function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
@@ -40,12 +40,12 @@ function Button(props) {
     display: "inline-block",
   }
   const iconStyle = {
-    width: "18px"
+    width: "24px"
   }
 
   return (
     
-    <div className={ visible ? "slideIn" : "slideOut"} style={container}>
+    <div className={ visible ? "slideIn" : "slideOutDown"} style={container}>
     <button
       style={button}
       className="circleButton"

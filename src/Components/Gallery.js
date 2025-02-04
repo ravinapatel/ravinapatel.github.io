@@ -78,19 +78,15 @@ function App(props) {
     display: "inline-block",
     position: "relative",
     width: isBigScreen ? props.totalWidth : 0.9 * window.width,
-    // width: width,
   }
   const contentStyle2 = {
     display: "flex",
-    // backgroundColor: "yellow"
-    // display: one column ? "block" : "flex",
   }
 
   const columnStyle = {
     flex: 1/numCols,
     paddingRight: PADDING / 2,
     paddingLeft: PADDING / 2,
-    // width: isBigScreen ? width : "100%"
   }
 
   const rowStyle = {
@@ -99,16 +95,16 @@ function App(props) {
   }
 
   const titleStyle = {
-    paddingBottom: 20,
+    paddingBottom: 24,
     width: isBigScreen ? props.totalWidth : 0.9 * window.width
   }
 
 
   // RENDERING
   var columnsComponents = columns.map(col =>
-    <div className="column" style={columnStyle}>
+    <div style={columnStyle}>
       {col.map(row =>
-        < div className="row" style={rowStyle} >
+        < div style={rowStyle} >
           {row}
         </div>
       )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Intro from "../Components/WorkIntro";
+import WorkIntro from "../Components/WorkIntro";
 import data from "../Data/uxData.json";
 // import categoriesData from "../Data/categories.json";
 import FadeIn from 'react-fade-in';
@@ -9,11 +9,6 @@ import ReactGA from 'react-ga';
 import useWindowSize from "../Components/useWindowSize";
 import {useRef} from 'react';
 
-// CONTENT
-// data for the "check out more of my projects section"
-// const moreData = [
-//   categoriesData[0], categoriesData[1], categoriesData[2]
-// ];
 
 function clickResume() {
   // GA Event
@@ -43,108 +38,51 @@ function App() {
   const window = useWindowSize();
   var isSmallScreen = window.width < 700
 
+  const projectPrevs = data.map((item) => (
+    <ProjectPrev id={item.id} />
+  ));
 
   // STYLING
-  const containerStyle = {
-    textAlign: "center",
+  const projectsFlex = {
+    display: "flex",
+    gap: 120,
+    flexDirection: "column"  /* Stack sections vertically */
   }
-
-  const refContainerStyle = {
-    paddingTop: 42,
-  }
-
-  const lastSectionStyle = {
-    display: "block",
-    paddingTop: "50px",
-    paddingBottom: "50px"
-  }
-
-  const button = {
-    display: "inline-block",
-    padding: 10
-  }
-
-  const titleStyle1 = {
-    paddingBottom: 42,
-    display: "block"
-  }
-
-  const titleStyle2 = {
-    paddingBottom: 0,
-    display: "block"
-  }
-
-  const projectPrevStyle = {
-    paddingBottom: isSmallScreen ? 84 : 128
-  }
-  const lastProjectPrevStyle = {
-    paddingBottom: isSmallScreen ? 0 : 0
-  }
-
-  function getDir(index) {
-    // return (index % 2 === 0) ? "left" : "right"  // alternates the direction
-    return "left"
-  }
-
-  const projects = data.map((item, index) => < ProjectPrev
-    id={item.id}
-    name={item.name}
-    description={item.description}
-    msg={item.msg}
-    url={item.url}
-    msg2={item.msg2}
-    url2={item.url2}
-    msg3={item.msg3}
-    url3={item.url3}
-    direction={getDir(index)}
-    isInternal={item.isInternal}
-  />)
-
-  var projectDivs = projects.map((item, index) => {
-    if (index === projects.length-1) {
-      return <div style={lastProjectPrevStyle}>
-        {item}
-      </div>
-    }
-    else {
-      return <div style={projectPrevStyle}>
-        {item}
-      </div>
-    }
-  })
 
 
   return (
     <FadeIn transitionDuration="500">
-      <div style={containerStyle}>
+      <div className='pageContainer'>
 
         {/* Intro */}
-        <Intro reference={el1} click={()=> scrollToDiv(el2)}></Intro>
+        <WorkIntro reference={el1} click={()=> scrollToDiv(el2)}></WorkIntro>
 
         {/* UX Projects */}
-        
-        <div style={refContainerStyle} ref={el2}>
-          <div className="sectionTitle" style={titleStyle1}>selected work</div>
-          {projectDivs}
-
-          {/* <div className="link" >Click on Me!</div>
-          <div style={sectionStyle}><Gallery cols="2" totalWidth="800" padding="40" data={data} isLarge="true" ></Gallery></div> */}
+        <div className='section-wide' style={{paddingTop: 140, marginTop: -140}} ref={el2}>
+          <div className="sectionTitle" style={{textAlign: "center", marginBottom: 40}}>selected projects</div>
+          <div style={projectsFlex}>
+            {projectPrevs}
+          </div>
         </div>
 
         {/* CTAs */}
-        <div style={lastSectionStyle}>
-          <div className="sectionTitle" style={titleStyle2}>wanna connect?</div>
-          <div style={button} onClick={clickEmail}>
-            <Button
-              text="Say hi!"
-              url="mailto: rpp62@cornell.edu"
-            ></Button>
-          </div>
-          <div style={button} onClick={clickResume}>
-            <Button
-              text="View resume"
-              url="../../ravina-resume.pdf"
-            ></Button>
+        <div className='section-wide' style={{marginBottom: 60}}>
+          <div className='flex--vert flex-align-horiz--center'>
+            <div className="sectionTitle">wanna connect?</div>
+            <div className='flex--horiz'>
+              <div onClick={clickEmail}>
+                <Button
+                  text="Say hi!"
+                  url="mailto: 7ravina7@gmail.com"
+                ></Button>
+              </div>
+              <div onClick={clickResume}>
+                <Button
+                  text="View resume"
+                  url="../../ravina-resume.pdf"
+                ></Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

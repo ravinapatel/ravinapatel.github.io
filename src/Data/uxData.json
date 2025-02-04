@@ -1,13 +1,33 @@
 [
   {
-    "id": "pandora",
-    "name": "Pandora Charts",
-    "description": "Designed Pandora's first independent charts website and optimized the internal chart curation experience. Completed this project during my summer 2021 internship.",
-    "descriptionShort": "Designing Pandora's charts website and optimizing its internal chart curation experience",
+    "id": "shareable-assets",
+    "name": "Shareable Assets",
+    "description": "We built an end-to-end service that automatically generates custom graphics when artists reach milestones and prompts them to share.",
+    "descriptionShort": "Empowering artists to share with fans",
     "msg": "Read case study",
-    "url": "./pandora",
-    "msg2": "Visit Pandora Charts",
-    "url2": "https://pandoracharts.com/",
+    "url": "./shareable-assets",
+    "isInternal": "true"
+  },
+  {
+    "id": "profile",
+    "name": "AMP Profile Enhancements",
+    "description": "Added key features and usability updates to artist profile tools on AMP, resulting in a 303% increase in engagement and 68% increase in profile shares.",
+    "descriptionShort": "Increasing artist profile engagement",
+    "msg": "Read case study",
+    "url": "./profile",
+    "isInternal": "true"
+  },
+  {
+    "id": "resell",
+    "name": "Resell",
+    "description": "Designed an app to facilitate thrifting and selling on Cornell's campus. Worked with engineers to get from research to beta testing in two semesters.",
+    "descriptionShort": "Facilitating thrifting and selling on Cornell's campus",
+    "msg": "Read case study",
+    "url": "./resell",
+    "msg2": "App Store",
+    "msg3": "Google Play",
+    "url2": "https://apps.apple.com/us/app/resell-cornell-marketplace/id1622452299",
+    "url3": "https://play.google.com/store/apps/details?id=com.cornellappdev.resell.android",
     "isInternal": "true"
   },
   {
@@ -21,26 +41,5 @@
     "url2": "https://paravaneventures.com/design2020/",
     "isInternal": "true",
     "ribbon": "true"
-  },
-  {
-    "id": "resell",
-    "name": "Resell",
-    "description": "Designed an app to facilitate thrifting and selling on Cornell's campus. Worked with engineers to get from research to beta testing in two semesters.",
-    "descriptionShort": "Facilitating thrifting and selling on Cornell's campus",
-    "msg": "Coming soon",
-    "msg2": "App Store",
-    "msg3": "Google Play",
-    "url2": "https://apps.apple.com/us/app/resell-cornell-marketplace/id1622452299",
-    "url3": "https://play.google.com/store/apps/details?id=com.cornellappdev.resell.android",
-    "isInternal": "true"
-  },
-  {
-    "id": "snap",
-    "name": "Snap Cliques",
-    "description": "Prototyped a feature that increases personalization and social interaction in Snapchat’s Discover page",
-    "descriptionShort": "Increasing personalization and social interaction in Snapchat’s Discover page",
-    "msg": "Read case study",
-    "url": "./snap-cliques",
-    "isInternal": "true"
   }
 ]
