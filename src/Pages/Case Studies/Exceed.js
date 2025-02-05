@@ -16,20 +16,15 @@ import motivation from "../../Images/portfolio/ux/exceed/motivation.png";
 import onboarding from "../../Images/portfolio/ux/exceed/onboarding-interests.png";
 import searchIterations from "../../Images/portfolio/ux/exceed/search-iterations.png";
 import market from "../../Images/portfolio/ux/exceed/market.png";
-import saveNote from "../../Images/portfolio/ux/exceed/save-note.gif";
+// import saveNote from "../../Images/portfolio/ux/exceed/save-note.gif"; (replaced import & commented out 1)
+import saveNote from "../../Images/portfolio/ux/exceed/save-note.png";
 
 //ICONS
-import helpCircle from "../../Icons/help-circle.svg";
 import award from "../../Icons/award.svg";
 import clock from "../../Icons/clock.svg";
 import search from "../../Icons/search.svg";
 import send from "../../Icons/send.svg";
 import frown from "../../Icons/frown.svg";
-import userCheck from "../../Icons/user-check.svg";
-import checkCircle from "../../Icons/check-circle.svg";
-import users from "../../Icons/users.svg";
-import sliders from "../../Icons/sliders.svg";
-import quotationMark from "../../Icons/quotation-mark.svg";
 
 // ICONS
 import sun from "../../Icons/sun.svg";
@@ -85,9 +80,9 @@ function App(props) {
             <div> <img src={sun} width={ICON_WIDTH} className="icon--blue"></img> </div>
             <div className="heading greyText">Highlights</div>
             <div className='card-nested-surface--grey'> <img src={highlights} width={"100%"}></img> </div>
-            <div className='card-nested-surface--grey flex--vert flex-align-horiz--center' style={equalSize}>
+            {/* <div className='card-nested-surface--grey flex--vert flex-align-horiz--center' style={equalSize}>
               <img src={saveNote} style={{width: "100%", maxWidth: 300}}></img>
-            </div >
+            </div > */}
             <div className='card-nested-surface--grey'> <img src={highlightsBadges} width={"100%"}></img> </div>
           </div>
         </div>

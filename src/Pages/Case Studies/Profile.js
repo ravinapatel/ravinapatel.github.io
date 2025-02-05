@@ -10,10 +10,11 @@ import ChooseAnother from "../../Components/ChooseAnother";
 import highlights from "../../Images/portfolio/ux/profile/highlights-profile.png";
 import profileDisconnect from "../../Images/portfolio/ux/profile/profile-disconnect.png";
 import profileCard from "../../Images/portfolio/ux/profile/profile-card.png";
-import sticky from "../../Images/portfolio/ux/profile/sticky.gif";
+// import sticky from "../../Images/portfolio/ux/profile/sticky.gif"; (replaced import)
+import sticky from "../../Images/portfolio/ux/profile/sticky.png";
 import impact from "../../Images/portfolio/ux/profile/impact.png";
 import responsive from "../../Images/portfolio/ux/profile/responsive.png";
-import redesign from "../../Images/portfolio/ux/profile/redesign.gif";
+// import redesign from "../../Images/portfolio/ux/profile/redesign.gif"; (commented out 1)
 
 // ICONS
 import sun from "../../Icons/sun.svg";
@@ -60,7 +61,7 @@ function App(props) {
           <div className='card-surface--white card-stroke--purple flex--vert flex-align-horiz--center'>
             <div> <img src={sun} width={ICON_WIDTH} className="icon--purple"></img> </div>
             <div className="heading greyText">Highlights</div>
-            <img src={redesign} style={{width: "80%"}}></img>
+            {/* <img src={redesign} style={{width: "80%"}}></img> */}
             <div className='spacer'></div>
             <img src={responsive} style={{width: "100%"}}></img>
           </div>

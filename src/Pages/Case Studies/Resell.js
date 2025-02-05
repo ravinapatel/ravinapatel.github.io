@@ -12,13 +12,16 @@ import highlights from "../../Images/portfolio/ux/resell/highlights.png";
 import fbMarketplace from "../../Images/portfolio/ux/resell/fb-marketplace.png";
 import dumpAndRun from "../../Images/portfolio/ux/resell/dump-and-run.png";
 import journey from "../../Images/portfolio/ux/resell/journey.png";
-import handoffIterations from "../../Images/portfolio/ux/resell/handoff.gif";
+// import handoffIterations from "../../Images/portfolio/ux/resell/handoff.gif"; (replaced import)
+import handoffIterations from "../../Images/portfolio/ux/resell/handoff.png";
 import auth from "../../Images/portfolio/ux/resell/authentification.png";
 import profile from "../../Images/portfolio/ux/resell/profile.png";
-import venmo from "../../Images/portfolio/ux/resell/venmo.gif";
+// import venmo from "../../Images/portfolio/ux/resell/venmo.gif"; (replaced import)
+import venmo from "../../Images/portfolio/ux/resell/venmo.png";
 import edges from "../../Images/portfolio/ux/resell/edges.png";
 import system from "../../Images/portfolio/ux/resell/design-system.png";
-import home from "../../Images/portfolio/ux/resell/home.gif";
+// import home from "../../Images/portfolio/ux/resell/home.gif"; (replaced import)
+import home from "../../Images/portfolio/ux/resell/home.png";
 import fiveStars from "../../Images/portfolio/ux/resell/five-stars.png";
 
 // ICONS

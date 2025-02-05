@@ -9,23 +9,23 @@ import ChooseAnother from "../../Components/ChooseAnother";
 // IMAGES
 import algorithm from "../../Images/portfolio/ux/shareable-assets/highlights-gradient.png";
 import ideaSketch from "../../Images/portfolio/ux/shareable-assets/idea-sketch.png";
-import variation from "../../Images/portfolio/ux/shareable-assets/variation-gif.gif";
+// import variation from "../../Images/portfolio/ux/shareable-assets/variation-gif.gif"; (replaced import)
+import variation from "../../Images/portfolio/ux/shareable-assets/variation.png";
 import billionaires from "../../Images/portfolio/ux/shareable-assets/billionaires.png";
-import visual from "../../Images/portfolio/ux/shareable-assets/visual-gif.gif";
+// import visual from "../../Images/portfolio/ux/shareable-assets/visual-gif.gif"; (replaced import)
+import visual from "../../Images/portfolio/ux/shareable-assets/visual.png";
 import badAccessibility from "../../Images/portfolio/ux/shareable-assets/bad-accessibility.png";
-import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.gif";
+// import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.gif"; (replaced import)
+import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.png";
 import email from "../../Images/portfolio/ux/shareable-assets/email.png";
-import assetReelWhite from "../../Images/portfolio/ux/shareable-assets/asset-reel-bg-f.png";
 import assetReelGrey from "../../Images/portfolio/ux/shareable-assets/asset-reel-bg-fa.png";
 import posts from "../../Images/portfolio/ux/shareable-assets/posts.png";
 import shareCards from "../../Images/portfolio/ux/shareable-assets/share-cards.png";
 import banner from "../../Images/portfolio/ux/shareable-assets/banner.png";
 import emailRedesign from "../../Images/portfolio/ux/shareable-assets/email-redesign.png";
-// import deliveryFlow from "../../Images/portfolio/ux/shareable-assets/delivery-flow.gif";
 
 //ICONS
 import helpCircle from "../../Icons/help-circle.svg";
-import smile from "../../Icons/smile.svg";
 import frown from "../../Icons/frown.svg";
 import userCheck from "../../Icons/user-check.svg";
 import checkCircle from "../../Icons/check-circle.svg";
@@ -139,9 +139,7 @@ function App(props) {
           </div>
 
           <div className='spacer'></div>
-          <div style={center}>
-            <img src={variation} width={isSmallScreen ? "100%" : "80%"}></img>
-          </div>
+          <div style={center}> <img src={variation} width={isSmallScreen ? "100%" : "80%"}></img> </div>
           <div className='spacer'></div>
 
           <div className='body'>
@@ -213,7 +211,7 @@ function App(props) {
 
           <div className='spacer'></div>
           <div> <img src={deliveryIterations} width={"100%"}></img> </div>
-          <div className='spacer'></div>
+          {/* <div className='spacer'></div> */}
         </div>
 
         {/* email design */}
