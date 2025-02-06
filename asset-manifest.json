@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.384d6a49.chunk.css",
-    "main.js": "/static/js/main.1ccd0824.chunk.js",
-    "main.js.map": "/static/js/main.1ccd0824.chunk.js.map",
+    "main.js": "/static/js/main.75967722.chunk.js",
+    "main.js.map": "/static/js/main.75967722.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ed9d8f35.js",
     "runtime-main.js.map": "/static/js/runtime-main.ed9d8f35.js.map",
     "static/js/2.44cdcc7f.chunk.js": "/static/js/2.44cdcc7f.chunk.js",
     "static/js/2.44cdcc7f.chunk.js.map": "/static/js/2.44cdcc7f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4bc1072f81c69175e0232869c57885bf.js": "/precache-manifest.4bc1072f81c69175e0232869c57885bf.js",
+    "precache-manifest.2ee01b770031b75bebf63d9faff9569a.js": "/precache-manifest.2ee01b770031b75bebf63d9faff9569a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.384d6a49.chunk.css.map": "/static/css/main.384d6a49.chunk.css.map",
     "static/js/2.44cdcc7f.chunk.js.LICENSE.txt": "/static/js/2.44cdcc7f.chunk.js.LICENSE.txt",
@@ -68,7 +68,7 @@
     "static/media/gradient-blobs.png": "/static/media/gradient-blobs.8537f680.png",
     "static/media/gradient-cover.mp4": "/static/media/gradient-cover.ee085691.mp4",
     "static/media/gradient.png": "/static/media/gradient.f7ca4708.png",
-    "static/media/handoff.png": "/static/media/handoff.9555a73f.png",
+    "static/media/handoff.gif": "/static/media/handoff.fa4440ae.gif",
     "static/media/head-back.jpg": "/static/media/head-back.8212a0fd.jpg",
     "static/media/help-circle.svg": "/static/media/help-circle.5aac11ae.svg",
     "static/media/highlights-badges.png": "/static/media/highlights-badges.70e920c9.png",
@@ -78,7 +78,7 @@
     "static/media/highlights.png": "/static/media/highlights.fe40c5c0.png",
     "static/media/hip-hop.png": "/static/media/hip-hop.64074cd4.png",
     "static/media/holo-sticker.png": "/static/media/holo-sticker.297c16ae.png",
-    "static/media/home.png": "/static/media/home.81fbe0a8.png",
+    "static/media/home.gif": "/static/media/home.d5826ef4.gif",
     "static/media/idea-sketch.png": "/static/media/idea-sketch.0ece46c7.png",
     "static/media/impact.png": "/static/media/impact.8e5c6a1d.png",
     "static/media/invaders-gif.gif": "/static/media/invaders-gif.bf2a4a31.gif",
@@ -124,7 +124,7 @@
     "static/media/uke.jpg": "/static/media/uke.e1710005.jpg",
     "static/media/user-check.svg": "/static/media/user-check.7b998d3b.svg",
     "static/media/variation.png": "/static/media/variation.0bc9d8a7.png",
-    "static/media/venmo.png": "/static/media/venmo.47c39493.png",
+    "static/media/venmo.gif": "/static/media/venmo.80bba91d.gif",
     "static/media/visual.png": "/static/media/visual.067f5eb5.png",
     "static/media/wallflower.png": "/static/media/wallflower.6db91c89.png",
     "static/media/wood.jpg": "/static/media/wood.22c915ea.jpg"
@@ -133,6 +133,6 @@
     "static/js/runtime-main.ed9d8f35.js",
     "static/js/2.44cdcc7f.chunk.js",
     "static/css/main.384d6a49.chunk.css",
-    "static/js/main.1ccd0824.chunk.js"
+    "static/js/main.75967722.chunk.js"
   ]
 }
