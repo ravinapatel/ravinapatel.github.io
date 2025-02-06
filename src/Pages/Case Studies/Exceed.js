@@ -46,7 +46,10 @@ function App(props) {
   }
   const equalSize = {
     flex: "1 1 0px",
-    alignSelf: "stretch"
+    alignSelf: "stretch",              
+    "--card-padding": isSmallScreen ? "20px 20px" : undefined,    // i should move this into the css later
+    "--gap-horiz": isSmallScreen ? "16px" : undefined,
+    "--gap-vert": isSmallScreen ? "12px" : undefined,
   }
   const headerIndent = {
     marginLeft: -(ICON_WIDTH_MEDIUM + 40)
@@ -54,6 +57,11 @@ function App(props) {
   const iconContainer = {
     padding: 8,
     width: "fit-content"
+  }
+  const cardResponsive = {              // i should move this into the css later
+    "--card-padding": isSmallScreen ? "20px 20px" : undefined,
+    "--gap-horiz": isSmallScreen ? "16px" : undefined,
+    "--gap-vert": isSmallScreen ? "12px" : undefined,
   }
 
   // CONTENT
@@ -76,20 +84,20 @@ function App(props) {
 
         {/* highlights */}
         <div className='section' >
-          <div className='card-surface--white card-stroke--blue flex--vert flex-align-horiz--center'>
+          <div className='card-surface--white card-stroke--blue flex--vert flex-align-horiz--center' style={cardResponsive}>
             <div> <img src={sun} width={ICON_WIDTH} className="icon--blue"></img> </div>
             <div className="heading greyText">Highlights</div>
-            <div className='card-nested-surface--grey'> <img src={highlights} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey'> <img src={highlights} width={"100%"} style={cardResponsive}></img> </div>
             <div className='card-nested-surface--grey flex--vert flex-align-horiz--center' style={equalSize}>
-              <img src={saveNote} style={{width: "100%", maxWidth: 300}}></img>
+              <img src={saveNote} style={{width: "100%", maxWidth: isSmallScreen ? 200 : 300}}></img>
             </div >
-            <div className='card-nested-surface--grey'> <img src={highlightsBadges} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey'> <img src={highlightsBadges} width={"100%"} style={cardResponsive}></img> </div>
           </div>
         </div>
 
         {/* challenge */}
         <div className='section' >
-          <div className='card-surface--grey card-stroke--shine flex--vertical'>
+          <div className='card-surface--grey card-stroke--shine flex--vertical' style={cardResponsive}>
             <div className="heading greyText">The Case Challenge</div>
             <div className='spacer'></div>
             <div className="body">
@@ -118,7 +126,7 @@ function App(props) {
             While most people have less than 30 minutes a day to dedicate to learning, mainstream 
             platforms, such as LinkedIn Learning and Skillshare, focus on long-form content.
           </div>
-          <div className='card-surface--grey flex--vert'>
+          <div className='card-surface--grey flex--vert' style={cardResponsive}>
             <img src={market} style={{width: "100%"}}></img>
           </div>
           <div className='body greyText'>
@@ -134,7 +142,7 @@ function App(props) {
             These findings confirmed that a learning app with snackable content could better 
             meet the needs of busy professionals.
           </div>
-          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert'>
+          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert' style={cardResponsive}>
             <div className='title2'>
               <b>Exceed</b> is an app that provides snackable learning content to allow busy 
                 professionals to continue growing.
@@ -177,13 +185,13 @@ function App(props) {
             A central issue I found through user research was that people thought they needed to
             dedicate much more time than they have, setting them up for failure.
           </div>
-          <div className='card-surface--grey'>
+          <div className='card-surface--grey' style={cardResponsive}>
             <span className='body redText'><b>31%</b></span> <span className='body'>of people are not meeting their daily learning goal...</span>
           </div>
-          <div className='card-surface--grey'>
+          <div className='card-surface--grey' style={cardResponsive}>
             ... but <span className='body redText'><b>80%</b></span> <span className='body'>of them have set their goal to be an hour a day</span>
           </div>
-          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert'>
+          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert' style={cardResponsive}>
             <img src={frown} width={ICON_WIDTH} className="icon--blue"></img>
             <div className='heading greyText'>Key Insight</div>
             <div className='title2'>People overcommit in goal setting, leading to failure, and decreasing motivation.</div>
@@ -194,7 +202,7 @@ function App(props) {
             To turn this negative cycle into a positive one, I designed an onboarding step to suggest more <b>attainable 
             goals</b> and offer reminder notifications. I also allow users to <b>earn achievement badges</b> to keep them excited about their progress.
           </div>
-          <div className='card-surface--grey flex--vert flex-align-horiz--center'>
+          <div className='card-surface--grey flex--vert flex-align-horiz--center' style={cardResponsive}>
             <img src={motivation} style={{width: "100%", maxWidth: 500}}></img> 
           </div>
         </div>
@@ -212,7 +220,7 @@ function App(props) {
             <br></br><br></br>
             I also emphasized the short watch, listen, and read times in the card design.
           </div>
-          <div className='card-surface--grey flex--vert flex-align-horiz--center'>
+          <div className='card-surface--grey flex--vert flex-align-horiz--center' style={cardResponsive}>
             <img src={cardTimes} style={{width: "100%"}}></img> 
           </div>
           <div className='spacer'></div>
@@ -221,8 +229,8 @@ function App(props) {
             To do this, I allow users to <b>save content for later</b>, and <b>quickly jot down notes</b> as they watch or listen. 
             This way, they can easily pick up where they left off.
           </div>
-          <div className='card-surface--grey flex--vert flex-align-horiz--center'>
-            <img src={saveNote} style={{width: "100%", maxWidth: 300}}></img> 
+          <div className='card-surface--grey flex--vert flex-align-horiz--center' style={cardResponsive}>
+            <img src={saveNote} style={{width: "100%", maxWidth: isSmallScreen ? 200 : 300}}></img> 
           </div>
         </div>
 
@@ -234,7 +242,7 @@ function App(props) {
             <div className='heading greyText'>Pain Point: Discovery</div>
           </div>
           <div className='title1'><b>Encouraging targeted discovery</b></div>
-          <div className='card-surface--grey'>
+          <div className='card-surface--grey' style={cardResponsive}>
             <span className='body redText'><b>50%</b></span> <span className='body'>of people knew what they wanted to learn but had 
               trouble finding the right tools to do it.</span>
           </div>
@@ -243,7 +251,7 @@ function App(props) {
             To address this, I collect interests during onboarding to create a personalized home feed that guides 
             users to content they are looking for.
           </div>
-          <div className='card-surface--grey flex--vert flex-align-horiz--center'>
+          <div className='card-surface--grey flex--vert flex-align-horiz--center' style={cardResponsive}>
             <img src={onboarding} style={{width: "100%", maxWidth: 200}}></img> 
           </div>
           <div className='spacer'></div>
@@ -259,7 +267,7 @@ function App(props) {
         <div className='section'>
           <div className='heading greyText'>Final Designs</div>
           <div className='title1'><b>Empowering artists to share with fans</b></div>
-          <div className='card-surface--white'> <img src={highlights} style={{width: "100%"}}></img> </div>
+          <div className='card-surface--white' style={cardResponsive}> <img src={highlights} style={{width: "100%"}}></img> </div>
         </div>
 
 
@@ -268,7 +276,7 @@ function App(props) {
         <div className='section'>
           <div className='heading greyText'>Impact & Reflection</div>
           <div className='title1'><b>A successful sprint!</b></div>
-          <div className='card-surface--white card-stroke--green card-dir--corner flex--vert' >
+          <div className='card-surface--white card-stroke--green card-dir--corner flex--vert' style={cardResponsive}>
             <img src={send} width={ICON_WIDTH} className="icon--green"></img>
             <div className='heading greyText'>Success!</div>
             <div className='title2'> My submission won first place in the case competition! </div>
@@ -277,13 +285,13 @@ function App(props) {
 
           <div className='spacer'></div>
           <div className='body'>Some exciting parts of this project:</div>
-          <div className='card-surface--grey card-stroke--shine' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}>
             <div className='body'>
               The 5-day time constraint also pushed me to research, ideate, and build very quickly. 
               I followed Google's design sprint framework to work through the process.
             </div>
           </div>
-          <div className='card-surface--grey card-stroke--shine' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}>
             <div className='body'>
               As a student, designing for busy professionals was a new challenge since they were so 
               different from me. I had to rely fully on research and interviews to understand their 

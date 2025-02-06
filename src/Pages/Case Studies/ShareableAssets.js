@@ -47,6 +47,11 @@ function App(props) {
     paddingTop: 4
   }
   const center = {textAlign: "center"}
+  const cardResponsive = {              // i should move this into the css later
+    "--card-padding": isSmallScreen ? "20px 20px" : undefined,
+    "--gap-horiz": isSmallScreen ? "16px" : undefined,
+    "--gap-vert": isSmallScreen ? "12px" : undefined,
+  }
 
   // CONTENT
   const PROJECT_ID = "shareable-assets"       // must match the project id in uxData
@@ -70,13 +75,13 @@ function App(props) {
 
         {/* highlights */}
         <div className='section' >
-          <div className='card-surface--white card-stroke--blue flex--vert flex-align-horiz--center'>
+          <div className='card-surface--white card-stroke--blue flex--vert flex-align-horiz--center' style={cardResponsive}>
             <div> <img src={sun} width={ICON_WIDTH} className="icon--blue"></img> </div>
             <div className="heading greyText">Highlights</div>
-            <div className='card-nested-surface--grey'> <img src={assetReelGrey} width={"100%"}></img> </div>
-            <div className='card-nested-surface--grey'> <img src={email} width={"100%"}></img> </div>
-            <div className='card-nested-surface--grey'> <img src={algorithm} width={"100%"}></img> </div>
-            <div className='card-nested-surface--grey'> <img src={shareCards} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey' style={cardResponsive}> <img src={assetReelGrey} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey' style={cardResponsive}> <img src={email} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey' style={cardResponsive}> <img src={algorithm} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey' style={cardResponsive}> <img src={shareCards} width={"100%"}></img> </div>
           </div>
         </div>
 
@@ -86,19 +91,19 @@ function App(props) {
           <div className="title1">
             <b>Artists don’t share on social media as much as they would want to</b>
           </div>
-          <div className='card-surface--grey card-stroke--shine flex--horiz' >
+          <div className='card-surface--grey card-stroke--shine flex--horiz' style={cardResponsive}>
             <img src={quotationMark} width={ICON_WIDTH_SMALL} className="icon--grey"></img>
             <div className="body-medium">I should post more, but it takes a lot of time and effort to post on all social medias consistently.</div>
           </div>
           <div className='spacer'></div>
 
           <div className={isSmallScreen ? "flex--vert" : "flex--horiz"}>
-            <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert'>
+            <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert' style={cardResponsive}>
               <img src={frown} width={ICON_WIDTH} className="icon--blue"></img>
               <div className="heading greyText">User Problem</div>
               <div className="title2">Artists want to share on social media more easily...</div>
             </div>
-            <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert'>
+            <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert' style={cardResponsive}>
               <img src={userCheck} width={ICON_WIDTH} className="icon--blue"></img>
               <div className="heading greyText">Business Opportunity</div>
               <div className="title2">...and more artist shares would increase listening on Pandora</div>
@@ -110,7 +115,7 @@ function App(props) {
         <div className='section' >
           <div className="title1"> <b>Introducing Shareable Assets</b> </div>
           <img src={ideaSketch}></img>
-          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert'>
+          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert' style={cardResponsive}>
             <img src={sun} width={ICON_WIDTH} className='icon--blue'></img>
             <div className="heading greyText">Idea</div>
             <div className="title2">
@@ -147,7 +152,7 @@ function App(props) {
             brand consistency and create more of an “official” look.
           </div>
           
-          <div className='card-surface--grey flex--vert flex-align-horiz--center'>
+          <div className='card-surface--grey flex--vert flex-align-horiz--center' style={cardResponsive}>
             <div><img src={billionaires} width={200}></img></div>
             <div className="body">Pandora Billionaires Plaque</div>
           </div>
@@ -156,7 +161,7 @@ function App(props) {
             Here is the design I settled on! This design was informed by feedback from many teams, 
             including artist relations, brand, content, and legal.
           </div>
-          <div className='card-surface--grey'> <img src={visual} width={"100%"}></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={visual} width={"100%"}></img> </div>
         </div>
 
         {/* gradient generation */}
@@ -166,11 +171,11 @@ function App(props) {
             When generating this design automatically, the gradient plays a large part in the quality 
             and accessibility.
           </div>
-          <div className='card-surface--grey flex--vert flex-align-horiz--center'>
+          <div className='card-surface--grey flex--vert flex-align-horiz--center' style={cardResponsive}>
             <div><img src={badAccessibility} width={200}></img></div>
             <div className="body">❌ What we’re hoping to prevent</div>
           </div>
-          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert'>
+          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert' style={cardResponsive}>
             <img src={helpCircle} width={ICON_WIDTH} className='icon--blue'></img>
             <div className="heading greyText">Key Question</div>
             <div className="title2">
@@ -188,7 +193,7 @@ function App(props) {
             color. For greyscale album art, it defaults to a few fallback gradients using variations
             of Pandora Blue.
           </div>
-          <div className='card-surface--grey'><img src={algorithm} width={"100%"}></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={algorithm} width={"100%"}></img> </div>
           <div className='body'>
             The original algorithm specs I handed off actually tested pretty well! During testing, 
             I checked edge cases for colors (very light, dark, bright, etc.), and tweaked some of 
@@ -224,14 +229,14 @@ function App(props) {
             I also had to make sure that the design was responsive, adapted well to dark mode, 
             and showed up correctly in various email service providers (e.g. Gmail, Apple Mail, etc.).
           </div>
-          <div className='card-surface--grey'> <img src={email} width={"100%"}></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={email} width={"100%"}></img> </div>
           <div className='spacer'></div>
           <div className='body'>
             As I designed this email style, the team saw that it could be a good time to give our 
             existing (and quite out-of-date) creator notification emails a redesign. The flexible components that
             I made made the redesigns very easy!
           </div>
-          <div className='card-surface--grey'> <img src={emailRedesign} width={"100%"}></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={emailRedesign} width={"100%"}></img> </div>
         </div>
 
 
@@ -240,31 +245,31 @@ function App(props) {
         <div className='section'>
           <div className='heading greyText'>Final Designs</div>
           <div className='title1'><b>Empowering artists to share with fans</b></div>
-          <div className='card-surface--white'> <img src={banner} width="100%"></img> </div>
+          <div className='card-surface--white' style={cardResponsive}> <img src={banner} width="100%"></img> </div>
         </div>
 
         {/* impact */}
         <div className='section'>
           <div className='heading greyText'>Impact</div>
           <div className='title1'><b>Excited artists are sharing their Pandora milestones with their fans!</b></div>
-          <div className='card-surface--white card-stroke--blue card-dir--corner flex--horiz' >
+          <div className='card-surface--white card-stroke--blue card-dir--corner flex--horiz' style={cardResponsive}>
             <img src={quotationMark} width={ICON_WIDTH_SMALL} className="icon--blue"></img>
             <div className="body-medium">Thanks to the <span className='blueText'>@amp_pandora</span> team for their tireless efforts to get artists’ music heard.”</div>
           </div>
-          <div className='card-surface--grey' > <img src={posts} width="100%"></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={posts} width="100%"></img> </div>
         </div>
 
         {/* reflection */}
         <div className='section'>
           <div className='heading greyText'>Reflection</div>
-          <div className='card-surface--grey card-stroke--shine flex--horiz' >
+          <div className='card-surface--grey card-stroke--shine flex--horiz' style={cardResponsive}>
             <img src={checkCircle} width={ICON_WIDTH_SMALL} className="icon--grey" style={iconTopMargin}></img>
             <div className="body">
               Thorough testing and UI reviews were crucial to the final product's quality, and building
               good relationships with my engineering partners made this process much easier!
             </div>
           </div>
-          <div className='card-surface--grey card-stroke--shine flex--horiz' >
+          <div className='card-surface--grey card-stroke--shine flex--horiz' style={cardResponsive}>
             <img src={sliders} width={ICON_WIDTH_SMALL} className="icon--grey icon-margin--top" style={iconTopMargin}></img>
             <div className="body">
               This project improved my understanding of digital color representations, specifically the HSL model.

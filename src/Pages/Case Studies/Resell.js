@@ -37,6 +37,7 @@ function App(props) {
 
   // RESPONSIVENESS
   const window = useWindowSize();
+  var isMobileScreen = window.width < 500
   var isSmallScreen = window.width < 700
   var isBigScreen = window.width > 1200
 
@@ -44,7 +45,6 @@ function App(props) {
   const ICON_WIDTH = 40
   const ICON_WIDTH_MEDIUM = 32
   const ICON_WIDTH_SMALL = 24
-  const center = {textAlign: "center"}
   const headerIndent = {
     marginLeft: -(ICON_WIDTH_MEDIUM + 40)
   }
@@ -54,7 +54,15 @@ function App(props) {
   }
   const equalSize = {
     flex: "1 1 0px",
-    alignSelf: "stretch"
+    alignSelf: "stretch",
+    "--card-padding": isSmallScreen ? "20px 20px" : undefined,       // sync this with cardResponsive
+    "--gap-horiz": isSmallScreen ? "16px" : undefined,
+    "--gap-vert": isSmallScreen ? "12px" : undefined,
+  }
+  const cardResponsive = {              // i should move this into the css later
+    "--card-padding": isSmallScreen ? "20px 20px" : undefined,
+    "--gap-horiz": isSmallScreen ? "16px" : undefined,
+    "--gap-vert": isSmallScreen ? "12px" : undefined,
   }
 
   // CONTENT
@@ -83,15 +91,15 @@ function App(props) {
 
         {/* highlights */}
         <div className='section' >
-          <div className='card-surface--white card-stroke--purple flex--vert flex-align-horiz--center'>
+          <div className='card-surface--white card-stroke--purple flex--vert flex-align-horiz--center' style={cardResponsive}>
             <div> <img src={sun} width={ICON_WIDTH} className="icon--purple"></img> </div>
             <div className="heading greyText">Highlights</div>
-            <div className='card-nested-surface--grey flex--horiz flex-align-horiz--spread'> 
+            <div className='card-nested-surface--grey flex--horiz flex-align-horiz--spread' style={cardResponsive}> 
               <img src={home} width={"45%"}></img> 
               <img src={venmo} width={"45%"}></img> 
             </div>
-            <div className='card-nested-surface--grey'> <img src={edges} width={"100%"}></img> </div>
-            <div className='card-nested-surface--grey'> <img src={system} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey' style={cardResponsive}> <img src={edges} width={"100%"}></img> </div>
+            <div className='card-nested-surface--grey' style={cardResponsive}> <img src={system} width={"100%"}></img> </div>
 
           </div>
         </div>
@@ -105,9 +113,9 @@ function App(props) {
           </div>
           <div className="body">Current solutions don’t solve student needs:</div>
           
-          <div className='card-surface--grey card-stroke--shine flex--vert'>
-            <div className='flex--horiz'>
-              <img src={fbMarketplace} style={{width: "40%", maxWidth: "300px", objectFit: "cover"}}></img>
+          <div className='card-surface--grey card-stroke--shine flex--vert' style={cardResponsive}>
+            <div className={isMobileScreen ? 'flex--vert flex-align-horiz--center' : 'flex--horiz'}>
+              <img src={fbMarketplace} style={{width: isMobileScreen ? '100%' : '40%', maxWidth: "300px", objectFit: "cover"}}></img>
               <div className='flex--vert'>
                 <div className="heading greyText">Facebook Marketplace</div>
                 <div className="body-medium blockQuote"> “I can’t always trust sellers on online marketplaces" </div>
@@ -116,9 +124,9 @@ function App(props) {
             </div>
           </div>
 
-          <div className='card-surface--grey card-stroke--shine flex--vert'>
-            <div className='flex--horiz'>
-              <img src={dumpAndRun} style={{width: "40%", maxWidth: "300px", objectFit: "cover"}}></img>
+          <div className='card-surface--grey card-stroke--shine flex--vert' style={cardResponsive}>
+            <div className={isMobileScreen ? 'flex--vert flex-align-horiz--center' : 'flex--horiz'}>
+              <img src={dumpAndRun} style={{width: isMobileScreen ? '100%' : '40%', maxWidth: "300px", objectFit: "cover"}}></img>
               <div className='flex--vert'>
                 <div className="heading greyText">Dump & Run</div>
                 <div className="body-medium blockQuote"> "The Dump and Run is inconvenient" </div>
@@ -133,7 +141,7 @@ function App(props) {
 
         {/* the problem */}
         <div className='section' >
-          <div className='card-surface--white card-stroke--red card-dir--corner flex--vert'>
+          <div className='card-surface--white card-stroke--red card-dir--corner flex--vert' style={cardResponsive}>
             <img src={helpCircle} width={ICON_WIDTH} className="icon--pink"></img>
             <div className="heading greyText">The Problem</div>
             <div className="title2">Students want to shop sustainably, but potential 
@@ -174,8 +182,8 @@ function App(props) {
           <div className="body">
             We interviewed power buyers, power sellers, and neutral students about online marketplaces and found 
             that organizing handoffs and payments was the toughest part for everyone.</div>
-          <div className='card-surface--grey card-stroke--shine' > <img src={journey} style={{width: "100%"}}></img> </div>
-          <div className='card-surface--grey card-stroke--shine flex--horiz' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}> <img src={journey} style={{width: "100%"}}></img> </div>
+          <div className='card-surface--grey card-stroke--shine flex--horiz' style={cardResponsive}>
             <img src={quotationMark} width={ICON_WIDTH_SMALL} className="icon--grey"></img>
             <div className="body-medium">It’s a hassle to organize details of handoffs and payment.</div>
           </div>
@@ -203,8 +211,8 @@ function App(props) {
             Students expressed that if in-app payment wasn’t an option, they would prefer to pay with Venmo. We leveraged the 
             chat button section to seamlessly integrate Venmo payments into the experience.
           </div>
-          <div className='card-surface--grey card-stroke--shine' style={center}>
-            <img src={venmo} width={isSmallScreen ? "80%" : "40%"}></img>
+          <div className='card-surface--grey card-stroke--shine flex--vert flex-align-horiz--center' style={cardResponsive}>
+            <img src={venmo} width={isMobileScreen ? "70%" : "40%"}></img>
           </div>
         </div>
 
@@ -215,7 +223,7 @@ function App(props) {
             <div className='heading greyText'>Instilling Trust</div>
           </div>
           <div className='title1'><b>Instilling trust in our users</b></div>
-          <div className='card-surface--grey card-stroke--shine flex--horiz' >
+          <div className='card-surface--grey card-stroke--shine flex--horiz' style={cardResponsive}>
             <img src={quotationMark} width={ICON_WIDTH_SMALL} className="icon--grey"></img>
             <div className="body-medium">I can’t always trust sellers on online marketplaces</div>
           </div>
@@ -224,10 +232,10 @@ function App(props) {
             sign-ups with Cornell members helps address this, we still wanted to design accounts to appear as 
             real, trustworthy community members.
           </div>
-          <div className='card-surface--grey card-stroke--shine' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}>
             <img src={auth} style={{width: "100%"}}></img>
           </div>
-          <div className='card-surface--grey card-stroke--shine' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}>
             <img src={profile} style={{width: "100%"}}></img>
           </div>
         </div>
@@ -237,17 +245,17 @@ function App(props) {
           <div className='heading greyText'>Final Designs</div>
           <div className='title1'><b>A convenient marketplace for sustainable shopping</b></div>
           
-          <div className='card-nested-surface--grey flex--horiz flex-align-horiz--spread'> 
-              <img src={home} width={"45%"}></img> 
-              <img src={venmo} width={"45%"}></img> 
-            </div>
+          <div className='card-surface--grey flex--horiz flex-align-horiz--spread' style={cardResponsive}> 
+            <img src={home} width={"45%"}></img> 
+            <img src={venmo} width={"45%"}></img> 
+          </div>
         </div>
 
         {/* reflection */}
         <div className='section'>
           <div className='heading greyText'>Impact & Reflection</div>
           <div className='title1'><b>People are using the app!</b></div>
-          <div className='card-surface--white card-stroke--green card-dir--corner flex--vert' >
+          <div className='card-surface--white card-stroke--green card-dir--corner flex--vert' style={cardResponsive}>
             <img src={send} width={ICON_WIDTH} className="icon--green"></img>
             <div className='heading greyText'>Success!</div>
             <img src={fiveStars} width={"25%"}></img> 
@@ -263,19 +271,19 @@ function App(props) {
 
           <div className='spacer'></div>
           <div className='body'>Some exciting parts of this project:</div>
-          <div className='card-surface--grey card-stroke--shine' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}>
             <div className='body'>
               It was incredibly rewarding leading the design team for this project. Shoutout 
               to Jin and Lia for being the best designers to work with!
             </div>
           </div>
-          <div className='card-surface--grey card-stroke--shine' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}>
             <div className='body'>
               This was the first project that I worked on from inception to make it to the 
               App Store & Google Play Store!
             </div>
           </div>
-          <div className='card-surface--grey card-stroke--shine' >
+          <div className='card-surface--grey card-stroke--shine' style={cardResponsive}>
             <div className='body'>
               It was exciting to see the project continue after I graduated, and I'm so 
               grateful to the students who kept it going.

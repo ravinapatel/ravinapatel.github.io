@@ -35,12 +35,12 @@
 
 .flex--vert {
   display: flex;
-  gap: 16px;
-  flex-direction: column;  /* Stack sections vertically */
+  gap: var(--gap-vert, 16px);   /* Default gap */
+  flex-direction: column;       /* Stack sections vertically */
 }
 .flex--horiz {
   display: flex;
-  gap: 24px;
+  gap: var(--gap-horiz, 24px);  /* Default gap */
   align-items: flex-start;
 }
 .flex-align-horiz--center {
@@ -55,10 +55,9 @@
 
 
 /* ---------------------- CARDS ----------------------- */
-
 .card-surface--white{
   position: relative;           /* Ensure the pseudo-element is positioned relative to the card */
-  padding: 32px 40px;
+  padding: var(--card-padding, 32px 40px); /* Default padding that is responsively changed by styles */
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
@@ -69,7 +68,7 @@
 }
 .card-surface--grey{
   position: relative;           /* Ensure the pseudo-element is positioned relative to the card */
-  padding: 32px 40px;
+  padding: var(--card-padding, 32px 40px); /* Default padding that is responsively changed by styles  */
   border-radius: 16px;
   background: #fafafa;
   --gradient-start: #ececec;  /* Default solid grey */
@@ -118,7 +117,7 @@
 /* nesting cards makes the grey card's border break for some reason, so use this instead */
 .card-nested-surface--grey{
   position: relative;
-  padding: 32px 40px;
+  padding: var(--card-padding, 32px 40px); /* Default padding that is responsively changed by styles  */
   border-radius: 16px;
   background: #fafafa;
   border: 2px solid #ececec;

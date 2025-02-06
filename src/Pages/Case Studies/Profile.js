@@ -36,6 +36,11 @@ function App(props) {
   const iconTopMargin = {
     paddingTop: 4
   }
+  const cardResponsive = {              // i should move this into the css later
+    "--card-padding": isSmallScreen ? "20px 20px" : undefined,
+    "--gap-horiz": isSmallScreen ? "16px" : undefined,
+    "--gap-vert": isSmallScreen ? "12px" : undefined,
+  }
 
   // CONTENT
   const PROJECT_ID = "profile"          // must match the project id in uxData
@@ -58,7 +63,7 @@ function App(props) {
 
         {/* highlights */}
         <div className='section' >
-          <div className='card-surface--white card-stroke--purple flex--vert flex-align-horiz--center'>
+          <div className={'card-surface--white card-stroke--purple flex--vert flex-align-horiz--center'} style={cardResponsive}>
             <div> <img src={sun} width={ICON_WIDTH} className="icon--purple"></img> </div>
             <div className="heading greyText">Highlights</div>
             <img src={redesign} style={{width: "80%"}}></img>
@@ -74,11 +79,11 @@ function App(props) {
             <b>The AMP profile page is missing key features, and its design is out-of-date.</b>
           </div>
           <div className="body">
-            As AMP goes through a re-platforming, we have an opportunity to enhance the product. For the profile 
+            As Pandora's Artist Marketing Platform (AMP) goes through a re-platforming, we have an opportunity to enhance the product. For the profile 
             page, the team decided to add a few highly requested features and modernize the design style.
           </div>
           
-          <div className='card-surface--grey card-stroke--shine flex--vert'>
+          <div className='card-surface--grey card-stroke--shine flex--vert' style={cardResponsive}>
             <div className='flex--horiz'>
               <img src={checkCircle} width={ICON_WIDTH_SMALL} className="icon--grey" style={iconTopMargin}></img>
               <div className='flex--vert'>
@@ -89,7 +94,7 @@ function App(props) {
             </div>
           </div>
 
-          <div className='card-surface--grey card-stroke--shine flex--vert'>
+          <div className='card-surface--grey card-stroke--shine flex--vert' style={cardResponsive}>
             <div className='flex--horiz'>
               <img src={chevronsUp} width={ICON_WIDTH_SMALL} className="icon--grey" style={iconTopMargin}></img>
               <div className='flex--vert'>
@@ -106,7 +111,7 @@ function App(props) {
           <div className="heading greyText">Design Decision Highlight</div>
           <div className="title1"> <b>Boosting shares by presenting profiles in a familiar way</b> </div>
           
-          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert'>
+          <div className='card-surface--white card-stroke--blue card-dir--corner flex--vert' style={cardResponsive}>
             <img src={helpCircle} width={ICON_WIDTH} className="icon--blue"></img>
             <div className="heading greyText">Business Goal</div>
             <div className="title2">How might we encourage artists to share their Pandora profiles with fans?</div>
@@ -117,18 +122,18 @@ function App(props) {
             listeners on Pandora (see below). I suspect that this creates uncertainty for artists about what they 
             would be sharing and how it would appear to listeners.
           </div>
-          <div className='card-surface--grey'> <img src={profileDisconnect} width="100%"></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={profileDisconnect} width="100%"></img> </div>
           <div className='spacer'></div>
 
           <div className='body'>
             To address this, I designed a “profile card” that more closely resembles the Pandora profile. This also 
             consolidates functionality from many sections into a single component, saving space on the page.
           </div>
-          <div className='card-surface--grey'> <img src={profileCard} width="100%"></img> </div>
-          <div className='card-surface--grey'> <img src={sticky} width="100%"></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={profileCard} width="100%"></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={sticky} width="100%"></img> </div>
           <div className='spacer'></div>
 
-          <div className='card-surface--white card-stroke--green card-dir--corner flex--vert' >
+          <div className='card-surface--white card-stroke--green card-dir--corner flex--vert' style={cardResponsive}>
             <img src={arrowUp} width={ICON_WIDTH} className="icon--green"></img>
             <div className='heading greyText'>Success</div>
             <div className='title2'>
@@ -142,11 +147,11 @@ function App(props) {
           <div className='heading greyText'>Final Designs</div>
           <div className='title1'><b>Giving artists the tools they need to grow</b></div>
           <div className='body'>Contact me for more details about this project!</div>
-          <div className='card-surface--white card-stroke--blue flex--vert flex-align-horiz--center'>
+          <div className='card-surface--white card-stroke--blue flex--vert flex-align-horiz--center' style={cardResponsive}>
           <div> <img src={sun} width={ICON_WIDTH} className="icon--blue"></img> </div>
             <div className="heading greyText">Final Designs</div>
             {/* nested card stroke not working */}
-            <div className='card-nested-surface--grey'>
+            <div className='card-nested-surface--grey' style={cardResponsive}>
               <img src={highlights} style={{width: "100%"}}></img>
             </div>
           </div>
@@ -158,16 +163,16 @@ function App(props) {
           <div className='title1'><b>Lots of happy artists :)</b></div>
 
           <div className={isSmallScreen ? "flex--vert" : "flex--horiz"}>
-            <div className='card-surface--white card-stroke--green card-dir--corner flex--horiz'>
+            <div className='card-surface--white card-stroke--green card-dir--corner flex--horiz' style={cardResponsive}>
               <img src={arrowUp} width={ICON_WIDTH} className="icon--green"></img>
               <div className="title2"><b>303%</b> increase in engagement</div>
             </div>
-            <div className='card-surface--white card-stroke--green card-dir--corner flex--horiz'>
+            <div className='card-surface--white card-stroke--green card-dir--corner flex--horiz' style={cardResponsive}>
               <img src={arrowUp} width={ICON_WIDTH} className="icon--green"></img>
               <div className="title2"><b>68%</b> increase in profile shares</div>
             </div>
           </div>
-          <div className='card-surface--grey'> <img src={impact} width="100%"></img> </div>
+          <div className='card-surface--grey' style={cardResponsive}> <img src={impact} width="100%"></img> </div>
         </div>
 
         {/* read another case */}

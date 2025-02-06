@@ -45,7 +45,7 @@ function App() {
   // STYLING
   const projectsFlex = {
     display: "flex",
-    gap: 120,
+    gap: isSmallScreen? 60 : 120,
     flexDirection: "column"  /* Stack sections vertically */
   }
 
@@ -59,7 +59,7 @@ function App() {
 
         {/* UX Projects */}
         <div className='section-wide' style={{paddingTop: 140, marginTop: -140}} ref={el2}>
-          <div className="sectionTitle" style={{textAlign: "center", marginBottom: 40}}>selected projects</div>
+          <div className="sectionTitle" style={{textAlign: "center", marginBottom: isSmallScreen ? 20 : 40}}>selected projects</div>
           <div style={projectsFlex}>
             {projectPrevs}
           </div>

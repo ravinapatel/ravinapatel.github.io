@@ -29,7 +29,7 @@ function App(props) {
   const imgContainerStyle = {
     position: 'relative',
     width: '100%',
-    height: '400px',          // Adjust based on your requirement
+    height: isSmallScreen ? '40%' : '400px',
     marginTop: 16
   };
   const imgStyle = {
