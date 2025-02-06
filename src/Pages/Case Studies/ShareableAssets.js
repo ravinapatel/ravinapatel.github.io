@@ -9,14 +9,14 @@ import ChooseAnother from "../../Components/ChooseAnother";
 // IMAGES
 import algorithm from "../../Images/portfolio/ux/shareable-assets/highlights-gradient.png";
 import ideaSketch from "../../Images/portfolio/ux/shareable-assets/idea-sketch.png";
-// import variation from "../../Images/portfolio/ux/shareable-assets/variation-gif.gif"; (replaced import)
-import variation from "../../Images/portfolio/ux/shareable-assets/variation.png";
+import variation from "../../Images/portfolio/ux/shareable-assets/variation-gif.gif";
+// import variation from "../../Images/portfolio/ux/shareable-assets/variation.png"; // static version
 import billionaires from "../../Images/portfolio/ux/shareable-assets/billionaires.png";
-// import visual from "../../Images/portfolio/ux/shareable-assets/visual-gif.gif"; (replaced import)
-import visual from "../../Images/portfolio/ux/shareable-assets/visual.png";
+import visual from "../../Images/portfolio/ux/shareable-assets/visual-gif.gif";
+// import visual from "../../Images/portfolio/ux/shareable-assets/visual.png"; // static version
 import badAccessibility from "../../Images/portfolio/ux/shareable-assets/bad-accessibility.png";
-// import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.gif"; (replaced import)
-import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.png";
+import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.gif";
+// import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.png"; // static version
 import email from "../../Images/portfolio/ux/shareable-assets/email.png";
 import assetReelGrey from "../../Images/portfolio/ux/shareable-assets/asset-reel-bg-fa.png";
 import posts from "../../Images/portfolio/ux/shareable-assets/posts.png";
