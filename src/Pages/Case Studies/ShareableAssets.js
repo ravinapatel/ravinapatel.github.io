@@ -15,8 +15,8 @@ import billionaires from "../../Images/portfolio/ux/shareable-assets/billionaire
 import visual from "../../Images/portfolio/ux/shareable-assets/visual-gif.gif";
 // import visual from "../../Images/portfolio/ux/shareable-assets/visual.png"; // static version
 import badAccessibility from "../../Images/portfolio/ux/shareable-assets/bad-accessibility.png";
-import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.gif";
-// import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.png"; // static version
+// import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.gif";
+import deliveryIterations from "../../Images/portfolio/ux/shareable-assets/delivery-iterations.png"; // static version
 import email from "../../Images/portfolio/ux/shareable-assets/email.png";
 import assetReelGrey from "../../Images/portfolio/ux/shareable-assets/asset-reel-bg-fa.png";
 import posts from "../../Images/portfolio/ux/shareable-assets/posts.png";
