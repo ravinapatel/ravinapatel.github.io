@@ -16,8 +16,8 @@ import motivation from "../../Images/portfolio/ux/exceed/motivation.png";
 import onboarding from "../../Images/portfolio/ux/exceed/onboarding-interests.png";
 import searchIterations from "../../Images/portfolio/ux/exceed/search-iterations.png";
 import market from "../../Images/portfolio/ux/exceed/market.png";
-// import saveNote from "../../Images/portfolio/ux/exceed/save-note.gif"; (replaced import & commented out 1)
-import saveNote from "../../Images/portfolio/ux/exceed/save-note.png";
+import saveNote from "../../Images/portfolio/ux/exceed/save-note.gif";
+// import saveNote from "../../Images/portfolio/ux/exceed/save-note.png"; // static version
 
 //ICONS
 import award from "../../Icons/award.svg";
@@ -80,9 +80,9 @@ function App(props) {
             <div> <img src={sun} width={ICON_WIDTH} className="icon--blue"></img> </div>
             <div className="heading greyText">Highlights</div>
             <div className='card-nested-surface--grey'> <img src={highlights} width={"100%"}></img> </div>
-            {/* <div className='card-nested-surface--grey flex--vert flex-align-horiz--center' style={equalSize}>
+            <div className='card-nested-surface--grey flex--vert flex-align-horiz--center' style={equalSize}>
               <img src={saveNote} style={{width: "100%", maxWidth: 300}}></img>
-            </div > */}
+            </div >
             <div className='card-nested-surface--grey'> <img src={highlightsBadges} width={"100%"}></img> </div>
           </div>
         </div>
