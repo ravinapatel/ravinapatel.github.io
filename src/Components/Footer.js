@@ -62,7 +62,7 @@ function App() {
     whiteSpace: "nowrap",
   }
 
-  let stripTextRaw = " Based in NYC | © 2023 Ravina Patel | Built in React.js | V3.1 | ";
+  let stripTextRaw = " Based in NYC | © 2020 Ravina Patel | Built in React.js | V3.2 | ";
   let stripText = stripTextRaw.replace(" ", "&nbsp;").slice(6).repeat(4);
 
   return (
