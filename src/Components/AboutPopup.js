@@ -29,7 +29,7 @@ function App(props) {
   }
   function copyToClipboard() {
     setCopied(true)
-    navigator.clipboard.writeText("rpp62@cornell.edu")
+    navigator.clipboard.writeText("ravinapatel.work@cornell.edu")
 
     // GA Event
     ReactGA.event({
@@ -109,7 +109,7 @@ function App(props) {
                   onClick={copyToClipboard}
                   onMouseEnter={showTag}
                   onMouseLeave={resetCopy}>
-                  rpp62@cornell.edu
+                  ravinapatel.work@cornell.edu
                 </div>
                 <div className={tagVisible ? "tagVisible" : "tagInvisible"} style={hoverTag}>{copied ? "Copied!" : "Copy to clipboard"}</div>
               </div>
@@ -122,7 +122,7 @@ function App(props) {
         <div style={sectionStyle} onClick={clickEmail}>
           <Button
             text="contact me"
-            url="mailto: rpp62@cornell.edu"
+            url="mailto: ravinapatel.work@cornell.edu"
           ></Button>
         </div>
         <div style={sectionStyle} onClick={clickResume}>

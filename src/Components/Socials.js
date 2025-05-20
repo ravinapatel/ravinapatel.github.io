@@ -28,7 +28,7 @@ function App(props) {
 
   return (
     <div style={{ display: "block" }}>
-      <a href="mailto: rpp62@cornell.edu" target="_blank" onClick={() => handleClick('email')}>
+      <a href="mailto: ravinapatel.work@cornell.edu" target="_blank" onClick={() => handleClick('email')}>
         <img src={mail} alt="email" width={"17px"} className={CLASS} align="center" /></a>
       <a href="https://www.linkedin.com/in/ravinapatel0/" target="_blank" onClick={() => handleClick('LinkedIn')}>
         <img src={linkedIn} alt="linkedIn" width={"17px"} className={CLASS} align="center" style={{ paddingLeft: PADDING }} /></a>

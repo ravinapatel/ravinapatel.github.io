@@ -73,7 +73,7 @@ function App() {
               <div onClick={clickEmail}>
                 <Button
                   text="Say hi!"
-                  url="mailto: 7ravina7@gmail.com"
+                  url="mailto: ravinapatel.work@gmail.com"
                 ></Button>
               </div>
               <div onClick={clickResume}>

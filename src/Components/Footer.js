@@ -77,7 +77,7 @@ function App() {
           
           <div style={columnRight}>
             <p className='body' style={{marginBottom: "10px"}}>let's build together!</p>
-            <Link text="Email me" url="mailto: 7ravina7@gmail.com" isInternal="false" type="small" icon="arrowDiagonal" color="grey"></Link>
+            <Link text="Email me" url="mailto: ravinapatel.work@gmail.com" isInternal="false" type="small" icon="arrowDiagonal" color="grey"></Link>
             <Link text="View resume" url="./ravina-resume.pdf" isInternal="false" type="small" icon="arrowDiagonal" color="grey"></Link>
             <Link text="LinkedIn" url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="small" icon="arrowDiagonal" color="grey"></Link>
           </div>

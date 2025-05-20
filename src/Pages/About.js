@@ -230,7 +230,7 @@ function App(props) {
               I love building cool products and experiences, so if you'd like to work together, feel free to reach out!
             </div>
             <div style={{paddingRight: 18, display: "inline-block"}}>
-              <Button text={"Say hi!"} url="mailto: 7ravina7@gmail.com" isInternal="false"></Button>
+              <Button text={"Say hi!"} url="mailto: ravinapatel.work@gmail.com" isInternal="false"></Button>
             </div>
             <Button text={"View resume"} url="./ravina-resume.pdf" isInternal="false"></Button>
           </div>
@@ -238,7 +238,7 @@ function App(props) {
 
         {/* LET'S CHAT */}
           {/* <div style={connectContent}>
-            <div style={contactLink}><Link text={"Email me"} url="mailto: 7ravina7@gmail.com" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
+            <div style={contactLink}><Link text={"Email me"} url="mailto: ravinapatel.work@gmail.com" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
             <div style={contactLink}><Link text={"Resume"} url="../../ravina-resume.pdf" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
             <div style={contactLink}><Link text={"LinkedIn"} url="https://www.linkedin.com/in/ravinapatel0/" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
             <div style={contactLink}><Link text={"Instagram"} url="https://www.instagram.com/ravinart/" isInternal="false" type="block" icon="arrowDiagonal" color="rgba(0, 0, 0, 1)"></Link></div>
